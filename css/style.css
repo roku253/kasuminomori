@@ -1,0 +1,246 @@
+/* 霞ノ杜町観光サイト — 2010年代前半・地方自治体風 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "MS PGothic", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #333;
+  background: #e8e8e8 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2NkIBIwEqRyYwAjBkYwEgYwEgYwEgYwEgYwEgYA/wsBBWrVotkAAAAASUVORK5CYII=") repeat;
+}
+
+a {
+  color: #004a99;
+}
+a:visited {
+  color: #663399;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.site-header {
+  background: linear-gradient(180deg, #1a4d80 0%, #003366 100%);
+  color: #fff;
+  padding: 12px 16px 10px;
+  border-bottom: 4px solid #c9a227;
+}
+
+.site-header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 0 #001a33;
+}
+
+.site-header .tagline {
+  font-size: 11px;
+  opacity: 0.92;
+}
+
+/* パンくず */
+.breadcrumb {
+  font-size: 11px;
+  padding: 6px 16px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+.breadcrumb a {
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* メインレイアウト */
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  border-right: 1px solid #ccc;
+  padding: 12px 0 24px;
+}
+
+.sidebar h2 {
+  margin: 0 0 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  background: #ddd;
+  border-left: 4px solid #003366;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0 0 16px;
+  list-style: none;
+}
+
+.sidebar li {
+  border-bottom: 1px dotted #bbb;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  background: #e0e8f0;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 20px 32px;
+}
+
+.content h2 {
+  margin: 0 0 12px;
+  padding: 6px 10px;
+  font-size: 16px;
+  color: #003366;
+  background: linear-gradient(90deg, #dde8f5 0%, #fff 100%);
+  border-left: 5px solid #003366;
+}
+
+.content h3 {
+  margin: 20px 0 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  border-bottom: 1px dashed #999;
+  padding-bottom: 4px;
+}
+
+.content p {
+  margin: 0 0 12px;
+}
+
+/* 表組み */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 12px;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid #999;
+  padding: 8px 10px;
+  text-align: left;
+}
+.data-table th {
+  background: #e6eef5;
+  white-space: nowrap;
+}
+
+/* お知らせ欄 */
+.news-box {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  margin: 16px 0;
+}
+.news-box h3 {
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 13px;
+  background: #003366;
+  color: #fff;
+  border-bottom: none;
+}
+.news-box ul {
+  margin: 0;
+  padding: 10px 12px 12px 28px;
+}
+.news-box li {
+  margin-bottom: 6px;
+}
+
+/* フッター */
+.site-footer {
+  clear: both;
+  padding: 16px;
+  font-size: 11px;
+  color: #555;
+  border-top: 1px solid #ccc;
+  background: #eee;
+  text-align: center;
+}
+
+.next-spot {
+  margin-top: 28px;
+  padding: 14px;
+  text-align: center;
+  background: #f0f4f8;
+  border: 1px solid #b8c8d8;
+}
+.next-spot a {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* お問い合わせフォーム風 */
+.fake-form label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+.fake-form p {
+  margin-bottom: 10px;
+}
+.fake-form input[type="text"],
+.fake-form textarea {
+  width: 280px;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 12px;
+}
+.fake-btn {
+  margin-top: 12px;
+  padding: 6px 24px;
+  font-size: 13px;
+}
+
+/* アクセス地図注釈 */
+.map-note {
+  font-size: 11px;
+  color: #c00;
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px dashed #c00;
+  background: #fff8f8;
+}
+
+.access-map-wrap {
+  border: 2px solid #666;
+  padding: 8px;
+  background: #fff;
+  margin: 12px 0;
+}
+
+img.full-width {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

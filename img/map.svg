@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8d8c8"/>
+      <stop offset="100%" stop-color="#a0b8a0"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#889988" stroke-width="0.4" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <rect width="640" height="420" fill="url(#grid)"/>
+  <!-- Ý -->
+  <path d="M0 280 Q 120 260 200 300 T 400 290 T 640 270 L 640 420 L 0 420 Z" fill="#6a9cbc" opacity="0.75"/>
+  <text x="480" y="360" font-family="sans-serif" font-size="12" fill="#345">;>»Ý/A:	</text>
+  <!-- ýSûSS -->
+  <path d="M 40 380 L 220 200 L 380 120 L 520 40" stroke="#444" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <text x="230" y="190" font-family="sans-serif" font-size="11" fill="#222">S42÷</text>
+  <!-- Œ_S -->
+  <path d="M 520 40 L 580 20" stroke="#888" stroke-width="8" stroke-dasharray="10 8"/>
+  <circle cx="548" cy="32" r="14" fill="#c0392b"/>
+  <text x="530" y="18" font-family="sans-serif" font-size="11" fill="#800">×</text>
+  <!-- Á	0 -->
+  <rect x="520" y="0" width="120" height="80" fill="#d4a574" stroke="#8b4513" stroke-width="2" opacity="0.85"/>
+  <text x="528" y="55" font-family="sans-serif" font-size="11" fill="#422">Á	0</text>
+  <!-- ³I¹ÝÃÈ -->
+  <circle cx="220" cy="200" r="10" fill="#003366"/>
+  <text x="210" y="175" font-family="sans-serif" font-size="11" fill="#003366">`^></text>
+  <circle cx="380" cy="120" r="10" fill="#003366"/>
+  <text x="365" y="105" font-family="sans-serif" font-size="11" fill="#003366">a
+ŠK</text>
+  <circle cx="120" cy="320" r="10" fill="#0055aa"/>
+  <text x="95" y="335" font-family="sans-serif" font-size="11" fill="#0055aa">bÇ™(</text>
+  <!-- ¿¤Èë -->
+  <text x="16" y="28" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222">Î\:hº ³IÞÃ×!	</text>
+</svg>

@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      if (!/^https?:$/i.test(location.protocol)) return;
+      var p = location.pathname;
+      if (/\/index\.html$/i.test(p)) {
+        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
+      }
+    })();
+  </script>
   <title>観光スポット：杜の湯（足湯）｜霞ノ杜町観光協会</title>
   <link rel="stylesheet" href="../../css/style.css">
 </head>

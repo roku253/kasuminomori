@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      if (!/^https?:$/i.test(location.protocol)) return;
+      var p = location.pathname;
+      if (/\/index\.html$/i.test(p)) {
+        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
+      }
+    })();
+  </script>
   <title>霞ノ杜町観光協会｜公式サイト</title>
   <meta name="description" content="山間の霧と緑に包まれた霞ノ杜町の観光情報をお届けします。">
   <link rel="stylesheet" href="css/style.css">

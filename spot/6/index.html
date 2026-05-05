@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>403 Forbidden</title>
+  <!-- 意図的に誤ったパスでスタイル崩れを演出 -->
+  <link rel="stylesheet" href="../../css/style_DOES_NOT_EXIST.css">
+  <style>
+    /* 隠しページ用：意図的にチグハグな配色・フォント */
+    body.fallback {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      background: #1a1a1a;
+      color: #ccc;
+    }
+    .err-banner {
+      background: #600;
+      color: #fff;
+      padding: 24px 16px;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      border-bottom: 8px solid #300;
+    }
+    .err-sub {
+      padding: 12px 16px;
+      background: #222;
+      color: #f88;
+      font-size: 14px;
+    }
+    .leak-box {
+      margin: 16px;
+      padding: 16px;
+      border: 2px dashed #666;
+      background: #0d0d0d;
+      color: #9f9;
+      font-size: 12px;
+      line-height: 1.6;
+      max-width: 720px;
+      overflow-wrap: anywhere;
+    }
+    .leak-box h2 {
+      color: #f44;
+      font-size: 16px;
+      margin-top: 0;
+      font-family: Impact, sans-serif;
+    }
+    .glitch {
+      color: #888;
+      text-decoration: line-through;
+    }
+    .blink {
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="fallback">
+  <div class="err-banner">403 Forbidden</div>
+  <div class="err-sub">
+    You don't have permission to access this resource on this server.
+    <br>
+    <span style="font-size:11px;color:#888;">nginx/1.18.0 (dummy) | Kasumi CMS staging — internal only</span>
+  </div>
+
+  <div class="leak-box">
+    <h2>【閲覧注意】キャッシュ残骸 / ERR_PARTIAL_LOAD</h2>
+    <p>
+      このページは<strong>公開メニューからはリンクされていません</strong>。
+      URL を直接入力した閲覧者向けのダミーです。物語・謎解き用の<strong>フィクション</strong>です。
+    </p>
+    <p>
+      <span class="glitch">文書番号 KSM-INT-0198-A （撤回済）</span><br>
+      サブジェクト：霞ノ杜町・杜地区「旧参詣路」封鎖理由の補足<br>
+      記載：○○年度調査時、<span class="blink">■■■■</span>において異常な沈下痕を確認。
+      観光協会公式サイトからのリンク削除指示は R7.12 に実行済み。
+    </p>
+    <p>
+      参照キーワード（ゲーム用ヒントの例）：<br>
+      <code style="color:#fc9;">MIST_GATE</code> /
+      <code style="color:#fc9;">PRIVATE_ZONE_NORTH</code> /
+      <code style="color:#fc9;">BRIDGE_LOG_04</code>
+    </p>
+    <p style="color:#666;font-size:11px;">
+      ※上記コード・文書番号はナンセンスでも構いません。シナリオ側で差し替えてください。<br>
+      ※このページはサイト内から辿れません（<code>spot/6/</code> のみ）。
+    </p>
+  </div>
+
+  <p style="padding:16px;color:#555;font-size:11px;">
+    <a href="../../" style="color:#666;">« 通常サイトへ戻る（403ではありません）</a>
+  </p>
+</body>
+</html>

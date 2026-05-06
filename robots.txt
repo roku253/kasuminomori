@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# 隠しページ（noindex）のパスはクロールしても検索には出しませんが、不要なら Disallow できます
+# Disallow: /kasuminomori/spot/6/
+
+Sitemap: https://roku253.github.io/kasuminomori/sitemap.xml

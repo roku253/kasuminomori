@@ -38,6 +38,8 @@ a:visited {
 }
 
 .wrap {
+  display: flex;
+  flex-direction: column;
   max-width: 980px;
   margin: 0 auto;
   background: #fff;
@@ -45,6 +47,15 @@ a:visited {
   border-right: 1px solid #bbb;
   min-height: 100vh;
   min-height: 100dvh;
+}
+
+.site-header,
+.breadcrumb {
+  flex-shrink: 0;
+}
+
+.site-footer {
+  flex-shrink: 0;
 }
 
 /* ヘッダー */
@@ -57,7 +68,7 @@ a:visited {
 
 .site-header h1 {
   margin: 0 0 4px;
-  font-size: clamp(1.125rem, 4.2vw, 1.375rem);
+  font-size: 22px;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-shadow: 1px 1px 0 #001a33;
@@ -88,16 +99,19 @@ a:visited {
   text-decoration: underline;
 }
 
-/* メインレイアウト */
+/* メインレイアウト（flex:1 で余白をここに寄せ、フッターを画面下へ） */
 .main-layout {
+  flex: 1 1 auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
+  min-height: 0;
 }
 
 .sidebar {
   width: 200px;
   flex-shrink: 0;
+  align-self: stretch;
   background: #f5f5f5;
   border-right: 1px solid #ccc;
   padding: 12px 0 24px;
@@ -122,13 +136,10 @@ a:visited {
 }
 
 .sidebar a {
-  display: flex;
-  align-items: center;
-  min-height: 2.75rem;
+  display: block;
   padding: 8px 12px;
   font-size: 12px;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 58, 102, 0.12);
 }
 .sidebar a:hover {
   background: #e0e8f0;
@@ -280,11 +291,11 @@ img.full-width {
   vertical-align: middle;
 }
 
-/* ——— スマホ・タブレット（PCは上記のまま） ——— */
-@media (max-width: 720px) {
+/* ——— スマホ専用（〜767px）：読みやすさ・タップ優先 ——— */
+@media (max-width: 767px) {
   body {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.65;
     touch-action: manipulation;
   }
 
@@ -295,62 +306,87 @@ img.full-width {
   }
 
   .site-header {
-    padding: 14px 14px 12px;
-    padding-top: max(14px, env(safe-area-inset-top, 14px));
+    padding: 16px 16px 14px;
+    padding-top: max(16px, env(safe-area-inset-top, 16px));
+  }
+
+  .site-header h1 {
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
   }
 
   .site-header .tagline {
     font-size: 12px;
+    line-height: 1.5;
   }
 
   .breadcrumb {
-    padding: 8px 14px;
+    padding: 10px 16px;
     font-size: 12px;
   }
 
   .main-layout {
     flex-direction: column;
+    flex: 1 1 auto;
   }
 
   .sidebar {
     width: 100%;
-    flex-shrink: 1;
+    flex-shrink: 0;
     border-right: none;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
+    padding: 0 0 12px;
   }
 
   .sidebar h2 {
-    font-size: 13px;
-    padding: 8px 14px;
+    font-size: 0.8125rem;
+    padding: 10px 16px;
+    margin-bottom: 0;
+  }
+
+  .sidebar ul {
+    padding-bottom: 12px;
   }
 
   .sidebar a {
-    font-size: 14px;
-    padding: 10px 14px;
-    min-height: 2.875rem;
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    padding: 12px 16px;
+    font-size: 15px;
+    -webkit-tap-highlight-color: rgba(0, 58, 102, 0.12);
   }
 
   .content {
-    padding: 18px 14px 36px;
+    flex: 1 1 auto;
+    padding: 22px 16px 32px;
   }
 
   .content h2 {
-    font-size: 1.125rem;
-    padding: 8px 10px;
+    font-size: 1.2rem;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    line-height: 1.35;
   }
 
   .content h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+  }
+
+  .content p {
+    margin-bottom: 16px;
   }
 
   .data-table {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .data-table th,
   .data-table td {
-    padding: 10px 10px;
+    padding: 12px 10px;
     word-break: break-word;
     overflow-wrap: break-word;
   }
@@ -359,49 +395,80 @@ img.full-width {
     white-space: normal;
   }
 
+  .table-scroll {
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+  }
+
+  .table-scroll .data-table {
+    background: #fff;
+  }
+
+  .news-box {
+    margin: 20px 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
   .news-box h3 {
-    font-size: 14px;
-    padding: 10px 14px;
+    font-size: 15px;
+    padding: 12px 16px;
   }
 
   .news-box ul {
-    padding: 12px 14px 14px 26px;
+    padding: 14px 16px 16px 28px;
+  }
+
+  .news-box li {
+    margin-bottom: 10px;
   }
 
   .site-footer {
-    padding: 18px 14px;
-    padding-bottom: max(18px, env(safe-area-inset-bottom, 18px));
+    padding: 20px 16px;
+    padding-bottom: max(20px, env(safe-area-inset-bottom, 20px));
     font-size: 12px;
+    line-height: 1.5;
   }
 
   .next-spot {
-    padding: 16px 12px;
+    margin-top: 32px;
+    padding: 18px 14px;
+    border-radius: 4px;
   }
 
   .next-spot a {
-    font-size: 15px;
+    font-size: 16px;
     display: inline-block;
-    padding: 6px 4px;
+    padding: 8px 6px;
     min-height: 2.75rem;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .access-map-wrap {
-    padding: 6px;
-    margin-left: -2px;
-    margin-right: -2px;
+    padding: 8px;
+    margin: 16px 0;
+    border-radius: 4px;
   }
 
   .map-note {
-    font-size: 12px;
-    line-height: 1.55;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 12px;
+    margin-top: 12px;
   }
 
   .fake-form label {
     display: block;
     width: auto;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-weight: bold;
+    font-size: 15px;
+  }
+
+  .fake-form p {
+    margin-bottom: 16px;
   }
 
   .fake-form input[type="text"],
@@ -409,19 +476,27 @@ img.full-width {
     width: 100%;
     max-width: 100%;
     font-size: 16px;
-    padding: 10px 12px;
+    padding: 12px 14px;
+    border-radius: 4px;
   }
 
   .fake-btn {
-    min-height: 2.75rem;
-    min-width: 8rem;
-    padding: 10px 24px;
-    font-size: 15px;
+    min-height: 3rem;
+    min-width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
     -webkit-tap-highlight-color: rgba(0, 58, 102, 0.12);
   }
 }
 
-@media (min-width: 721px) {
+/* ——— PC専用（768px〜）：コンパクト・2カラム固定 ——— */
+@media (min-width: 768px) {
+  body {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
   .site-header h1 {
     font-size: 22px;
   }
@@ -430,8 +505,93 @@ img.full-width {
     font-size: 11px;
   }
 
+  .breadcrumb {
+    font-size: 11px;
+    padding: 6px 16px;
+  }
+
+  .main-layout {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    width: 200px;
+    padding: 12px 0 24px;
+  }
+
   .sidebar a {
     display: block;
     min-height: 0;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .content {
+    padding: 16px 20px 32px;
+  }
+
+  .content h2 {
+    font-size: 16px;
+    padding: 6px 10px;
+    margin-bottom: 12px;
+  }
+
+  .content h3 {
+    font-size: 14px;
+    margin: 20px 0 8px;
+  }
+
+  .data-table {
+    font-size: 12px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 10px;
+  }
+
+  .data-table th {
+    white-space: nowrap;
+  }
+
+  .site-footer {
+    padding: 16px;
+    font-size: 11px;
+  }
+
+  .next-spot a {
+    font-size: 14px;
+  }
+
+  .table-scroll {
+    margin: 12px 0;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .table-scroll .data-table {
+    background: transparent;
+  }
+
+  .fake-form label {
+    display: inline-block;
+    width: 120px;
+    font-weight: normal;
+  }
+
+  .fake-form input[type="text"],
+  .fake-form textarea {
+    width: 280px;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .fake-btn {
+    min-height: 0;
+    min-width: 0;
+    padding: 6px 24px;
+    font-size: 13px;
   }
 }

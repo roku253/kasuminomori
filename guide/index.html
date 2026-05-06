@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
+    !function () {
+      var m = window.matchMedia('(max-width: 767px)');
+      function s() {
+        document.documentElement.classList.toggle('is-mobile', m.matches);
+      }
+      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
+      s();
+    }();
+  </script>
+  <script>
     (function () {
       if (!/^https?:$/i.test(location.protocol)) return;
       var p = location.pathname;
@@ -14,6 +24,7 @@
   </script>
   <title>町のご案内｜霞ノ杜町観光協会</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mobile.css">
 </head>
 <body>
   <div class="wrap">
@@ -76,5 +87,6 @@
       <p>© 霞ノ杜町観光協会　【フィクション】</p>
     </footer>
   </div>
+  <script src="../js/mobile.js" defer></script>
 </body>
 </html>

@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
+    !function () {
+      var m = window.matchMedia('(max-width: 767px)');
+      function s() {
+        document.documentElement.classList.toggle('is-mobile', m.matches);
+      }
+      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
+      s();
+    }();
+  </script>
+  <script>
     (function () {
       if (!/^https?:$/i.test(location.protocol)) return;
       var p = location.pathname;
@@ -15,6 +25,7 @@
   <title>霞ノ杜町観光協会｜公式サイト</title>
   <meta name="description" content="山間の霧と緑に包まれた霞ノ杜町の観光情報をお届けします。">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
   <div class="wrap">
@@ -103,5 +114,6 @@
       <p>© 霞ノ杜町観光協会　All Rights Reserved.　【このサイトはフィクションです】</p>
     </footer>
   </div>
+  <script src="js/mobile.js" defer></script>
 </body>
 </html>

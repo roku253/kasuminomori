@@ -64,8 +64,41 @@
   <style>
     #site-root { visibility: hidden; }
     html.token-gate-ok #site-root { visibility: visible; }
+
+    /* 観光協会らしい工事中・準備中風 */
+    .ns-denied-overlay {
+      position: fixed; inset: 0; z-index: 999999;
+      background: #f4efe4 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M0 0 L40 40' stroke='%23d6caa8' stroke-width='1'/></svg>") repeat;
+      display: flex; align-items: center; justify-content: center;
+      font-family: "Yu Gothic", Meiryo, sans-serif;
+      padding: 24px;
+    }
+    .ns-denied-card {
+      max-width: 560px; width: 100%;
+      background: #fff;
+      border-top: 6px solid #3a6e3a;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 28px 26px;
+    }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
   </style>
   <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div");
+      el.className = "ns-denied-overlay";
+      el.innerHTML =
+        '<div class="ns-denied-card">' +
+        '<h1>霞ノ杜町観光協会｜ご案内</h1>' +
+        '<p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p>' +
+        '<p>関係者の方は、ご案内のあった経路よりお進みください。</p>' +
+        '<p class="small">' + String(msg || "").replace(/[<>]/g, "") + '</p>' +
+        '</div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
   <script src="./token-gate.js" defer></script>
 </head>
 <body>

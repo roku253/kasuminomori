@@ -3,40 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
-  <title>観光スポット：霧見展望休憩所｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霧見展望休憩所のご紹介。霞ノ杜町観光協会が眺望と通行上の注意を案内します。【フィクション】">
+  <title>霧見展望休憩所｜霞ノ杜町観光協会</title>
+  <meta name="description" content="霧見展望休憩所のご紹介。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/spot/4/">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; } html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb">
-      <a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 霧見展望休憩所
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 霧見展望休憩所</nav>
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,26 +48,55 @@
           <li><a href="../3/">霞ノ杜資料館</a></li>
           <li><a href="../4/">霧見展望休憩所</a></li>
           <li><a href="../5/">杜の湯（足湯）</a></li>
+          <li><a href="../__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="../../history/">町の歴史</a></li></ul>
       </aside>
       <main class="content">
         <h2>霧見展望休憩所</h2>
         <p>
-          国道から少し入った林道沿いにある小さな休憩所です。晴れた日は山並みが一望できますが、
-          <strong>霧の日は視界が数メートルしかない</strong>ことも珍しくありません。
+          霞ノ杜山系の中腹、町の北側に位置する小さな展望休憩所。
+          標高 540 m。天気の良い日には、町の中心部から南の三日月町、東の杉並ヶ岡まで見渡せます。
+          そして霧の濃い朝は、足元から谷をひたすように白い海が広がります。
         </p>
         <p>
-          冬季は道路凍結のため<strong>車両通行止め</strong>となる場合があります。必ず最新情報をご確認ください。
+          木造の屋根とベンチがあるだけの素朴な休憩所ですが、地元では「霧見（きりみ）」と呼ばれ、
+          季節の変わり目には町民が一人静かに腰掛けている姿が見られます。
         </p>
 
-        <div class="next-spot">
-          <a href="../5/">次の観光地へ：杜の湯（足湯） »</a>
+        <h3>霧の見えかた（季節別）</h3>
+        <ul>
+          <li><strong>春</strong>：朝方、町中心部から沸き上がる薄い霧。</li>
+          <li><strong>夏</strong>：夕立の前、湿った霧が一気に山肌をなめる。</li>
+          <li><strong>秋</strong>：もっとも霧が深い季節。盆地全体が白く満ち、町の屋根だけが島のように浮かぶ。</li>
+          <li><strong>冬</strong>：日が出る前の数十分だけ、霧氷の朝。樹氷越しに町を見下ろせる。</li>
+        </ul>
+
+        <h3>展望休憩所からの眺め</h3>
+        <p>
+          休憩所から南を見ると、町中心部の屋根、杜川の流れ、その先の三日月町まで一望できます。
+          一方、<strong>北西方向</strong> には霞ノ杜の山並みの折れ重なる稜線と、その合間に小さくのぞく <strong>水辺の景色</strong> が見えます。
+          こちらは町の旧整備区域に当たるため、現在は一般の立ち入りを制限している地域です。
+          展望休憩所から眺めるだけにとどめてください。
+        </p>
+
+        <h3>利用情報</h3>
+        <div class="table-scroll">
+        <table class="data-table">
+          <tbody>
+            <tr><th>所在地</th><td>霞ノ杜山林道 中腹（示意）</td></tr>
+            <tr><th>到達時間</th><td>町中心部から徒歩で約 50 分（林道経由 / 上駐車場まで車で 15 分）</td></tr>
+            <tr><th>注意</th><td>林道は野生動物の活動範囲です。鈴・笛などの携行を推奨。</td></tr>
+          </tbody>
+        </table>
         </div>
+
+        <div class="next-spot"><a href="../5/">次の観光地へ：杜の湯（足湯） »</a></div>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../../js/mobile.js" defer></script>
 </body>

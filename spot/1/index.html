@@ -3,40 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
-  <title>観光スポット：霞ノ杜神社｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霞ノ杜神社のご紹介。霞ノ杜町観光協会が観光スポットの見どころ・参拝の目安を案内します。【フィクション】">
+  <title>霞ノ杜神社｜霞ノ杜町観光協会</title>
+  <meta name="description" content="霞ノ杜神社のご紹介。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/spot/1/">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb">
-      <a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 霞ノ杜神社
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 霞ノ杜神社</nav>
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,36 +49,53 @@
           <li><a href="../3/">霞ノ杜資料館</a></li>
           <li><a href="../4/">霧見展望休憩所</a></li>
           <li><a href="../5/">杜の湯（足湯）</a></li>
+          <li><a href="../__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="../../history/">町の歴史</a></li></ul>
       </aside>
       <main class="content">
         <h2>霞ノ杜神社</h2>
         <p>
-          町の北東部、小高い丘陵の一角に鎮座する<strong>霞ノ杜神社</strong>。
+          町の北東部、小高い丘陵の一角に鎮座する <strong>霞ノ杜神社</strong>。
           創建年代ははっきりしませんが、古くから「霧を払う」信仰として親しまれてきました。
+          境内に立ち並ぶ樹齢数百年といわれるスギは、冬の朝には霧氷をまとい、初夏には深い緑の天蓋をつくります。
         </p>
         <p>
-          境内には樹齢数百年といわれるスギが立ち並び、早朝は深い霧に包まれることがあります。
-          石段が途中で途切れているように見えるのは、長年の浸食と修復の歴史のためです（実際は安全なルートへ誘導されています）。
+          石段は長年の浸食と修復の歴史を物語っており、途中で角度が変わる箇所があります。
+          現在は安全のため、迂回ルートに誘導しています。
         </p>
+
+        <h3>祭事</h3>
+        <ul>
+          <li>1月3日 〜 5日：初詣・霧払いの神事</li>
+          <li>春彼岸：杜開きの集い（春の祭事の出発点）</li>
+          <li>11月23日：新嘗の小祭</li>
+        </ul>
+
+        <h3>境内のみどころ</h3>
+        <ul>
+          <li><strong>霧払いの大杉</strong>：参道脇にそびえる神木。樹皮に手を当てて願をかける作法。</li>
+          <li><strong>水鏡の手水舎（てみずや）</strong>：丘の湧水を引いた手水。雨の少ない年は止まる日もあります。</li>
+          <li><strong>絵馬掛け</strong>：絵馬には霞ノ杜小学校の児童が描いた絵を奉納する習わしがあります。</li>
+        </ul>
+
+        <h3>参拝・観光情報</h3>
         <div class="table-scroll">
         <table class="data-table">
           <tbody>
-            <tr><th scope="row">所在地</th><td>霞ノ杜町大字杜ケ丘（示意）</td></tr>
-            <tr><th scope="row">参拝時間</th><td>終日（境内自由／社務所は別途）</td></tr>
-            <tr><th scope="row">注意</th><td>急な段差・苔で滑りやすい箇所があります。</td></tr>
+            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘（示意）</td></tr>
+            <tr><th>参拝時間</th><td>終日（境内自由／社務所は別途）</td></tr>
+            <tr><th>注意</th><td>急な段差・苔で滑りやすい箇所があります。雨天・霧天は足元にご注意。</td></tr>
           </tbody>
         </table>
         </div>
 
-        <div class="next-spot">
-          <a href="../2/">次の観光地へ：杜の吊り橋 »</a>
-        </div>
+        <div class="next-spot"><a href="../2/">次の観光地へ：杜の吊り橋 »</a></div>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../../js/mobile.js" defer></script>
 </body>

@@ -3,40 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
   <title>年間行事｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霞ノ杜町観光協会の年間行事カレンダー。季節のイベント・お祭りの予定一覧（参考）。【フィクション】">
+  <meta name="description" content="霞ノ杜町の年間行事・祭事一覧。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/events/">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+    .event-card { background: #fff; border: 1px solid #ccbda5; padding: 12px 14px; margin: 10px 0; }
+    .event-card .when { font-size: 11px; color: #7a6a40; }
+    .event-card.discontinued { background: #f5efe2; border-style: dashed; }
+    .event-card.discontinued .when { color: #b00; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb">
-      <a href="../">ホーム</a> &nbsp;›&nbsp; 年間行事
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../">ホーム</a> &nbsp;›&nbsp; 年間行事</nav>
+
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,36 +54,75 @@
           <li><a href="../spot/3/">霞ノ杜資料館</a></li>
           <li><a href="../spot/4/">霧見展望休憩所</a></li>
           <li><a href="../spot/5/">杜の湯（足湯）</a></li>
+          <li><a href="../spot/__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="../history/">町の歴史</a></li></ul>
       </aside>
-      <main class="content">
-        <h2>年間行事（予定）</h2>
-        <p>※天候・その他の事由により変更・中止となる場合があります。</p>
 
-        <div class="table-scroll">
-        <table class="data-table">
-          <thead>
-            <tr><th>月</th><th>行事名</th><th>概要</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>1月</td><td>新春霞まつり（小巧）</td><td>神社境内での祈念行事。</td></tr>
-            <tr><td>4月</td><td>杜の新緑ウォーク</td><td>ガイド付き散策（要予約・定員あり）。</td></tr>
-            <tr><td>8月</td><td>夏の灯り夜市</td><td>町中心部商店街（規模小）。</td></tr>
-            <tr><td>10月</td><td>収穫感謝の集い</td><td>地場産の販売・実演。</td></tr>
-            <tr><td>11月</td><td>霧の写真展</td><td>公民館にて展示。</td></tr>
-          </tbody>
-        </table>
+      <main class="content">
+        <h2>年間行事・祭事</h2>
+
+        <div class="event-card">
+          <div class="when">1月3日 〜 5日</div>
+          <h3>初詣・霧払いの神事（霞ノ杜神社）</h3>
+          <p>新年最初の朝霧の中で、宮司による霧払いの儀が行われます。古くから町の安全と豊作を祈願する神事。</p>
         </div>
 
-        <h3>ご参加にあたって</h3>
-        <p>
-          一部イベントは<strong>事前申込制</strong>です。詳細は開催直前に当協会へお問い合わせください。
-        </p>
+        <div class="event-card">
+          <div class="when">3月下旬</div>
+          <h3>杜開きの集い</h3>
+          <p>町の山道・林道の通行再開を祝う集い。地元の蕎麦・甘酒の振る舞いがあります。</p>
+        </div>
+
+        <div class="event-card">
+          <div class="when">5月上旬</div>
+          <h3>霞ノ杜こども作品展（春）</h3>
+          <p>町立霞ノ杜小学校の絵画クラブをはじめとした、町内児童の作品展示。例年、町民ホールで開催。</p>
+        </div>
+
+        <div class="event-card">
+          <div class="when">8月15日（夜）</div>
+          <h3>水迎えの祭り</h3>
+          <p>杜川の水源に感謝する小さな祭り。川沿いに灯篭が並びます。霧の濃い年は、灯りが揺らいで見えると言われています。</p>
+        </div>
+
+        <div class="event-card">
+          <div class="when">10月12日 前後（直近）</div>
+          <h3>河川敷清掃ボランティア</h3>
+          <p>霞ノ杜の北西部、杜川と <strong>水辺の丘</strong> 周辺を対象に、町民有志と町立霞ノ杜小学校の児童とで実施しています。</p>
+        </div>
+
+        <div class="event-card">
+          <div class="when">11月上旬</div>
+          <h3>霞ノ杜こども絵画展（秋）</h3>
+          <p>春の続編。秋の作品は町外からの審査員を招いて講評が行われます。</p>
+        </div>
+
+        <div class="event-card">
+          <div class="when">12月</div>
+          <h3>冬の安全教室</h3>
+          <p>町警察署・町民防犯協会との共催。霧と凍結への対策、夕方の視認性について学びます。</p>
+        </div>
+
+        <h3>＜参考＞旧整備区域で行われていた行事</h3>
+        <div class="event-card discontinued">
+          <div class="when">— 開催休止中 —</div>
+          <h3>春の写生会（旧 水辺の丘 自然公園）</h3>
+          <p>
+            かつて、町北西部の旧整備区域では、町立小学校の児童を中心とした春の写生会が開かれていました。
+            令和 4 年以降、整備上の理由により休止しています。
+          </p>
+        </div>
+        <div class="event-card discontinued">
+          <div class="when">— 開催休止中 —</div>
+          <h3>水辺の丘 観月会</h3>
+          <p>霧の少ない秋夜に行われていた、月見の会。旧整備区域内で開催されていました。</p>
+        </div>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../js/mobile.js" defer></script>
 </body>

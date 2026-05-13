@@ -3,40 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
-  <title>観光スポット：杜の吊り橋｜霞ノ杜町観光協会</title>
-  <meta name="description" content="杜の吊り橋のご紹介。霞ノ杜町観光協会が周辺散策の目安と注意事項を案内します。【フィクション】">
+  <title>杜の吊り橋｜霞ノ杜町観光協会</title>
+  <meta name="description" content="杜の吊り橋のご紹介。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/spot/2/">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; } html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb">
-      <a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 杜の吊り橋
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 杜の吊り橋</nav>
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,33 +48,53 @@
           <li><a href="../3/">霞ノ杜資料館</a></li>
           <li><a href="../4/">霧見展望休憩所</a></li>
           <li><a href="../5/">杜の湯（足湯）</a></li>
+          <li><a href="../__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="../../history/">町の歴史</a></li></ul>
       </aside>
       <main class="content">
         <h2>杜の吊り橋</h2>
         <p>
-          渓谷をまたぐ<strong>杜の吊り橋</strong>は、長さ約80m。眼下には浅い淵が広がり、霧の日は木々の向こうが白くけぶります。
+          杜川の上流、深い渓を渡す木造の小さな吊り橋。
+          全長 38 メートル、足元には所々に細い隙間があり、踏み板の継ぎ目から下を流れる水の音と霧が立ちのぼります。
+          地元では「杜橋（もりばし）」と呼ばれることもあります。
         </p>
         <p>
-          橋のたもとには<strong>「一度に渡れる人数の目安」</strong>を示した看板があります。強風・凍結時は通行止めとなる場合があります。
+          現在の橋は昭和 40 年代の改修によるもので、それ以前は石を敷いた渡し場でした。
+          欄干に結びつけられた、小さな布や紙の束は、地元の子どもたちが書く願掛けの「結び文」です。
         </p>
+
+        <h3>橋の周辺で見られるもの</h3>
+        <ul>
+          <li><strong>水の音の合流点</strong>：橋の真下で支流が合流し、低い水音が常に響いています。</li>
+          <li><strong>苔の樹皮</strong>：北側の橋柱は、北からの湿気を受けて苔が育っています。</li>
+          <li><strong>古い案内板の柱</strong>：橋を渡った先、北西側の小道のたもとに、案内板の支柱だけが残されています。看板そのものは長年の間に失われたと伝えられています。</li>
+        </ul>
+
+        <h3>歴史と伝承</h3>
+        <p>
+          昭和初期の写真には、橋を渡った先に <strong>小さな案内板の列</strong> が写っているものがあります。
+          これらは、川の北側にかつて整備されていた散策路の入口を示すものでした。
+          散策路自体は長らく一般の利用から外れており、現在は通行できません。
+        </p>
+
+        <h3>観光情報</h3>
         <div class="table-scroll">
         <table class="data-table">
           <tbody>
-            <tr><th scope="row">所要時間の目安</th><td>往復30分（周辺散策含む）</td></tr>
-            <tr><th scope="row">駐車場</th><td>橋詰めに町営第二駐車場（台数に限りあり）</td></tr>
+            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川中流（示意）</td></tr>
+            <tr><th>通行時間</th><td>日中（夜間は照明なし。視界の悪い日は通行を控えてください）</td></tr>
+            <tr><th>注意</th><td>雨の日は踏み板が滑りやすくなります。最大荷重・通行人数の制限あり。</td></tr>
           </tbody>
         </table>
         </div>
 
-        <div class="next-spot">
-          <a href="../3/">次の観光地へ：霞ノ杜資料館 »</a>
-        </div>
+        <div class="next-spot"><a href="../3/">次の観光地へ：霞ノ杜資料館 »</a></div>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../../js/mobile.js" defer></script>
 </body>

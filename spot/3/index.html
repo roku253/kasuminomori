@@ -3,40 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
-  <title>観光スポット：霞ノ杜資料館｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霞ノ杜資料館（旧役場別館）のご紹介。霞ノ杜町観光協会が開館時間・展示の概要を案内します。【フィクション】">
+  <title>霞ノ杜資料館｜霞ノ杜町観光協会</title>
+  <meta name="description" content="霞ノ杜資料館のご紹介。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/spot/3/">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; } html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+    .archive-list { background: #fff; border: 1px solid #ccbda5; padding: 10px 14px; }
+    .archive-list li { margin: 4px 0; }
+    .archive-note { font-size: 11px; color: #888; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb">
-      <a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 霞ノ杜資料館
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../../">ホーム</a> &nbsp;›&nbsp; 観光スポット &nbsp;›&nbsp; 霞ノ杜資料館</nav>
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,33 +51,60 @@
           <li><a href="../3/">霞ノ杜資料館</a></li>
           <li><a href="../4/">霧見展望休憩所</a></li>
           <li><a href="../5/">杜の湯（足湯）</a></li>
+          <li><a href="../__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="../../history/">町の歴史</a></li></ul>
       </aside>
       <main class="content">
-        <h2>霞ノ杜資料館（旧役場別館）</h2>
+        <h2>霞ノ杜資料館</h2>
         <p>
-          明治期の役場付属建物を改装した小さな資料館です。木工道具・古地図・町の人口推移グラフなどを展示しています。
+          町の北西寄り、町役場の隣接地に建つ <strong>霞ノ杜資料館</strong>。
+          町域から出土した土器、明治以降の写真、町の地誌、町民の寄贈品など、霞ノ杜の歩みを伝える資料を展示しています。
         </p>
         <p>
-          館内は<strong>撮影禁止</strong>のコーナーがあります（フラッシュの反射で展示物が劣化するため）。
+          1 階は常設展、2 階は企画展のフロア。地下には町史編纂室があり、町の古文書・地図・写真の整理が今も続けられています。
+          訪問前にお電話でご予約いただくと、研究員による解説をご案内できる場合があります。
         </p>
+
+        <h3>常設展示の見どころ</h3>
+        <ul>
+          <li><strong>霞ノ杜の地形模型</strong>：盆地・川・山系の関係が一目でわかる立体模型。</li>
+          <li><strong>明治・大正期の写真パネル</strong>：道、橋、神社の風景を、町民の生活とともに紹介。</li>
+          <li><strong>木工と山仕事の道具</strong>：林業が盛んだった頃の道具類を展示。</li>
+        </ul>
+
+        <h3>町史編纂室・所蔵資料（一部）</h3>
+        <div class="archive-list">
+          <ul>
+            <li><strong>1953 年</strong>　町立小学校 開校時の校門前 集合写真</li>
+            <li><strong>1962 年</strong>　杜の吊り橋（旧）の写真</li>
+            <li><strong>1971 年</strong>　町内全域 簡易測量図 写し</li>
+            <li><strong>1978 年</strong>　町北西部 自然散策路 整備記念写真（案内板を含む）</li>
+            <li><strong>1985 年</strong>　町民体育祭 旗手の記録</li>
+            <li><strong>2001 年</strong>　町合併協議資料（参考）</li>
+            <li><strong>2024 年</strong>　町立霞ノ杜小学校 絵画クラブ 作品集</li>
+          </ul>
+          <p class="archive-note">※ デジタル化済みの資料は <a href="../../history/">町の歴史</a> ページから一部閲覧できます。</p>
+        </div>
+
+        <h3>利用情報</h3>
         <div class="table-scroll">
         <table class="data-table">
           <tbody>
-            <tr><th scope="row">開館</th><td>火〜土 10:00〜16:00（月・日・祝休）</td></tr>
-            <tr><th scope="row">入館料</th><td>大人200円（小学生以下無料・ダミー価格）</td></tr>
+            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 2 番地（町役場 隣）</td></tr>
+            <tr><th>開館時間</th><td>9:30 〜 16:30（入館は 16:00 まで）</td></tr>
+            <tr><th>休館日</th><td>火曜・水曜、年末年始</td></tr>
+            <tr><th>観覧料</th><td>無料（特別展は別途）</td></tr>
           </tbody>
         </table>
         </div>
 
-        <div class="next-spot">
-          <a href="../4/">次の観光地へ：霧見展望休憩所 »</a>
-        </div>
+        <div class="next-spot"><a href="../4/">次の観光地へ：霧見展望休憩所 »</a></div>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../../js/mobile.js" defer></script>
 </body>

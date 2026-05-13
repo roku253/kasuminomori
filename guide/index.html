@@ -6,37 +6,43 @@
   <script>
     !function () {
       var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
+      function s() { document.documentElement.classList.toggle('is-mobile', m.matches); }
+      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); s();
     }();
   </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
   <title>町のご案内｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霞ノ杜町観光協会が紹介する町のご案内。歴史の略年表、気象・自然環境について。【フィクション】">
+  <meta name="description" content="霞ノ杜町の歴史、自然、気候、産業をご案内します。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/guide/">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
     <header class="site-header">
       <h1>霞ノ杜町観光協会</h1>
       <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
     </header>
-    <nav class="breadcrumb">
-      <a href="../">ホーム</a> &nbsp;›&nbsp; 町のご案内
-    </nav>
+    <nav class="breadcrumb"><a href="../">ホーム</a> &nbsp;›&nbsp; 町のご案内</nav>
+
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,40 +60,72 @@
           <li><a href="../spot/3/">霞ノ杜資料館</a></li>
           <li><a href="../spot/4/">霧見展望休憩所</a></li>
           <li><a href="../spot/5/">杜の湯（足湯）</a></li>
+          <li><a href="../spot/__" title="読み込み中">…</a></li>
+        </ul>
+        <h2>町のページ</h2>
+        <ul>
+          <li><a href="../history/">町の歴史</a></li>
         </ul>
       </aside>
+
       <main class="content">
         <h2>町のご案内</h2>
         <p>
-          霞ノ杜町の歴史は古く、縄文時代の遺物が点在することからも、人们の交流が早かったことが伺えます。
-          近世には木材の集散地としても知られ、現在も山林・木工文化が町の生活に根付いています。
+          霞ノ杜町（かすみのもりちょう）は、県境に近い山あいに位置する、面積約 64 km²・人口およそ <strong>3,200 人</strong> の小さな町です。
+          町の中央を <strong>杜川</strong> が東西に流れ、北側を屏風のように囲む霞ノ杜山系から、四季を通じて霧と水が運ばれてきます。
+          「霞ノ杜」の地名は、この朝夕の濃霧と、町域に広がる雑木の杜（もり）に由来すると伝えられています。
         </p>
 
-        <h3>略年表（参考）</h3>
+        <h3>地勢と気候</h3>
+        <p>
+          標高は中心部で約 380 m、北側の山系は 900 m 前後の稜線が続きます。盆地状の地形のため、
+          春と秋には朝方の <strong>濃霧（こうむ）</strong> が、夏は夕立の前の <strong>湿った霧</strong> が、
+          冬は冷え込んだ朝に <strong>霧氷</strong> が見られる日があります。
+          霧は町の生活にも溶け込んでおり、町内の祭事や民話の多くに「霧」が登場します。
+        </p>
+        <ul>
+          <li>年平均気温：12.4 ℃（気象庁観測点近隣・参考）</li>
+          <li>霧日数：年 110 日前後（朝霧を含む観測ベース）</li>
+          <li>積雪：年により大きく変動。山間部は累積で 100 cm を超える年も。</li>
+        </ul>
+
+        <h3>略年表</h3>
         <div class="table-scroll">
         <table class="data-table">
-          <thead>
-            <tr><th>年代</th><th>できごと（伝承・記録より）</th></tr>
-          </thead>
+          <thead><tr><th>年代</th><th>主なできごと（伝承・記録）</th></tr></thead>
           <tbody>
-            <tr><td>江戸中期</td><td>参詣路としての小道が整備される記録。</td></tr>
-            <tr><td>明治</td><td>町村制施行に伴い行政区画が再編。</td></tr>
-            <tr><td>昭和40年代</td><td>林道・吊り橋の改修。観光客の往来が増加。</td></tr>
-            <tr><td>平成〜令和</td><td>過疎対策と観光振興を両立する施策を推進。</td></tr>
+            <tr><td>江戸中期</td><td>参詣路としての小道が整備される。霞ノ杜神社の社殿改築。</td></tr>
+            <tr><td>明治22年</td><td>町村制施行に伴い「霞ノ杜村」発足。</td></tr>
+            <tr><td>昭和23年</td><td>町制施行、霞ノ杜町となる。</td></tr>
+            <tr><td>昭和40年代</td><td>林道・吊り橋の改修、観光客の往来が増加。</td></tr>
+            <tr><td>昭和53年</td><td>町北西部の自然散策路を整備、案内板を新設。</td></tr>
+            <tr><td>平成20年代</td><td>過疎対策と観光振興を両立する施策を本格化。一部の旧整備区域を非公開化。</td></tr>
+            <tr><td>令和 4年</td><td>再開発計画と整備地の見直しが議論される。</td></tr>
           </tbody>
         </table>
         </div>
 
-        <h3>気象・自然環境について</h3>
+        <h3>町の産業と文化</h3>
         <p>
-          盆地状の地形のため、朝夕を問わず<strong>濃霧</strong>が発生しやすい地域です。
-          運転・徒歩とも無理のない計画でお越しください。登山道・林道では<strong>熊などの野生動物</strong>の目撃情報があります。
+          かつては林業と地場の木工が町の中心産業でした。今でも町内の数軒の工房で、杜の木を用いた小物・家具づくりが続いています。
+          農産では蕎麦と山菜、加工品では <strong>「霧の最中（もなか）」</strong> と <strong>「杜のはちみつ」</strong> が知られています。
+        </p>
+        <p>
+          文化的には、町域の祭事のほとんどに「霧を読む」「水を読む」という表現が出てきます。
+          子どもたちの間に伝わる古いわらべ歌のなかには、「丘で霧が立つと、いない子が来る」という一節が残っています。
+          これらは、霧の中で迷いやすい山道に対する古人の戒めだったと考えられています。
+        </p>
+
+        <h3>注意事項</h3>
+        <p>
+          盆地状の地形のため、運転・徒歩を問わず<strong>視界の急変</strong>に注意してください。
+          登山道・林道では <strong>熊・鹿などの野生動物</strong> の目撃情報があります。
+          一部の <strong>旧整備区域</strong> は、整備上の理由から立ち入りを制限しています。看板・ロープに従ってください。
         </p>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../js/mobile.js" defer></script>
 </body>

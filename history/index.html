@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>町の歴史｜霞ノ杜町観光協会</title>
+  <meta name="description" content="霞ノ杜町の沿革、町史編纂室所蔵の記録写真、町の風景の移り変わり。【フィクション】">
+  <link rel="canonical" href="https://roku253.github.io/kasuminomori/history/">
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/mobile.css" />
   <style>
@@ -25,33 +27,46 @@
       }
     }
     .photo-cap { font-size: 11px; color: #555; margin-top: 6px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 12px 0; }
+    .gallery figure { margin: 0; }
+    .gallery img { width: 100%; height: 140px; object-fit: cover; border: 4px solid #efe7d6; }
+    .gallery figcaption { font-size: 11px; color: #666; margin-top: 4px; }
+    .timeline { background: #fff; border: 1px solid #ccbda5; padding: 14px 16px; margin: 12px 0; }
+    .timeline h4 { margin: 16px 0 4px; color: #2d5a27; font-size: 14px; }
+    .timeline p { margin: 4px 0; font-size: 13px; color: #333; }
+    .pull-quote {
+      margin: 18px 0; padding: 12px 16px;
+      background: #f6f1e6; border-left: 4px solid #8a6d3b;
+      font-size: 13px; line-height: 1.85; color: #3a2f1a;
+    }
+    .pull-quote .src { font-size: 11px; color: #7a6a40; margin-top: 6px; }
+    .removed-list {
+      background: #fff8e8; border: 1px dashed #c79956; padding: 10px 14px;
+      font-size: 12px; color: #5a4612;
+    }
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
   </style>
   <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
   <script>
     window.__TOKEN_DENIED__ = function (msg) {
-      var el = document.createElement("div");
-      el.style.cssText = "position:fixed;inset:0;z-index:999999;background:#efe8d8;display:flex;align-items:center;justify-content:center;font-family:'Yu Gothic',Meiryo,sans-serif;padding:24px;";
-      el.innerHTML = '<div style="max-width:560px;background:#fff;border-top:6px solid #2d5a27;padding:24px;"><h1 style="margin:0 0 10px;color:#2d5a27;font-size:17px;">霞ノ杜町観光協会｜ご案内</h1><p style="font-size:13px;line-height:1.8;color:#333;">ただいま当サイトはメンテナンス中です。</p><p style="font-size:11px;color:#888;margin-top:14px;">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
       document.documentElement.appendChild(el);
     };
   </script>
   <script src="../token-gate.js" defer></script>
-  <style>
-    #site-root { visibility: hidden; }
-    html.token-gate-ok #site-root { visibility: visible; }
-  </style>
 </head>
 <body>
   <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-
-    <nav class="breadcrumb">
-      <a href="../">ホーム</a> &nbsp;›&nbsp; 町の歴史
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../">ホーム</a> &nbsp;›&nbsp; 町の歴史</nav>
 
     <div class="main-layout">
       <aside class="sidebar">
@@ -63,49 +78,117 @@
           <li><a href="../events/">年間行事</a></li>
           <li><a href="../contact/">お問い合わせ</a></li>
         </ul>
-        <h2>町のページ</h2>
+        <h2>観光スポット</h2>
         <ul>
-          <li><a href="./">町の歴史</a></li>
+          <li><a href="../spot/1/">霞ノ杜神社</a></li>
+          <li><a href="../spot/2/">杜の吊り橋</a></li>
+          <li><a href="../spot/3/">霞ノ杜資料館</a></li>
+          <li><a href="../spot/4/">霧見展望休憩所</a></li>
+          <li><a href="../spot/5/">杜の湯（足湯）</a></li>
+          <li><a href="../spot/__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="./">町の歴史</a></li></ul>
       </aside>
 
       <main class="content">
         <h2>町の歴史</h2>
         <p>
-          霞ノ杜町は、古くから杜と水脈に支えられた集落として知られています。
+          霞ノ杜町は、古くから杜と水脈に支えられた集落として知られてきました。
           昭和期には林業と地場産品の集散地として一時の活況を見せ、町域には今も当時の道標や石碑が点在しています。
+          このページでは、町史編纂室が保存してきた写真と記録の一部を、年代を追いながらご紹介します。
         </p>
 
-        <h3>記録写真（1978年撮影・町史編纂室所蔵）</h3>
+        <h3>1. 江戸〜明治の道筋</h3>
+        <p>
+          霞ノ杜の参詣路は江戸中期の絵地図に登場します。山あいを縫う細い道は、霧の濃い朝には踏み迷いやすく、
+          いくつもの石の道しるべが置かれていました。
+          現在も町中心部から霞ノ杜神社へと続く参道沿いに、苔むした石が数基残っています。
+        </p>
+
+        <div class="pull-quote">
+          「霧の朝、丘の方より子供の声の聞こえることありと言ふ。
+          されども、近寄れば声は霧の中に消え、ただ水の音のみ残るなり。」
+          <div class="src">— 霞ノ杜村史 補遺（大正11年・町史編纂室所蔵）</div>
+        </div>
+
+        <h3>2. 昭和の整備・町制施行</h3>
+        <p>
+          昭和23年、町村制施行に伴い「霞ノ杜村」は「霞ノ杜町」となります。
+          高度成長期には林業を中心に町が動き、昭和40年代には吊り橋・林道・展望休憩所が次々に整備されました。
+          観光客の往来が増えた時期もあり、町の北西部には自然散策路と案内板が新設されています。
+        </p>
+
+        <h3>3. 1978年の風景写真</h3>
+        <p>
+          以下の写真は、町史編纂室が保管する 1978 年撮影のフィルム原板から起こしたものです。
+          町の北西部、水際の風景を写したものとされています。
+        </p>
         <div class="photo-zoomable">
-          <img src="../img/history-1978.svg" alt="1978年撮影の町の風景" />
+          <img src="../img/history-1978.svg" alt="1978年撮影の町の風景（北西部・水際）" />
           <div class="zoom-pane" style="background-image: url('../img/history-1978-zoom.svg'); background-position: 50% 80%;"></div>
         </div>
-        <p class="photo-cap">写真：町の北西部・水際の風景（1978年）。マウスを乗せると拡大されます。</p>
+        <p class="photo-cap">写真：町の北西部・水際の風景（1978年・町史編纂室所蔵）。マウスを乗せると拡大されます。</p>
 
-        <p style="margin-top:1.5rem;">
-          現存しない木製案内板や、再開発に伴い撤去された設備の写真も、町史編纂室で順次デジタル化を進めております。
+        <p>
+          写真の右下、霧の合間にうっすらと木の看板の輪郭が確認できます。
+          長年の風雨で多くが朽ちましたが、町史編纂室では当時の案内板の文字を、別の資料との照合により補完しています。
         </p>
 
-        <h3>沿革（抜粋）</h3>
-        <table class="data-table">
-          <tbody>
-            <tr><th>明治22年</th><td>町村制施行に伴い「霞ノ杜村」発足</td></tr>
-            <tr><th>昭和23年</th><td>町制施行、霞ノ杜町となる</td></tr>
-            <tr><th>昭和53年</th><td>町北西部の自然散策路を整備、案内板を新設</td></tr>
-            <tr><th>平成20年代</th><td>一部の旧整備区域を非公開化、観光サイトから掲載終了</td></tr>
-          </tbody>
-        </table>
+        <h3>4. かつての風景ギャラリー</h3>
+        <div class="gallery">
+          <figure>
+            <img src="../img/history-1978.svg" alt="" />
+            <figcaption>1978年・町北西部 水際</figcaption>
+          </figure>
+          <figure>
+            <img src="../img/mizube-mural.svg" alt="" />
+            <figcaption>令和6年・小学校 地域貢献活動の壁画（参考画像）</figcaption>
+          </figure>
+        </div>
+
+        <h3>5. 略年表</h3>
+        <div class="timeline">
+          <h4>明治22年</h4><p>町村制施行に伴い「霞ノ杜村」発足。</p>
+          <h4>昭和23年</h4><p>町制施行、霞ノ杜町となる。</p>
+          <h4>昭和28年</h4><p>霞ノ杜村立霞ノ杜小学校 開校（後の霞ノ杜町立霞ノ杜小学校）。</p>
+          <h4>昭和40年代</h4><p>林道・吊り橋の改修。観光客の往来が増加。</p>
+          <h4>昭和53年</h4><p>町北西部の自然散策路を整備、案内板を新設。</p>
+          <h4>平成 8年</h4><p>町立霞ノ杜小学校 校舎改築。</p>
+          <h4>平成20年代</h4><p>一部の旧整備区域を非公開化、観光サイトから掲載終了。</p>
+          <h4>令和 4年</h4><p>町北西部の整備地の見直し・再開発計画が議論される。</p>
+          <h4>令和 6年</h4><p>町立霞ノ杜小学校による「水辺の丘」周辺の河川敷清掃活動を実施。</p>
+        </div>
+
+        <h3>6. 旧整備区域について</h3>
+        <p>
+          町域の北西部、霞ノ杜山系の手前には、かつて町が整備した自然散策路がありました。
+          昭和53年に開設、平成20年代に一部区域を <strong>非公開処理</strong> としています。
+        </p>
+        <div class="removed-list">
+          ※ 観光協会の公式案内には、現在もこの区域は含まれていません。<br>
+          現存しない木製案内板・撤去設備の写真は、町史編纂室で順次デジタル化を進めています。
+          公開時期は別途お知らせいたします。
+        </div>
+
+        <h3>7. 子どもたちの記録</h3>
+        <p>
+          霞ノ杜小学校では、毎年秋に「霞ノ杜こども絵画展」を町民ホールで開催しています。
+          令和 6 年度の出品作には、町北西部の風景を題材にしたものが複数ありました。
+          展示の一部は、町史編纂室での保管とデジタル化を進めています。
+        </p>
+        <p style="font-size:12px;color:#555;">
+          詳しくは
+          <a href="https://roku253.github.io/kasuminomori-shougakkou/" target="_blank" rel="noopener">霞ノ杜町立霞ノ杜小学校 公式ホームページ</a>
+          をご参照ください。
+        </p>
 
         <div class="next-spot">
           <a href="../">トップページへ戻る »</a>
         </div>
       </main>
     </div>
-
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
   </div>
   </div>
   <script src="../js/mobile.js" defer></script>

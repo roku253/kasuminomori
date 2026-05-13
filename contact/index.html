@@ -3,40 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
-  <script>
-    (function () {
-      if (!/^https?:$/i.test(location.protocol)) return;
-      var p = location.pathname;
-      if (/\/index\.html$/i.test(p)) {
-        location.replace(p.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    })();
-  </script>
   <title>お問い合わせ｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霞ノ杜町観光協会へのお問い合わせ窓口（デモ用フォーム）。ご質問・ご意見の連絡先案内。【フィクション】">
+  <meta name="description" content="霞ノ杜町観光協会へのお問い合わせ・FAQ。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/contact/">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
+    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
+    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
+    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
+    .faq { background: #fff; border: 1px solid #ccbda5; padding: 12px 14px; margin: 10px 0; }
+    .faq dt { font-weight: bold; color: #2d5a27; margin-top: 8px; }
+    .faq dt::before { content: "Q. "; }
+    .faq dd { margin: 4px 0 8px 1.2em; color: #333; }
+    .faq dd::before { content: "A. "; color: #888; }
+    form.fake-form label { display: block; font-size: 12px; margin-top: 8px; color: #555; }
+    form.fake-form input, form.fake-form textarea { width: 100%; padding: 6px 8px; border: 1px solid #ccbda5; font-family: inherit; }
+    form.fake-form textarea { height: 80px; }
+    form.fake-form button { margin-top: 10px; padding: 6px 16px; background: #2d5a27; color: #fff; border: none; cursor: pointer; }
+    .form-notice { font-size: 11px; color: #b00; margin-top: 8px; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div"); el.className = "ns-denied-overlay";
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb">
-      <a href="../">ホーム</a> &nbsp;›&nbsp; お問い合わせ
-    </nav>
+    <header class="site-header"><h1>霞ノ杜町観光協会</h1><p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p></header>
+    <nav class="breadcrumb"><a href="../">ホーム</a> &nbsp;›&nbsp; お問い合わせ</nav>
+
     <div class="main-layout">
       <aside class="sidebar">
         <h2>メニュー</h2>
@@ -54,40 +60,53 @@
           <li><a href="../spot/3/">霞ノ杜資料館</a></li>
           <li><a href="../spot/4/">霧見展望休憩所</a></li>
           <li><a href="../spot/5/">杜の湯（足湯）</a></li>
+          <li><a href="../spot/__" title="読み込み中">…</a></li>
         </ul>
+        <h2>町のページ</h2>
+        <ul><li><a href="../history/">町の歴史</a></li></ul>
       </aside>
+
       <main class="content">
         <h2>お問い合わせ</h2>
-        <p>
-          ご質問・ご意見は下記フォームよりお寄せください。<br>
-          <strong>※このサイトは架空のデモです。送信しても実際には送信されません。</strong>
-        </p>
 
-        <form class="fake-form" action="#" method="get" onsubmit="alert('（デモ）送信処理はありません。'); return false;">
-          <p>
-            <label for="name">お名前</label>
-            <input type="text" id="name" name="name" placeholder="例）山田 太郎">
-          </p>
-          <p>
-            <label for="mail">メール</label>
-            <input type="text" id="mail" name="mail" placeholder="例）info@example.jp">
-          </p>
-          <p>
-            <label for="body">お問い合わせ内容</label><br>
-            <textarea id="body" name="body" rows="6" cols="40" placeholder="お問い合わせ内容をご記入ください"></textarea>
-          </p>
-          <p>
-            <button type="submit" class="fake-btn">送信する</button>
-          </p>
+        <h3>窓口</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>担当</th><td>霞ノ杜町観光協会 事務局（町役場 2 階）</td></tr>
+            <tr><th>住所</th><td>霞ノ杜町 大字杜ケ丘 1（町役場内）</td></tr>
+            <tr><th>受付時間</th><td>平日 9:00 〜 16:30（土日祝日・年末年始を除く）</td></tr>
+            <tr><th>電話</th><td>0×××-××-×××× / FAX 0×××-××-××××</td></tr>
+          </tbody>
+        </table>
+
+        <h3>よくあるご質問</h3>
+        <dl class="faq">
+          <dt>町内に宿泊施設はありますか？</dt>
+          <dd>三日月町方面に温泉旅館・民宿が複数あります。霞ノ杜地区内はゲストハウス 1 軒のみで、要予約です。</dd>
+          <dt>水辺の丘 という場所について教えてください。</dt>
+          <dd>町北西部にかつて整備されていた自然散策地です。現在は整備上の理由から一般の立ち入りを制限しているため、観光案内には含めていません。</dd>
+          <dt>霧の濃い日でも観光できますか？</dt>
+          <dd>町内の主要スポットは可能ですが、林道や吊り橋付近は視界が大きく落ちます。神社・資料館・足湯などの屋根のあるスポットがおすすめです。</dd>
+          <dt>町の昔の地図や写真は見られますか？</dt>
+          <dd>霞ノ杜資料館（火・水休館）と、町史編纂室（要予約）でご覧いただけます。サイト上でも <a href="../history/">町の歴史</a> ページで一部公開しています。</dd>
+        </dl>
+
+        <h3>お問い合わせフォーム</h3>
+        <p>※ 本フォームはデモ用です（送信されません）。</p>
+        <form class="fake-form" onsubmit="event.preventDefault(); this.querySelector('.form-notice').textContent='※フォームは現在受付を停止しています。お電話でお願いいたします。';">
+          <label>お名前</label>
+          <input type="text" required>
+          <label>ご連絡先（メールまたは電話）</label>
+          <input type="text" required>
+          <label>お問い合わせ内容</label>
+          <textarea required></textarea>
+          <button type="submit">送信する</button>
+          <div class="form-notice"></div>
         </form>
-
-        <h3>電話でのお問い合わせ</h3>
-        <p>0123-45-XXXX（受付時間：平日 9:00〜17:00）※ダミー</p>
       </main>
     </div>
-    <footer class="site-footer">
-      <p>© 霞ノ杜町観光協会　【フィクション】</p>
-    </footer>
+    <footer class="site-footer"><p>© 霞ノ杜町観光協会　【フィクション】</p></footer>
+  </div>
   </div>
   <script src="../js/mobile.js" defer></script>
 </body>

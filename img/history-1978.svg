@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#c8c5b8"/>
+      <stop offset="1" stop-color="#9aa090"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#6d7e7b"/>
+      <stop offset="1" stop-color="#3e4d4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="280" fill="url(#sky)"/>
+  <rect y="260" width="720" height="200" fill="url(#water)"/>
+  <g fill="#2a3b34" opacity="0.85">
+    <polygon points="0,260 110,170 220,260"/>
+    <polygon points="200,260 330,150 480,260"/>
+    <polygon points="430,260 560,200 720,260"/>
+  </g>
+  <g fill="#9d9d8b" opacity="0.55">
+    <rect x="20" y="240" width="120" height="14"/>
+    <rect x="240" y="244" width="80" height="12"/>
+  </g>
+  <!-- äD -->
+  <g transform="translate(515 240) rotate(-4)">
+    <rect x="0" y="0" width="170" height="56" fill="#e2d6b2" stroke="#5c4a25" stroke-width="2"/>
+    <text x="85" y="34" text-anchor="middle" font-family="serif" font-size="20" fill="#3a2b10" letter-spacing="2">4ºnl</text>
+    <line x1="0" y1="0" x2="170" y2="56" stroke="#5c4a25" stroke-width="1" opacity="0.18"/>
+    <rect x="-2" y="-2" width="174" height="60" fill="none" stroke="#5c4a25" stroke-width="1" opacity="0.5"/>
+  </g>
+  <g fill="#000" opacity="0.06">
+    <rect width="720" height="460"/>
+  </g>
+  <text x="14" y="448" font-family="serif" font-size="12" fill="#fff" opacity="0.75">Î\: / 1978</text>
+</svg>

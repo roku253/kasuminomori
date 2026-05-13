@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <rect width="720" height="420" fill="#c8b994"/>
+  <rect y="280" width="720" height="140" fill="#a89878"/>
+  <!-- Á -->
+  <rect x="20" y="40" width="680" height="280" fill="#e8dec4" stroke="#7a6a45" stroke-width="2"/>
+  <!-- Á;*}hâhtnŒÿ -->
+  <g transform="translate(60 60)">
+    <circle cx="120" cy="60" r="34" fill="#f3a548"/>
+    <g stroke="#f3a548" stroke-width="6" stroke-linecap="round">
+      <line x1="120" y1="10" x2="120" y2="0"/>
+      <line x1="60" y1="60" x2="50" y2="60"/>
+      <line x1="180" y1="60" x2="190" y2="60"/>
+      <line x1="84" y1="24" x2="78" y2="18"/>
+      <line x1="156" y1="24" x2="162" y2="18"/>
+    </g>
+    <!-- â -->
+    <path d="M0 160 q40 -20 80 0 t80 0 t80 0 t80 0 t80 0 t80 0" fill="none" stroke="#3a6e8a" stroke-width="5"/>
+    <path d="M0 180 q40 -20 80 0 t80 0 t80 0 t80 0 t80 0 t80 0" fill="none" stroke="#3a6e8a" stroke-width="4" opacity="0.7"/>
+    <!-- tnŒÿ -->
+    <g transform="translate(420 60)">
+      <ellipse cx="40" cy="30" rx="18" ry="20" fill="#2a2a2a"/>
+      <rect x="22" y="48" width="36" height="48" fill="#3b5a8a"/>
+      <rect x="22" y="96" width="14" height="46" fill="#23344c"/>
+      <rect x="44" y="96" width="14" height="46" fill="#23344c"/>
+    </g>
+  </g>
+  <!-- .±hlDP‹ -->
+  <g transform="translate(80 360)" opacity="0.85">
+    <ellipse cx="0" cy="6" rx="22" ry="6" fill="#7a8a6e"/>
+    <circle cx="-12" cy="0" r="8" fill="#e6a3b2"/>
+    <circle cx="12" cy="0" r="8" fill="#f7e092"/>
+    <circle cx="0" cy="-4" r="8" fill="#ffffff"/>
+  </g>
+  <g transform="translate(140 360)" opacity="0.85">
+    <rect x="-12" y="-12" width="24" height="20" fill="#c98454" rx="4"/>
+    <circle cx="-6" cy="-4" r="2" fill="#000"/>
+    <circle cx="6" cy="-4" r="2" fill="#000"/>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>町の歴史｜霞ノ杜町観光協会</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/mobile.css" />
+  <style>
+    .photo-zoomable {
+      position: relative; display: inline-block; cursor: zoom-in;
+      border: 6px solid #efe7d6; box-shadow: 2px 2px 0 #b8a88c;
+      max-width: 100%;
+    }
+    .photo-zoomable img { display: block; max-width: 100%; height: auto; }
+    .photo-zoomable .zoom-pane {
+      position: absolute; right: -260px; top: 0; width: 260px; height: 260px;
+      border: 1px solid #b8a88c; background: #fff no-repeat; background-size: 520px auto;
+      box-shadow: 2px 2px 0 #b8a88c; display: none; pointer-events: none;
+    }
+    .photo-zoomable:hover .zoom-pane { display: block; }
+    @media (max-width: 767px) {
+      .photo-zoomable .zoom-pane {
+        position: static; width: 100%; height: 220px; margin-top: 8px; display: block; background-size: 720px auto;
+      }
+    }
+    .photo-cap { font-size: 11px; color: #555; margin-top: 6px; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script>
+    window.__TOKEN_DENIED__ = function (msg) {
+      var el = document.createElement("div");
+      el.style.cssText = "position:fixed;inset:0;z-index:999999;background:#efe8d8;display:flex;align-items:center;justify-content:center;font-family:'Yu Gothic',Meiryo,sans-serif;padding:24px;";
+      el.innerHTML = '<div style="max-width:560px;background:#fff;border-top:6px solid #2d5a27;padding:24px;"><h1 style="margin:0 0 10px;color:#2d5a27;font-size:17px;">霞ノ杜町観光協会｜ご案内</h1><p style="font-size:13px;line-height:1.8;color:#333;">ただいま当サイトはメンテナンス中です。</p><p style="font-size:11px;color:#888;margin-top:14px;">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      document.documentElement.appendChild(el);
+    };
+  </script>
+  <script src="../token-gate.js" defer></script>
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+  </style>
+</head>
+<body>
+  <div id="site-root">
+  <div class="wrap">
+    <header class="site-header">
+      <h1>霞ノ杜町観光協会</h1>
+      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
+    </header>
+
+    <nav class="breadcrumb">
+      <a href="../">ホーム</a> &nbsp;›&nbsp; 町の歴史
+    </nav>
+
+    <div class="main-layout">
+      <aside class="sidebar">
+        <h2>メニュー</h2>
+        <ul>
+          <li><a href="../">トップページ</a></li>
+          <li><a href="../guide/">町のご案内</a></li>
+          <li><a href="../access/">アクセス・地図</a></li>
+          <li><a href="../events/">年間行事</a></li>
+          <li><a href="../contact/">お問い合わせ</a></li>
+        </ul>
+        <h2>町のページ</h2>
+        <ul>
+          <li><a href="./">町の歴史</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h2>町の歴史</h2>
+        <p>
+          霞ノ杜町は、古くから杜と水脈に支えられた集落として知られています。
+          昭和期には林業と地場産品の集散地として一時の活況を見せ、町域には今も当時の道標や石碑が点在しています。
+        </p>
+
+        <h3>記録写真（1978年撮影・町史編纂室所蔵）</h3>
+        <div class="photo-zoomable">
+          <img src="../img/history-1978.svg" alt="1978年撮影の町の風景" />
+          <div class="zoom-pane" style="background-image: url('../img/history-1978-zoom.svg'); background-position: 50% 80%;"></div>
+        </div>
+        <p class="photo-cap">写真：町の北西部・水際の風景（1978年）。マウスを乗せると拡大されます。</p>
+
+        <p style="margin-top:1.5rem;">
+          現存しない木製案内板や、再開発に伴い撤去された設備の写真も、町史編纂室で順次デジタル化を進めております。
+        </p>
+
+        <h3>沿革（抜粋）</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>明治22年</th><td>町村制施行に伴い「霞ノ杜村」発足</td></tr>
+            <tr><th>昭和23年</th><td>町制施行、霞ノ杜町となる</td></tr>
+            <tr><th>昭和53年</th><td>町北西部の自然散策路を整備、案内板を新設</td></tr>
+            <tr><th>平成20年代</th><td>一部の旧整備区域を非公開化、観光サイトから掲載終了</td></tr>
+          </tbody>
+        </table>
+
+        <div class="next-spot">
+          <a href="../">トップページへ戻る »</a>
+        </div>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <p>© 霞ノ杜町観光協会　【フィクション】</p>
+    </footer>
+  </div>
+  </div>
+  <script src="../js/mobile.js" defer></script>
+</body>
+</html>

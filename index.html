@@ -61,8 +61,15 @@
   </script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+  </style>
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script src="./token-gate.js" defer></script>
 </head>
 <body>
+  <div id="site-root">
   <div class="wrap">
     <header class="site-header">
       <h1>霞ノ杜町観光協会</h1>
@@ -91,6 +98,7 @@
           <li><a href="spot/3/">霞ノ杜資料館</a></li>
           <li><a href="spot/4/">霧見展望休憩所</a></li>
           <li><a href="spot/5/">杜の湯（足湯）</a></li>
+          <li><a href="spot/6/">水辺の丘</a></li>
         </ul>
       </aside>
 
@@ -149,6 +157,7 @@
     <footer class="site-footer">
       <p>© 霞ノ杜町観光協会　All Rights Reserved.　【このサイトはフィクションです】</p>
     </footer>
+  </div>
   </div>
   <script src="js/mobile.js" defer></script>
 </body>

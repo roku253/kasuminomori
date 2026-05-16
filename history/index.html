@@ -56,7 +56,7 @@
   <script>
     window.__TOKEN_DENIED__ = function (msg) {
       var el = document.createElement("div"); el.className = "ns-denied-overlay";
-      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>関係者の方は、ご案内のあった経路よりお進みください。</p><p class="small">' + String(msg||"").replace(/[<>]/g,"") + '</p></div>';
+      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>ご利用の方は、次の任務ポータルよりお進みください。</p><p class="ns-portal"><a href="https://nazo-portal.vercel.app/portal" target="_blank" rel="noopener noreferrer">https://nazo-portal.vercel.app/portal</a></p></div>';
       document.documentElement.appendChild(el);
     };
   </script>

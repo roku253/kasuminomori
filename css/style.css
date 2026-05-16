@@ -612,3 +612,14 @@ img.full-width {
     font-size: 13px;
   }
 }
+
+/* token denied — portal link */
+.ns-denied-card .ns-portal {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 1.55;
+  word-break: break-all;
+}
+.ns-denied-card .ns-portal a {
+  color: #004a99;
+}

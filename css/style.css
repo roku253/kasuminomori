@@ -233,6 +233,23 @@ a:visited {
   background: #eee;
   text-align: center;
 }
+.site-footer .site-footer-copy {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #333;
+}
+.site-footer .fiction-disclaimer {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 11px;
+  line-height: 1.65;
+  color: #444;
+  text-align: left;
+}
+.site-footer .fiction-disclaimer strong {
+  color: #222;
+  font-weight: 600;
+}
 
 .next-spot {
   margin-top: 28px;

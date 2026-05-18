@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2016ローカルニュース｜霞ノ杜町観光協会</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <script src="../../token-gate.js" defer></script>
+  <style>
+    #site-root { visibility: hidden; }
+    html.token-gate-ok #site-root { visibility: visible; }
+    .news-card { background: #fff; border: 1px solid #ccbda5; padding: 16px; margin: 12px 0; }
+    .news-card h2 { margin: 0 0 8px; font-size: 16px; color: #2d5a27; }
+    .news-date { font-size: 11px; color: #666; }
+  </style>
+</head>
+<body>
+  <div id="site-root">
+    <div class="wrap">
+      <header class="site-header"><h1>霞ノ杜町観光協会</h1></header>
+      <nav class="breadcrumb"><a href="../../">ホーム</a> › 2016年ローカルニュース</nav>
+      <main data-kn-story-clue="1">
+        <h2>2016年・霞ノ杜周辺のローカル記事（アーカイブ）</h2>
+        <article class="news-card">
+          <p class="news-date">2016年8月15日</p>
+          <h2>行方不明から保護された児童3名、無事帰宅</h2>
+          <p>
+            8月12日に霞ノ杜町内で行方が分からなくなっていた小学4年生3名（<strong>佐藤 ユウ</strong>、<strong>田村 タクミ</strong>、<strong>鈴木 レン</strong>）が、8月15日に無事保護され帰宅した。
+            町は詳細を公表しておらず、神隠し伝承に絡む憶測投稿の拡散を避けるため、当時の記事本文の一部は非公開としている。
+          </p>
+        </article>
+        <article class="news-card">
+          <p class="news-date">2016年7月20日</p>
+          <h2>旧・烏啼（うてぃ）地区 開発計画の凍結</h2>
+          <p>
+            町議会は、旧・烏啼地区における大規模開発案の凍結を決議。地質調査で「風穴」周辺の不安定層が指摘された。
+            地図上の地区コード <code>67-B</code> は、以後の公開資料から削除された。
+          </p>
+        </article>
+        <p><a href="../../history/">町の歴史へ</a></p>
+      </main>
+    </div>
+  
+  <script>
+    (function () {
+      var KN_FP_KEY = "signal_trace_kn_footprint_v2";
+      function knPurged() {
+        try {
+          var f = localStorage.getItem(KN_FP_KEY) || "";
+          return f === "purged_delete" || f === "purged_keep";
+        } catch (e) {
+          return false;
+        }
+      }
+      function knApply() {
+        if (!knPurged()) return;
+        document.querySelectorAll('[data-kn-story-clue="1"]').forEach(function (el) {
+          el.style.display = "none";
+        });
+      }
+      window.addEventListener("storage", function (e) {
+        if (e.key === KN_FP_KEY) knApply();
+      });
+      knApply();
+    })();
+  </script>
+</body>
+</html>

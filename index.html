@@ -64,6 +64,20 @@
   <style>
     #site-root { visibility: hidden; }
     html.token-gate-ok #site-root { visibility: visible; }
+    .kn-print-error { display: none; }
+    @media print {
+      .kn-print-error {
+        display: block !important;
+        margin: 24px;
+        padding: 12px;
+        border: 2px dashed #c00;
+        font-family: ui-monospace, monospace;
+        font-size: 12px;
+        color: #900;
+      }
+      body * { visibility: hidden; }
+      .kn-print-error, .kn-print-error * { visibility: visible; }
+    }
 
     /* 観光協会らしい工事中・準備中風 */
     .ns-denied-overlay {
@@ -136,6 +150,7 @@
         <h2>町のページ</h2>
         <ul>
           <li><a href="history/">町の歴史</a></li>
+          <li data-kn-story-clue="1"><a href="blog/2016/">2016年ローカルニュース</a></li>
         </ul>
       </aside>
 
@@ -191,6 +206,7 @@
       </main>
     </div>
 
+    <p class="kn-print-error" aria-hidden="true">[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2016-07-20</p>
     <footer class="site-footer">
       <p class="site-footer-copy">© 霞ノ杜町観光協会　All Rights Reserved.</p>
       <p class="fiction-disclaimer" role="note">※本サイトは謎解き作品のための<strong>架空サイト</strong>です。記載・表示されるサービス名・地名・人物名・団体名などはフィクションであり、<strong>実在のものとは一切関係ありません</strong>。</p>
@@ -221,69 +237,7 @@
         if (v !== "purged_delete" && v !== "purged_keep") return;
         knApplyFootprint();
       });
-      var KN_PURGE_CHAIN = [
-        "https://roku253.github.io/urban-legend-board/?kn_purge=1&kn_step=0",
-        "https://roku253.github.io/kasuminomori/?kn_purge=1&kn_step=1",
-        "https://roku253.github.io/kasuminomori-shougakkou/?kn_purge=1&kn_step=2",
-        "https://roku253.github.io/name-to-coord/?kn_purge=1&kn_step=3",
-        "https://roku253.github.io/yootube/user/h_mizuse_2014/?kn_purge=1&kn_step=4",
-        "https://roku253.github.io/gougle-map/?kn_purge=1&kn_step=5",
-      ];
-      function knPurgeAdvance(step) {
-        var next = step + 1;
-        if (next < KN_PURGE_CHAIN.length) {
-          window.location.href = KN_PURGE_CHAIN[next];
-          return;
-        }
-        try {
-          window.close();
-        } catch (e) {}
-      }
-      function knPurgeModal() {
-        var q = new URLSearchParams(location.search);
-        if (q.get("kn_purge") !== "1") return;
-        var step = parseInt(q.get("kn_step") || "0", 10);
-        var ov = document.createElement("div");
-        ov.style.cssText =
-          "position:fixed;inset:0;z-index:999998;background:rgba(244,239,228,.92);display:flex;align-items:center;justify-content:center;padding:16px;";
-        var card = document.createElement("div");
-        card.style.cssText =
-          "max-width:420px;width:100%;background:#fff;border-top:6px solid #3a6e3a;padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.12);font-family:'Yu Gothic',Meiryo,sans-serif;";
-        card.innerHTML =
-          "<p style=\"margin:0 0 10px;font-weight:700;font-size:15px;color:#2a402a;\">観光スポットメタデータの削除確認</p>" +
-          "<p style=\"margin:0 0 16px;font-size:13px;color:#444;line-height:1.65;\">一覧に表示されている「準備中」の項目を削除キューに載せますか？</p>";
-        var row = document.createElement("div");
-        row.style.cssText = "display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;";
-        function reply(c) {
-          try {
-            if (window.opener && !window.opener.closed) {
-              window.opener.postMessage({ type: "KN_PURGE_SITE_RESPONSE", step: step, choice: c }, "*");
-            }
-          } catch (e) {}
-          knPurgeAdvance(step);
-        }
-        var bN = document.createElement("button");
-        bN.textContent = "いいえ";
-        bN.type = "button";
-        bN.style.cssText = "padding:8px 14px;cursor:pointer;";
-        var bY = document.createElement("button");
-        bY.textContent = "はい";
-        bY.type = "button";
-        bY.style.cssText = "padding:8px 14px;cursor:pointer;background:#3a6e3a;color:#fff;border:none;";
-        bN.onclick = function () {
-          reply(false);
-        };
-        bY.onclick = function () {
-          reply(true);
-        };
-        row.appendChild(bN);
-        row.appendChild(bY);
-        card.appendChild(row);
-        ov.appendChild(card);
-        document.body.appendChild(ov);
-      }
       knApplyFootprint();
-      knPurgeModal();
     })();
   </script>
 </body>

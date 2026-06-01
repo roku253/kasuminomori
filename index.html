@@ -66,14 +66,16 @@
           <span class="city-logo__text"><span class="city-logo__ja">霞ノ杜町</span><span class="city-logo__en">KASUMINOMORI TOWN</span></span>
         </a>
         <div class="city-top-search">
-          <div class="city-top-search__tabs">
-            <button type="button" class="is-active">サイト内検索</button>
-            <button type="button">ページ番号</button>
+          <div class="city-top-search__panel">
+            <div class="city-top-search__tabs" role="tablist" aria-label="検索の種類">
+              <button type="button" class="is-active" role="tab" aria-selected="true">サイト内検索</button>
+              <button type="button" role="tab" aria-selected="false">ページ番号</button>
+            </div>
+            <form class="city-top-search__box" action="kurashi/tetsuzuki-search.html" role="search">
+              <input type="search" name="q" placeholder="キーワード" aria-label="検索">
+              <button type="submit">検索</button>
+            </form>
           </div>
-          <form class="city-top-search__box" action="kurashi/tetsuzuki-search.html" role="search">
-            <input type="search" name="q" placeholder="キーワード" aria-label="検索">
-            <button type="submit">検索</button>
-          </form>
         </div>
       </header>
       <div class="city-top-pickup">

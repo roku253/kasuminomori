@@ -29,7 +29,7 @@ body.city-body {
 .city-logo__ja { display: block; font-size: 18px; font-weight: 700; letter-spacing: 0.08em; }
 .city-logo__en { display: block; font-size: 10px; opacity: 0.85; letter-spacing: 0.12em; }
 .city-menu-fixed {
-  position: fixed; top: 12px; right: 12px; z-index: 100001;
+  position: fixed; top: 12px; right: 20px; z-index: 100001;
   border: none; border-radius: 999px; padding: 10px 20px;
   font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit;
   background: #2d8a3e; color: #fff;
@@ -71,7 +71,8 @@ body.city-mega-open { overflow: hidden; }
   background: #f0f0f0; min-height: 40vh;
 }
 .city-page {
-  max-width: 900px; margin: 0 auto; padding: 20px 16px 48px;
+  max-width: none; width: 100%; margin: 0;
+  padding: 24px clamp(16px, 3vw, 48px) 48px;
   background: #fff;
 }
 .city-breadcrumb { font-size: 12px; color: #666; margin-bottom: 16px; }
@@ -107,7 +108,7 @@ body.city-mega-open { overflow: hidden; }
 .city-footer__photo-head p { margin: 0 0 20px; font-size: 13px; opacity: 0.8; }
 .city-footer__photo-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-  max-width: 900px; margin-bottom: 40px;
+  max-width: none; margin-bottom: 40px;
 }
 .city-footer__photo-large img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
 .city-footer__photo-small { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -118,7 +119,10 @@ body.city-mega-open { overflow: hidden; }
   padding: 10px 20px; border-radius: 999px; text-decoration: none; margin-bottom: 16px;
 }
 .city-footer__banner-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
-.city-footer__banner-row img { height: 56px; width: auto; border-radius: 4px; }
+.city-footer__banner-item {
+  display: inline-block; pointer-events: none; cursor: default;
+}
+.city-footer__banner-row img { height: 56px; width: auto; border-radius: 4px; display: block; }
 .city-footer__bottom {
   display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; align-items: end;
   max-width: 1100px; position: relative;
@@ -137,7 +141,7 @@ body.city-mega-open { overflow: hidden; }
 .city-legacy-wrap { background: #f0f0f0; }
 
 .city-legacy-wrap .wrap.city-legacy-inner {
-  max-width: 900px; margin: 0 auto; background: #fff;
+  max-width: none; width: 100%; margin: 0; background: #fff;
   padding: 0 0 48px;
   border: none; min-height: auto;
 }

@@ -78,7 +78,6 @@ def html_leaf(rel_path, page_title, crumbs, h1, paras, table="", related=None, e
 <body class="city-body">
 <div id="site-root">
   <div data-city-include="header"></div>
-  <div data-city-include="tools"></div>
   <div class="city-page-wrap">
     <main class="city-page" id="city-main">
       <nav class="city-breadcrumb" aria-label="パンくず">{bc_html}</nav>
@@ -91,6 +90,7 @@ def html_leaf(rel_path, page_title, crumbs, h1, paras, table="", related=None, e
   <div data-city-include="footer"></div>
 </div>
 <script src="{b}js/site-include.js" data-base="{b}" defer></script>
+<script src="{b}js/city-menu.js" defer></script>
 <script src="{b}js/kasumi-footprint.js" defer></script>
 {extra_body}
 </body>
@@ -128,7 +128,6 @@ def html_hub(rel_path, page_title, crumbs, h1, intro, cards):
 <body class="city-body">
 <div id="site-root">
   <div data-city-include="header"></div>
-  <div data-city-include="tools"></div>
   <div class="city-page-wrap">
     <main class="city-page" id="city-main">
       <nav class="city-breadcrumb" aria-label="パンくず">{" &nbsp;›&nbsp; ".join(bc_parts)}</nav>
@@ -402,7 +401,7 @@ def main():
     write("shisei/open-data.html", html_leaf("shisei/open-data.html", "オープンデータ", csh("オープンデータ"),
         "オープンデータ", ["町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"],
         '<table class="city-data"><tr><th>bus_stops.csv</th><td>停留所座標</td></tr><tr><th>tourism_spots.csv</th><td>観光スポット</td></tr></table>',
-        [("便利ツール", "../kurashi/chizu.html"), ("観光", "../bunka/"), ("市政", "index.html"), ("問合せ", "../contact/")]))
+        [("地図から探す", "../kurashi/chizu.html"), ("観光", "../bunka/"), ("市政", "index.html"), ("問合せ", "../contact/")]))
 
     archive_body = '<p class="kn-print-error" aria-hidden="true">[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2021-07-20</p>'
     write("shisei/archive.html", html_leaf("shisei/archive.html", "広報アーカイブ", csh("広報・過去ログ"),

@@ -5,12 +5,26 @@
       <span class="city-logo__mark" aria-hidden="true"></span>
       <span class="city-logo__text"><span class="city-logo__ja">霞ノ杜町</span><span class="city-logo__en">KASUMINOMORI TOWN</span></span>
     </a>
-    <div class="city-header__tools">
-      <button type="button" class="city-btn-tools" id="city-open-tools" aria-haspopup="dialog">便利ツール</button>
-      <button type="button" class="city-btn-menu" id="city-open-menu" aria-expanded="false" aria-controls="city-mega-panel">メニュー</button>
-    </div>
   </div>
+  <button type="button" class="city-menu-fixed" id="city-open-menu" aria-expanded="false" aria-controls="city-mega-panel">メニュー</button>
   <nav class="city-mega" id="city-mega-panel" hidden>
+    <div class="city-mega__tools">
+      <h2 class="city-mega__tools-title">よく使うリンク</h2>
+      <ul class="city-mega__tools-list">
+        <li><a href="{{BASE}}kurashi/tetsuzuki-navi.html">手続ナビ</a></li>
+        <li><a href="{{BASE}}kurashi/tetsuzuki-search.html">申請・手続早わかり検索</a></li>
+        <li><a href="{{BASE}}kurashi/bus-jikan.html">バス時刻表</a></li>
+        <li><a href="{{BASE}}kurashi/bus-roke.html">バスロケ</a></li>
+        <li><a href="{{BASE}}kurashi/gomi.html">ごみ収集曜日</a></li>
+        <li><a href="{{BASE}}kurashi/gomi-search.html">ごみ収集検索</a></li>
+        <li><a href="{{BASE}}kurashi/chizu.html">地図から探す</a></li>
+        <li><a href="{{BASE}}anzen/hazard.html">ハザードマップ</a></li>
+        <li><a href="{{BASE}}kurashi/denshi-shinsei.html">電子申請</a></li>
+        <li><a href="{{BASE}}events/">年間行事</a></li>
+        <li><a href="{{BASE}}shisei/open-data.html">オープンデータ</a></li>
+        <li><a href="{{BASE}}sangyo/">事業者のかたへ</a></li>
+      </ul>
+    </div>
     <div class="city-mega__grid">
       <div class="city-mega__col">
         <h2><a href="{{BASE}}kurashi/">くらし・環境</a></h2>

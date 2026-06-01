@@ -39,7 +39,6 @@ HEAD_TMPL = '''<!DOCTYPE html>
 <body class="city-body">
 <div id="site-root">
   <div data-city-include="header"></div>
-  <div data-city-include="tools"></div>
   <div class="city-page-wrap city-legacy-wrap">
 '''
 
@@ -48,6 +47,7 @@ FOOT_TMPL = '''
   <div data-city-include="footer"></div>
 </div>
 <script src="{base}js/site-include.js" data-base="{base}" defer></script>
+<script src="{base}js/city-menu.js" defer></script>
 <script src="{base}js/mobile.js" defer></script>
 <script src="{base}js/kasumi-footprint.js" defer></script>
 {extra_script}

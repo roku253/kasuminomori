@@ -48,8 +48,6 @@
 <body class="city-body city-body--top">
 <div id="site-root">
   <div data-city-include="header"></div>
-  <div data-city-include="tools"></div>
-  <a class="city-skip" href="#city-main">本文へスキップ</a>
 
   <section class="city-top-hero" aria-label="メインビジュアル">
     <div class="city-top-hero__slides">
@@ -76,7 +74,6 @@
             <input type="search" name="q" placeholder="キーワード" aria-label="検索">
             <button type="submit">検索</button>
           </form>
-          <button type="button" class="city-btn-tools" id="city-open-tools-top">便利ツール</button>
         </div>
       </header>
       <div class="city-top-pickup">
@@ -112,37 +109,10 @@
     </div>
   </section>
 
-  <aside class="city-top-sns" aria-label="公式SNS">
-    <div class="city-top-sns__x">霞ノ杜町公式<br>最新情報をお届けします</div>
-    <div class="city-top-sns__grid">
-      <a href="#">Instagram</a>
-      <a href="#">LINE</a>
-      <a href="#">Facebook</a>
-      <a href="#">YouTube</a>
-    </div>
-  </aside>
-
-  <button type="button" class="city-top-menu-fab" id="city-menu-fab" aria-label="メニュー">メニュー</button>
-
-  <div class="city-emergency">
-    現在、緊急情報はありません。<a href="anzen/saigai.html">災害・緊急情報はこちら</a>
-  </div>
-
-  <nav class="city-top-mainnav" aria-label="カテゴリ">
-    <div class="city-top-mainnav__grid">
-      <a href="kurashi/">くらし・環境</a>
-      <a href="anzen/">安全・緊急</a>
-      <a href="fukushi/">福祉・健康</a>
-      <a href="kodomo/">子ども・教育</a>
-      <a href="sangyo/">産業・雇用</a>
-      <a href="bunka/">文化・スポーツ・観光</a>
-      <a href="shisei/">市政情報</a>
-    </div>
-  </nav>
-
   <div data-city-include="footer"></div>
 </div>
 <script src="js/site-include.js" data-base="./" defer></script>
+<script src="js/city-menu.js" defer></script>
 <script src="js/city-top.js" defer></script>
 <script src="js/kasumi-footprint.js" defer></script>
 </body>

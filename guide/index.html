@@ -1,47 +1,28 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() { document.documentElement.classList.toggle('is-mobile', m.matches); }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); s();
-    }();
-  </script>
-  <title>町のご案内｜霞ノ杜町観光協会</title>
-  <meta name="description" content="霞ノ杜町の歴史、自然、気候、産業をご案内します。【フィクション】">
+  <title>町のご案内｜霞ノ杜町</title>
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/guide/">
+  <link rel="stylesheet" href="../css/city-common.css">
+  <link rel="stylesheet" href="../css/city-gate.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/mobile.css">
-  <style>
-    #site-root { visibility: hidden; }
-    html.token-gate-ok #site-root { visibility: visible; }
-    .ns-denied-overlay { position: fixed; inset: 0; z-index: 999999; background: #efe8d8; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: "Yu Gothic", Meiryo, sans-serif; }
-    .ns-denied-card { max-width: 560px; width: 100%; background: #fff; border-top: 6px solid #2d5a27; padding: 28px 26px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
-    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
-    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
-    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
-  </style>
-  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
-  <script>
-    window.__TOKEN_DENIED__ = function (msg) {
-      var el = document.createElement("div"); el.className = "ns-denied-overlay";
-      el.innerHTML = '<div class="ns-denied-card"><h1>霞ノ杜町観光協会｜ご案内</h1><p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p><p>ご利用の方は、次のサイトよりお進みください。</p><p class="ns-portal"><a href="https://nazo-portal.vercel.app/portal" target="_blank" rel="noopener noreferrer">https://nazo-portal.vercel.app/portal</a></p></div>';
-      document.documentElement.appendChild(el);
-    };
-  </script>
+  
+  <script src="../js/kasumi-gate-head.js"></script>
   <script src="../token-gate.js" defer></script>
 </head>
-<body>
-  <div id="site-root">
-  <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
-    <nav class="breadcrumb"><a href="../">ホーム</a> &nbsp;›&nbsp; 町のご案内</nav>
+<body class="city-body">
+<div id="site-root">
+  <div data-city-include="header"></div>
+  <div data-city-include="tools"></div>
+  <div class="city-page-wrap city-legacy-wrap">
+    <div class="wrap city-legacy-inner">
+    <nav class="city-breadcrumb" aria-label="パンくず">
+      <a href="../">トップ</a> &nbsp;›&nbsp;
+      <a href="../bunka/">文化・観光</a> &nbsp;›&nbsp; 町のご案内
+    </nav>
 
     <div class="main-layout">
       <aside class="sidebar">
@@ -127,12 +108,13 @@
         </p>
       </main>
     </div>
-    <footer class="site-footer">
-      <p class="site-footer-copy">© 霞ノ杜町観光協会</p>
-      <p class="fiction-disclaimer" role="note">※本サイトは謎解き作品のための<strong>架空サイト</strong>です。記載・表示されるサービス名・地名・人物名・団体名などはフィクションであり、<strong>実在のものとは一切関係ありません</strong>。</p>
-    </footer>
+    </div>
+
   </div>
-  </div>
-  <script src="../js/mobile.js" defer></script>
+  <div data-city-include="footer"></div>
+</div>
+<script src="../js/site-include.js" data-base="../" defer></script>
+<script src="../js/kasumi-footprint.js" defer></script>
+
 </body>
 </html>

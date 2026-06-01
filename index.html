@@ -1,19 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta name="google-site-verification" content="c0eDUSRnGg391rEJXWPdmd3Iw_3FUIfxo35pM84Bz4Y" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    !function () {
-      var m = window.matchMedia('(max-width: 767px)');
-      function s() {
-        document.documentElement.classList.toggle('is-mobile', m.matches);
-      }
-      m.addEventListener ? m.addEventListener('change', s) : m.addListener(s);
-      s();
-    }();
-  </script>
   <script>
     (function () {
       if (!/^https?:$/i.test(location.protocol)) return;
@@ -23,220 +13,137 @@
       }
     })();
   </script>
-  <title>霞ノ杜町観光協会｜公式サイト</title>
-  <meta name="description" content="霞ノ杜町観光協会の公式サイト。霞ノ杜町の観光スポット、アクセス・地図、年間行事、お問い合わせをご案内します。山間の霧と緑に包まれた町の情報をお届けします。【フィクション】">
+  <title>霞ノ杜町｜公式ホームページ</title>
+  <meta name="description" content="霞ノ杜町公式サイト。くらし・防災・子育て・観光・市政情報をご案内。山あいの小さな町、霧と杜の里。【フィクション】">
   <link rel="canonical" href="https://roku253.github.io/kasuminomori/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:url" content="https://roku253.github.io/kasuminomori/">
-  <meta property="og:site_name" content="霞ノ杜町観光協会">
-  <meta property="og:title" content="霞ノ杜町観光協会｜公式サイト">
-  <meta property="og:description" content="霞ノ杜町観光協会の公式サイト。観光スポット・アクセス・年間行事のご案内。【フィクション】">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="霞ノ杜町観光協会｜公式サイト">
-  <meta name="twitter:description" content="霞ノ杜町観光協会の公式サイト。観光情報をご案内します。【フィクション】">
+  <meta property="og:site_name" content="霞ノ杜町">
+  <meta property="og:title" content="霞ノ杜町｜公式ホームページ">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://roku253.github.io/kasuminomori/#website",
+        "name": "霞ノ杜町",
         "url": "https://roku253.github.io/kasuminomori/",
-        "name": "霞ノ杜町観光協会",
-        "alternateName": ["霞ノ杜町観光協会 公式サイト", "霞ノ杜町観光協会公式サイト"],
-        "description": "霞ノ杜町の観光情報を発信する公式サイト（フィクション設定）。",
-        "inLanguage": "ja",
-        "publisher": { "@id": "https://roku253.github.io/kasuminomori/#org" }
+        "inLanguage": "ja"
       },
       {
-        "@type": "Organization",
-        "@id": "https://roku253.github.io/kasuminomori/#org",
-        "name": "霞ノ杜町観光協会",
-        "url": "https://roku253.github.io/kasuminomori/",
-        "description": "霞ノ杜町の観光振興・案内を行う協会（このサイトはフィクションです）。"
+        "@type": "GovernmentOrganization",
+        "name": "霞ノ杜町",
+        "url": "https://roku253.github.io/kasuminomori/"
       }
     ]
   }
   </script>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mobile.css">
-  <style>
-    #site-root { visibility: hidden; }
-    html.token-gate-ok #site-root { visibility: visible; }
-    .kn-print-error { display: none; }
-    @media print {
-      .kn-print-error {
-        display: block !important;
-        margin: 24px;
-        padding: 12px;
-        border: 2px dashed #c00;
-        font-family: ui-monospace, monospace;
-        font-size: 12px;
-        color: #900;
-      }
-      body * { visibility: hidden; }
-      .kn-print-error, .kn-print-error * { visibility: visible; }
-    }
-
-    /* 観光協会らしい工事中・準備中風 */
-    .ns-denied-overlay {
-      position: fixed; inset: 0; z-index: 999999;
-      background: #f4efe4 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M0 0 L40 40' stroke='%23d6caa8' stroke-width='1'/></svg>") repeat;
-      display: flex; align-items: center; justify-content: center;
-      font-family: "Yu Gothic", Meiryo, sans-serif;
-      padding: 24px;
-    }
-    .ns-denied-card {
-      max-width: 560px; width: 100%;
-      background: #fff;
-      border-top: 6px solid #3a6e3a;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-      padding: 28px 26px;
-    }
-    .ns-denied-card h1 { margin: 0 0 12px; font-size: 18px; color: #2d5a27; }
-    .ns-denied-card p { margin: 8px 0; font-size: 14px; line-height: 1.8; color: #333; }
-    .ns-denied-card .small { font-size: 11px; color: #888; margin-top: 16px; }
-  </style>
-  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
-  <script>
-    window.__TOKEN_DENIED__ = function (msg) {
-      var el = document.createElement("div");
-      el.className = "ns-denied-overlay";
-      el.innerHTML =
-        '<div class="ns-denied-card">' +
-        '<h1>霞ノ杜町観光協会｜ご案内</h1>' +
-        '<p>ただいま当サイトはメンテナンス中のため、一般公開を停止しております。</p>' +
-        '<p>ご利用の方は、次のサイトよりお進みください。</p>' +
-        '<p class="ns-portal"><a href="https://nazo-portal.vercel.app/portal" target="_blank" rel="noopener noreferrer">https://nazo-portal.vercel.app/portal</a></p>' +
-        '</div>';
-      document.documentElement.appendChild(el);
-    };
-  </script>
-  <script src="./token-gate.js" defer></script>
+  <link rel="stylesheet" href="css/city-common.css">
+  <link rel="stylesheet" href="css/city-top.css">
+  <link rel="stylesheet" href="css/city-gate.css">
+  <script src="js/kasumi-gate-head.js"></script>
+  <script src="token-gate.js" defer></script>
 </head>
-<body>
-  <div id="site-root">
-  <div class="wrap">
-    <header class="site-header">
-      <h1>霞ノ杜町観光協会</h1>
-      <p class="tagline">ようこそ霞ノ杜町へ　〜 霧と杜が織りなす、やすらぎの里 〜</p>
-    </header>
+<body class="city-body city-body--top">
+<div id="site-root">
+  <div data-city-include="header"></div>
+  <div data-city-include="tools"></div>
+  <a class="city-skip" href="#city-main">本文へスキップ</a>
 
-    <nav class="breadcrumb">
-      <a href="./">ホーム</a>
-      &nbsp;›&nbsp; トップページ
-    </nav>
-
-    <div class="main-layout">
-      <aside class="sidebar">
-        <h2>メニュー</h2>
-        <ul>
-          <li><a href="./">トップページ</a></li>
-          <li><a href="guide/">町のご案内</a></li>
-          <li><a href="access/">アクセス・地図</a></li>
-          <li><a href="events/">年間行事</a></li>
-          <li><a href="contact/">お問い合わせ</a></li>
-        </ul>
-        <h2>観光スポット</h2>
-        <ul>
-          <li><a href="spot/1/">霞ノ杜神社</a></li>
-          <li><a href="spot/2/">杜の吊り橋</a></li>
-          <li><a href="spot/3/">霞ノ杜資料館</a></li>
-          <li><a href="spot/4/">霧見展望休憩所</a></li>
-          <li><a href="spot/5/">杜の湯（足湯）</a></li>        </ul>
-        <h2>町のページ</h2>
-        <ul>
-          <li><a href="history/">町の歴史</a></li>
-          <li data-kn-story-clue="1"><a href="blog/2021/">2021年ローカルニュース</a></li>
-        </ul>
-      </aside>
-
-      <main class="content">
-        <h2>トップページ</h2>
-        <p>
-          本サイトは<strong>霞ノ杜町観光協会</strong>が町内外の皆さま向けに観光情報を発信する公式サイトです。
-          霞ノ杜町は、県境に近い山あいに位置する人口およそ<strong>3,200人</strong>の小さな町で、
-          四季を通じて濃い霧が立ち込めることがあり、「霞ノ杜」の名の由来とも言われています。
-        </p>
-
-        <div class="news-box">
-          <h3>お知らせ</h3>
-          <ul>
-            <li><strong>R8.4.1</strong>　町公式サイトをリニューアルしました。（一部ページ準備中）</li>
-            <li><strong>R8.3.15</strong>　杜の吊り橋周辺の通行について（雨天時は滑りやすくなります）</li>
-            <li><strong>R8.2.1</strong>　冬季閉鎖区間のご案内を更新しました。</li>
-          </ul>
-        </div>
-
-        <h3>町からのご挨拶（抜粋）</h3>
-        <p>
-          霞ノ杜町観光協会では、町内外の皆様に安心して観光・散策をお楽しみいただけるよう情報発信に努めております。
-          ご不明な点は<a href="contact/">お問い合わせフォーム</a>よりご連絡ください。
-          （回答には数日いただく場合がございます）
-        </p>
-
-        <div class="table-scroll">
-        <table class="data-table">
-          <caption style="caption-side:bottom;font-size:11px;color:#666;padding-top:6px;">※表の数値は記載時点の目安です。</caption>
-          <thead>
-            <tr>
-              <th scope="col">項目</th>
-              <th scope="col">内容</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">所在地</th>
-              <td>○○県北部・吾妻郡霞ノ杜町</td>
-            </tr>
-            <tr>
-              <th scope="row">協会開館時間</th>
-              <td>平日 9:00〜17:00（土日祝・年末年始は休館）</td>
-            </tr>
-            <tr>
-              <th scope="row">お電話</th>
-              <td>0123-45-XXXX（ダミー番号）</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </main>
+  <section class="city-top-hero" aria-label="メインビジュアル">
+    <div class="city-top-hero__slides">
+      <div class="city-top-hero__slide is-active" style="background-image:url('img/placeholders/hero-01.svg')"></div>
+      <div class="city-top-hero__slide" style="background-image:url('img/placeholders/hero-02.svg')"></div>
+      <div class="city-top-hero__slide" style="background-image:url('img/placeholders/hero-03.svg')"></div>
+      <div class="city-top-hero__slide" style="background-image:url('img/placeholders/hero-04.svg')"></div>
+      <div class="city-top-hero__slide" style="background-image:url('img/placeholders/hero-05.svg')"></div>
+      <div class="city-top-hero__slide" style="background-image:url('img/placeholders/hero-06.svg')"></div>
     </div>
+    <div class="city-top-hero__overlay"></div>
+    <div class="city-top-hero__inner">
+      <header class="city-top-header">
+        <a class="city-logo" href="./">
+          <span class="city-logo__mark" aria-hidden="true"></span>
+          <span class="city-logo__text"><span class="city-logo__ja">霞ノ杜町</span><span class="city-logo__en">KASUMINOMORI TOWN</span></span>
+        </a>
+        <div class="city-top-search">
+          <div class="city-top-search__tabs">
+            <button type="button" class="is-active">サイト内検索</button>
+            <button type="button">ページ番号</button>
+          </div>
+          <form class="city-top-search__box" action="kurashi/tetsuzuki-search.html" role="search">
+            <input type="search" name="q" placeholder="キーワード" aria-label="検索">
+            <button type="submit">検索</button>
+          </form>
+          <button type="button" class="city-btn-tools" id="city-open-tools-top">便利ツール</button>
+        </div>
+      </header>
+      <div class="city-top-pickup">
+        <h2>PICK UP</h2>
+        <div class="city-top-pickup__pills">
+          <a href="kurashi/bus-jikan.html">町営バス</a>
+          <a href="kurashi/gomi.html">ごみ収集</a>
+          <a href="anzen/hazard.html">防災・ハザード</a>
+          <a href="events/">年間行事</a>
+          <a href="bunka/">観光情報</a>
+          <a href="shisei/koho.html">お知らせ</a>
+        </div>
+      </div>
+      <h1 class="city-top-title" id="city-main">霞ノ杜町</h1>
+      <div class="city-top-panels">
+        <a class="city-top-panel" href="kurashi/">
+          <span class="city-top-panel__icon" aria-hidden="true">🌿</span>
+          <strong>町民のかた</strong>
+          <span>Resident services</span>
+        </a>
+        <a class="city-top-panel" href="sangyo/">
+          <span class="city-top-panel__icon" aria-hidden="true">🏢</span>
+          <strong>事業者のかた</strong>
+          <span>Business owners</span>
+        </a>
+        <a class="city-top-panel" href="bunka/">
+          <span class="city-top-panel__icon" aria-hidden="true">⛩</span>
+          <strong>観光・文化</strong>
+          <span>Sightseeing</span>
+        </a>
+      </div>
+      <button type="button" class="city-top-play" id="city-hero-play">再生</button>
+    </div>
+  </section>
 
-    <p class="kn-print-error" aria-hidden="true">[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2021-07-20</p>
-    <footer class="site-footer">
-      <p class="site-footer-copy">© 霞ノ杜町観光協会　All Rights Reserved.</p>
-      <p class="fiction-disclaimer" role="note">※本サイトは謎解き作品のための<strong>架空サイト</strong>です。記載・表示されるサービス名・地名・人物名・団体名などはフィクションであり、<strong>実在のものとは一切関係ありません</strong>。</p>
-    </footer>
+  <aside class="city-top-sns" aria-label="公式SNS">
+    <div class="city-top-sns__x">霞ノ杜町公式<br>最新情報をお届けします</div>
+    <div class="city-top-sns__grid">
+      <a href="#">Instagram</a>
+      <a href="#">LINE</a>
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </div>
+  </aside>
+
+  <button type="button" class="city-top-menu-fab" id="city-menu-fab" aria-label="メニュー">メニュー</button>
+
+  <div class="city-emergency">
+    現在、緊急情報はありません。<a href="anzen/saigai.html">災害・緊急情報はこちら</a>
   </div>
-  </div>
-  <script src="js/mobile.js" defer></script>
-  <script>
-    (function () {
-      var KN_FP_KEY = "signal_trace_kn_footprint_v2";
-      function knPurged() {
-        try {
-          var f = localStorage.getItem(KN_FP_KEY) || "";
-          return f === "purged_delete" || f === "purged_keep";
-        } catch (e) {
-          return false;
-        }
-      }
-      function knApplyFootprint() {
-        if (!knPurged()) return;
-        document.querySelectorAll('[data-kn-story-clue="1"]').forEach(function (el) {
-          el.style.display = "none";
-        });
-      }
-      window.addEventListener("storage", function (e) {
-        if (e.key !== KN_FP_KEY) return;
-        var v = e.newValue;
-        if (v !== "purged_delete" && v !== "purged_keep") return;
-        knApplyFootprint();
-      });
-      knApplyFootprint();
-    })();
-  </script>
+
+  <nav class="city-top-mainnav" aria-label="カテゴリ">
+    <div class="city-top-mainnav__grid">
+      <a href="kurashi/">くらし・環境</a>
+      <a href="anzen/">安全・緊急</a>
+      <a href="fukushi/">福祉・健康</a>
+      <a href="kodomo/">子ども・教育</a>
+      <a href="sangyo/">産業・雇用</a>
+      <a href="bunka/">文化・スポーツ・観光</a>
+      <a href="shisei/">市政情報</a>
+    </div>
+  </nav>
+
+  <div data-city-include="footer"></div>
+</div>
+<script src="js/site-include.js" data-base="./" defer></script>
+<script src="js/city-top.js" defer></script>
+<script src="js/kasumi-footprint.js" defer></script>
 </body>
 </html>

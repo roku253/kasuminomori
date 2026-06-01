@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>資料室｜霞ノ杜町観光協会</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/mobile.css" />
-  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
-  <script src="../token-gate.js" defer></script>
-  <style>
-    #site-root { visibility: hidden; }
-    html.token-gate-ok #site-root { visibility: visible; }
-    .doc-block { background: #fff; border: 1px solid #ccbda5; padding: 16px; margin: 14px 0; font-size: 13px; line-height: 1.85; }
-    .doc-block h3 { margin: 0 0 8px; color: #2d5a27; font-size: 15px; }
-    .doc-meta { font-size: 11px; color: #666; margin-bottom: 10px; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>資料室｜霞ノ杜町</title>
+  <link rel="canonical" href="https://roku253.github.io/kasuminomori/documents/">
+  <link rel="stylesheet" href="../css/city-common.css">
+  <link rel="stylesheet" href="../css/city-gate.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  
+  <script src="../js/kasumi-gate-head.js"></script>
+  <script src="../../token-gate.js" defer></script>
 </head>
-<body>
-  <div id="site-root">
-    <div class="wrap">
-      <header class="site-header"><h1>霞ノ杜町観光協会</h1></header>
-      <nav class="breadcrumb"><a href="../">ホーム</a> › 資料室</nav>
+<body class="city-body">
+<div id="site-root">
+  <div data-city-include="header"></div>
+  <div data-city-include="tools"></div>
+  <div class="city-page-wrap city-legacy-wrap">
+    <div class="wrap city-legacy-inner">
+    <nav class="city-breadcrumb" aria-label="パンくず">
+      <a href="../">トップ</a> &nbsp;›&nbsp;
+      <a href="../shisei/">市政情報</a> &nbsp;›&nbsp; 資料室
+    </nav>
+
       <main class="content" data-kn-story-clue="1">
         <h2>公報・資料室</h2>
         <p>霞ノ杜町の公開資料の抜粋です。個人名は原則記載していません。</p>
@@ -47,11 +50,13 @@
 
         <p><a href="../history/#legend">町の歴史（伝承）</a> ／ <a href="../blog/2021/">2021年の出来事</a></p>
       </main>
-      <footer class="site-footer">
-        <p class="fiction-disclaimer" role="note">※架空サイトです。</p>
-      </footer>
-    </div>
+          </div>
+
   </div>
-  <script src="../js/mobile.js" defer></script>
+  <div data-city-include="footer"></div>
+</div>
+<script src="../js/site-include.js" data-base="../" defer></script>
+<script src="../js/kasumi-footprint.js" defer></script>
+
 </body>
 </html>

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2021ローカルニュース｜霞ノ杜町観光協会</title>
-  <link rel="stylesheet" href="../../css/style.css" />
-  <script>window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori"</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2021年ローカルニュース｜霞ノ杜町</title>
+  <link rel="canonical" href="https://roku253.github.io/kasuminomori/blog/2021/">
+  <link rel="stylesheet" href="../../css/city-common.css">
+  <link rel="stylesheet" href="../../css/city-gate.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/mobile.css">
+  
+  <script src="../../js/kasumi-gate-head.js"></script>
   <script src="../../token-gate.js" defer></script>
-  <style>
-    #site-root { visibility: hidden; }
-    html.token-gate-ok #site-root { visibility: visible; }
-    .news-card { background: #fff; border: 1px solid #ccbda5; padding: 16px; margin: 12px 0; }
-    .news-card h2 { margin: 0 0 8px; font-size: 16px; color: #2d5a27; }
-    .news-date { font-size: 11px; color: #666; }
-  </style>
 </head>
-<body>
-  <div id="site-root">
-    <div class="wrap">
-      <header class="site-header"><h1>霞ノ杜町観光協会</h1></header>
-      <nav class="breadcrumb"><a href="../../">ホーム</a> › 2021年の出来事</nav>
+<body class="city-body">
+<div id="site-root">
+  <div data-city-include="header"></div>
+  <div data-city-include="tools"></div>
+  <div class="city-page-wrap city-legacy-wrap">
+    <div class="wrap city-legacy-inner">
+    <nav class="city-breadcrumb" aria-label="パンくず">
+      <a href="../../">トップ</a> &nbsp;›&nbsp;
+      <a href="../../shisei/">市政情報</a> &nbsp;›&nbsp; 2021年ローカルニュース
+    </nav>
+
       <main data-kn-story-clue="1">
         <h2>2021年・霞ノ杜周辺のローカル記事（アーカイブ）</h2>
         <article class="news-card">
@@ -46,9 +50,15 @@
           <a href="https://roku253.github.io/yootube/watch/kasuminomori-2021-incident.html" rel="noopener">関連報道（外部）</a>
         </p>
       </main>
-    </div>
+        </div>
+
   </div>
-  <script>
+  <div data-city-include="footer"></div>
+</div>
+<script src="../../js/site-include.js" data-base="../../" defer></script>
+<script src="../../js/kasumi-footprint.js" defer></script>
+<script>
+
     (function () {
       var KN_FP_KEY = "signal_trace_kn_footprint_v2";
       function knPurged() {
@@ -70,6 +80,8 @@
       });
       knApply();
     })();
-  </script>
+  
+</script>
+
 </body>
 </html>

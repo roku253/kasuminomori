@@ -1,5 +1,15 @@
 (function () {
+  function placeTopMenu() {
+    if (!document.body.classList.contains("city-body--top")) return;
+    var btn = document.getElementById("city-open-menu");
+    var header = document.querySelector(".city-top-header");
+    if (btn && header && btn.parentElement !== header) {
+      header.appendChild(btn);
+    }
+  }
+
   function bindMenu() {
+    placeTopMenu();
     var panel = document.getElementById("city-mega-panel");
     var btn = document.getElementById("city-open-menu");
     if (!panel || !btn) return;

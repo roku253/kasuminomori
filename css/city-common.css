@@ -124,18 +124,36 @@ body.city-mega-open { overflow: hidden; }
 }
 .city-footer__banner-row img { height: 56px; width: auto; border-radius: 4px; display: block; }
 .city-footer__bottom {
-  display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; align-items: end;
-  max-width: 1100px; position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 20px 40px;
+  align-items: start;
+  max-width: 1100px;
 }
-.city-footer__brand { display: flex; gap: 12px; align-items: center; }
+.city-footer__brand {
+  display: flex; gap: 12px; align-items: center;
+  grid-column: 1; grid-row: 1;
+}
 .city-footer__name { margin: 0; font-size: 22px; font-weight: 700; }
 .city-footer__en { margin: 0; font-size: 11px; opacity: 0.7; }
-.city-footer__addr { font-style: normal; font-size: 13px; line-height: 1.8; opacity: 0.9; }
-.city-footer__symbol {
-  position: absolute; right: 0; bottom: 0; opacity: 0.15; width: 180px; pointer-events: none;
+.city-footer__addr {
+  font-style: normal; font-size: 13px; line-height: 1.8; opacity: 0.9;
+  grid-column: 2; grid-row: 1;
+  position: relative; z-index: 1;
 }
-.city-footer__copy { font-size: 11px; opacity: 0.6; margin: 24px 0 8px; }
-.city-fiction { font-size: 11px; opacity: 0.55; max-width: 720px; }
+.city-footer__symbol {
+  grid-column: 1; grid-row: 2;
+  width: 96px; opacity: 0.18; pointer-events: none;
+  margin-top: 4px;
+}
+.city-footer__copy {
+  font-size: 11px; opacity: 0.6;
+  margin: 32px 0 8px; clear: both;
+}
+.city-fiction {
+  font-size: 11px; opacity: 0.55; max-width: 720px;
+  line-height: 1.65; margin: 0;
+}
 
 .city-page-wrap,
 .city-legacy-wrap { background: #f0f0f0; }
@@ -178,7 +196,8 @@ body.city-mega-open { overflow: hidden; }
 @media (max-width: 767px) {
   .city-footer__photo-grid { grid-template-columns: 1fr; }
   .city-mega__tools-list { grid-template-columns: 1fr 1fr; }
-  .city-footer__bottom { grid-template-columns: 1fr; }
-  .city-footer__symbol { display: none; }
+  .city-footer__bottom { grid-template-columns: 1fr; gap: 20px; }
+  .city-footer__addr { grid-column: 1; grid-row: auto; }
+  .city-footer__symbol { grid-row: auto; width: 72px; margin-top: 0; }
   .city-mega__grid { grid-template-columns: 1fr 1fr; }
 }

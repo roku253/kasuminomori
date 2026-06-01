@@ -19,14 +19,26 @@
   display: flex; flex-direction: column; padding: 16px;
 }
 .city-top-header {
-  display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;
-  gap: 12px;
-  padding-right: 100px;
+  display: flex; flex-wrap: wrap; align-items: flex-start;
+  gap: 10px 12px;
+  width: 100%;
+}
+.city-top-header .city-logo {
+  flex: 0 1 auto;
+  min-width: 0;
 }
 .city-top-search {
-  flex: 0 1 auto;
-  max-width: min(380px, calc(100vw - 180px));
+  flex: 1 1 220px;
+  min-width: 200px;
+  max-width: 320px;
   margin-left: auto;
+}
+.city-body--top .city-top-header .city-menu-fixed {
+  position: static;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin-left: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
 .city-top-search__panel {
   background: #fff;
@@ -37,7 +49,7 @@
 .city-top-search__tabs { display: flex; gap: 0; background: #e8ecef; }
 .city-top-search__tabs button {
   flex: 1;
-  border: none; padding: 8px 14px; font-size: 11px; cursor: pointer;
+  border: none; padding: 8px 12px; font-size: 11px; cursor: pointer;
   background: #e8ecef; color: #333;
   border-radius: 0;
   border-bottom: 2px solid transparent;
@@ -55,30 +67,67 @@
 }
 .city-top-search__box button {
   border: none; background: #1a5fb4; color: #fff; padding: 0 16px; cursor: pointer;
+  flex-shrink: 0;
 }
-.city-top-pickup { margin-top: 12px; max-width: 520px; }
+.city-top-pickup { margin-top: 12px; max-width: 520px; clear: both; }
 .city-top-pickup h2 { font-size: 11px; margin: 0 0 8px; letter-spacing: 0.2em; }
 .city-top-pickup__pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .city-top-pickup__pills a {
   background: #1a5fb4; color: #fff; text-decoration: none;
   padding: 6px 14px; border-radius: 999px; font-size: 12px;
 }
-.city-top-title {
+/* 写真名称 — 旧・町名の縦書き位置（左） */
+.city-top-slide-title {
   writing-mode: vertical-rl; text-orientation: mixed;
-  font-size: clamp(48px, 12vw, 96px); font-weight: 900;
-  letter-spacing: 0.15em; margin: auto 0;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.5);
-  align-self: flex-start; padding: 40px 0;
+  font-size: clamp(22px, 4vw, 34px); font-weight: 700;
+  letter-spacing: 0.12em; margin: auto 0 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  align-self: flex-start;
+  padding: 32px 0 48px;
+  max-height: 50vh;
+}
+/* 町名 — 旧・写真名称の中央位置 */
+.city-top-title {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  writing-mode: horizontal-tb;
+  font-size: clamp(40px, 9vw, 88px);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.55);
+  pointer-events: none;
 }
 .city-body--top .city-header--inner .city-header__bar { display: none; }
-.city-body--top .city-menu-fixed {
-  top: 14px;
-  right: 88px;
-}
 
 @media (max-width: 767px) {
-  .city-top-header { padding-right: 88px; }
-  .city-top-search { max-width: 100%; margin-left: 0; }
-  .city-body--top .city-menu-fixed { right: 12px; top: 14px; }
-  .city-top-title { font-size: 48px; padding: 20px 0; }
+  .city-top-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .city-top-search {
+    max-width: none;
+    margin-left: 0;
+    order: 2;
+  }
+  .city-body--top .city-top-header .city-menu-fixed {
+    order: 3;
+    align-self: flex-end;
+  }
+  .city-top-header .city-logo { order: 1; }
+  .city-top-slide-title {
+    font-size: 20px;
+    padding: 16px 0 24px;
+    max-height: none;
+  }
+  .city-top-title {
+    font-size: 36px;
+    top: 42%;
+    white-space: normal;
+    width: 90%;
+  }
 }

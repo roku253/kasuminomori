@@ -18,6 +18,16 @@ npm run test:e2e:ui
 npm run test:e2e:codegen
 ```
 
+## ヘッダー・カテゴリタブ
+
+```bash
+npx playwright test e2e/header-nav.spec.ts
+```
+
+内页（`lg` 以上）では画面上部の7タブがカテゴリ入口、メガメニューは「よく使うリンク」中心。モバイルではメガメニューに全カテゴリ。
+
+開発 URL は必ず `http://localhost:3000/kasuminomori/`（`basePath` 付き）。`/kurashi/` だけだと 404 になります。
+
 ## PC / スマホの見え方記録
 
 ```bash

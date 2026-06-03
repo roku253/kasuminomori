@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Phone } from "lucide-react";
-import { MEGA_COLUMNS } from "@/lib/navigation";
+import { HeaderCategoryNav } from "./HeaderCategoryNav";
 import { MegaMenu } from "./MegaMenu";
 import { SiteLogo } from "./SiteLogo";
 
@@ -31,22 +30,9 @@ export function SiteHeader() {
       >
         <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-2.5 sm:gap-3">
           <SiteLogo variant="header" />
-          <nav
-            className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-0.5 lg:flex"
-            aria-label="主要カテゴリ"
-          >
-            {MEGA_COLUMNS.map((col) => (
-              <Link
-                key={col.href}
-                href={col.href}
-                className="rounded-md px-2.5 py-2 text-[13px] font-medium text-white/95 no-underline transition hover:bg-white/15"
-              >
-                {col.title}
-              </Link>
-            ))}
-          </nav>
+          <HeaderCategoryNav />
           <div className="ml-auto shrink-0 lg:ml-2">
-            <MegaMenu />
+            <MegaMenu mode="split" />
           </div>
         </div>
       </header>

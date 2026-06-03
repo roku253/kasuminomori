@@ -48,11 +48,15 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
   });
 
   test("メガメニュー: 開閉と市政リンク", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 });
     await page.goto(sitePath("shisei/koho/"));
     const menuBtn = page.getByRole("button", { name: "メニュー" });
     await menuBtn.click();
     await expect(menuBtn).toHaveAttribute("aria-expanded", "true");
-    await page.getByRole("link", { name: "お問い合わせ" }).first().click();
+    await page
+      .getByRole("navigation", { name: "サイトメニュー" })
+      .getByRole("link", { name: "お問い合わせ" })
+      .click();
     await expect(page).toHaveURL(/\/kasuminomori\/contact\/?$/);
   });
 

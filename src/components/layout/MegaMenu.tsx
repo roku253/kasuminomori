@@ -5,13 +5,19 @@ import Link from "next/link";
 import { useCallback, useEffect, useId, useState } from "react";
 import { MEGA_COLUMNS, MEGA_TOOLS } from "@/lib/navigation";
 
+/** full: カテゴリ列＋ツール（トップ・モバイル） / split: lg+ はツールのみ、未満は full */
+export type MegaMenuMode = "full" | "split";
+
 type Props = {
   embeddedInHero?: boolean;
+  mode?: MegaMenuMode;
 };
 
-export function MegaMenu({ embeddedInHero }: Props) {
+export function MegaMenu({ embeddedInHero, mode = "full" }: Props) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const showCategoryGuide = mode === "split";
+  const showCategoryColumns = mode === "full" || mode === "split";
 
   const toggle = useCallback(() => setOpen((o) => !o), []);
 
@@ -31,6 +37,11 @@ export function MegaMenu({ embeddedInHero }: Props) {
   const btnClass = embeddedInHero
     ? "min-h-[44px] rounded-full border-0 bg-[#2d8a3e] px-5 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-[#247032]"
     : "min-h-[44px] shrink-0 rounded-full border-0 bg-[#2d8a3e] px-4 py-2.5 text-sm font-bold text-white shadow-md hover:bg-[#247032]";
+
+  const columnsGridClass =
+    mode === "split"
+      ? "city-mega-columns mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:grid-cols-2 lg:hidden md:px-6"
+      : "city-mega-columns mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:px-6";
 
   return (
     <>
@@ -59,6 +70,7 @@ export function MegaMenu({ embeddedInHero }: Props) {
       <nav
         id={panelId}
         hidden={!open}
+        aria-label="サイトメニュー"
         className={
           embeddedInHero
             ? "city-mega fixed inset-0 z-[100000] overflow-y-auto border-b-[3px] border-[var(--kasumi-blue)] bg-[var(--color-surface)] pt-16 shadow-2xl"
@@ -81,34 +93,41 @@ export function MegaMenu({ embeddedInHero }: Props) {
             ))}
           </ul>
         </div>
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:px-6">
-          {MEGA_COLUMNS.map((col) => (
-            <div key={col.href} className="min-w-0">
-              <h2 className="m-0 border-b-2 border-[var(--kasumi-blue)] pb-2 text-base font-bold">
-                <Link
-                  href={col.href}
-                  className="text-[var(--kasumi-blue)] no-underline hover:underline"
-                  onClick={() => setOpen(false)}
-                >
-                  {col.title}
-                </Link>
-              </h2>
-              <ul className="mt-3 space-y-0.5 p-0 list-none text-[15px] leading-relaxed">
-                {col.links.map((l) => (
-                  <li key={l.href}>
-                    <Link
-                      href={l.href}
-                      className="inline-flex min-h-[40px] w-full items-center rounded-[var(--radius-sm)] px-1 py-1 text-[var(--color-text)] no-underline transition hover:bg-white hover:text-[var(--kasumi-blue)]"
-                      onClick={() => setOpen(false)}
-                    >
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        {showCategoryGuide && (
+          <p className="mx-auto hidden max-w-6xl px-4 pb-2 text-sm leading-relaxed text-[var(--color-text-muted)] lg:block md:px-6">
+            カテゴリの案内は、画面上部のメニューからお選びください。
+          </p>
+        )}
+        {showCategoryColumns && (
+          <div className={columnsGridClass}>
+            {MEGA_COLUMNS.map((col) => (
+              <div key={col.href} className="min-w-0">
+                <h2 className="m-0 border-b-2 border-[var(--kasumi-blue)] pb-2 text-base font-bold">
+                  <Link
+                    href={col.href}
+                    className="text-[var(--kasumi-blue)] no-underline hover:underline"
+                    onClick={() => setOpen(false)}
+                  >
+                    {col.title}
+                  </Link>
+                </h2>
+                <ul className="mt-3 space-y-0.5 p-0 list-none text-[15px] leading-relaxed">
+                  {col.links.map((l) => (
+                    <li key={l.href}>
+                      <Link
+                        href={l.href}
+                        className="inline-flex min-h-[40px] w-full items-center rounded-[var(--radius-sm)] px-1 py-1 text-[var(--color-text)] no-underline transition hover:bg-white hover:text-[var(--kasumi-blue)]"
+                        onClick={() => setOpen(false)}
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </nav>
     </>
   );

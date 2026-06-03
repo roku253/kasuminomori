@@ -1,4 +1,6 @@
 export const MEGA_TOOLS = [
+  { href: "/contact/", label: "お問い合わせ" },
+  { href: "/shisei/yakuba/", label: "庁舎案内" },
   { href: "/kurashi/tetsuzuki-navi/", label: "手続ナビ" },
   { href: "/kurashi/tetsuzuki-search/", label: "申請・手続早わかり検索" },
   { href: "/kurashi/bus-jikan/", label: "バス時刻表" },

@@ -3,11 +3,10 @@ import { getManifest } from "@/lib/content/loader";
 import { RenderPage, createPageMetadata } from "@/lib/render-page";
 
 type Props = {
-  params: Promise<{ segments?: string[] }>;
+  params: Promise<{ segments: string[] }>;
 };
 
-function routeFromSegments(segments?: string[]): string {
-  if (!segments?.length) return "/";
+function routeFromSegments(segments: string[]): string {
   return `/${segments.join("/")}/`;
 }
 

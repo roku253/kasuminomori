@@ -1,10 +1,23 @@
 {
-  "path": "spot/4.html",
+  "path": "spot/4/index.html",
   "route": "/spot/4/",
-  "layout": "city",
-  "title": "リダイレクト中…",
+  "layout": "legacy",
+  "title": "霧見展望休憩所｜霞ノ杜町",
   "description": "",
-  "canonical": "4/",
-  "breadcrumbs": [],
-  "related": []
+  "canonical": "https://roku253.github.io/kasuminomori/spot/4/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "文化・観光",
+      "href": "../../bunka/"
+    },
+    {
+      "label": "霧見展望休憩所"
+    }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>霧見展望休憩所</h2>\r\n        <p>\r\n          霞ノ杜山系の中腹、町の北側に位置する小さな展望休憩所。\r\n          標高 540 m。天気の良い日には、町の中心部から南の三日月町、東の杉並ヶ岡まで見渡せます。\r\n          そして霧の濃い朝は、足元から谷をひたすように白い海が広がります。\r\n        </p>\r\n        <p>\r\n          木造の屋根とベンチがあるだけの素朴な休憩所ですが、地元では「霧見（きりみ）」と呼ばれ、\r\n          季節の変わり目には町民が一人静かに腰掛けている姿が見られます。\r\n        </p>\r\n\r\n        <h3>霧の見えかた（季節別）</h3>\r\n        <ul>\r\n          <li><strong>春</strong>：朝方、町中心部から沸き上がる薄い霧。</li>\r\n          <li><strong>夏</strong>：夕立の前、湿った霧が一気に山肌をなめる。</li>\r\n          <li><strong>秋</strong>：もっとも霧が深い季節。盆地全体が白く満ち、町の屋根だけが島のように浮かぶ。</li>\r\n          <li><strong>冬</strong>：日が出る前の数十分だけ、霧氷の朝。樹氷越しに町を見下ろせる。</li>\r\n        </ul>\r\n\r\n        <h3>展望休憩所からの眺め</h3>\r\n        <p>\r\n          休憩所から南を見ると、町中心部の屋根、杜川の流れ、その先の三日月町まで一望できます。\r\n          一方、<strong>北西方向</strong> には霞ノ杜の山並みの折れ重なる稜線と、その合間に小さくのぞく <strong>水辺の景色</strong> が見えます。\r\n          こちらは町の旧整備区域に当たるため、現在は一般の立ち入りを制限している地域です。\r\n          展望休憩所から眺めるだけにとどめてください。\r\n        </p>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜山林道 中腹（示意）</td></tr>\r\n            <tr><th>到達時間</th><td>町中心部から徒歩で約 50 分（林道経由 / 上駐車場まで車で 15 分）</td></tr>\r\n            <tr><th>注意</th><td>林道は野生動物の活動範囲です。鈴・笛などの携行を推奨。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../5/\">次の観光地へ：杜の湯（足湯） »</a></div>"
 }

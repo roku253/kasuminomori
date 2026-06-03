@@ -1,10 +1,23 @@
 {
-  "path": "spot/2.html",
+  "path": "spot/2/index.html",
   "route": "/spot/2/",
-  "layout": "city",
-  "title": "リダイレクト中…",
+  "layout": "legacy",
+  "title": "杜の吊り橋｜霞ノ杜町",
   "description": "",
-  "canonical": "2/",
-  "breadcrumbs": [],
-  "related": []
+  "canonical": "https://roku253.github.io/kasuminomori/spot/2/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "文化・観光",
+      "href": "../../bunka/"
+    },
+    {
+      "label": "杜の吊り橋"
+    }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>杜の吊り橋</h2>\r\n        <p>\r\n          杜川の上流、深い渓を渡す木造の小さな吊り橋。\r\n          全長 38 メートル、足元には所々に細い隙間があり、踏み板の継ぎ目から下を流れる水の音と霧が立ちのぼります。\r\n          地元では「杜橋（もりばし）」と呼ばれることもあります。\r\n        </p>\r\n        <p>\r\n          現在の橋は昭和 40 年代の改修によるもので、それ以前は石を敷いた渡し場でした。\r\n          欄干に結びつけられた、小さな布や紙の束は、地元の子どもたちが書く願掛けの「結び文」です。\r\n        </p>\r\n\r\n        <h3>橋の周辺で見られるもの</h3>\r\n        <ul>\r\n          <li><strong>水の音の合流点</strong>：橋の真下で支流が合流し、低い水音が常に響いています。</li>\r\n          <li><strong>苔の樹皮</strong>：北側の橋柱は、北からの湿気を受けて苔が育っています。</li>\r\n          <li><strong>古い案内板の柱</strong>：橋を渡った先、北西側の小道のたもとに、案内板の支柱だけが残されています。看板そのものは長年の間に失われたと伝えられています。</li>\r\n        </ul>\r\n\r\n        <h3>歴史と伝承</h3>\r\n        <p>\r\n          昭和初期の写真には、橋を渡った先に <strong>小さな案内板の列</strong> が写っているものがあります。\r\n          これらは、川の北側にかつて整備されていた散策路の入口を示すものでした。\r\n          散策路自体は長らく一般の利用から外れており、現在は通行できません。\r\n        </p>\r\n\r\n        <h3>観光情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川中流（示意）</td></tr>\r\n            <tr><th>通行時間</th><td>日中（夜間は照明なし。視界の悪い日は通行を控えてください）</td></tr>\r\n            <tr><th>注意</th><td>雨の日は踏み板が滑りやすくなります。最大荷重・通行人数の制限あり。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../3/\">次の観光地へ：霞ノ杜資料館 »</a></div>"
 }

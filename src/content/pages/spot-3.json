@@ -1,10 +1,23 @@
 {
-  "path": "spot/3.html",
+  "path": "spot/3/index.html",
   "route": "/spot/3/",
-  "layout": "city",
-  "title": "リダイレクト中…",
+  "layout": "legacy",
+  "title": "霞ノ杜資料館｜霞ノ杜町",
   "description": "",
-  "canonical": "3/",
-  "breadcrumbs": [],
-  "related": []
+  "canonical": "https://roku253.github.io/kasuminomori/spot/3/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "文化・観光",
+      "href": "../../bunka/"
+    },
+    {
+      "label": "霞ノ杜資料館"
+    }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>霞ノ杜資料館</h2>\r\n        <p>\r\n          町の北西寄り、町役場の隣接地に建つ <strong>霞ノ杜資料館</strong>。\r\n          町域から出土した土器、明治以降の写真、町の地誌、町民の寄贈品など、霞ノ杜の歩みを伝える資料を展示しています。\r\n        </p>\r\n        <p>\r\n          1 階は常設展、2 階は企画展のフロア。地下には町史編纂室があり、町の古文書・地図・写真の整理が今も続けられています。\r\n          訪問前にお電話でご予約いただくと、研究員による解説をご案内できる場合があります。\r\n        </p>\r\n\r\n        <h3>常設展示の見どころ</h3>\r\n        <ul>\r\n          <li><strong>霞ノ杜の地形模型</strong>：盆地・川・山系の関係が一目でわかる立体模型。</li>\r\n          <li><strong>明治・大正期の写真パネル</strong>：道、橋、神社の風景を、町民の生活とともに紹介。</li>\r\n          <li><strong>木工と山仕事の道具</strong>：林業が盛んだった頃の道具類を展示。</li>\r\n        </ul>\r\n\r\n        <h3>町史編纂室・所蔵資料（一部）</h3>\r\n        <div class=\"archive-list\">\r\n          <ul>\r\n            <li><strong>1953 年</strong>　町立小学校 開校時の校門前 集合写真</li>\r\n            <li><strong>1962 年</strong>　杜の吊り橋（旧）の写真</li>\r\n            <li><strong>1971 年</strong>　町内全域 簡易測量図 写し</li>\r\n            <li><strong>1978 年</strong>　町北西部 自然散策路 整備記念写真（案内板を含む）</li>\r\n            <li><strong>1985 年</strong>　町民体育祭 旗手の記録</li>\r\n            <li><strong>2001 年</strong>　町合併協議資料（参考）</li>\r\n            <li><strong>2024 年</strong>　町立霞ノ杜小学校 絵画クラブ 作品集</li>\r\n          </ul>\r\n          <p class=\"archive-note\">※ デジタル化済みの資料は <a href=\"../../history/\">町の歴史</a> ページから一部閲覧できます。</p>\r\n        </div>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 2 番地（町役場 隣）</td></tr>\r\n            <tr><th>開館時間</th><td>9:30 〜 16:30（入館は 16:00 まで）</td></tr>\r\n            <tr><th>休館日</th><td>火曜・水曜、年末年始</td></tr>\r\n            <tr><th>観覧料</th><td>無料（特別展は別途）</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../4/\">次の観光地へ：霧見展望休憩所 »</a></div>"
 }

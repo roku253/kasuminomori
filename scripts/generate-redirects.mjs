@@ -36,10 +36,21 @@ function walkHtml(dir, base = "") {
   return results;
 }
 
+function redirectPathsFromManifest() {
+  const manifestPath = path.join(ROOT, "src", "content", "manifest.json");
+  if (!fs.existsSync(manifestPath)) return [];
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  return (manifest.pages || [])
+    .map((p) => p.path)
+    .filter((p) => p && !p.endsWith("index.html"));
+}
+
 function main() {
   const base = "/kasuminomori";
   let count = 0;
-  for (const rel of walkHtml(ROOT)) {
+  const htmlPaths = walkHtml(ROOT);
+  const relPaths = htmlPaths.length ? htmlPaths : redirectPathsFromManifest();
+  for (const rel of relPaths) {
     const withoutExt = rel.replace(/\.html$/, "");
     const target = `${base}/${withoutExt}/`;
     const outPath = path.join(OUT, rel);

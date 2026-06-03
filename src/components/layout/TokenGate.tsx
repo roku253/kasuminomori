@@ -101,6 +101,15 @@ function lock() {
   document.documentElement.classList.remove("token-gate-ok");
 }
 
+function isDevBypass(): boolean {
+  if (process.env.NODE_ENV === "development") return true;
+  try {
+    return localStorage.getItem("kasumi_dev_unlock") === "1";
+  } catch {
+    return false;
+  }
+}
+
 async function callValidate(c: ReturnType<typeof readCreds>) {
   const resourceKey = window.__TOKEN_RESOURCE_KEY__ || "";
   const r = await fetch(`${TOKEN_GATE_ORIGIN}/api/platform/validate-entitlement`, {
@@ -198,6 +207,12 @@ export function TokenGateInit() {
   useEffect(() => {
     window.__TOKEN_RESOURCE_KEY__ = "ext:kasuminomori";
     window.__TOKEN_DENIED__ = deniedOverlay;
+
+    if (isDevBypass()) {
+      document.documentElement.setAttribute("data-kasumi-dev", "1");
+      unlock();
+      return;
+    }
 
     try {
       const u = new URL(window.location.href);

@@ -4,7 +4,7 @@ import { PICKUP_LINKS } from "@/lib/hero-slides";
 export function PickupPills() {
   return (
     <div>
-      <h2 className="mb-2 text-[11px] font-normal tracking-[0.2em] text-white/90">PICK UP</h2>
+      <h2 className="mb-2 text-[11px] font-bold tracking-[0.15em] text-white/95">よく使うページ</h2>
       <div className="flex flex-wrap gap-2">
         {PICKUP_LINKS.map((l) => (
           <Link

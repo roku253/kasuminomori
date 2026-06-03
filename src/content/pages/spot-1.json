@@ -1,10 +1,23 @@
 {
-  "path": "spot/1.html",
+  "path": "spot/1/index.html",
   "route": "/spot/1/",
-  "layout": "city",
-  "title": "リダイレクト中…",
+  "layout": "legacy",
+  "title": "霞ノ杜神社｜霞ノ杜町",
   "description": "",
-  "canonical": "1/",
-  "breadcrumbs": [],
-  "related": []
+  "canonical": "https://roku253.github.io/kasuminomori/spot/1/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "文化・観光",
+      "href": "../../bunka/"
+    },
+    {
+      "label": "霞ノ杜神社"
+    }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>霞ノ杜神社</h2>\r\n        <p>\r\n          町の北東部、小高い丘陵の一角に鎮座する <strong>霞ノ杜神社</strong>。\r\n          創建年代ははっきりしませんが、古くから「霧を払う」信仰として親しまれてきました。\r\n          境内に立ち並ぶ樹齢数百年といわれるスギは、冬の朝には霧氷をまとい、初夏には深い緑の天蓋をつくります。\r\n        </p>\r\n        <p>\r\n          石段は長年の浸食と修復の歴史を物語っており、途中で角度が変わる箇所があります。\r\n          現在は安全のため、迂回ルートに誘導しています。\r\n        </p>\r\n\r\n        <h3>祭事</h3>\r\n        <ul>\r\n          <li>1月3日 〜 5日：初詣・霧払いの神事</li>\r\n          <li>春彼岸：杜開きの集い（春の祭事の出発点）</li>\r\n          <li>11月23日：新嘗の小祭</li>\r\n        </ul>\r\n\r\n        <h3>境内のみどころ</h3>\r\n        <ul>\r\n          <li><strong>霧払いの大杉</strong>：参道脇にそびえる神木。樹皮に手を当てて願をかける作法。</li>\r\n          <li><strong>水鏡の手水舎（てみずや）</strong>：丘の湧水を引いた手水。雨の少ない年は止まる日もあります。</li>\r\n          <li><strong>絵馬掛け</strong>：絵馬には霞ノ杜小学校の児童が描いた絵を奉納する習わしがあります。</li>\r\n        </ul>\r\n\r\n        <h3>参拝・観光情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘（示意）</td></tr>\r\n            <tr><th>参拝時間</th><td>終日（境内自由／社務所は別途）</td></tr>\r\n            <tr><th>注意</th><td>急な段差・苔で滑りやすい箇所があります。雨天・霧天は足元にご注意。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../2/\">次の観光地へ：杜の吊り橋 »</a></div>"
 }

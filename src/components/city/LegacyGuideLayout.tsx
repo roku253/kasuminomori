@@ -1,7 +1,10 @@
-import Link from "next/link";
 import type { CityPageContent } from "@/lib/content/types";
-import { CityBreadcrumb } from "@/components/layout/CityBreadcrumb";
+import Link from "next/link";
+import { ExternalLink, MapPin } from "lucide-react";
 import { TOURISM_SIDEBAR } from "@/lib/navigation";
+import { PageHero } from "@/components/ui/PageHero";
+import { RelatedPanel } from "@/components/ui/RelatedPanel";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 type Props = {
   page: CityPageContent;
@@ -13,71 +16,79 @@ export function LegacyGuideLayout({ page }: Props) {
     : {};
 
   return (
-    <div className="city-legacy-wrap bg-[#f4efe4]">
-      <div className="mx-auto max-w-6xl px-4 py-8">
-        <CityBreadcrumb items={page.breadcrumbs} />
-        <div className="main-layout grid gap-8 lg:grid-cols-[220px_1fr]">
-          <aside className="sidebar rounded border border-[#ccbda5] bg-[#faf8f4] p-4 text-sm">
-            <h2 className="mt-0 text-sm text-[#2d5a27]">メニュー</h2>
-            <ul className="space-y-1 p-0 list-none">
-              {TOURISM_SIDEBAR.menu.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="text-[#333] no-underline hover:text-[#1a4d80]">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h2 className="text-sm text-[#2d5a27]">観光スポット</h2>
-            <ul className="space-y-1 p-0 list-none">
-              {TOURISM_SIDEBAR.spots.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="text-[#333] no-underline hover:text-[#1a4d80]">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h2 className="text-sm text-[#2d5a27]">町のページ</h2>
-            <ul className="space-y-1 p-0 list-none">
-              {TOURISM_SIDEBAR.town.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="text-[#333] no-underline hover:text-[#1a4d80]">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h2 className="text-sm text-[#2d5a27]">教育施設</h2>
-            <ul className="space-y-1 p-0 list-none">
+    <article className="mx-auto w-full max-w-6xl px-4 py-8 md:py-12" id="city-main">
+      <PageHero
+        title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
+        breadcrumbs={page.breadcrumbs}
+      />
+
+      <div className="grid gap-8 lg:grid-cols-[minmax(200px,240px)_1fr]">
+        <nav
+          className="h-fit rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-4 shadow-[var(--shadow-sm)] lg:sticky lg:top-4"
+          aria-label="観光・町案内メニュー"
+        >
+          <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--kasumi-blue)]">
+            <MapPin size={14} aria-hidden />
+            町のご案内
+          </p>
+          <SidebarBlock title="メニュー" links={TOURISM_SIDEBAR.menu} />
+          <SidebarBlock title="観光スポット" links={TOURISM_SIDEBAR.spots} />
+          <SidebarBlock title="町のページ" links={TOURISM_SIDEBAR.town} />
+          <div className="mt-4 border-t border-[var(--color-border)] pt-4">
+            <p className="mb-2 text-xs font-bold text-[#666]">教育施設</p>
+            <ul className="m-0 list-none space-y-1.5 p-0 text-sm">
               {TOURISM_SIDEBAR.external.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#333] no-underline hover:text-[#1a4d80]"
+                    className="inline-flex items-center gap-1 text-[var(--kasumi-blue)] no-underline hover:underline"
                   >
                     {l.label}
+                    <ExternalLink size={12} aria-hidden />
                   </a>
                 </li>
               ))}
             </ul>
-          </aside>
-          <main
-            className="content legacy-prose rounded border border-[#ccbda5] bg-white p-6 md:p-8"
-            id="city-main"
+          </div>
+        </nav>
+
+        <ScrollReveal>
+          <div
+            className="legacy-prose rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-6 shadow-[var(--shadow-sm)] md:p-8"
             {...mainAttrs}
           >
-            {page.bodyHtml && (
-              <div dangerouslySetInnerHTML={{ __html: page.bodyHtml }} />
-            )}
-            {page.extraHtml && (
-              <div dangerouslySetInnerHTML={{ __html: page.extraHtml }} />
-            )}
-          </main>
-        </div>
+            {page.bodyHtml && <div dangerouslySetInnerHTML={{ __html: page.bodyHtml }} />}
+            {page.extraHtml && <div dangerouslySetInnerHTML={{ __html: page.extraHtml }} />}
+          </div>
+        </ScrollReveal>
       </div>
+
+      {page.related && page.related.length > 0 && <RelatedPanel links={page.related} className="mt-8" />}
+    </article>
+  );
+}
+
+function SidebarBlock({
+  title,
+  links,
+}: {
+  title: string;
+  links: readonly { href: string; label: string }[];
+}) {
+  return (
+    <div className="mb-4">
+      <p className="mb-2 text-xs font-bold text-[#666]">{title}</p>
+      <ul className="m-0 list-none space-y-1.5 p-0 text-sm">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link href={l.href} className="text-[#333] no-underline hover:text-[var(--kasumi-blue)] hover:underline">
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

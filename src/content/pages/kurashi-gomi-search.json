@@ -45,5 +45,5 @@
     "<label>区分コード <input id=\"gomi-zip\" type=\"text\" maxlength=\"7\" placeholder=\"0291701\"></label> <button type=\"button\" id=\"gomi-go\">検索</button>",
     "例: 0291701（三日月） / 0291702（霞ノ杜） / 0291703（杉並ヶ岡）"
   ],
-  "extraHtml": "<p id=\"gomi-out\"></p>\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi.html\">収集曜日</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index.html\">くらし</a></li></ul></aside>"
+  "extraHtml": "<p id=\"gomi-out\"></p>\r\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi.html\">収集曜日</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index.html\">くらし</a></li></ul></aside>"
 }

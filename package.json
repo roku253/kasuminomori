@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "extract": "node scripts/extract-content.mjs",
-    "redirects": "node scripts/generate-redirects.mjs"
+    "redirects": "node scripts/generate-redirects.mjs",
+    "cleanup-legacy": "node scripts/cleanup-legacy-html.mjs"
   },
   "dependencies": {
     "gsap": "^3.12.7",

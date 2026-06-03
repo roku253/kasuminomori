@@ -9,8 +9,8 @@ export function SiteShell({ children }: Props) {
   return (
     <>
       <SiteHeader />
-      <div className="city-page-wrap bg-[#f4f6f8] min-h-[50vh]">{children}</div>
-      <SiteFooter variant="inner" />
+      <div className="min-h-[50vh] bg-[var(--color-page-bg)]">{children}</div>
+      <SiteFooter variant="inner" enableScrollMotion />
     </>
   );
 }

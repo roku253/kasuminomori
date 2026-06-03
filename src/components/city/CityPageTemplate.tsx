@@ -1,66 +1,75 @@
-import Link from "next/link";
 import type { CityPageContent } from "@/lib/content/types";
-import { CityBreadcrumb } from "@/components/layout/CityBreadcrumb";
+import { isHubExtraHtml, parseHubCardsFromHtml, stripHubHtml } from "@/lib/parse-hub";
+import { CategoryHub } from "@/components/ui/CategoryHub";
+import { DataTable } from "@/components/ui/DataTable";
+import { PageHero } from "@/components/ui/PageHero";
+import { RelatedPanel } from "@/components/ui/RelatedPanel";
+import { SectionCard } from "@/components/ui/SectionCard";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-
-function normalizeRelatedHref(href: string): string {
-  if (href.startsWith("http") || href.startsWith("#")) return href;
-  let p = href;
-  while (p.startsWith("../")) p = p.slice(3);
-  while (p.startsWith("./")) p = p.slice(2);
-  p = p.replace(/index\.html$/, "");
-  if (!p.startsWith("/")) p = `/${p}`;
-  if (!p.endsWith("/")) p = `${p}/`;
-  return p;
-}
 
 type Props = {
   page: CityPageContent;
 };
 
-export function CityPageTemplate({ page }: Props) {
+function renderBodyHtml(html: string, key: number) {
+  if (html.trim().startsWith("<")) {
+    return <div key={key} className="prose-city text-base" dangerouslySetInnerHTML={{ __html: html }} />;
+  }
   return (
-    <main className="city-page mx-auto max-w-3xl px-4 py-10 md:py-14" id="city-main">
-      <CityBreadcrumb items={page.breadcrumbs} />
-      <ScrollReveal>
-        {page.h1 && (
-          <h1 className="mb-6 font-[family-name:var(--font-display)] text-3xl font-bold text-[#1a4d80] md:text-4xl">
-            {page.h1}
-          </h1>
-        )}
-      </ScrollReveal>
-      {page.paragraphs?.map((html, i) => (
-        <ScrollReveal key={i}>
-          <div
-            className="prose-city mb-4 text-[15px] leading-relaxed text-[#333]"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+    <p key={key} className="m-0 text-base leading-relaxed text-[#333]">
+      {html}
+    </p>
+  );
+}
+
+export function CityPageTemplate({ page }: Props) {
+  const hubCards = page.extraHtml && isHubExtraHtml(page.extraHtml) ? parseHubCardsFromHtml(page.extraHtml) : [];
+  const extraAfterHub = page.extraHtml && hubCards.length ? stripHubHtml(page.extraHtml) : page.extraHtml;
+  const lead = page.paragraphs?.[0];
+  const moreParagraphs = page.paragraphs?.slice(1) ?? [];
+  const leadIsHtml = lead?.trim().startsWith("<");
+
+  return (
+    <article className="city-page mx-auto w-full max-w-5xl px-4 py-8 md:py-12" id="city-main">
+      <PageHero
+        title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
+        breadcrumbs={page.breadcrumbs}
+        subtitle={lead && !leadIsHtml ? lead : undefined}
+      />
+
+      {lead && leadIsHtml && <SectionCard className="mb-8">{renderBodyHtml(lead, 0)}</SectionCard>}
+
+      {hubCards.length > 0 && (
+        <ScrollReveal>
+          <SectionCard title="目的から探す" className="mb-8">
+            <CategoryHub cards={hubCards} />
+          </SectionCard>
         </ScrollReveal>
-      ))}
+      )}
+
+      {moreParagraphs.length > 0 && (
+        <SectionCard className="mb-8">
+          {moreParagraphs.map((html, i) => renderBodyHtml(html, i))}
+        </SectionCard>
+      )}
+
       {page.tableHtml && (
         <ScrollReveal>
-          <div className="prose-city overflow-x-auto" dangerouslySetInnerHTML={{ __html: page.tableHtml }} />
+          <SectionCard title="一覧・詳細" className="mb-8">
+            <DataTable tableHtml={page.tableHtml} caption={page.h1} />
+          </SectionCard>
         </ScrollReveal>
       )}
-      {page.extraHtml && (
+
+      {extraAfterHub && extraAfterHub.length > 10 && (
         <ScrollReveal>
-          <div className="prose-city" dangerouslySetInnerHTML={{ __html: page.extraHtml }} />
+          <SectionCard className="mb-8">
+            <div className="prose-city" dangerouslySetInnerHTML={{ __html: extraAfterHub }} />
+          </SectionCard>
         </ScrollReveal>
       )}
-      {page.related && page.related.length > 0 && (
-        <aside className="mt-12 rounded-lg border border-[#dde3e8] bg-[#f8fafc] p-6">
-          <h2 className="mb-3 text-base font-bold text-[#1a4d80]">関連するページ</h2>
-          <ul className="space-y-2 p-0 list-none">
-            {page.related.map((r) => (
-              <li key={r.href} {...(r.storyClue ? { "data-kn-story-clue": "1" } : {})}>
-                <Link href={normalizeRelatedHref(r.href)} className="text-[#1a4d80] no-underline hover:underline">
-                  {r.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      )}
-    </main>
+
+      {page.related && page.related.length > 0 && <RelatedPanel links={page.related} />}
+    </article>
   );
 }

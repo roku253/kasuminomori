@@ -90,7 +90,7 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
       <section className="footer-photo-section mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="mb-8">
           <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-wide text-[#1a4d80]">
-            Photograph
+            フォトギャラリー
           </h2>
           <p className="mt-1 text-sm text-[#666]">
             霞ノ杜町公式フォトギャラリー　ID <span className="font-mono">kasuminomori_photo</span>
@@ -121,13 +121,13 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
               霞ノ杜町ホームページ掲載広告の募集
             </Link>
           </p>
-          <div className="footer-banner-row mt-6 flex flex-wrap gap-4" aria-hidden>
+          <ul className="footer-banner-row m-0 mt-6 flex list-none flex-wrap gap-4 p-0">
             {BANNERS.map((b) => (
-              <span key={b.src} className="inline-block shrink-0">
-                <Image src={b.src} alt={b.alt} width={200} height={56} className="h-14 w-auto" />
-              </span>
+              <li key={b.src}>
+                <Image src={b.src} alt={b.alt} width={200} height={56} className="h-14 w-auto rounded border border-[#dde3e8]" />
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -144,12 +144,20 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
         </address>
         <Image
           src="/img/placeholders/footer-symbol.svg"
-          alt=""
+          alt="霞ノ杜町のシンボルマーク"
           width={200}
           height={200}
           className="footer-symbol mx-auto md:mx-0"
         />
       </div>
+      <nav className="mx-auto max-w-6xl border-t border-[#dde3e8] px-4 py-4 text-center text-sm" aria-label="フッターメニュー">
+        <ul className="m-0 flex flex-wrap justify-center gap-x-4 gap-y-2 p-0 list-none">
+          <li><Link href="/shisei/yakuba/" className="text-[var(--kasumi-blue)] no-underline hover:underline">庁舎案内</Link></li>
+          <li><Link href="/contact/" className="text-[var(--kasumi-blue)] no-underline hover:underline">お問い合わせ</Link></li>
+          <li><Link href="/guide/" className="text-[var(--kasumi-blue)] no-underline hover:underline">町のご案内</Link></li>
+          <li><Link href="/shisei/koho/" className="text-[var(--kasumi-blue)] no-underline hover:underline">サイトのご利用について</Link></li>
+        </ul>
+      </nav>
       <p className="border-t border-[#dde3e8] py-4 text-center text-xs text-[#888]">
         Copyright © Kasuminomori Town All Rights Reserved.
       </p>

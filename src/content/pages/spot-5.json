@@ -1,10 +1,23 @@
 {
-  "path": "spot/5.html",
+  "path": "spot/5/index.html",
   "route": "/spot/5/",
-  "layout": "city",
-  "title": "リダイレクト中…",
+  "layout": "legacy",
+  "title": "杜の湯｜霞ノ杜町",
   "description": "",
-  "canonical": "5/",
-  "breadcrumbs": [],
-  "related": []
+  "canonical": "https://roku253.github.io/kasuminomori/spot/5/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "文化・観光",
+      "href": "../../bunka/"
+    },
+    {
+      "label": "杜の湯"
+    }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>杜の湯（足湯）</h2>\r\n        <p>\r\n          杜川の中流、町中心部から徒歩 12 分ほどのところにある、無料の足湯施設。\r\n          かつてはこの一帯に温泉旅館が並んでいましたが、現在は町営の小さな足湯だけが残されています。\r\n          湯量は控えめ、温度は冬で 41 度、夏は 38 度ほど。\r\n        </p>\r\n\r\n        <h3>使い方</h3>\r\n        <ul>\r\n          <li>備え付けのバケツに足を入れる前に、横の流し場でかかとを軽くすすいでください。</li>\r\n          <li>タオルの貸し出しはありません。お手回りに 1 枚お持ちください。</li>\r\n          <li>夜間（17:30 以降）は照明なしです。早めの利用がおすすめ。</li>\r\n        </ul>\r\n\r\n        <h3>周辺のお店</h3>\r\n        <ul>\r\n          <li><strong>霧の最中（もなか）</strong> 売り場（湯の隣、地元商店組合の屋台）</li>\r\n          <li><strong>月待ちプリン 霞ノ杜店</strong>（週末のみ営業の小さな店）</li>\r\n          <li><strong>ファイブイレブン 霞ノ杜橋詰店</strong>（22時閉店）</li>\r\n        </ul>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川 中流（示意）</td></tr>\r\n            <tr><th>利用時間</th><td>6:00 〜 17:30（冬期は短縮）</td></tr>\r\n            <tr><th>料金</th><td>無料</td></tr>\r\n            <tr><th>休業日</th><td>毎月第 3 水曜</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../../\">観光協会トップへ戻る »</a></div>"
 }

@@ -18,6 +18,14 @@ npm run test:e2e:ui
 npm run test:e2e:codegen
 ```
 
+## PC / スマホの見え方記録
+
+```bash
+npm run test:e2e:viewports
+```
+
+保存先: `test-results/viewports/top-1280x800.png`, `top-375x812.png`, `top-375x812-mega-open.png`
+
 ## レポート・動画
 
 - HTML レポート: `npm run test:e2e:report`

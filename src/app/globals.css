@@ -82,6 +82,31 @@ body.city-mega-open {
   overflow: hidden;
 }
 
+/* ワイド PC: ヒーロー両脇を意図したシネマ枠に（コンテンツ幅は max-w-6xl のまま） */
+.hero-edge-vignette {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 10, 18, 0.92) 0%,
+    rgba(5, 10, 18, 0.35) 12%,
+    transparent 22%,
+    transparent 78%,
+    rgba(5, 10, 18, 0.35) 88%,
+    rgba(5, 10, 18, 0.92) 100%
+  );
+}
+
+@media (max-width: 1023px) {
+  .hero-edge-vignette {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 20, 40, 0.55) 0%,
+      transparent 28%,
+      transparent 72%,
+      rgba(10, 15, 20, 0.75) 100%
+    );
+  }
+}
+
 /* RelatedPanel 表示時は legacy extraHtml の重複 aside を非表示 */
 .city-page .prose-city .city-related {
   display: none;

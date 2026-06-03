@@ -96,43 +96,50 @@ export function CinematicHero() {
         </div>
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-[#001428]/70 via-[#001428]/35 to-[#0a0f14]/90" />
-      <div className="relative z-10 mx-auto flex min-h-[min(100dvh,920px)] max-w-6xl flex-col px-4 pb-8 pt-4 md:px-8 md:pb-10">
-        <header className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
+      <div className="hero-edge-vignette pointer-events-none absolute inset-0 z-[6]" aria-hidden />
+      <div className="relative z-10 mx-auto flex min-h-[min(100dvh,920px)] max-w-6xl flex-col px-4 pb-8 pt-4 md:relative md:px-8 md:pb-10">
+        <header className="z-20 grid w-full shrink-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
           <SiteLogo variant="hero" />
           <MegaMenu embeddedInHero />
           <div className="hero-glass col-span-2 w-full max-w-lg justify-self-stretch sm:justify-self-end sm:max-w-sm">
             <TopSearch />
           </div>
         </header>
-        <div className="hero-glass mt-5 max-w-xl">
+        <div className="hero-glass z-20 mt-4 max-w-xl shrink-0 md:mt-5">
           <PickupPills />
-        </div>
-        <div className="mt-auto flex flex-col gap-6 pb-4 md:flex-row md:items-end md:justify-between">
-          <p className="hero-caption m-0 font-[family-name:var(--font-display)] text-2xl font-bold tracking-wide md:text-3xl" aria-live="polite">
-            {slide.title}
-          </p>
-          <div className="flex gap-2" role="tablist" aria-label="スライド選択">
-            {HERO_SLIDES.map((s, i) => (
-              <button
-                key={s.src}
-                type="button"
-                role="tab"
-                aria-selected={i === index}
-                aria-label={s.title}
-                className={`h-2 w-8 rounded-full border-0 transition ${
-                  i === index ? "bg-white" : "bg-white/35 hover:bg-white/55"
-                }`}
-                onClick={() => setIndex(i)}
-              />
-            ))}
-          </div>
         </div>
         <h1
           id="city-main"
-          className="hero-title pointer-events-none absolute left-1/2 top-[36%] w-[92%] max-w-[14ch] -translate-x-1/2 -translate-y-1/2 text-center font-[family-name:var(--font-display)] text-[clamp(1.75rem,8vw,4.5rem)] font-black leading-tight tracking-[0.12em] md:top-[42%] md:max-w-none md:tracking-[0.18em]"
+          className="hero-title relative z-10 my-6 w-full shrink-0 text-center font-[family-name:var(--font-display)] text-[clamp(1.75rem,9vw,2.75rem)] font-black leading-tight tracking-[0.12em] md:pointer-events-none md:absolute md:left-1/2 md:top-[40%] md:my-0 md:w-[92%] md:max-w-none md:-translate-x-1/2 md:-translate-y-1/2 md:text-[clamp(2.5rem,5vw,4.5rem)] md:tracking-[0.18em] lg:top-[42%]"
         >
           霞ノ杜町
         </h1>
+        <div className="relative z-20 mt-auto flex shrink-0 flex-col gap-4 pb-2 pt-2 md:gap-6 md:pb-4">
+          <p
+            className="hero-caption m-0 font-[family-name:var(--font-display)] text-xl font-bold tracking-wide sm:text-2xl md:text-3xl"
+            aria-live="polite"
+          >
+            {slide.title}
+          </p>
+          <div className="flex items-center justify-between gap-4 md:justify-end">
+            <p className="m-0 text-xs text-white/70 md:hidden">スライド {index + 1} / {HERO_SLIDES.length}</p>
+            <div className="flex gap-2" role="tablist" aria-label="スライド選択">
+              {HERO_SLIDES.map((s, i) => (
+                <button
+                  key={s.src}
+                  type="button"
+                  role="tab"
+                  aria-selected={i === index}
+                  aria-label={s.title}
+                  className={`h-2.5 min-w-[32px] rounded-full border-0 transition ${
+                    i === index ? "bg-white" : "bg-white/35 hover:bg-white/55"
+                  }`}
+                  onClick={() => setIndex(i)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

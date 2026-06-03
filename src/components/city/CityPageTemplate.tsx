@@ -37,6 +37,7 @@ export function CityPageTemplate({ page }: Props) {
       <PageHero
         title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
         breadcrumbs={page.breadcrumbs}
+        pageRoute={page.route}
         subtitle={lead && !leadIsHtml ? lead : undefined}
       />
 
@@ -45,7 +46,7 @@ export function CityPageTemplate({ page }: Props) {
       {hubCards.length > 0 && (
         <ScrollReveal>
           <SectionCard title="目的から探す" className="mb-8">
-            <CategoryHub cards={hubCards} />
+            <CategoryHub cards={hubCards} pageRoute={page.route} />
           </SectionCard>
         </ScrollReveal>
       )}
@@ -72,7 +73,9 @@ export function CityPageTemplate({ page }: Props) {
         </ScrollReveal>
       )}
 
-      {page.related && page.related.length > 0 && <RelatedPanel links={page.related} />}
+      {page.related && page.related.length > 0 && (
+        <RelatedPanel links={page.related} pageRoute={page.route} />
+      )}
     </article>
   );
 }

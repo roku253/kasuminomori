@@ -1,24 +1,15 @@
 import Link from "next/link";
 import type { RelatedLink } from "@/lib/content/types";
-
-function normalizeRelatedHref(href: string): string {
-  if (href.startsWith("http") || href.startsWith("#")) return href;
-  let p = href;
-  while (p.startsWith("../")) p = p.slice(3);
-  while (p.startsWith("./")) p = p.slice(2);
-  p = p.replace(/index\.html$/, "");
-  if (!p.startsWith("/")) p = `/${p}`;
-  if (!p.endsWith("/")) p = `${p}/`;
-  return p;
-}
+import { resolveContentHref } from "@/lib/site";
 
 type Props = {
   links: RelatedLink[];
+  pageRoute: string;
   title?: string;
   className?: string;
 };
 
-export function RelatedPanel({ links, title = "関連するページ", className = "" }: Props) {
+export function RelatedPanel({ links, pageRoute, title = "関連するページ", className = "" }: Props) {
   if (!links.length) return null;
 
   return (
@@ -30,7 +21,7 @@ export function RelatedPanel({ links, title = "関連するページ", className
         {links.map((r) => (
           <li key={r.href} className="my-1.5" {...(r.storyClue ? { "data-kn-story-clue": "1" } : {})}>
             <Link
-              href={normalizeRelatedHref(r.href)}
+              href={resolveContentHref(r.href, pageRoute)}
               className="inline-flex min-h-[44px] items-center py-1 text-[var(--kasumi-blue)] no-underline hover:underline"
             >
               {r.label}

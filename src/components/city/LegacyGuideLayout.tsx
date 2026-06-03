@@ -20,6 +20,7 @@ export function LegacyGuideLayout({ page }: Props) {
       <PageHero
         title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
         breadcrumbs={page.breadcrumbs}
+        pageRoute={page.route}
       />
 
       <div className="grid gap-8 lg:grid-cols-[minmax(200px,240px)_1fr]">
@@ -65,7 +66,9 @@ export function LegacyGuideLayout({ page }: Props) {
         </nav>
       </div>
 
-      {page.related && page.related.length > 0 && <RelatedPanel links={page.related} className="mt-8" />}
+      {page.related && page.related.length > 0 && (
+        <RelatedPanel links={page.related} pageRoute={page.route} className="mt-8" />
+      )}
     </article>
   );
 }

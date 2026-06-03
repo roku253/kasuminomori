@@ -32,6 +32,17 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
     await expect(page.getByRole("link", { name: /町営バス/ }).first()).toBeVisible();
   });
 
+  test("くらしハブ: ごみカードは /kurashi/gomi/ へ（/gomi/ 404 回避）", async ({ page }) => {
+    await page.goto(sitePath("kurashi/"));
+    await page
+      .locator("#city-main")
+      .getByRole("link", { name: /ごみ・リサイクル/ })
+      .first()
+      .click();
+    await expect(page).toHaveURL(/\/kasuminomori\/kurashi\/gomi\/?$/);
+    await expect(page.getByRole("heading", { level: 1, name: "ごみ・リサイクル" })).toBeVisible();
+  });
+
   test("観光 spot: 霞ノ杜神社（legacy レイアウト）", async ({ page }) => {
     await page.goto(sitePath("spot/1/"));
     await expect(page.getByRole("heading", { level: 1, name: "霞ノ杜神社" })).toBeVisible();

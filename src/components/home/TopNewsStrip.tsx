@@ -29,7 +29,7 @@ export function TopNewsStrip() {
             <li key={item.date + item.title}>
               <Link
                 href={item.href}
-                className="group flex flex-wrap items-baseline gap-2 text-[15px] text-[#222] no-underline hover:text-[var(--kasumi-blue)] md:gap-3"
+                className="group flex min-h-[44px] flex-wrap items-center gap-2 rounded-md py-1 text-[15px] text-[#222] no-underline hover:bg-[#f6f8fa] hover:text-[var(--kasumi-blue)] md:gap-3"
               >
                 <time className="shrink-0 text-xs font-medium text-[#666]">{item.date}</time>
                 <span className="flex-1">{item.title}</span>

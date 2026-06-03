@@ -29,14 +29,22 @@ export function MegaMenu({ embeddedInHero }: Props) {
   }, [open]);
 
   const btnClass = embeddedInHero
-    ? "rounded-full border-0 bg-[#2d8a3e] px-5 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-[#247032]"
-    : "fixed top-3 right-5 z-[100001] rounded-full border-0 bg-[#2d8a3e] px-5 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-[#247032]";
+    ? "min-h-[44px] rounded-full border-0 bg-[#2d8a3e] px-5 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-[#247032]"
+    : "min-h-[44px] shrink-0 rounded-full border-0 bg-[#2d8a3e] px-4 py-2.5 text-sm font-bold text-white shadow-md hover:bg-[#247032]";
 
   return (
     <>
+      {open && !embeddedInHero && (
+        <div
+          role="presentation"
+          className="fixed inset-0 z-[99999] cursor-default bg-black/40"
+          onClick={() => setOpen(false)}
+          onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
+        />
+      )}
       <button
         type="button"
-        className={btnClass}
+        className={`${btnClass} relative z-[100001]`}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={toggle}
@@ -49,7 +57,11 @@ export function MegaMenu({ embeddedInHero }: Props) {
       <nav
         id={panelId}
         hidden={!open}
-        className="city-mega fixed inset-x-0 top-0 z-[100000] max-h-[85vh] overflow-auto border-b-[3px] border-[#1a4d80] bg-[#f5f5f5] pt-[52px] shadow-2xl"
+        className={
+          embeddedInHero
+            ? "city-mega fixed inset-x-0 top-0 z-[100000] max-h-[85vh] overflow-auto border-b-[3px] border-[#1a4d80] bg-[#f5f5f5] pt-[52px] shadow-2xl"
+            : "city-mega fixed inset-x-0 top-[var(--site-header-stack,5.5rem)] z-[100000] max-h-[calc(100dvh-var(--site-header-stack,5.5rem))] overflow-auto border-b-[3px] border-[#1a4d80] bg-[#f5f5f5] shadow-2xl"
+        }
       >
         <div className="mx-auto max-w-6xl border-b border-[#ccc] px-4 py-3">
           <h2 className="m-0 text-sm font-bold text-[#1a4d80]">よく使うリンク</h2>
@@ -58,7 +70,7 @@ export function MegaMenu({ embeddedInHero }: Props) {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="inline-block rounded bg-white px-3 py-1.5 text-xs text-[#1a4d80] no-underline hover:bg-[#e8f0fa]"
+                  className="inline-flex min-h-[40px] items-center rounded bg-white px-3 py-2 text-xs text-[#1a4d80] no-underline hover:bg-[#e8f0fa]"
                   onClick={() => setOpen(false)}
                 >
                   {l.label}
@@ -78,7 +90,11 @@ export function MegaMenu({ embeddedInHero }: Props) {
               <ul className="mt-2 space-y-1 p-0 list-none text-sm">
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-[#333] no-underline hover:text-[#1a4d80]" onClick={() => setOpen(false)}>
+                    <Link
+                      href={l.href}
+                      className="inline-flex min-h-[40px] items-center py-1 text-[#333] no-underline hover:text-[#1a4d80]"
+                      onClick={() => setOpen(false)}
+                    >
                       {l.label}
                     </Link>
                   </li>

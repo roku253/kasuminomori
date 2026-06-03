@@ -104,7 +104,7 @@ export function DataTable({ rows, headers, tableHtml, className = "", caption }:
           {parsedRows.map((row, i) =>
             isLabelValue(row) ? (
               <tr key={`${row.label}-${i}`}>
-                <th className="w-[28%] border border-[#ccc] bg-[#e8f0e8] px-3 py-2 text-left font-normal">
+                <th className="w-[28%] min-w-[7rem] border border-[#ccc] bg-[#e8f0fa] px-3 py-2 text-left font-semibold text-[var(--kasumi-blue)]">
                   {row.label}
                 </th>
                 <td className="border border-[#ccc] px-3 py-2">{row.value}</td>

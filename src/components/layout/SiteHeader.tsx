@@ -25,21 +25,29 @@ export function SiteHeader() {
           </a>
         </div>
       </div>
-      <header className="sticky top-0 z-[99990] bg-[var(--kasumi-blue)] text-white shadow-md">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-2.5">
+      <header
+        className="sticky top-0 z-[99990] bg-[var(--kasumi-blue)] text-white shadow-md [--site-header-stack:5.75rem]"
+        data-site-header
+      >
+        <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-2.5 sm:gap-3">
           <SiteLogo variant="header" />
-          <nav className="ml-auto hidden flex-wrap items-center gap-1 lg:flex" aria-label="主要カテゴリ">
+          <nav
+            className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-0.5 lg:flex"
+            aria-label="主要カテゴリ"
+          >
             {MEGA_COLUMNS.map((col) => (
               <Link
                 key={col.href}
                 href={col.href}
-                className="rounded px-2.5 py-1.5 text-[13px] font-medium text-white/95 no-underline transition hover:bg-white/15"
+                className="rounded-md px-2.5 py-2 text-[13px] font-medium text-white/95 no-underline transition hover:bg-white/15"
               >
                 {col.title}
               </Link>
             ))}
           </nav>
-          <MegaMenu />
+          <div className="ml-auto shrink-0 lg:ml-2">
+            <MegaMenu />
+          </div>
         </div>
       </header>
     </>

@@ -1,5 +1,5 @@
 import type { CityPageContent } from "@/lib/content/types";
-import { isHubExtraHtml, parseHubCardsFromHtml, stripHubHtml } from "@/lib/parse-hub";
+import { isHubExtraHtml, parseHubCardsFromHtml, stripHubHtml, stripRelatedAside } from "@/lib/parse-hub";
 import { CategoryHub } from "@/components/ui/CategoryHub";
 import { DataTable } from "@/components/ui/DataTable";
 import { PageHero } from "@/components/ui/PageHero";
@@ -24,13 +24,16 @@ function renderBodyHtml(html: string, key: number) {
 
 export function CityPageTemplate({ page }: Props) {
   const hubCards = page.extraHtml && isHubExtraHtml(page.extraHtml) ? parseHubCardsFromHtml(page.extraHtml) : [];
-  const extraAfterHub = page.extraHtml && hubCards.length ? stripHubHtml(page.extraHtml) : page.extraHtml;
+  let extraAfterHub = page.extraHtml && hubCards.length ? stripHubHtml(page.extraHtml) : page.extraHtml;
+  if (extraAfterHub && page.related?.length) {
+    extraAfterHub = stripRelatedAside(extraAfterHub);
+  }
   const lead = page.paragraphs?.[0];
   const moreParagraphs = page.paragraphs?.slice(1) ?? [];
   const leadIsHtml = lead?.trim().startsWith("<");
 
   return (
-    <article className="city-page mx-auto w-full max-w-5xl px-4 py-8 md:py-12" id="city-main">
+    <article className="city-page mx-auto w-full max-w-6xl px-4 py-8 md:py-12" id="city-main">
       <PageHero
         title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
         breadcrumbs={page.breadcrumbs}

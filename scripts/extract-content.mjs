@@ -8,7 +8,19 @@ const ARCHIVE = path.join(ROOT, "archive");
 const OUT_DIR = path.join(ROOT, "src", "content", "pages");
 const MANIFEST_PATH = path.join(ROOT, "src", "content", "manifest.json");
 
-const SKIP = new Set(["partials", "node_modules", ".next", "out", "public", "src", "legacy", "archive"]);
+const SKIP = new Set([
+  "partials",
+  "node_modules",
+  ".next",
+  "out",
+  "public",
+  "src",
+  "legacy",
+  "archive",
+  "playwright-report",
+  "test-results",
+  "e2e",
+]);
 const SKIP_FILES = new Set(["index.html"]);
 
 function walkHtml(dir, base = "") {
@@ -212,7 +224,7 @@ function rebuildManifestFromJson() {
   }
   const pages = fs
     .readdirSync(OUT_DIR)
-    .filter((f) => f.endsWith(".json"))
+    .filter((f) => f.endsWith(".json") && !f.startsWith("playwright-report"))
     .map((f) => JSON.parse(fs.readFileSync(path.join(OUT_DIR, f), "utf8")));
   pages.sort((a, b) => a.route.localeCompare(b.route, "ja"));
   const manifest = buildManifestFromPages(pages);

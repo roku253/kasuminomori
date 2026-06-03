@@ -31,7 +31,7 @@ export function RelatedPanel({ links, title = "関連するページ", className
           <li key={r.href} className="my-1.5" {...(r.storyClue ? { "data-kn-story-clue": "1" } : {})}>
             <Link
               href={normalizeRelatedHref(r.href)}
-              className="text-[var(--kasumi-blue)] no-underline hover:underline"
+              className="inline-flex min-h-[44px] items-center py-1 text-[var(--kasumi-blue)] no-underline hover:underline"
             >
               {r.label}
             </Link>

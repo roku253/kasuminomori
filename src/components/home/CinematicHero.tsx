@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { HERO_SLIDES } from "@/lib/hero-slides";
+import { assetPath } from "@/lib/site";
 import { MegaMenu } from "@/components/layout/MegaMenu";
 import { SiteLogo } from "@/components/layout/SiteLogo";
 import { useReducedMotion } from "@/components/motion/useReducedMotion";
@@ -84,7 +85,7 @@ export function CinematicHero() {
         >
           <div className="hero-slide-inner absolute inset-0 origin-center">
             <Image
-              src={s.src}
+              src={assetPath(s.src)}
               alt={i === index ? s.alt : ""}
               fill
               priority={i === 0}
@@ -96,12 +97,12 @@ export function CinematicHero() {
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-[#001428]/70 via-[#001428]/35 to-[#0a0f14]/90" />
       <div className="relative z-10 mx-auto flex min-h-[min(100dvh,920px)] max-w-6xl flex-col px-4 pb-8 pt-4 md:px-8 md:pb-10">
-        <header className="flex flex-wrap items-start gap-3">
+        <header className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
           <SiteLogo variant="hero" />
-          <div className="hero-glass ml-auto w-full max-w-sm">
+          <MegaMenu embeddedInHero />
+          <div className="hero-glass col-span-2 w-full max-w-lg justify-self-stretch sm:justify-self-end sm:max-w-sm">
             <TopSearch />
           </div>
-          <MegaMenu embeddedInHero />
         </header>
         <div className="hero-glass mt-5 max-w-xl">
           <PickupPills />
@@ -128,7 +129,7 @@ export function CinematicHero() {
         </div>
         <h1
           id="city-main"
-          className="hero-title pointer-events-none absolute left-1/2 top-[42%] w-[92%] -translate-x-1/2 -translate-y-1/2 text-center font-[family-name:var(--font-display)] text-4xl font-black tracking-[0.18em] md:text-6xl lg:text-7xl"
+          className="hero-title pointer-events-none absolute left-1/2 top-[36%] w-[92%] max-w-[14ch] -translate-x-1/2 -translate-y-1/2 text-center font-[family-name:var(--font-display)] text-[clamp(1.75rem,8vw,4.5rem)] font-black leading-tight tracking-[0.12em] md:top-[42%] md:max-w-none md:tracking-[0.18em]"
         >
           霞ノ杜町
         </h1>

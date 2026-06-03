@@ -21,6 +21,11 @@ export function stripHubHtml(html: string): string {
   return html.replace(/<div class="city-hub-cards">[\s\S]*?<\/div>/i, "").trim();
 }
 
+/** legacy extraHtml 内の関連リンク（RelatedPanel と重複するため除去） */
+export function stripRelatedAside(html: string): string {
+  return html.replace(/<aside\s+class="city-related"[^>]*>[\s\S]*?<\/aside>/gi, "").trim();
+}
+
 export function isHubExtraHtml(html?: string): boolean {
   return Boolean(html?.includes("city-hub-cards"));
 }

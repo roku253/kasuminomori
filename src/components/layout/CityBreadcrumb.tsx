@@ -21,7 +21,10 @@ export function CityBreadcrumb({ items }: Props) {
         <span key={`${item.label}-${i}`}>
           {i > 0 && <span className="mx-2 text-[#999]">›</span>}
           {item.href ? (
-            <Link href={resolveHref(item.href)} className="text-[#1a4d80] no-underline hover:underline">
+            <Link
+              href={resolveHref(item.href)}
+              className="inline-flex min-h-[44px] items-center py-0.5 text-[#1a4d80] no-underline hover:underline"
+            >
               {item.label}
             </Link>
           ) : (

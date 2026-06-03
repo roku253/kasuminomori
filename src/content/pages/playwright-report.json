@@ -1,0 +1,9 @@
+{
+  "path": "playwright-report/index.html",
+  "route": "/playwright-report/",
+  "layout": "city",
+  "title": "Playwright Test Report",
+  "description": "",
+  "breadcrumbs": [],
+  "related": []
+}

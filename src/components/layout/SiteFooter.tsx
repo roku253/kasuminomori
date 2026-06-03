@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { assetPath } from "@/lib/site";
 import { SiteLogo } from "./SiteLogo";
 import { useReducedMotion } from "@/components/motion/useReducedMotion";
 
@@ -98,12 +99,12 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
         </div>
         <div className="grid gap-4 md:grid-cols-[1fr_1fr]">
           <figure className="footer-photo-large relative m-0 aspect-[3/4] overflow-hidden rounded-lg shadow-md">
-            <Image src={PHOTOS.large.src} alt={PHOTOS.large.alt} fill className="object-cover" sizes="(max-width:768px) 100vw, 480px" />
+            <Image src={assetPath(PHOTOS.large.src)} alt={PHOTOS.large.alt} fill className="object-cover" sizes="(max-width:768px) 100vw, 480px" />
           </figure>
           <div className="footer-photo-small grid grid-cols-2 gap-3">
             {PHOTOS.small.map((p) => (
               <figure key={p.src} className="relative m-0 aspect-square overflow-hidden rounded-lg shadow-sm">
-                <Image src={p.src} alt={p.alt} fill className="object-cover" sizes="240px" />
+                <Image src={assetPath(p.src)} alt={p.alt} fill className="object-cover" sizes="240px" />
               </figure>
             ))}
           </div>
@@ -124,7 +125,7 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
           <ul className="footer-banner-row m-0 mt-6 flex list-none flex-wrap gap-4 p-0">
             {BANNERS.map((b) => (
               <li key={b.src}>
-                <Image src={b.src} alt={b.alt} width={200} height={56} className="h-14 w-auto rounded border border-[#dde3e8]" />
+                <Image src={assetPath(b.src)} alt={b.alt} width={200} height={56} className="h-14 w-auto rounded border border-[#dde3e8]" />
               </li>
             ))}
           </ul>
@@ -143,7 +144,7 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
           代表電話 0123-45-6700（平日 8:30〜17:15）
         </address>
         <Image
-          src="/img/placeholders/footer-symbol.svg"
+          src={assetPath("/img/placeholders/footer-symbol.svg")}
           alt="霞ノ杜町のシンボルマーク"
           width={200}
           height={200}

@@ -34,7 +34,7 @@ export function CategoryHub({ cards, className = "" }: Props) {
         <Link
           key={card.href}
           href={normalizeHref(card.href)}
-          className="group block rounded-[var(--radius-md)] border border-[var(--color-border)] bg-white p-5 text-inherit no-underline shadow-[var(--shadow-sm)] transition hover:border-[var(--kasumi-blue)] hover:shadow-[var(--shadow-md)]"
+          className="group flex min-h-[120px] flex-col rounded-[var(--radius-md)] border border-[var(--color-border)] bg-white p-5 text-inherit no-underline shadow-[var(--shadow-sm)] transition hover:border-[var(--kasumi-blue)] hover:shadow-[var(--shadow-md)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--kasumi-blue)]"
           {...(card.storyClue ? { "data-kn-story-clue": "1" } : {})}
         >
           <strong className="mb-2 block text-base text-[var(--kasumi-blue)] group-hover:underline">

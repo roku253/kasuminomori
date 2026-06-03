@@ -14,7 +14,7 @@ export function TopSearch() {
           type="button"
           role="tab"
           aria-selected={tab === "site"}
-          className={`flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
+          className={`min-h-[44px] flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
             tab === "site" ? "bg-white/90 font-bold text-[#1a5fb4]" : "bg-transparent text-white/90"
           }`}
           onClick={() => setTab("site")}
@@ -25,7 +25,7 @@ export function TopSearch() {
           type="button"
           role="tab"
           aria-selected={tab === "page"}
-          className={`flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
+          className={`min-h-[44px] flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
             tab === "page" ? "bg-white/90 font-bold text-[#1a5fb4]" : "bg-transparent text-white/90"
           }`}
           onClick={() => setTab("page")}
@@ -47,7 +47,7 @@ export function TopSearch() {
         />
         <button
           type="submit"
-          className="flex shrink-0 items-center gap-1 border-0 bg-[#1a5fb4] px-4 text-white cursor-pointer hover:bg-[#154a9a]"
+          className="flex min-h-[44px] shrink-0 items-center gap-1 border-0 bg-[#1a5fb4] px-4 text-white cursor-pointer hover:bg-[#154a9a]"
         >
           <Search size={16} aria-hidden />
           <span className="sr-only sm:not-sr-only sm:inline">検索</span>

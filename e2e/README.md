@@ -36,3 +36,5 @@ npm run test:e2e:codegen
 ## 動画の場所
 
 テスト後: `test-results/<フォルダ名>/video.webm` を VLC 等で再生。
+
+<!-- automation check -->

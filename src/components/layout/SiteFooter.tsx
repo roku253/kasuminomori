@@ -40,24 +40,14 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
     if (!enableScrollMotion || !rootRef.current || reduced) return;
     gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
-      gsap.to(".footer-photo-large", {
-        yPercent: 8,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".footer-photo-section",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-      gsap.from(".footer-photo-small figure", {
+      gsap.from(".footer-photo-mosaic__grid figure", {
         opacity: 0,
         y: 32,
         stagger: 0.12,
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".footer-photo-small",
+          trigger: ".footer-photo-mosaic__grid",
           start: "top 85%",
         },
       });
@@ -90,21 +80,20 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
     <footer ref={rootRef} className={`${bg} text-[#222]`}>
       <section className="footer-photo-section mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="mb-8">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-wide text-[#1a4d80]">
-            フォトギャラリー
-          </h2>
-          <p className="mt-1 text-sm text-[#666]">
-            霞ノ杜町公式フォトギャラリー　ID <span className="font-mono">kasuminomori_photo</span>
+          <h2 className="city-heading-display m-0 text-2xl md:text-[1.65rem]">フォトギャラリー</h2>
+          <p className="mt-2 text-sm text-[var(--color-text-muted)]">
+            霞ノ杜町公式フォトギャラリー　ID{" "}
+            <span className="font-mono text-[13px] text-[var(--color-text)]">kasuminomori_photo</span>
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-[1fr_1fr]">
-          <figure className="footer-photo-large relative m-0 aspect-[3/4] overflow-hidden rounded-lg shadow-md">
+        <div className="footer-photo-mosaic">
+          <figure className="footer-photo-mosaic__lead footer-photo-large">
             <Image src={assetPath(PHOTOS.large.src)} alt={PHOTOS.large.alt} fill className="object-cover" sizes="(max-width:768px) 100vw, 480px" />
           </figure>
-          <div className="footer-photo-small grid grid-cols-2 gap-3">
+          <div className="footer-photo-mosaic__grid footer-photo-small">
             {PHOTOS.small.map((p) => (
-              <figure key={p.src} className="relative m-0 aspect-square overflow-hidden rounded-lg shadow-sm">
-                <Image src={assetPath(p.src)} alt={p.alt} fill className="object-cover" sizes="240px" />
+              <figure key={p.src}>
+                <Image src={assetPath(p.src)} alt={p.alt} fill className="object-cover" sizes="(max-width:768px) 45vw, 220px" />
               </figure>
             ))}
           </div>

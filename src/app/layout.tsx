@@ -6,15 +6,20 @@ import "./globals.css";
 
 const notoSans = Noto_Sans_JP({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-noto-sans",
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const notoSerif = Noto_Serif_JP({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["500", "700", "900"],
   variable: "--font-noto-serif",
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

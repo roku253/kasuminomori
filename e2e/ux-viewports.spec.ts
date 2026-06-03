@@ -32,6 +32,7 @@ test.describe("トップ — viewport 見え方記録", () => {
     const menuBtn = page.getByRole("button", { name: "メニュー" });
     await menuBtn.click();
     await expect(menuBtn).toHaveAttribute("aria-expanded", "true");
+    await expect(page.getByText("よく使うページ")).toBeHidden();
     await page.screenshot({ path: path.join(OUT_DIR, "top-375x812-mega-open.png") });
   });
 });

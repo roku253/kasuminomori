@@ -39,6 +39,14 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
     await expect(page.getByText("霧払いの大杉")).toBeVisible();
   });
 
+  test("トップ: メガメニュー展開時にヒーローピルが重ならない", async ({ page }) => {
+    await page.goto(sitePath());
+    await page.getByRole("button", { name: "メニュー" }).click();
+    await expect(page.getByRole("button", { name: "メニュー" })).toHaveAttribute("aria-expanded", "true");
+    await expect(page.getByText("よく使うページ")).toBeHidden();
+    await expect(page.getByRole("navigation").filter({ hasText: "よく使うリンク" })).toBeVisible();
+  });
+
   test("メガメニュー: 開閉と市政リンク", async ({ page }) => {
     await page.goto(sitePath("shisei/koho/"));
     const menuBtn = page.getByRole("button", { name: "メニュー" });

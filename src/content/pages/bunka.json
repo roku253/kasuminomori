@@ -1,0 +1,22 @@
+{
+  "path": "bunka/index.html",
+  "route": "/bunka/",
+  "layout": "city",
+  "title": "文化・スポーツ・観光｜霞ノ杜町",
+  "description": "",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "文化・スポーツ・観光"
+    }
+  ],
+  "related": [],
+  "h1": "文化・スポーツ・観光",
+  "paragraphs": [
+    "観光・行事・歴史・スポーツイベントへの入口です。"
+  ],
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"../guide/\"><strong>町のご案内</strong><span>自然と産業</span></a><a class=\"city-hub-card\" href=\"../events/\"><strong>年間行事</strong><span>祭り・マラソン</span></a><a class=\"city-hub-card\" href=\"../spot/1/\"><strong>観光スポット</strong><span>神社から足湯まで</span></a><a class=\"city-hub-card\" href=\"../history/\"><strong>町の歴史</strong><span>写真と年表</span></a><a class=\"city-hub-card\" href=\"sports.html\"><strong>スポーツ</strong><span>町民大会</span></a><a class=\"city-hub-card\" href=\"bunka.html\"><strong>伝統文化</strong><span>祭・伝承</span></a><a class=\"city-hub-card\" href=\"events-calendar.html\"><strong>イベントカレンダー</strong><span>月間予定</span></a></div>"
+}

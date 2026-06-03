@@ -1,0 +1,47 @@
+{
+  "path": "shisei/yakuba.html",
+  "route": "/shisei/yakuba/",
+  "layout": "city",
+  "title": "庁舎案内｜霞ノ杜町",
+  "description": "庁舎案内 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "庁舎案内"
+    }
+  ],
+  "related": [
+    {
+      "href": "../access/",
+      "label": "アクセス",
+      "storyClue": false
+    },
+    {
+      "href": "shozoku.html",
+      "label": "組織",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/chizu.html",
+      "label": "地図",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "市政",
+      "storyClue": false
+    }
+  ],
+  "h1": "庁舎案内",
+  "paragraphs": [
+    "〒029-17XX 吾妻郡霞ノ杜町三日月中央2-8-1。JR最寄「三日月町」駅から町営バス20分。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../acces"
+}

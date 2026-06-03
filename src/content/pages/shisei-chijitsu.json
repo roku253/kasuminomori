@@ -1,0 +1,47 @@
+{
+  "path": "shisei/chijitsu.html",
+  "route": "/shisei/chijitsu/",
+  "layout": "city",
+  "title": "町長｜霞ノ杜町",
+  "description": "町長の部屋 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "町長の部屋"
+    }
+  ],
+  "related": [
+    {
+      "href": "shozoku.html",
+      "label": "組織",
+      "storyClue": false
+    },
+    {
+      "href": "koho.html",
+      "label": "お知らせ",
+      "storyClue": false
+    },
+    {
+      "href": "senkyo.html",
+      "label": "選挙",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "市政",
+      "storyClue": false
+    }
+  ],
+  "h1": "町長の部屋",
+  "paragraphs": [
+    "町長 藤原 誠一（ふじわら せいいち）— 杜と人をつなぐまちづくりを目指して。（架空）"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"sho"
+}

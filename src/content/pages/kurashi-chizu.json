@@ -1,0 +1,48 @@
+{
+  "path": "kurashi/chizu.html",
+  "route": "/kurashi/chizu/",
+  "layout": "city",
+  "title": "地図から探す｜霞ノ杜町",
+  "description": "地図から探す — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "地図から探す"
+    }
+  ],
+  "related": [
+    {
+      "href": "../access/",
+      "label": "アクセス",
+      "storyClue": false
+    },
+    {
+      "href": "../spot/1/",
+      "label": "観光スポット",
+      "storyClue": false
+    },
+    {
+      "href": "../anzen/hazard.html",
+      "label": "ハザード",
+      "storyClue": false
+    },
+    {
+      "href": "bus-jikan.html",
+      "label": "バス",
+      "storyClue": false
+    }
+  ],
+  "h1": "地図から探す",
+  "paragraphs": [
+    "町内の主要施設・観光スポットの位置は、アクセス・地図ページの簡易図をご利用ください。",
+    "<a href=\"../access/\">アクセス・地図ページを開く</a>"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../access/\">アクセス</a></li><li><a href=\"../spot/1/"
+}

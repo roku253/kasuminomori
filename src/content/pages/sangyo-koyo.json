@@ -1,0 +1,48 @@
+{
+  "path": "sangyo/koyo.html",
+  "route": "/sangyo/koyo/",
+  "layout": "city",
+  "title": "雇用｜霞ノ杜町",
+  "description": "雇用・季節工 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "産業・雇用",
+      "href": "index.html"
+    },
+    {
+      "label": "雇用・季節工"
+    }
+  ],
+  "related": [
+    {
+      "href": "ringyo.html",
+      "label": "林業",
+      "storyClue": false
+    },
+    {
+      "href": "shogyo.html",
+      "label": "商店街",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "事業者",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "雇用・季節工",
+  "paragraphs": [
+    "ハウスメーカー・林業・観光の季節求人を町ハローワーク掲示板で公開（架空）。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>林業作業</th><td>4〜11月 / 要相談</td></tr><tr><th>観光案内</th><td>夏期アルバイト</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"ringyo.html\">林業</a></li><li><a href=\"shogyo.html\">商店街</a></li><li><a href=\"index.html\">事業者</a></li><li><a href="
+}

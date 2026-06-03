@@ -1,0 +1,47 @@
+{
+  "path": "kodomo/kosodate.html",
+  "route": "/kodomo/kosodate/",
+  "layout": "city",
+  "title": "子育て支援｜霞ノ杜町",
+  "description": "子育て支援 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "子ども・教育",
+      "href": "index.html"
+    },
+    {
+      "label": "子育て支援"
+    }
+  ],
+  "related": [
+    {
+      "href": "hoiku.html",
+      "label": "保育",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/tetsuzuki-navi.html",
+      "label": "手続ナビ",
+      "storyClue": false
+    },
+    {
+      "href": "../fukushi/",
+      "label": "福祉",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "子育て支援",
+  "paragraphs": [
+    "児童手当・医療費助成・一時預かりの案内は子育て支援課。相談は杜のいろはと連携。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href="
+}

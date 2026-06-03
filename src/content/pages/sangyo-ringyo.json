@@ -1,0 +1,47 @@
+{
+  "path": "sangyo/ringyo.html",
+  "route": "/sangyo/ringyo/",
+  "layout": "city",
+  "title": "林業｜霞ノ杜町",
+  "description": "林業 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "産業・雇用",
+      "href": "index.html"
+    },
+    {
+      "label": "林業"
+    }
+  ],
+  "related": [
+    {
+      "href": "../kurashi/kankyo.html",
+      "label": "環境",
+      "storyClue": false
+    },
+    {
+      "href": "koyo.html",
+      "label": "雇用",
+      "storyClue": false
+    },
+    {
+      "href": "kankou-sangyo.html",
+      "label": "観光",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "産業",
+      "storyClue": false
+    }
+  ],
+  "h1": "林業",
+  "paragraphs": [
+    "町面積の約七成が森林。間伐・素材販売は林業組合と建設課が窓口。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><"
+}

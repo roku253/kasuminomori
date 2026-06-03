@@ -1,0 +1,48 @@
+{
+  "path": "shisei/open-data.html",
+  "route": "/shisei/open-data/",
+  "layout": "city",
+  "title": "オープンデータ｜霞ノ杜町",
+  "description": "オープンデータ — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "オープンデータ"
+    }
+  ],
+  "related": [
+    {
+      "href": "../kurashi/chizu.html",
+      "label": "地図から探す",
+      "storyClue": false
+    },
+    {
+      "href": "../bunka/",
+      "label": "観光",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "市政",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "オープンデータ",
+  "paragraphs": [
+    "町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>bus_stops.csv</th><td>停留所座標</td></tr><tr><th>tourism_spots.csv</th><td>観光スポット</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../kurashi/chizu.html\">地図から探す</a></li><li><a href=\"../bunka/\">観光</a></li><li><a href=\"index.html\">市政</a></li><li><a href=\"../con"
+}

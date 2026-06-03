@@ -1,0 +1,49 @@
+{
+  "path": "kurashi/gomi-search.html",
+  "route": "/kurashi/gomi-search/",
+  "layout": "city",
+  "title": "ごみ収集検索｜霞ノ杜町",
+  "description": "ごみ収集検索 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "ごみ収集検索"
+    }
+  ],
+  "related": [
+    {
+      "href": "gomi.html",
+      "label": "収集曜日",
+      "storyClue": false
+    },
+    {
+      "href": "kankyo.html",
+      "label": "環境",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "くらし",
+      "storyClue": false
+    }
+  ],
+  "h1": "ごみ収集検索",
+  "paragraphs": [
+    "町内区分コード（7桁・フィクション）を入力して収集曜日を表示します。",
+    "<label>区分コード <input id=\"gomi-zip\" type=\"text\" maxlength=\"7\" placeholder=\"0291701\"></label> <button type=\"button\" id=\"gomi-go\">検索</button>",
+    "例: 0291701（三日月） / 0291702（霞ノ杜） / 0291703（杉並ヶ岡）"
+  ],
+  "extraHtml": "<p id=\"gomi-out\"></p>\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi.html\">収集曜日</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index.html\">くらし</a></li></ul></aside>"
+}

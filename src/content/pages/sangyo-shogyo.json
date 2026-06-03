@@ -1,0 +1,47 @@
+{
+  "path": "sangyo/shogyo.html",
+  "route": "/sangyo/shogyo/",
+  "layout": "city",
+  "title": "商店街｜霞ノ杜町",
+  "description": "三日月町商店街 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "産業・雇用",
+      "href": "index.html"
+    },
+    {
+      "label": "三日月町商店街"
+    }
+  ],
+  "related": [
+    {
+      "href": "../bunka/",
+      "label": "観光",
+      "storyClue": false
+    },
+    {
+      "href": "../access/",
+      "label": "アクセス",
+      "storyClue": false
+    },
+    {
+      "href": "koyo.html",
+      "label": "雇用",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "産業",
+      "storyClue": false
+    }
+  ],
+  "h1": "三日月町商店街",
+  "paragraphs": [
+    "老舗の雑貨・食堂・土産店が旧街道沿いに並びます。毎月第3土曜は夜市。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hr"
+}

@@ -1,0 +1,47 @@
+{
+  "path": "fukushi/kenko.html",
+  "route": "/fukushi/kenko/",
+  "layout": "city",
+  "title": "健康・医療｜霞ノ杜町",
+  "description": "健康・医療 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "福祉・健康",
+      "href": "index.html"
+    },
+    {
+      "label": "健康・医療"
+    }
+  ],
+  "related": [
+    {
+      "href": "hoken.html",
+      "label": "保険",
+      "storyClue": false
+    },
+    {
+      "href": "../anzen/kinkyu.html",
+      "label": "救急",
+      "storyClue": false
+    },
+    {
+      "href": "kaigo.html",
+      "label": "介護",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "健康・医療",
+  "paragraphs": [
+    "40歳以上の町民健診は毎年秋に実施。霞ノ杜診療所は平日9:00〜17:00（土日祝休診）。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoken"
+}

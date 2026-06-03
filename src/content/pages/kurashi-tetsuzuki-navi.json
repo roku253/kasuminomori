@@ -1,0 +1,48 @@
+{
+  "path": "kurashi/tetsuzuki-navi.html",
+  "route": "/kurashi/tetsuzuki-navi/",
+  "layout": "city",
+  "title": "手続ナビ｜霞ノ杜町",
+  "description": "手続ナビ — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "手続ナビ"
+    }
+  ],
+  "related": [
+    {
+      "href": "tetsuzuki-search.html",
+      "label": "早わかり検索",
+      "storyClue": false
+    },
+    {
+      "href": "juminhyo.html",
+      "label": "住民票",
+      "storyClue": false
+    },
+    {
+      "href": "../kodomo/kosodate.html",
+      "label": "子育て",
+      "storyClue": false
+    },
+    {
+      "href": "../shisei/yakuba.html",
+      "label": "庁舎",
+      "storyClue": false
+    }
+  ],
+  "h1": "手続ナビ",
+  "paragraphs": [
+    "よくあるライフイベントから、必要な手続と窓口を案内します。（静的ナビ・フィクション）"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>転入した</th><td>住民票転入 → 国民健康保険 → ごみ収集登録</td></tr><tr><th>引っ越す</th><td>転出届 → 各種証明の変更</td></tr><tr><th>子どもが生まれた</th><td>出生届 → 児童手当 → 保育所申込</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"juminhyo.html\">住民票</a></li><li><a href=\"../kodomo/kosodate.html\">子育て</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li></ul></asi"
+}

@@ -1,0 +1,47 @@
+{
+  "path": "kurashi/kankyo.html",
+  "route": "/kurashi/kankyo/",
+  "layout": "city",
+  "title": "環境・自然｜霞ノ杜町",
+  "description": "環境・自然 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "環境・自然"
+    }
+  ],
+  "related": [
+    {
+      "href": "../anzen/hazard.html",
+      "label": "ハザード",
+      "storyClue": false
+    },
+    {
+      "href": "gomi.html",
+      "label": "ごみ",
+      "storyClue": false
+    },
+    {
+      "href": "../access/",
+      "label": "アクセス",
+      "storyClue": false
+    },
+    {
+      "href": "../bunka/",
+      "label": "観光",
+      "storyClue": false
+    }
+  ],
+  "h1": "環境・自然",
+  "paragraphs": [
+    "杜川流域の保全協定に基づき、岸辺の伐採・キャンプ火は制限されています。北西部旧整備区域は立入禁止です。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../anzen/ha"
+}

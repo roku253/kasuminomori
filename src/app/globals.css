@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  --kasumi-blue: #1a4d80;
+  --kasumi-green: #2d8a3e;
+  --kasumi-mist: #0a1628;
+  --font-display: var(--font-noto-serif), "Yu Mincho", serif;
+  --font-sans: var(--font-noto-sans), "Yu Gothic UI", Meiryo, sans-serif;
+}
+
+@theme inline {
+  --color-kasumi-blue: var(--kasumi-blue);
+  --color-kasumi-green: var(--kasumi-green);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #222;
+  background: #111;
+}
+
+#site-root {
+  visibility: hidden;
+}
+
+html.token-gate-ok #site-root {
+  visibility: visible;
+}
+
+body.city-mega-open {
+  overflow: hidden;
+}
+
+.ns-denied-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #f4efe4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: var(--font-sans);
+}
+
+.ns-denied-card {
+  max-width: 560px;
+  width: 100%;
+  background: #fff;
+  border-top: 6px solid var(--kasumi-blue);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  padding: 28px 26px;
+}
+
+.ns-denied-card h1 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--kasumi-blue);
+}
+
+.ns-denied-card p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.kn-print-error {
+  display: none;
+}
+
+@media print {
+  .kn-print-error {
+    display: block !important;
+    margin: 24px;
+    padding: 12px;
+    border: 2px dashed #c00;
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    color: #900;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .kn-print-error,
+  .kn-print-error * {
+    visibility: visible;
+  }
+}
+
+.prose-city table.city-data,
+.legacy-prose table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+
+.prose-city table.city-data th,
+.prose-city table.city-data td,
+.legacy-prose table.data-table th,
+.legacy-prose table.data-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.prose-city table.city-data th,
+.legacy-prose table.data-table thead th {
+  background: #e8f0fa;
+  color: var(--kasumi-blue);
+  font-weight: 700;
+}
+
+.legacy-prose h2 {
+  color: #2d5a27;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.legacy-prose h3 {
+  color: #3a5a30;
+  font-size: 1.1rem;
+}
+
+.legacy-prose .pull-quote {
+  margin: 18px 0;
+  padding: 12px 16px;
+  background: #f6f1e6;
+  border-left: 4px solid #8a6d3b;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.legacy-prose .photo-zoomable {
+  position: relative;
+  display: inline-block;
+  cursor: zoom-in;
+  border: 6px solid #efe7d6;
+  box-shadow: 2px 2px 0 #b8a88c;
+  max-width: 100%;
+}
+
+.legacy-prose .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.legacy-prose .timeline {
+  background: #fff;
+  border: 1px solid #ccbda5;
+  padding: 14px 16px;
+}

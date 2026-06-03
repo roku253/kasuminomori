@@ -1,0 +1,47 @@
+{
+  "path": "fukushi/hoken.html",
+  "route": "/fukushi/hoken/",
+  "layout": "city",
+  "title": "保険｜霞ノ杜町",
+  "description": "国民健康保険・後期高齢者 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "福祉・健康",
+      "href": "index.html"
+    },
+    {
+      "label": "国民健康保険・後期高齢者"
+    }
+  ],
+  "related": [
+    {
+      "href": "kenko.html",
+      "label": "健康",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/juminhyo.html",
+      "label": "住民票",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "福祉",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "国民健康保険・後期高齢者",
+  "paragraphs": [
+    "国保の加入・変更は転入・転出と同時に届出。料金は所得に応じて算定されます。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kenk"
+}

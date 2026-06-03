@@ -1,0 +1,22 @@
+{
+  "path": "sangyo/index.html",
+  "route": "/sangyo/",
+  "layout": "city",
+  "title": "産業・雇用｜霞ノ杜町",
+  "description": "",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "産業・雇用"
+    }
+  ],
+  "related": [],
+  "h1": "産業・雇用",
+  "paragraphs": [
+    "林業・観光・商店街・雇用の情報です。"
+  ],
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"ringyo.html\"><strong>林業</strong><span>間伐・素材</span></a><a class=\"city-hub-card\" href=\"kankou-sangyo.html\"><strong>観光産業</strong><span>協会・受入</span></a><a class=\"city-hub-card\" href=\"shogyo.html\"><strong>三日月町商店街</strong><span>店舗・イベント</span></a><a class=\"city-hub-card\" href=\"koyo.html\"><strong>雇用・季節工</strong><span>募集情報</span></a></div>"
+}

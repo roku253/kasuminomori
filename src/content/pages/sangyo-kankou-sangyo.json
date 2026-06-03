@@ -1,0 +1,47 @@
+{
+  "path": "sangyo/kankou-sangyo.html",
+  "route": "/sangyo/kankou-sangyo/",
+  "layout": "city",
+  "title": "観光産業｜霞ノ杜町",
+  "description": "観光産業 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "産業・雇用",
+      "href": "index.html"
+    },
+    {
+      "label": "観光産業"
+    }
+  ],
+  "related": [
+    {
+      "href": "../bunka/",
+      "label": "観光入口",
+      "storyClue": false
+    },
+    {
+      "href": "shogyo.html",
+      "label": "商店街",
+      "storyClue": false
+    },
+    {
+      "href": "../events/",
+      "label": "イベント",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "観光産業",
+  "paragraphs": [
+    "宿泊・体験・受入の届出、協会との連携は産業観光課。観光情報は文化・観光カテゴリへ。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+}

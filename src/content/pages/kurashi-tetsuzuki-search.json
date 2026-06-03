@@ -1,0 +1,48 @@
+{
+  "path": "kurashi/tetsuzuki-search.html",
+  "route": "/kurashi/tetsuzuki-search/",
+  "layout": "city",
+  "title": "手続早わかり検索｜霞ノ杜町",
+  "description": "申請・手続早わかり検索 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "手続早わかり検索"
+    }
+  ],
+  "related": [
+    {
+      "href": "tetsuzuki-navi.html",
+      "label": "手続ナビ",
+      "storyClue": false
+    },
+    {
+      "href": "denshi-shinsei.html",
+      "label": "電子申請",
+      "storyClue": false
+    },
+    {
+      "href": "../shisei/shozoku.html",
+      "label": "組織",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "申請・手続早わかり検索",
+  "paragraphs": [
+    "手続名から担当課を検索できます。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>住民票</th><td>住民課 / 1階</td></tr><tr><th>建築確認</th><td>建設課 / 2階</td></tr><tr><th>観光協力</th><td>産業観光課 / 2階</td></tr><tr><th>国民健康保険</th><td>福祉課 / 1階</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"denshi-shinsei.html\">電子申請</a></li><li><a href=\"../shisei/shozoku.html\">組織</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></"
+}

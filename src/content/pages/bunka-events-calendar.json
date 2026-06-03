@@ -1,0 +1,48 @@
+{
+  "path": "bunka/events-calendar.html",
+  "route": "/bunka/events-calendar/",
+  "layout": "city",
+  "title": "イベント｜霞ノ杜町",
+  "description": "イベントカレンダー — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "文化・スポーツ・観光",
+      "href": "index.html"
+    },
+    {
+      "label": "イベントカレンダー"
+    }
+  ],
+  "related": [
+    {
+      "href": "../events/",
+      "label": "行事",
+      "storyClue": false
+    },
+    {
+      "href": "sports.html",
+      "label": "スポーツ",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "観光",
+      "storyClue": false
+    },
+    {
+      "href": "../shisei/koho.html",
+      "label": "お知らせ",
+      "storyClue": false
+    }
+  ],
+  "h1": "イベントカレンダー",
+  "paragraphs": [
+    "月ごとの主な行事は年間行事ページに掲載しています。",
+    "<a href=\"../events/\">年間行事ページへ</a>"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../events/\">行事</a></li><li><a"
+}

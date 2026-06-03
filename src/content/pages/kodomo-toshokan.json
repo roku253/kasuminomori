@@ -1,0 +1,48 @@
+{
+  "path": "kodomo/toshokan.html",
+  "route": "/kodomo/toshokan/",
+  "layout": "city",
+  "title": "図書館｜霞ノ杜町",
+  "description": "町立図書館 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "子ども・教育",
+      "href": "index.html"
+    },
+    {
+      "label": "町立図書館"
+    }
+  ],
+  "related": [
+    {
+      "href": "../history/",
+      "label": "歴史",
+      "storyClue": false
+    },
+    {
+      "href": "../documents/",
+      "label": "資料室",
+      "storyClue": false
+    },
+    {
+      "href": "shogakkou.html",
+      "label": "小学校",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "教育",
+      "storyClue": false
+    }
+  ],
+  "h1": "町立図書館",
+  "paragraphs": [
+    "三日月庁舎別館2階。一般書・町史コーナー・児童書を所蔵。火・水は休館。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>開館</th><td>9:30〜18:00（土曜〜17:00）</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../history/\">歴史</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\""
+}

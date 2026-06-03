@@ -1,0 +1,48 @@
+{
+  "path": "anzen/saigai.html",
+  "route": "/anzen/saigai/",
+  "layout": "city",
+  "title": "緊急情報｜霞ノ杜町",
+  "description": "緊急・災害情報 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "安全・緊急",
+      "href": "index.html"
+    },
+    {
+      "label": "緊急・災害情報"
+    }
+  ],
+  "related": [
+    {
+      "href": "bosai.html",
+      "label": "防災",
+      "storyClue": false
+    },
+    {
+      "href": "hazard.html",
+      "label": "ハザード",
+      "storyClue": false
+    },
+    {
+      "href": "kinkyu.html",
+      "label": "救急",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "トップ",
+      "storyClue": false
+    }
+  ],
+  "h1": "緊急・災害情報",
+  "paragraphs": [
+    "現在、町に関する緊急情報は発表されていません。",
+    "<strong>状況:</strong> 特になし（最終更新: 令和8年4月1日）"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bosai.html\">防災</a></li><li><a hre"
+}

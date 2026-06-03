@@ -1,0 +1,48 @@
+{
+  "path": "kurashi/suido.html",
+  "route": "/kurashi/suido/",
+  "layout": "city",
+  "title": "上下水道｜霞ノ杜町",
+  "description": "上下水道 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "上下水道"
+    }
+  ],
+  "related": [
+    {
+      "href": "kankyo.html",
+      "label": "環境",
+      "storyClue": false
+    },
+    {
+      "href": "tetsuzuki-navi.html",
+      "label": "手続ナビ",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "くらしトップ",
+      "storyClue": false
+    }
+  ],
+  "h1": "上下水道",
+  "paragraphs": [
+    "町営水道は杜川系の水源を利用しています。休止水・水質検査結果はお知らせで告知します。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>水道料金</th><td>メーター検針・2ヶ月ごと請求</td></tr><tr><th>休止水連絡</th><td>総務課 0123-45-6702</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index"
+}

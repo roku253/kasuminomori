@@ -1,0 +1,22 @@
+{
+  "path": "kurashi/index.html",
+  "route": "/kurashi/",
+  "layout": "city",
+  "title": "くらし・環境｜霞ノ杜町",
+  "description": "",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "くらし・環境"
+    }
+  ],
+  "related": [],
+  "h1": "くらし・環境",
+  "paragraphs": [
+    "ごみ・水道・交通・住民手続など、町民生活の案内です。"
+  ],
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"gomi.html\"><strong>ごみ・リサイクル</strong><span>収集曜日・分別</span></a><a class=\"city-hub-card\" href=\"bus-jikan.html\"><strong>町営バス</strong><span>時刻・運賃</span></a><a class=\"city-hub-card\" href=\"suido.html\"><strong>上下水道</strong><span>料金・休止水</span></a><a class=\"city-hub-card\" href=\"juminhyo.html\"><strong>住民票・窓口</strong><span>手続と持ち物</span></a><a class=\"city-hub-card\" href=\"sumai.html\"><strong>住まい・移住</strong><span>空き家・土地</span></a><a class=\"city-hub-card\" href=\"kankyo.html\"><strong>環境・自然</strong><span>杜川・保全区域</span></a><a class=\"city-hub-card\" href=\"tetsuzuki-navi.html\"><strong>手続ナビ</strong><span>Q&A</span></a><a class=\"city-hub-card\" href=\"chizu.html\"><strong>地図から探す</strong><span>町内マップ</span></a></div>"
+}

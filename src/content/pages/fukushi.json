@@ -1,0 +1,22 @@
+{
+  "path": "fukushi/index.html",
+  "route": "/fukushi/",
+  "layout": "city",
+  "title": "福祉・健康｜霞ノ杜町",
+  "description": "",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "福祉・健康"
+    }
+  ],
+  "related": [],
+  "h1": "福祉・健康",
+  "paragraphs": [
+    "医療・介護・保険に関する情報です。"
+  ],
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"kenko.html\"><strong>健康・医療</strong><span>健診・診療所</span></a><a class=\"city-hub-card\" href=\"kaigo.html\"><strong>介護</strong><span>要介護認定</span></a><a class=\"city-hub-card\" href=\"hoken.html\"><strong>保険</strong><span>国保・後期高齢者</span></a></div>"
+}

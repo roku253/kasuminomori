@@ -1,0 +1,47 @@
+{
+  "path": "fukushi/kaigo.html",
+  "route": "/fukushi/kaigo/",
+  "layout": "city",
+  "title": "介護｜霞ノ杜町",
+  "description": "介護 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "福祉・健康",
+      "href": "index.html"
+    },
+    {
+      "label": "介護"
+    }
+  ],
+  "related": [
+    {
+      "href": "kenko.html",
+      "label": "健康",
+      "storyClue": false
+    },
+    {
+      "href": "hoken.html",
+      "label": "保険",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/tetsuzuki-navi.html",
+      "label": "手続ナビ",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "福祉",
+      "storyClue": false
+    }
+  ],
+  "h1": "介護",
+  "paragraphs": [
+    "要介護認定の申請は福祉課。地域包括支援センター「杜のいろは」が相談を受け付けます。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+}

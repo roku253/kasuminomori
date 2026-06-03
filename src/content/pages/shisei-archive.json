@@ -1,0 +1,48 @@
+{
+  "path": "shisei/archive.html",
+  "route": "/shisei/archive/",
+  "layout": "city",
+  "title": "広報アーカイブ｜霞ノ杜町",
+  "description": "広報・過去ログ — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "広報・過去ログ"
+    }
+  ],
+  "related": [
+    {
+      "href": "koho.html",
+      "label": "お知らせ",
+      "storyClue": false
+    },
+    {
+      "href": "../history/",
+      "label": "歴史",
+      "storyClue": false
+    },
+    {
+      "href": "../blog/2021/",
+      "label": "2021",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "市政",
+      "storyClue": false
+    }
+  ],
+  "h1": "広報・過去ログ",
+  "paragraphs": [
+    "過去の広報・ローカルニュースへ。",
+    "[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2021-07-20"
+  ],
+  "extraHtml": "<ul><li data-kn-story-clue=\"1\"><a href=\"../blog/2021/\">2021年ローカルニュース</a></li><li><a href=\"../blog/2016/\">2016年アーカイブ</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\"../history/\">町の歴史</a></li></ul><p class=\"kn-print-error\" aria-hidden=\"true\"></p>\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"koho.html\">お知らせ</a></li><li><a href=\"../history/\"<p class=\"kn-print-error\" aria-hidden=\"true\">[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2021-07-20</p>"
+}

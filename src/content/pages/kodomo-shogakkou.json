@@ -1,0 +1,48 @@
+{
+  "path": "kodomo/shogakkou.html",
+  "route": "/kodomo/shogakkou/",
+  "layout": "city",
+  "title": "小学校｜霞ノ杜町",
+  "description": "町立第一小学校 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "子ども・教育",
+      "href": "index.html"
+    },
+    {
+      "label": "町立第一小学校"
+    }
+  ],
+  "related": [
+    {
+      "href": "hoiku.html",
+      "label": "保育",
+      "storyClue": false
+    },
+    {
+      "href": "toshokan.html",
+      "label": "図書館",
+      "storyClue": false
+    },
+    {
+      "href": "kosodate.html",
+      "label": "子育て",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "教育",
+      "storyClue": false
+    }
+  ],
+  "h1": "町立第一小学校",
+  "paragraphs": [
+    "霞ノ杜町立第一小学校の公式サイトは別ページでご覧いただけます。",
+    "<a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">霞ノ杜町立第一小学校 公式サイト</a>"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoiku.html\">保育</a></li><li><a href=\"toshokan.html\">図書館</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a hr"
+}

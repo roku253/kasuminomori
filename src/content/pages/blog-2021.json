@@ -1,0 +1,23 @@
+{
+  "path": "blog/2021/index.html",
+  "route": "/blog/2021/",
+  "layout": "legacy",
+  "title": "2021年ローカルニュース｜霞ノ杜町",
+  "description": "",
+  "canonical": "https://roku253.github.io/kasuminomori/blog/2021/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "市政情報",
+      "href": "../../shisei/"
+    },
+    {
+      "label": "2021年ローカルニュース"
+    }
+  ],
+  "related": [],
+  "bodyHtml": ""
+}

@@ -1,0 +1,22 @@
+{
+  "path": "anzen/index.html",
+  "route": "/anzen/",
+  "layout": "city",
+  "title": "安全・緊急｜霞ノ杜町",
+  "description": "",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "安全・緊急"
+    }
+  ],
+  "related": [],
+  "h1": "安全・緊急",
+  "paragraphs": [
+    "防災・交通安全・救急のご案内です。"
+  ],
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"saigai.html\"><strong>緊急・災害情報</strong><span>現在の状況</span></a><a class=\"city-hub-card\" href=\"bosai.html\"><strong>防災</strong><span>避難・備蓄</span></a><a class=\"city-hub-card\" href=\"hazard.html\"><strong>ハザードマップ</strong><span>立入制限・土砂</span></a><a class=\"city-hub-card\" href=\"koutsuu.html\"><strong>交通安全</strong><span>吊り橋・霧</span></a><a class=\"city-hub-card\" href=\"kinkyu.html\"><strong>救急・夜間診療</strong><span>連絡先一覧</span></a></div>"
+}

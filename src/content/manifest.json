@@ -1,0 +1,2428 @@
+{
+  "pages": [
+    {
+      "path": "access/index.html",
+      "route": "/access/",
+      "layout": "legacy",
+      "title": "アクセス・地図｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/access/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "../kurashi/"
+        },
+        {
+          "label": "アクセス・地図"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>アクセス・地図</h2>\n\n        <h3>町内 簡易マップ</h3>\n        <div class=\"town-map\">\n          <svg viewBox=\"0 0 720 420\" xmlns=\"http://www.w3.org/2000/svg\">\n            <rect width=\"720\" height=\"420\" fill=\"#f5f0e6\"/>\n            <path d=\"M 0 0 L 720 0 L 720 140 Q 540 130 360 170 Q 200 200 0 170 Z\" fill=\"#c8d6b3\"/>\n            <text x=\"120\" y=\"60\" font-size=\"14\" fill=\"#5b7148\">霞ノ杜 山系</text>\n            <path d=\"M 0 280 Q 180 250 360 280 Q 540 310 720 280\" stroke=\"#7aa2c4\" stroke-width=\"6\" fill=\"none\"/>\n            <text x=\"380\" y=\"305\" font-size=\"11\" fill=\"#456a85\">— 杜川 —</text>\n            <ellipse cx=\"120\" cy=\"240\" rx=\"80\" ry=\"60\" fill=\"#e8dfd0\"/>\n            <text x=\"120\" y=\"244\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5a4a30\">霞ノ杜</text>\n            <ellipse cx=\"380\" cy=\"370\" rx=\"120\" ry=\"30\" fill=\"#e8dfd0\"/>\n            <text x=\"380\" y=\"376\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5a4a30\">三日月町（中心）</text>\n            <ellipse cx=\"620\" cy=\"350\" rx=\"80\" ry=\"40\" fill=\"#e8dfd0\"/>\n            <text x=\"620\" y=\"354\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5a4a30\">杉並ヶ岡</text>\n            <path d=\"M 0 200 Q 360 180 720 190\" stroke=\"#a89878\" stroke-width=\"3\" fill=\"none\"/>\n            <text x=\"60\" y=\"195\" font-size=\"10\" fill=\"#7a6a40\">北街道</text>\n            <path d=\"M 380 0 Q 380 200 380 420\" stroke=\"#a89878\" stroke-width=\"3\" fill=\"none\"/>\n            <text x=\"386\" y=\"40\" font-size=\"10\" fill=\"#7a6a40\">旧街道</text>\n            <g fill=\"#ea4335\">\n              <circle cx=\"155\" cy=\"195\" r=\"5\"/><circle cx=\"100\" cy=\"220\" r=\"5\"/>\n              <circle cx=\"170\" cy=\"260\" r=\"5\"/><circle cx=\"130\" cy=\"180\" r=\"5\"/>\n              <circle cx=\"140\" cy=\"280\" r=\"5\"/>\n            </g>\n            <text x=\"120\" y=\"305\" text-anchor=\"middle\" font-size=\"9\" fill=\"#888\">※点は観光スポット位置の目安</text>\n            <g transform=\"translate(580, 405)\">\n              <rect width=\"80\" height=\"3\" fill=\"#333\"/><rect width=\"40\" height=\"3\" fill=\"#fff\"/>\n              <text x=\"40\" y=\"-4\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">1 km</text>\n            </g>\n          </svg>\n        </div>\n\n        <h3>交通機関</h3>\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>町外からの主要ルート</th><td>三日月町方面（旧街道経由）／杉並ヶ岡方面（北街道経由）</td></tr>\n            <tr><th>町営バス</th><td>三日月町中心部 ⇄ 霞ノ杜地区 を一日 6 往復。山間部は便数少。</td></tr>\n            <tr><th>所要時間</th><td>三日月町中心部から霞ノ杜地区まで車で約 20 分</td></tr>\n          </tbody>\n        </table>\n\n        <h3>駐車場</h3>\n        <ul>\n          <li><strong>霞ノ杜神社 参拝者駐車場</strong>（無料・約 12 台 / 砂利）</li>\n          <li><strong>町営 杜の駐車場</strong>（無料・約 30 台 / 観光協会まで徒歩 1 分）</li>\n          <li><strong>霧見展望休憩所 上駐車場</strong>（無料・約 8 台 / 林道経由）</li>\n        </ul>\n\n        <h3>立ち入りに関するご案内</h3>\n        <p>\n          町の<strong>北西部の旧整備区域</strong>には、安全管理上の理由から一般の立ち入りを制限している区画があります。\n          ロープ・看板に従ってください。当該区域はサイト上のスポット案内からは外しています。\n        </p>\n        <p>\n          霧が深い日は <strong>足元の段差</strong>、夕方は <strong>視界距離</strong> にお気をつけください。\n          山中での通信状況は安定しません。事前にルートを共有することを推奨します。\n        </p>"
+    },
+    {
+      "path": "anzen/bosai.html",
+      "route": "/anzen/bosai/",
+      "layout": "city",
+      "title": "防災｜霞ノ杜町",
+      "description": "防災 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "安全・緊急",
+          "href": "index.html"
+        },
+        {
+          "label": "防災"
+        }
+      ],
+      "related": [
+        {
+          "href": "hazard.html",
+          "label": "ハザード",
+          "storyClue": false
+        },
+        {
+          "href": "saigai.html",
+          "label": "緊急",
+          "storyClue": false
+        },
+        {
+          "href": "koutsuu.html",
+          "label": "交通",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/",
+          "label": "くらし",
+          "storyClue": false
+        }
+      ],
+      "h1": "防災",
+      "paragraphs": [
+        "指定避難所は三日月町公民館・霞ノ杜地区集会所です。防災無線は町内4か所に設置しています。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>避難所</th><td>三日月公民館 / 霞ノ杜集会所</td></tr><tr><th>砂袋配布</th><td>建設課倉庫前（災害時のみ）</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hazard.html\">ハザード</a></li><li><a href=\"saigai.html\">緊急</a></li><li><a href=\"koutsuu.html\">交通</a></li><li><a href=\"../kurash"
+    },
+    {
+      "path": "anzen/hazard.html",
+      "route": "/anzen/hazard/",
+      "layout": "city",
+      "title": "ハザードマップ｜霞ノ杜町",
+      "description": "ハザードマップ — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "安全・緊急",
+          "href": "index.html"
+        },
+        {
+          "label": "ハザードマップ"
+        }
+      ],
+      "related": [
+        {
+          "href": "../access/",
+          "label": "アクセス注意",
+          "storyClue": false
+        },
+        {
+          "href": "bosai.html",
+          "label": "防災",
+          "storyClue": false
+        },
+        {
+          "href": "../spot/2/",
+          "label": "吊り橋",
+          "storyClue": false
+        },
+        {
+          "href": "../bunka/",
+          "label": "観光",
+          "storyClue": false
+        }
+      ],
+      "h1": "ハザードマップ",
+      "paragraphs": [
+        "北西部旧整備区域は土砂・旧施設跡のため立入禁止。杜川沿いは増水に注意。霧による視界不良に留意してください。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../access/\">アクセ"
+    },
+    {
+      "path": "anzen/index.html",
+      "route": "/anzen/",
+      "layout": "city",
+      "title": "安全・緊急｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "安全・緊急"
+        }
+      ],
+      "related": [],
+      "h1": "安全・緊急",
+      "paragraphs": [
+        "防災・交通安全・救急のご案内です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"saigai.html\"><strong>緊急・災害情報</strong><span>現在の状況</span></a><a class=\"city-hub-card\" href=\"bosai.html\"><strong>防災</strong><span>避難・備蓄</span></a><a class=\"city-hub-card\" href=\"hazard.html\"><strong>ハザードマップ</strong><span>立入制限・土砂</span></a><a class=\"city-hub-card\" href=\"koutsuu.html\"><strong>交通安全</strong><span>吊り橋・霧</span></a><a class=\"city-hub-card\" href=\"kinkyu.html\"><strong>救急・夜間診療</strong><span>連絡先一覧</span></a></div>"
+    },
+    {
+      "path": "anzen/kinkyu.html",
+      "route": "/anzen/kinkyu/",
+      "layout": "city",
+      "title": "救急・夜間｜霞ノ杜町",
+      "description": "救急・夜間診療 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "安全・緊急",
+          "href": "index.html"
+        },
+        {
+          "label": "救急・夜間診療"
+        }
+      ],
+      "related": [
+        {
+          "href": "../fukushi/kenko.html",
+          "label": "健康",
+          "storyClue": false
+        },
+        {
+          "href": "bosai.html",
+          "label": "防災",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/yakuba.html",
+          "label": "庁舎",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "安全",
+          "storyClue": false
+        }
+      ],
+      "h1": "救急・夜間診療",
+      "paragraphs": [
+        "町内の夜間・休日救急は、県北医療圏の当番医制度に準じます（架空）。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>救急</th><td>119</td></tr><tr><th>町代表</th><td>0123-45-6700</td></tr><tr><th>診療所</th><td>霞ノ杜診療所（平日のみ・詳細は健康ページ）</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../fukushi/kenko.html\">健康</a></li><li><a href=\"bosai.html\">防災</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li><li><a href=\"index.html\">安全</a></li>"
+    },
+    {
+      "path": "anzen/koutsuu.html",
+      "route": "/anzen/koutsuu/",
+      "layout": "city",
+      "title": "交通安全｜霞ノ杜町",
+      "description": "交通安全 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "安全・緊急",
+          "href": "index.html"
+        },
+        {
+          "label": "交通安全"
+        }
+      ],
+      "related": [
+        {
+          "href": "../spot/2/",
+          "label": "吊り橋",
+          "storyClue": false
+        },
+        {
+          "href": "../access/",
+          "label": "アクセス",
+          "storyClue": false
+        },
+        {
+          "href": "saigai.html",
+          "label": "緊急",
+          "storyClue": false
+        },
+        {
+          "href": "../events/",
+          "label": "イベント",
+          "storyClue": false
+        }
+      ],
+      "h1": "交通安全",
+      "paragraphs": [
+        "杜の吊り橋は同時通行10名程度。雨天・濃霧時は通行止めとなる場合があります。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hre"
+    },
+    {
+      "path": "anzen/saigai.html",
+      "route": "/anzen/saigai/",
+      "layout": "city",
+      "title": "緊急情報｜霞ノ杜町",
+      "description": "緊急・災害情報 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "安全・緊急",
+          "href": "index.html"
+        },
+        {
+          "label": "緊急・災害情報"
+        }
+      ],
+      "related": [
+        {
+          "href": "bosai.html",
+          "label": "防災",
+          "storyClue": false
+        },
+        {
+          "href": "hazard.html",
+          "label": "ハザード",
+          "storyClue": false
+        },
+        {
+          "href": "kinkyu.html",
+          "label": "救急",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "トップ",
+          "storyClue": false
+        }
+      ],
+      "h1": "緊急・災害情報",
+      "paragraphs": [
+        "現在、町に関する緊急情報は発表されていません。",
+        "<strong>状況:</strong> 特になし（最終更新: 令和8年4月1日）"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bosai.html\">防災</a></li><li><a hre"
+    },
+    {
+      "path": "blog/2016/index.html",
+      "route": "/blog/2016/",
+      "layout": "city",
+      "title": "2016年アーカイブ｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [],
+      "related": []
+    },
+    {
+      "path": "blog/2021/index.html",
+      "route": "/blog/2021/",
+      "layout": "legacy",
+      "title": "2021年ローカルニュース｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/blog/2021/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "市政情報",
+          "href": "../../shisei/"
+        },
+        {
+          "label": "2021年ローカルニュース"
+        }
+      ],
+      "related": [],
+      "bodyHtml": ""
+    },
+    {
+      "path": "bunka/bunka.html",
+      "route": "/bunka/bunka/",
+      "layout": "city",
+      "title": "伝統文化｜霞ノ杜町",
+      "description": "伝統文化・祭り — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "文化・スポーツ・観光",
+          "href": "index.html"
+        },
+        {
+          "label": "伝統文化・祭り"
+        }
+      ],
+      "related": [
+        {
+          "href": "../history/",
+          "label": "歴史",
+          "storyClue": false
+        },
+        {
+          "href": "../spot/1/",
+          "label": "神社",
+          "storyClue": false
+        },
+        {
+          "href": "../events/",
+          "label": "行事",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "観光",
+          "storyClue": false
+        }
+      ],
+      "h1": "伝統文化・祭り",
+      "paragraphs": [
+        "霞ノ杜神社の例大祭、霧見祭など。伝承については町の歴史ページもご覧ください。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+    },
+    {
+      "path": "bunka/events-calendar.html",
+      "route": "/bunka/events-calendar/",
+      "layout": "city",
+      "title": "イベント｜霞ノ杜町",
+      "description": "イベントカレンダー — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "文化・スポーツ・観光",
+          "href": "index.html"
+        },
+        {
+          "label": "イベントカレンダー"
+        }
+      ],
+      "related": [
+        {
+          "href": "../events/",
+          "label": "行事",
+          "storyClue": false
+        },
+        {
+          "href": "sports.html",
+          "label": "スポーツ",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "観光",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        }
+      ],
+      "h1": "イベントカレンダー",
+      "paragraphs": [
+        "月ごとの主な行事は年間行事ページに掲載しています。",
+        "<a href=\"../events/\">年間行事ページへ</a>"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../events/\">行事</a></li><li><a"
+    },
+    {
+      "path": "bunka/index.html",
+      "route": "/bunka/",
+      "layout": "city",
+      "title": "文化・スポーツ・観光｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "文化・スポーツ・観光"
+        }
+      ],
+      "related": [],
+      "h1": "文化・スポーツ・観光",
+      "paragraphs": [
+        "観光・行事・歴史・スポーツイベントへの入口です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"../guide/\"><strong>町のご案内</strong><span>自然と産業</span></a><a class=\"city-hub-card\" href=\"../events/\"><strong>年間行事</strong><span>祭り・マラソン</span></a><a class=\"city-hub-card\" href=\"../spot/1/\"><strong>観光スポット</strong><span>神社から足湯まで</span></a><a class=\"city-hub-card\" href=\"../history/\"><strong>町の歴史</strong><span>写真と年表</span></a><a class=\"city-hub-card\" href=\"sports.html\"><strong>スポーツ</strong><span>町民大会</span></a><a class=\"city-hub-card\" href=\"bunka.html\"><strong>伝統文化</strong><span>祭・伝承</span></a><a class=\"city-hub-card\" href=\"events-calendar.html\"><strong>イベントカレンダー</strong><span>月間予定</span></a></div>"
+    },
+    {
+      "path": "bunka/sports.html",
+      "route": "/bunka/sports/",
+      "layout": "city",
+      "title": "スポーツ｜霞ノ杜町",
+      "description": "スポーツ・レクリエーション — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "文化・スポーツ・観光",
+          "href": "index.html"
+        },
+        {
+          "label": "スポーツ・レクリエーション"
+        }
+      ],
+      "related": [
+        {
+          "href": "../events/",
+          "label": "年間行事",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "観光",
+          "storyClue": false
+        },
+        {
+          "href": "../spot/2/",
+          "label": "吊り橋",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "スポーツ・レクリエーション",
+      "paragraphs": [
+        "町民体育祭（5月）、杜川マラソン（10月）などを開催。詳細は年間行事へ。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../e"
+    },
+    {
+      "path": "contact/index.html",
+      "route": "/contact/",
+      "layout": "legacy",
+      "title": "お問い合わせ｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/contact/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "../shisei/"
+        },
+        {
+          "label": "お問い合わせ"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>お問い合わせ</h2>\n\n        <h3>窓口</h3>\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>担当</th><td>霞ノ杜町観光協会 事務局（町役場 2 階）</td></tr>\n            <tr><th>住所</th><td>霞ノ杜町 大字杜ケ丘 1（町役場内）</td></tr>\n            <tr><th>受付時間</th><td>平日 9:00 〜 16:30（土日祝日・年末年始を除く）</td></tr>\n            <tr><th>電話</th><td>0×××-××-×××× / FAX 0×××-××-××××</td></tr>\n          </tbody>\n        </table>\n\n        <h3>よくあるご質問</h3>\n        <dl class=\"faq\">\n          <dt>町内に宿泊施設はありますか？</dt>\n          <dd>三日月町方面に温泉旅館・民宿が複数あります。霞ノ杜地区内はゲストハウス 1 軒のみで、要予約です。</dd>\n          <dt>水辺の丘 という場所について教えてください。</dt>\n          <dd>町北西部にかつて整備されていた自然散策地です。現在は整備上の理由から一般の立ち入りを制限しているため、観光案内には含めていません。</dd>\n          <dt>霧の濃い日でも観光できますか？</dt>\n          <dd>町内の主要スポットは可能ですが、林道や吊り橋付近は視界が大きく落ちます。神社・資料館・足湯などの屋根のあるスポットがおすすめです。</dd>\n          <dt>町の昔の地図や写真は見られますか？</dt>\n          <dd>霞ノ杜資料館（火・水休館）と、町史編纂室（要予約）でご覧いただけます。サイト上でも <a href=\"../history/\">町の歴史</a> ページで一部公開しています。</dd>\n        </dl>\n\n        <h3>お問い合わせフォーム</h3>\n        <p>※ 本フォームはデモ用です（送信されません）。</p>\n        <form class=\"fake-form\" onsubmit=\"event.preventDefault(); this.querySelector('.form-notice').textContent='※フォームは現在受付を停止しています。お電話でお願いいたします。';\">\n          <label>お名前</label>\n          <input type=\"text\" required>\n          <label>ご連絡先（メールまたは電話）</label>\n          <input type=\"text\" required>\n          <label>お問い合わせ内容</label>\n          <textarea required></textarea>\n          <button type=\"submit\">送信する</button>\n          <div class=\"form-notice\"></div>\n        </form>"
+    },
+    {
+      "path": "documents/index.html",
+      "route": "/documents/",
+      "layout": "legacy",
+      "title": "資料室｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/documents/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "../shisei/"
+        },
+        {
+          "label": "資料室"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>公報・資料室</h2>\n        <p>霞ノ杜町の公開資料の抜粋です。個人名は原則記載していません。</p>\n\n        <article class=\"doc-block\">\n          <p class=\"doc-meta\">議会だより 令和3年8月号（抜粋）</p>\n          <h3>青少年の登山事故について</h3>\n          <p>\n            …青少年の登山事故については、関係者の意向により詳細な記載を見送った。\n            町長室に照会があった件については、所管課と調整のうえ対応した…\n          </p>\n        </article>\n\n        <article class=\"doc-block\">\n          <p class=\"doc-meta\">地域安全通信（2021.8.20）</p>\n          <h3>烏啼山道における負傷児童への対応</h3>\n          <p>\n            烏啼山道にて負傷した児童について、迅速な対応に感謝する。\n            関係各位のご協力により、児童の安全確保に至った。\n            今後も立入禁止区域の周知に努める。\n          </p>\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\n        </article>\n\n        <p><a href=\"../history/#legend\">町の歴史（伝承）</a> ／ <a href=\"../blog/2021/\">2021年の出来事</a></p>",
+      "storyClueSelectors": [
+        "main.content"
+      ]
+    },
+    {
+      "path": "events/index.html",
+      "route": "/events/",
+      "layout": "city",
+      "title": "年間行事｜霞ノ杜町",
+      "description": "霞ノ杜町の年間行事・祭事のご案内。【フィクション】",
+      "canonical": "https://roku253.github.io/kasuminomori/events/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "文化・スポーツ・観光",
+          "href": "../bunka/"
+        },
+        {
+          "label": "年間行事"
+        }
+      ],
+      "related": [
+        {
+          "href": "../bunka/sports.html",
+          "label": "スポーツ・レクリエーション",
+          "storyClue": false
+        },
+        {
+          "href": "../bunka/bunka.html",
+          "label": "伝統文化・祭り",
+          "storyClue": false
+        },
+        {
+          "href": "../spot/1/",
+          "label": "霞ノ杜神社",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "お問い合わせ",
+          "storyClue": false
+        }
+      ],
+      "h1": "年間行事・祭事",
+      "paragraphs": [
+        "霞ノ杜町で年間を通じて行われる祭り・行事の一覧です。日程は例年の目安です。詳細は開催直前に<a href=\"../shisei/koho.html\">お知らせ</a>でご確認ください。",
+        "1月3日 〜 5日",
+        "新年最初の朝霧の中で、宮司による霧払いの儀が行われます。古くから町の安全と豊作を祈願する神事。",
+        "3月下旬",
+        "町の山道・林道の通行再開を祝う集い。地元の蕎麦・甘酒の振る舞いがあります。",
+        "5月上旬",
+        "町立霞ノ杜小学校の絵画クラブをはじめとした、町内児童の作品展示。例年、町民ホールで開催。",
+        "8月15日（夜）",
+        "杜川の水源に感謝する小さな祭り。川沿いに灯篭が並びます。霧の濃い年は、灯りが揺らいで見えると言われています。",
+        "10月12日 前後（直近）",
+        "霞ノ杜の北西部、杜川と <strong>水辺の丘</strong> 周辺を対象に、町民有志と町立霞ノ杜小学校の児童とで実施しています。",
+        "11月上旬",
+        "春の続編。秋の作品は町外からの審査員を招いて講評が行われます。",
+        "12月",
+        "町警察署・町民防犯協会との共催。霧と凍結への対策、夕方の視認性について学びます。",
+        "— 開催休止中 —",
+        "かつて、町北西部の旧整備区域では、町立小学校の児童を中心とした春の写生会が開かれていました。令和4年以降、整備上の理由により休止しています。",
+        "— 開催休止中 —",
+        "霧の少ない秋夜に行われていた、月見の会。旧整備区域内で開催されていました。"
+      ],
+      "extraHtml": "<article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>初詣・霧払いの神事（霞ノ杜神社）</h2>\n        \n      </article>\n\n      <article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>杜開きの集い</h2>\n        \n      </article>\n\n      <article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>霞ノ杜こども作品展（春）</h2>\n        \n      </article>\n\n      <article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>水迎えの祭り</h2>\n        \n      </article>\n\n      <article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>河川敷清掃ボランティア</h2>\n        \n      </article>\n\n      <article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>霞ノ杜こども絵画展（秋）</h2>\n        \n      </article>\n\n      <article class=\"city-event-card\">\n        <p class=\"when\"></p>\n        <h2>冬の安全教室</h2>\n        \n      </article>\n\n      <h2>＜参考＞旧整備区域で行われていた行事</h2>\n      <article class=\"city-event-card discontinued\">\n        <p class=\"when\"></p>\n        <h2>春の写生会（旧 水辺の丘 自然公園）</h2>\n        \n      </article>\n      <article class=\"city-event-card discontinued\">\n        <p class=\"when\"></p>\n        <h2>水辺の丘 観月会</h2>\n        \n      </article>\n\n      <aside class=\"city-related\">\n        <h2>関連するページ</h2>\n        <ul>\n          <li><a href=\"../bunka/sports.html\">スポーツ・レクリエーション</a></li>\n          <li><a href=\"../bunka/bunka.html\">伝統文化・祭り</a></li>\n          <li><a href=\"../spot/1/\">霞ノ杜神社</a></li>\n          <li><a href=\"../contact/\">お問い合わせ</a></li>\n        </ul>\n      </aside>"
+    },
+    {
+      "path": "fukushi/hoken.html",
+      "route": "/fukushi/hoken/",
+      "layout": "city",
+      "title": "保険｜霞ノ杜町",
+      "description": "国民健康保険・後期高齢者 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "福祉・健康",
+          "href": "index.html"
+        },
+        {
+          "label": "国民健康保険・後期高齢者"
+        }
+      ],
+      "related": [
+        {
+          "href": "kenko.html",
+          "label": "健康",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/juminhyo.html",
+          "label": "住民票",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "福祉",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "国民健康保険・後期高齢者",
+      "paragraphs": [
+        "国保の加入・変更は転入・転出と同時に届出。料金は所得に応じて算定されます。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kenk"
+    },
+    {
+      "path": "fukushi/index.html",
+      "route": "/fukushi/",
+      "layout": "city",
+      "title": "福祉・健康｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "福祉・健康"
+        }
+      ],
+      "related": [],
+      "h1": "福祉・健康",
+      "paragraphs": [
+        "医療・介護・保険に関する情報です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"kenko.html\"><strong>健康・医療</strong><span>健診・診療所</span></a><a class=\"city-hub-card\" href=\"kaigo.html\"><strong>介護</strong><span>要介護認定</span></a><a class=\"city-hub-card\" href=\"hoken.html\"><strong>保険</strong><span>国保・後期高齢者</span></a></div>"
+    },
+    {
+      "path": "fukushi/kaigo.html",
+      "route": "/fukushi/kaigo/",
+      "layout": "city",
+      "title": "介護｜霞ノ杜町",
+      "description": "介護 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "福祉・健康",
+          "href": "index.html"
+        },
+        {
+          "label": "介護"
+        }
+      ],
+      "related": [
+        {
+          "href": "kenko.html",
+          "label": "健康",
+          "storyClue": false
+        },
+        {
+          "href": "hoken.html",
+          "label": "保険",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "福祉",
+          "storyClue": false
+        }
+      ],
+      "h1": "介護",
+      "paragraphs": [
+        "要介護認定の申請は福祉課。地域包括支援センター「杜のいろは」が相談を受け付けます。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+    },
+    {
+      "path": "fukushi/kenko.html",
+      "route": "/fukushi/kenko/",
+      "layout": "city",
+      "title": "健康・医療｜霞ノ杜町",
+      "description": "健康・医療 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "福祉・健康",
+          "href": "index.html"
+        },
+        {
+          "label": "健康・医療"
+        }
+      ],
+      "related": [
+        {
+          "href": "hoken.html",
+          "label": "保険",
+          "storyClue": false
+        },
+        {
+          "href": "../anzen/kinkyu.html",
+          "label": "救急",
+          "storyClue": false
+        },
+        {
+          "href": "kaigo.html",
+          "label": "介護",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "健康・医療",
+      "paragraphs": [
+        "40歳以上の町民健診は毎年秋に実施。霞ノ杜診療所は平日9:00〜17:00（土日祝休診）。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoken"
+    },
+    {
+      "path": "guide/index.html",
+      "route": "/guide/",
+      "layout": "legacy",
+      "title": "町のご案内｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/guide/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../bunka/"
+        },
+        {
+          "label": "町のご案内"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>町のご案内</h2>\n        <p>\n          霞ノ杜町（かすみのもりちょう）は、県境に近い山あいに位置する、面積約 64 km²・人口およそ <strong>3,200 人</strong> の小さな町です。\n          町の中央を <strong>杜川</strong> が東西に流れ、北側を屏風のように囲む霞ノ杜山系から、四季を通じて霧と水が運ばれてきます。\n          「霞ノ杜」の地名は、この朝夕の濃霧と、町域に広がる雑木の杜（もり）に由来すると伝えられています。\n        </p>\n\n        <h3>地勢と気候</h3>\n        <p>\n          標高は中心部で約 380 m、北側の山系は 900 m 前後の稜線が続きます。盆地状の地形のため、\n          春と秋には朝方の <strong>濃霧（こうむ）</strong> が、夏は夕立の前の <strong>湿った霧</strong> が、\n          冬は冷え込んだ朝に <strong>霧氷</strong> が見られる日があります。\n          霧は町の生活にも溶け込んでおり、町内の祭事や民話の多くに「霧」が登場します。\n        </p>\n        <ul>\n          <li>年平均気温：12.4 ℃（気象庁観測点近隣・参考）</li>\n          <li>霧日数：年 110 日前後（朝霧を含む観測ベース）</li>\n          <li>積雪：年により大きく変動。山間部は累積で 100 cm を超える年も。</li>\n        </ul>\n\n        <h3>略年表</h3>\n        <div class=\"table-scroll\">\n        <table class=\"data-table\">\n          <thead><tr><th>年代</th><th>主なできごと（伝承・記録）</th></tr></thead>\n          <tbody>\n            <tr><td>江戸中期</td><td>参詣路としての小道が整備される。霞ノ杜神社の社殿改築。</td></tr>\n            <tr><td>明治22年</td><td>町村制施行に伴い「霞ノ杜村」発足。</td></tr>\n            <tr><td>昭和23年</td><td>町制施行、霞ノ杜町となる。</td></tr>\n            <tr><td>昭和40年代</td><td>林道・吊り橋の改修、観光客の往来が増加。</td></tr>\n            <tr><td>昭和53年</td><td>町北西部の自然散策路を整備、案内板を新設。</td></tr>\n            <tr><td>平成20年代</td><td>過疎対策と観光振興を両立する施策を本格化。一部の旧整備区域を非公開化。</td></tr>\n            <tr><td>令和 4年</td><td>再開発計画と整備地の見直しが議論される。</td></tr>\n          </tbody>\n        </table>\n        </div>\n\n        <h3>町の産業と文化</h3>\n        <p>\n          かつては林業と地場の木工が町の中心産業でした。今でも町内の数軒の工房で、杜の木を用いた小物・家具づくりが続いています。\n          農産では蕎麦と山菜、加工品では <strong>「霧の最中（もなか）」</strong> と <strong>「杜のはちみつ」</strong> が知られています。\n        </p>\n        <p>\n          文化的には、町域の祭事のほとんどに「霧を読む」「水を読む」という表現が出てきます。\n          子どもたちの間に伝わる古いわらべ歌のなかには、「丘で霧が立つと、いない子が来る」という一節が残っています。\n          これらは、霧の中で迷いやすい山道に対する古人の戒めだったと考えられています。\n        </p>\n\n        <h3>注意事項</h3>\n        <p>\n          盆地状の地形のため、運転・徒歩を問わず<strong>視界の急変</strong>に注意してください。\n          登山道・林道では <strong>熊・鹿などの野生動物</strong> の目撃情報があります。\n          一部の <strong>旧整備区域</strong> は、整備上の理由から立ち入りを制限しています。看板・ロープに従ってください。\n        </p>"
+    },
+    {
+      "path": "history/index.html",
+      "route": "/history/",
+      "layout": "legacy",
+      "title": "町の歴史｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/history/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../bunka/"
+        },
+        {
+          "label": "町の歴史"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>町の歴史</h2>\n        <p style=\"font-size:12px;\"><a href=\"../documents/\">資料室</a> ／ <a href=\"../blog/2021/\">2021年の出来事</a></p>\n        <p>\n          霞ノ杜町は、古くから杜と水脈に支えられた集落として知られてきました。\n          昭和期には林業と地場産品の集散地として一時の活況を見せ、町域には今も当時の道標や石碑が点在しています。\n          このページでは、町史編纂室が保存してきた写真と記録の一部を、年代を追いながらご紹介します。\n        </p>\n\n        <h3>1. 江戸〜明治の道筋</h3>\n        <p>\n          霞ノ杜の参詣路は江戸中期の絵地図に登場します。山あいを縫う細い道は、霧の濃い朝には踏み迷いやすく、\n          いくつもの石の道しるべが置かれていました。\n          現在も町中心部から霞ノ杜神社へと続く参道沿いに、苔むした石が数基残っています。\n        </p>\n\n        <div class=\"pull-quote\">\n          「霧の朝、丘の方より子供の声の聞こえることありと言ふ。\n          されども、近寄れば声は霧の中に消え、ただ水の音のみ残るなり。」\n          <div class=\"src\">— 霞ノ杜村史 補遺（大正11年・町史編纂室所蔵）</div>\n        </div>\n\n        <h3>2. 昭和の整備・町制施行</h3>\n        <p>\n          昭和23年、町村制施行に伴い「霞ノ杜村」は「霞ノ杜町」となります。\n          高度成長期には林業を中心に町が動き、昭和40年代には吊り橋・林道・展望休憩所が次々に整備されました。\n          観光客の往来が増えた時期もあり、町の北西部には自然散策路と案内板が新設されています。\n        </p>\n\n        <h3>3. 1978年の風景写真</h3>\n        <p>\n          以下の写真は、町史編纂室が保管する 1978 年撮影のフィルム原板から起こしたものです。\n          町の北西部、水際の風景を写したものとされています。\n        </p>\n        <div class=\"photo-zoomable\">\n          <img src=\"../img/history-1978.svg\" alt=\"1978年撮影の町の風景（北西部・水際）\" />\n          <div class=\"zoom-pane\" style=\"background-image: url('../img/history-1978-zoom.svg'); background-position: 50% 80%;\"></div>\n        </div>\n        <p class=\"photo-cap\">写真：町の北西部・水際の風景（1978年・町史編纂室所蔵）。マウスを乗せると拡大されます。</p>\n\n        <p>\n          写真の右下、霧の合間にうっすらと木の看板の輪郭が確認できます。\n          長年の風雨で多くが朽ちましたが、町史編纂室では当時の案内板の文字を、別の資料との照合により補完しています。\n        </p>\n\n        <h3>4. かつての風景ギャラリー</h3>\n        <div class=\"gallery\">\n          <figure>\n            <img src=\"../img/history-1978.svg\" alt=\"\" />\n            <figcaption>1978年・町北西部 水際</figcaption>\n          </figure>\n          <figure>\n            <img src=\"../img/mizube-mural.svg\" alt=\"\" />\n            <figcaption>令和6年・小学校 地域貢献活動の壁画（参考画像）</figcaption>\n          </figure>\n        </div>\n\n        <h3>5. 略年表</h3>\n        <div class=\"timeline\">\n          <h4>明治22年</h4><p>町村制施行に伴い「霞ノ杜村」発足。</p>\n          <h4>昭和23年</h4><p>町制施行、霞ノ杜町となる。</p>\n          <h4>昭和28年</h4><p>霞ノ杜村立霞ノ杜小学校 開校（後の霞ノ杜町立霞ノ杜小学校）。</p>\n          <h4>昭和40年代</h4><p>林道・吊り橋の改修。観光客の往来が増加。</p>\n          <h4>昭和53年</h4><p>町北西部の自然散策路を整備、案内板を新設。</p>\n          <h4>平成 8年</h4><p>町立霞ノ杜小学校 校舎改築。</p>\n          <h4>平成20年代</h4><p>一部の旧整備区域を非公開化、観光サイトから掲載終了。</p>\n          <h4>令和 4年</h4><p>町北西部の整備地の見直し・再開発計画が議論される。</p>\n          <h4>令和 6年</h4><p>町立霞ノ杜小学校による「水辺の丘」周辺の河川敷清掃活動を実施。</p>\n        </div>\n\n        <h3 id=\"legend\">6. 伝承「三人入って二人戻る」</h3>\n        <div class=\"pull-quote\" data-kn-story-clue=\"1\">\n          「山に三人が入り、戻るのは二人だけ——」\n          <div class=\"src\">— 霞ノ杜町史 民俗資料（町史編纂室所蔵・要約）</div>\n        </div>\n        <p data-kn-story-clue=\"1\">\n          江戸時代から伝わる言い伝えで、霧の深い朝に子供の声が聞こえるという話とセットで語られることがあります。\n          近代の記録では、特定の年の出来事と結びつけて語られる例もありますが、<strong>史実として三人・二人を確認する文献はありません</strong>。\n          町として公式に超常現象を認定しているわけではありません。\n        </p>\n\n        <h3>7. 旧整備区域について</h3>\n        <p>平成20年代以降、一部の旧整備区域は安全上の理由から非公開化され、観光案内からは掲載を終了しています。詳細な立入りはできません。</p>\n\n        <h3>8. 子どもたちの記録</h3>\n        <p>\n          霞ノ杜小学校では、毎年秋に「霞ノ杜こども絵画展」を町民ホールで開催しています。\n          令和 6 年度の出品作には、町北西部の風景を題材にしたものが複数ありました。\n          展示の一部は、町史編纂室での保管とデジタル化を進めています。\n        </p>\n        <p style=\"font-size:12px;color:#555;\">\n          詳しくは\n          <a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">霞ノ杜町立霞ノ杜小学校 公式ホームページ</a>\n          をご参照ください。\n        </p>\n\n        <div class=\"next-spot\">\n          <a href=\"../\">トップページへ戻る »</a>\n        </div>"
+    },
+    {
+      "path": "kodomo/hoiku.html",
+      "route": "/kodomo/hoiku/",
+      "layout": "city",
+      "title": "保育・幼稚園｜霞ノ杜町",
+      "description": "保育・幼稚園 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "子ども・教育",
+          "href": "index.html"
+        },
+        {
+          "label": "保育・幼稚園"
+        }
+      ],
+      "related": [
+        {
+          "href": "shogakkou.html",
+          "label": "小学校",
+          "storyClue": false
+        },
+        {
+          "href": "kosodate.html",
+          "label": "子育て",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "教育",
+          "storyClue": false
+        }
+      ],
+      "h1": "保育・幼稚園",
+      "paragraphs": [
+        "町内に認定こども園1、保育所2、幼稚園（連携型）1があります。空き状況は子育て支援課へ。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>杜保育園</th><td>定員60 / 三日月町</td></tr><tr><th>霞ヶ丘こども園</th><td>定員45 / 霞ノ杜</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"shogakkou.html\">小学校</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a href=\"../kurashi/tetsuzuki-navi.html\">手続ナビ</a></l"
+    },
+    {
+      "path": "kodomo/index.html",
+      "route": "/kodomo/",
+      "layout": "city",
+      "title": "子ども・教育｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "子ども・教育"
+        }
+      ],
+      "related": [],
+      "h1": "子ども・教育",
+      "paragraphs": [
+        "保育・学校・子育て支援の案内です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"shogakkou.html\"><strong>小学校</strong><span>町立第一小学校</span></a><a class=\"city-hub-card\" href=\"hoiku.html\"><strong>保育・幼稚園</strong><span>施設一覧</span></a><a class=\"city-hub-card\" href=\"toshokan.html\"><strong>図書館</strong><span>開館時間</span></a><a class=\"city-hub-card\" href=\"kosodate.html\"><strong>子育て支援</strong><span>相談・手当</span></a></div>"
+    },
+    {
+      "path": "kodomo/kosodate.html",
+      "route": "/kodomo/kosodate/",
+      "layout": "city",
+      "title": "子育て支援｜霞ノ杜町",
+      "description": "子育て支援 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "子ども・教育",
+          "href": "index.html"
+        },
+        {
+          "label": "子育て支援"
+        }
+      ],
+      "related": [
+        {
+          "href": "hoiku.html",
+          "label": "保育",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "../fukushi/",
+          "label": "福祉",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "子育て支援",
+      "paragraphs": [
+        "児童手当・医療費助成・一時預かりの案内は子育て支援課。相談は杜のいろはと連携。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href="
+    },
+    {
+      "path": "kodomo/shogakkou.html",
+      "route": "/kodomo/shogakkou/",
+      "layout": "city",
+      "title": "小学校｜霞ノ杜町",
+      "description": "町立第一小学校 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "子ども・教育",
+          "href": "index.html"
+        },
+        {
+          "label": "町立第一小学校"
+        }
+      ],
+      "related": [
+        {
+          "href": "hoiku.html",
+          "label": "保育",
+          "storyClue": false
+        },
+        {
+          "href": "toshokan.html",
+          "label": "図書館",
+          "storyClue": false
+        },
+        {
+          "href": "kosodate.html",
+          "label": "子育て",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "教育",
+          "storyClue": false
+        }
+      ],
+      "h1": "町立第一小学校",
+      "paragraphs": [
+        "霞ノ杜町立第一小学校の公式サイトは別ページでご覧いただけます。",
+        "<a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">霞ノ杜町立第一小学校 公式サイト</a>"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoiku.html\">保育</a></li><li><a href=\"toshokan.html\">図書館</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a hr"
+    },
+    {
+      "path": "kodomo/toshokan.html",
+      "route": "/kodomo/toshokan/",
+      "layout": "city",
+      "title": "図書館｜霞ノ杜町",
+      "description": "町立図書館 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "子ども・教育",
+          "href": "index.html"
+        },
+        {
+          "label": "町立図書館"
+        }
+      ],
+      "related": [
+        {
+          "href": "../history/",
+          "label": "歴史",
+          "storyClue": false
+        },
+        {
+          "href": "../documents/",
+          "label": "資料室",
+          "storyClue": false
+        },
+        {
+          "href": "shogakkou.html",
+          "label": "小学校",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "教育",
+          "storyClue": false
+        }
+      ],
+      "h1": "町立図書館",
+      "paragraphs": [
+        "三日月庁舎別館2階。一般書・町史コーナー・児童書を所蔵。火・水は休館。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>開館</th><td>9:30〜18:00（土曜〜17:00）</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../history/\">歴史</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\""
+    },
+    {
+      "path": "kurashi/bus-jikan.html",
+      "route": "/kurashi/bus-jikan/",
+      "layout": "city",
+      "title": "バス時刻表｜霞ノ杜町",
+      "description": "町営バス時刻表 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "バス時刻表"
+        }
+      ],
+      "related": [
+        {
+          "href": "bus-roke.html",
+          "label": "バスロケ",
+          "storyClue": false
+        },
+        {
+          "href": "chizu.html",
+          "label": "地図",
+          "storyClue": false
+        },
+        {
+          "href": "../access/",
+          "label": "アクセス詳細",
+          "storyClue": false
+        },
+        {
+          "href": "../bunka/",
+          "label": "観光",
+          "storyClue": false
+        }
+      ],
+      "h1": "町営バス時刻表",
+      "paragraphs": [
+        "三日月町中心部と霞ノ杜地区を結ぶ町営バスは、平日・土曜に1日6往復です。詳細な停留所位置はアクセス・地図をご覧ください。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>三日月発</th><td>7:10 / 9:30 / 11:40 / 14:00 / 16:20 / 18:10</td></tr><tr><th>霞ノ杜発</th><td>7:45 / 10:05 / 12:15 / 14:35 / 16:55 / 18:45</td></tr><tr><th>運賃</th><td>大人200円・小児100円（IC未対応）</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bus-roke.html\">バスロケ</a></li><li><a href=\"chizu.html\">地図</a></li><li><a href=\"../access/\">アクセス詳細</a></li><li><a href=\"../bunka/\">観光</a></li></ul></aside>"
+    },
+    {
+      "path": "kurashi/bus-roke.html",
+      "route": "/kurashi/bus-roke/",
+      "layout": "city",
+      "title": "バスロケ｜霞ノ杜町",
+      "description": "バスロケ・運行状況 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "バスロケ"
+        }
+      ],
+      "related": [
+        {
+          "href": "bus-jikan.html",
+          "label": "時刻表",
+          "storyClue": false
+        },
+        {
+          "href": "../anzen/bosai.html",
+          "label": "防災",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "../access/",
+          "label": "アクセス",
+          "storyClue": false
+        }
+      ],
+      "h1": "バスロケ・運行状況",
+      "paragraphs": [
+        "豪雨・積雪時は運休・遅延が発生することがあります。最新情報は町公式お知らせまたは三日月庁舎代表へお問い合わせください。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>運行区間</th><td>三日月町中心 ⇄ 霞ノ杜神社前</td></tr><tr><th>運休時</th><td>0123-45-6700（代表）内線 213</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bus-jikan.html\">時刻表</a></li><li><a href=\"../anzen/bosai.html\">防災</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../access/\">アクセス</a><"
+    },
+    {
+      "path": "kurashi/chizu.html",
+      "route": "/kurashi/chizu/",
+      "layout": "city",
+      "title": "地図から探す｜霞ノ杜町",
+      "description": "地図から探す — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "地図から探す"
+        }
+      ],
+      "related": [
+        {
+          "href": "../access/",
+          "label": "アクセス",
+          "storyClue": false
+        },
+        {
+          "href": "../spot/1/",
+          "label": "観光スポット",
+          "storyClue": false
+        },
+        {
+          "href": "../anzen/hazard.html",
+          "label": "ハザード",
+          "storyClue": false
+        },
+        {
+          "href": "bus-jikan.html",
+          "label": "バス",
+          "storyClue": false
+        }
+      ],
+      "h1": "地図から探す",
+      "paragraphs": [
+        "町内の主要施設・観光スポットの位置は、アクセス・地図ページの簡易図をご利用ください。",
+        "<a href=\"../access/\">アクセス・地図ページを開く</a>"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../access/\">アクセス</a></li><li><a href=\"../spot/1/"
+    },
+    {
+      "path": "kurashi/denshi-shinsei.html",
+      "route": "/kurashi/denshi-shinsei/",
+      "layout": "city",
+      "title": "電子申請｜霞ノ杜町",
+      "description": "電子申請 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "電子申請"
+        }
+      ],
+      "related": [
+        {
+          "href": "tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "juminhyo.html",
+          "label": "窓口",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "くらし",
+          "storyClue": false
+        }
+      ],
+      "h1": "電子申請",
+      "paragraphs": [
+        "一部手続はオンラインで受付可能です。印鑑登録・住民票の一部は来庁が必要です。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>オンライン可</th><td>各種証明の請求予約・観光イベント申込</td></tr><tr><th>来庁必須</th><td>初回の転入・印鑑登録</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"juminhyo.html\">窓口</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href"
+    },
+    {
+      "path": "kurashi/gomi-search.html",
+      "route": "/kurashi/gomi-search/",
+      "layout": "city",
+      "title": "ごみ収集検索｜霞ノ杜町",
+      "description": "ごみ収集検索 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "ごみ収集検索"
+        }
+      ],
+      "related": [
+        {
+          "href": "gomi.html",
+          "label": "収集曜日",
+          "storyClue": false
+        },
+        {
+          "href": "kankyo.html",
+          "label": "環境",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "くらし",
+          "storyClue": false
+        }
+      ],
+      "h1": "ごみ収集検索",
+      "paragraphs": [
+        "町内区分コード（7桁・フィクション）を入力して収集曜日を表示します。",
+        "<label>区分コード <input id=\"gomi-zip\" type=\"text\" maxlength=\"7\" placeholder=\"0291701\"></label> <button type=\"button\" id=\"gomi-go\">検索</button>",
+        "例: 0291701（三日月） / 0291702（霞ノ杜） / 0291703（杉並ヶ岡）"
+      ],
+      "extraHtml": "<p id=\"gomi-out\"></p>\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi.html\">収集曜日</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index.html\">くらし</a></li></ul></aside>"
+    },
+    {
+      "path": "kurashi/gomi.html",
+      "route": "/kurashi/gomi/",
+      "layout": "city",
+      "title": "ごみ・リサイクル｜霞ノ杜町",
+      "description": "ごみ・リサイクル — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "ごみ・リサイクル"
+        }
+      ],
+      "related": [
+        {
+          "href": "gomi-search.html",
+          "label": "ごみ収集検索",
+          "storyClue": false
+        },
+        {
+          "href": "kankyo.html",
+          "label": "環境",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "ごみ・リサイクル",
+      "paragraphs": [
+        "地区ごとに収集曜日が異なります。分別は町公式パンフレットに準拠します。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>三日月町</th><td>燃やす:火金 / 資源:水 / プラ:第1・3木</td></tr><tr><th>霞ノ杜</th><td>燃やす:月木 / 資源:水 / プラ:第2・4木</td></tr><tr><th>杉並ヶ岡</th><td>燃やす:火 / 資源:金 / プラ:第2水</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi-search.html\">ごみ収集検索</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></aside>"
+    },
+    {
+      "path": "kurashi/index.html",
+      "route": "/kurashi/",
+      "layout": "city",
+      "title": "くらし・環境｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "くらし・環境"
+        }
+      ],
+      "related": [],
+      "h1": "くらし・環境",
+      "paragraphs": [
+        "ごみ・水道・交通・住民手続など、町民生活の案内です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"gomi.html\"><strong>ごみ・リサイクル</strong><span>収集曜日・分別</span></a><a class=\"city-hub-card\" href=\"bus-jikan.html\"><strong>町営バス</strong><span>時刻・運賃</span></a><a class=\"city-hub-card\" href=\"suido.html\"><strong>上下水道</strong><span>料金・休止水</span></a><a class=\"city-hub-card\" href=\"juminhyo.html\"><strong>住民票・窓口</strong><span>手続と持ち物</span></a><a class=\"city-hub-card\" href=\"sumai.html\"><strong>住まい・移住</strong><span>空き家・土地</span></a><a class=\"city-hub-card\" href=\"kankyo.html\"><strong>環境・自然</strong><span>杜川・保全区域</span></a><a class=\"city-hub-card\" href=\"tetsuzuki-navi.html\"><strong>手続ナビ</strong><span>Q&A</span></a><a class=\"city-hub-card\" href=\"chizu.html\"><strong>地図から探す</strong><span>町内マップ</span></a></div>"
+    },
+    {
+      "path": "kurashi/juminhyo.html",
+      "route": "/kurashi/juminhyo/",
+      "layout": "city",
+      "title": "住民票・窓口｜霞ノ杜町",
+      "description": "住民票・窓口案内 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "住民票・窓口"
+        }
+      ],
+      "related": [
+        {
+          "href": "tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "tetsuzuki-search.html",
+          "label": "早わかり検索",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/yakuba.html",
+          "label": "庁舎案内",
+          "storyClue": false
+        },
+        {
+          "href": "denshi-shinsei.html",
+          "label": "電子申請",
+          "storyClue": false
+        }
+      ],
+      "h1": "住民票・窓口案内",
+      "paragraphs": [
+        "転入・転出・世帯変更は三日月庁舎1階 住民課で受け付けます。平日8:30〜17:15（12:00〜13:00は窓口休止）。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>住民票交付</th><td>本人確認書類・手数料300円</td></tr><tr><th>転入</th><td>14日以内に届出（前住所の転出証明がある場合）</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"../shisei/yakuba.html\">庁舎案内</a></li><li><a href=\"denshi-s"
+    },
+    {
+      "path": "kurashi/kankyo.html",
+      "route": "/kurashi/kankyo/",
+      "layout": "city",
+      "title": "環境・自然｜霞ノ杜町",
+      "description": "環境・自然 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "環境・自然"
+        }
+      ],
+      "related": [
+        {
+          "href": "../anzen/hazard.html",
+          "label": "ハザード",
+          "storyClue": false
+        },
+        {
+          "href": "gomi.html",
+          "label": "ごみ",
+          "storyClue": false
+        },
+        {
+          "href": "../access/",
+          "label": "アクセス",
+          "storyClue": false
+        },
+        {
+          "href": "../bunka/",
+          "label": "観光",
+          "storyClue": false
+        }
+      ],
+      "h1": "環境・自然",
+      "paragraphs": [
+        "杜川流域の保全協定に基づき、岸辺の伐採・キャンプ火は制限されています。北西部旧整備区域は立入禁止です。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../anzen/ha"
+    },
+    {
+      "path": "kurashi/suido.html",
+      "route": "/kurashi/suido/",
+      "layout": "city",
+      "title": "上下水道｜霞ノ杜町",
+      "description": "上下水道 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "上下水道"
+        }
+      ],
+      "related": [
+        {
+          "href": "kankyo.html",
+          "label": "環境",
+          "storyClue": false
+        },
+        {
+          "href": "tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "くらしトップ",
+          "storyClue": false
+        }
+      ],
+      "h1": "上下水道",
+      "paragraphs": [
+        "町営水道は杜川系の水源を利用しています。休止水・水質検査結果はお知らせで告知します。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>水道料金</th><td>メーター検針・2ヶ月ごと請求</td></tr><tr><th>休止水連絡</th><td>総務課 0123-45-6702</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index"
+    },
+    {
+      "path": "kurashi/sumai.html",
+      "route": "/kurashi/sumai/",
+      "layout": "city",
+      "title": "住まい・移住｜霞ノ杜町",
+      "description": "住まい・移住 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "住まい・移住"
+        }
+      ],
+      "related": [
+        {
+          "href": "kankyo.html",
+          "label": "環境",
+          "storyClue": false
+        },
+        {
+          "href": "../sangyo/",
+          "label": "産業",
+          "storyClue": false
+        },
+        {
+          "href": "../guide/",
+          "label": "町のご案内",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "住まい・移住",
+      "paragraphs": [
+        "空き家バンク・移住相談を町建設課で行っています。林業や観光と組み合わせた二地域居住の事例もあります。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kankyo.html"
+    },
+    {
+      "path": "kurashi/tetsuzuki-navi.html",
+      "route": "/kurashi/tetsuzuki-navi/",
+      "layout": "city",
+      "title": "手続ナビ｜霞ノ杜町",
+      "description": "手続ナビ — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "手続ナビ"
+        }
+      ],
+      "related": [
+        {
+          "href": "tetsuzuki-search.html",
+          "label": "早わかり検索",
+          "storyClue": false
+        },
+        {
+          "href": "juminhyo.html",
+          "label": "住民票",
+          "storyClue": false
+        },
+        {
+          "href": "../kodomo/kosodate.html",
+          "label": "子育て",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/yakuba.html",
+          "label": "庁舎",
+          "storyClue": false
+        }
+      ],
+      "h1": "手続ナビ",
+      "paragraphs": [
+        "よくあるライフイベントから、必要な手続と窓口を案内します。（静的ナビ・フィクション）"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>転入した</th><td>住民票転入 → 国民健康保険 → ごみ収集登録</td></tr><tr><th>引っ越す</th><td>転出届 → 各種証明の変更</td></tr><tr><th>子どもが生まれた</th><td>出生届 → 児童手当 → 保育所申込</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"juminhyo.html\">住民票</a></li><li><a href=\"../kodomo/kosodate.html\">子育て</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li></ul></asi"
+    },
+    {
+      "path": "kurashi/tetsuzuki-search.html",
+      "route": "/kurashi/tetsuzuki-search/",
+      "layout": "city",
+      "title": "手続早わかり検索｜霞ノ杜町",
+      "description": "申請・手続早わかり検索 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "index.html"
+        },
+        {
+          "label": "手続早わかり検索"
+        }
+      ],
+      "related": [
+        {
+          "href": "tetsuzuki-navi.html",
+          "label": "手続ナビ",
+          "storyClue": false
+        },
+        {
+          "href": "denshi-shinsei.html",
+          "label": "電子申請",
+          "storyClue": false
+        },
+        {
+          "href": "../shisei/shozoku.html",
+          "label": "組織",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "申請・手続早わかり検索",
+      "paragraphs": [
+        "手続名から担当課を検索できます。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>住民票</th><td>住民課 / 1階</td></tr><tr><th>建築確認</th><td>建設課 / 2階</td></tr><tr><th>観光協力</th><td>産業観光課 / 2階</td></tr><tr><th>国民健康保険</th><td>福祉課 / 1階</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"denshi-shinsei.html\">電子申請</a></li><li><a href=\"../shisei/shozoku.html\">組織</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></"
+    },
+    {
+      "path": "sangyo/index.html",
+      "route": "/sangyo/",
+      "layout": "city",
+      "title": "産業・雇用｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "産業・雇用"
+        }
+      ],
+      "related": [],
+      "h1": "産業・雇用",
+      "paragraphs": [
+        "林業・観光・商店街・雇用の情報です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"ringyo.html\"><strong>林業</strong><span>間伐・素材</span></a><a class=\"city-hub-card\" href=\"kankou-sangyo.html\"><strong>観光産業</strong><span>協会・受入</span></a><a class=\"city-hub-card\" href=\"shogyo.html\"><strong>三日月町商店街</strong><span>店舗・イベント</span></a><a class=\"city-hub-card\" href=\"koyo.html\"><strong>雇用・季節工</strong><span>募集情報</span></a></div>"
+    },
+    {
+      "path": "sangyo/kankou-sangyo.html",
+      "route": "/sangyo/kankou-sangyo/",
+      "layout": "city",
+      "title": "観光産業｜霞ノ杜町",
+      "description": "観光産業 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "産業・雇用",
+          "href": "index.html"
+        },
+        {
+          "label": "観光産業"
+        }
+      ],
+      "related": [
+        {
+          "href": "../bunka/",
+          "label": "観光入口",
+          "storyClue": false
+        },
+        {
+          "href": "shogyo.html",
+          "label": "商店街",
+          "storyClue": false
+        },
+        {
+          "href": "../events/",
+          "label": "イベント",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "観光産業",
+      "paragraphs": [
+        "宿泊・体験・受入の届出、協会との連携は産業観光課。観光情報は文化・観光カテゴリへ。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+    },
+    {
+      "path": "sangyo/koyo.html",
+      "route": "/sangyo/koyo/",
+      "layout": "city",
+      "title": "雇用｜霞ノ杜町",
+      "description": "雇用・季節工 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "産業・雇用",
+          "href": "index.html"
+        },
+        {
+          "label": "雇用・季節工"
+        }
+      ],
+      "related": [
+        {
+          "href": "ringyo.html",
+          "label": "林業",
+          "storyClue": false
+        },
+        {
+          "href": "shogyo.html",
+          "label": "商店街",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "事業者",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "雇用・季節工",
+      "paragraphs": [
+        "ハウスメーカー・林業・観光の季節求人を町ハローワーク掲示板で公開（架空）。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>林業作業</th><td>4〜11月 / 要相談</td></tr><tr><th>観光案内</th><td>夏期アルバイト</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"ringyo.html\">林業</a></li><li><a href=\"shogyo.html\">商店街</a></li><li><a href=\"index.html\">事業者</a></li><li><a href="
+    },
+    {
+      "path": "sangyo/ringyo.html",
+      "route": "/sangyo/ringyo/",
+      "layout": "city",
+      "title": "林業｜霞ノ杜町",
+      "description": "林業 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "産業・雇用",
+          "href": "index.html"
+        },
+        {
+          "label": "林業"
+        }
+      ],
+      "related": [
+        {
+          "href": "../kurashi/kankyo.html",
+          "label": "環境",
+          "storyClue": false
+        },
+        {
+          "href": "koyo.html",
+          "label": "雇用",
+          "storyClue": false
+        },
+        {
+          "href": "kankou-sangyo.html",
+          "label": "観光",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "産業",
+          "storyClue": false
+        }
+      ],
+      "h1": "林業",
+      "paragraphs": [
+        "町面積の約七成が森林。間伐・素材販売は林業組合と建設課が窓口。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><"
+    },
+    {
+      "path": "sangyo/shogyo.html",
+      "route": "/sangyo/shogyo/",
+      "layout": "city",
+      "title": "商店街｜霞ノ杜町",
+      "description": "三日月町商店街 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "産業・雇用",
+          "href": "index.html"
+        },
+        {
+          "label": "三日月町商店街"
+        }
+      ],
+      "related": [
+        {
+          "href": "../bunka/",
+          "label": "観光",
+          "storyClue": false
+        },
+        {
+          "href": "../access/",
+          "label": "アクセス",
+          "storyClue": false
+        },
+        {
+          "href": "koyo.html",
+          "label": "雇用",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "産業",
+          "storyClue": false
+        }
+      ],
+      "h1": "三日月町商店街",
+      "paragraphs": [
+        "老舗の雑貨・食堂・土産店が旧街道沿いに並びます。毎月第3土曜は夜市。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hr"
+    },
+    {
+      "path": "shisei/archive.html",
+      "route": "/shisei/archive/",
+      "layout": "city",
+      "title": "広報アーカイブ｜霞ノ杜町",
+      "description": "広報・過去ログ — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "広報・過去ログ"
+        }
+      ],
+      "related": [
+        {
+          "href": "koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "../history/",
+          "label": "歴史",
+          "storyClue": false
+        },
+        {
+          "href": "../blog/2021/",
+          "label": "2021",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "市政",
+          "storyClue": false
+        }
+      ],
+      "h1": "広報・過去ログ",
+      "paragraphs": [
+        "過去の広報・ローカルニュースへ。",
+        "[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2021-07-20"
+      ],
+      "extraHtml": "<ul><li data-kn-story-clue=\"1\"><a href=\"../blog/2021/\">2021年ローカルニュース</a></li><li><a href=\"../blog/2016/\">2016年アーカイブ</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\"../history/\">町の歴史</a></li></ul><p class=\"kn-print-error\" aria-hidden=\"true\"></p>\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"koho.html\">お知らせ</a></li><li><a href=\"../history/\"<p class=\"kn-print-error\" aria-hidden=\"true\">[ SYS_ERR ] 旧・烏啼地区ログ復元失敗 — 地区コード [ 67-B地区 ] はマスタから削除済み。開発凍結: 2021-07-20</p>"
+    },
+    {
+      "path": "shisei/chijitsu.html",
+      "route": "/shisei/chijitsu/",
+      "layout": "city",
+      "title": "町長｜霞ノ杜町",
+      "description": "町長の部屋 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "町長の部屋"
+        }
+      ],
+      "related": [
+        {
+          "href": "shozoku.html",
+          "label": "組織",
+          "storyClue": false
+        },
+        {
+          "href": "koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "senkyo.html",
+          "label": "選挙",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "市政",
+          "storyClue": false
+        }
+      ],
+      "h1": "町長の部屋",
+      "paragraphs": [
+        "町長 藤原 誠一（ふじわら せいいち）— 杜と人をつなぐまちづくりを目指して。（架空）"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"sho"
+    },
+    {
+      "path": "shisei/index.html",
+      "route": "/shisei/",
+      "layout": "city",
+      "title": "市政情報｜霞ノ杜町",
+      "description": "",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "市政情報"
+        }
+      ],
+      "related": [],
+      "h1": "市政情報",
+      "paragraphs": [
+        "町政・組織・広報・選挙の情報です。"
+      ],
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>広報アーカイブ</strong><span>過去ログ</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>フォーム</span></a></div>"
+    },
+    {
+      "path": "shisei/koho.html",
+      "route": "/shisei/koho/",
+      "layout": "city",
+      "title": "お知らせ｜霞ノ杜町",
+      "description": "お知らせ — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "お知らせ"
+        }
+      ],
+      "related": [
+        {
+          "href": "../anzen/saigai.html",
+          "label": "緊急",
+          "storyClue": false
+        },
+        {
+          "href": "archive.html",
+          "label": "広報アーカイブ",
+          "storyClue": false
+        },
+        {
+          "href": "../events/",
+          "label": "イベント",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "お知らせ",
+      "paragraphs": [
+        "町からの最新情報です。"
+      ],
+      "extraHtml": "<ul><li><strong>R8.4.1</strong> 公式サイトをリニューアル</li><li><strong>R8.3.15</strong> 杜の吊り橋 — 雨天注意</li><li><strong>R8.2.1</strong> 冬季閉鎖区間の案内更新</li></ul>\n      <aside class=\"city-related\"><h2"
+    },
+    {
+      "path": "shisei/open-data.html",
+      "route": "/shisei/open-data/",
+      "layout": "city",
+      "title": "オープンデータ｜霞ノ杜町",
+      "description": "オープンデータ — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "オープンデータ"
+        }
+      ],
+      "related": [
+        {
+          "href": "../kurashi/chizu.html",
+          "label": "地図から探す",
+          "storyClue": false
+        },
+        {
+          "href": "../bunka/",
+          "label": "観光",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "市政",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "オープンデータ",
+      "paragraphs": [
+        "町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>bus_stops.csv</th><td>停留所座標</td></tr><tr><th>tourism_spots.csv</th><td>観光スポット</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../kurashi/chizu.html\">地図から探す</a></li><li><a href=\"../bunka/\">観光</a></li><li><a href=\"index.html\">市政</a></li><li><a href=\"../con"
+    },
+    {
+      "path": "shisei/senkyo.html",
+      "route": "/shisei/senkyo/",
+      "layout": "city",
+      "title": "選挙｜霞ノ杜町",
+      "description": "選挙 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "選挙"
+        }
+      ],
+      "related": [
+        {
+          "href": "chijitsu.html",
+          "label": "町長",
+          "storyClue": false
+        },
+        {
+          "href": "koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "shozoku.html",
+          "label": "組織",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "市政",
+          "storyClue": false
+        }
+      ],
+      "h1": "選挙",
+      "paragraphs": [
+        "投票所は三日月公民館・霞ノ杜集会所。期日前投票は庁舎1階ロビー（選挙期間中のみ）。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+    },
+    {
+      "path": "shisei/shozoku.html",
+      "route": "/shisei/shozoku/",
+      "layout": "city",
+      "title": "組織｜霞ノ杜町",
+      "description": "組織・開庁時間 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "組織・開庁時間"
+        }
+      ],
+      "related": [
+        {
+          "href": "yakuba.html",
+          "label": "庁舎",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/tetsuzuki-search.html",
+          "label": "手続検索",
+          "storyClue": false
+        },
+        {
+          "href": "chijitsu.html",
+          "label": "町長",
+          "storyClue": false
+        },
+        {
+          "href": "../contact/",
+          "label": "問合せ",
+          "storyClue": false
+        }
+      ],
+      "h1": "組織・開庁時間",
+      "paragraphs": [
+        "三日月庁舎は平日8:30〜17:15。住民課・福祉課は1階、建設・産業観光は2階。"
+      ],
+      "tableHtml": "<table class=\"city-data\"><tr><th>代表</th><td>0123-45-6700</td></tr><tr><th>観光・産業</th><td>内線 220</td></tr></table>",
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"yakuba.html\">庁舎</a></li><li><a href=\"../kurashi/tetsuzuki-search.html\">手続検索</a></li><li><a href=\"chijitsu.html\">町長<"
+    },
+    {
+      "path": "shisei/yakuba.html",
+      "route": "/shisei/yakuba/",
+      "layout": "city",
+      "title": "庁舎案内｜霞ノ杜町",
+      "description": "庁舎案内 — 霞ノ杜町公式。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "庁舎案内"
+        }
+      ],
+      "related": [
+        {
+          "href": "../access/",
+          "label": "アクセス",
+          "storyClue": false
+        },
+        {
+          "href": "shozoku.html",
+          "label": "組織",
+          "storyClue": false
+        },
+        {
+          "href": "../kurashi/chizu.html",
+          "label": "地図",
+          "storyClue": false
+        },
+        {
+          "href": "index.html",
+          "label": "市政",
+          "storyClue": false
+        }
+      ],
+      "h1": "庁舎案内",
+      "paragraphs": [
+        "〒029-17XX 吾妻郡霞ノ杜町三日月中央2-8-1。JR最寄「三日月町」駅から町営バス20分。"
+      ],
+      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../acces"
+    },
+    {
+      "path": "spot/1/index.html",
+      "route": "/spot/1/",
+      "layout": "legacy",
+      "title": "霞ノ杜神社｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/spot/1/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../../bunka/"
+        },
+        {
+          "label": "霞ノ杜神社"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>霞ノ杜神社</h2>\n        <p>\n          町の北東部、小高い丘陵の一角に鎮座する <strong>霞ノ杜神社</strong>。\n          創建年代ははっきりしませんが、古くから「霧を払う」信仰として親しまれてきました。\n          境内に立ち並ぶ樹齢数百年といわれるスギは、冬の朝には霧氷をまとい、初夏には深い緑の天蓋をつくります。\n        </p>\n        <p>\n          石段は長年の浸食と修復の歴史を物語っており、途中で角度が変わる箇所があります。\n          現在は安全のため、迂回ルートに誘導しています。\n        </p>\n\n        <h3>祭事</h3>\n        <ul>\n          <li>1月3日 〜 5日：初詣・霧払いの神事</li>\n          <li>春彼岸：杜開きの集い（春の祭事の出発点）</li>\n          <li>11月23日：新嘗の小祭</li>\n        </ul>\n\n        <h3>境内のみどころ</h3>\n        <ul>\n          <li><strong>霧払いの大杉</strong>：参道脇にそびえる神木。樹皮に手を当てて願をかける作法。</li>\n          <li><strong>水鏡の手水舎（てみずや）</strong>：丘の湧水を引いた手水。雨の少ない年は止まる日もあります。</li>\n          <li><strong>絵馬掛け</strong>：絵馬には霞ノ杜小学校の児童が描いた絵を奉納する習わしがあります。</li>\n        </ul>\n\n        <h3>参拝・観光情報</h3>\n        <div class=\"table-scroll\">\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘（示意）</td></tr>\n            <tr><th>参拝時間</th><td>終日（境内自由／社務所は別途）</td></tr>\n            <tr><th>注意</th><td>急な段差・苔で滑りやすい箇所があります。雨天・霧天は足元にご注意。</td></tr>\n          </tbody>\n        </table>\n        </div>\n\n        <div class=\"next-spot\"><a href=\"../2/\">次の観光地へ：杜の吊り橋 »</a></div>"
+    },
+    {
+      "path": "spot/1.html",
+      "route": "/spot/1/",
+      "layout": "city",
+      "title": "リダイレクト中…",
+      "description": "",
+      "canonical": "1/",
+      "breadcrumbs": [],
+      "related": []
+    },
+    {
+      "path": "spot/2/index.html",
+      "route": "/spot/2/",
+      "layout": "legacy",
+      "title": "杜の吊り橋｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/spot/2/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../../bunka/"
+        },
+        {
+          "label": "杜の吊り橋"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>杜の吊り橋</h2>\n        <p>\n          杜川の上流、深い渓を渡す木造の小さな吊り橋。\n          全長 38 メートル、足元には所々に細い隙間があり、踏み板の継ぎ目から下を流れる水の音と霧が立ちのぼります。\n          地元では「杜橋（もりばし）」と呼ばれることもあります。\n        </p>\n        <p>\n          現在の橋は昭和 40 年代の改修によるもので、それ以前は石を敷いた渡し場でした。\n          欄干に結びつけられた、小さな布や紙の束は、地元の子どもたちが書く願掛けの「結び文」です。\n        </p>\n\n        <h3>橋の周辺で見られるもの</h3>\n        <ul>\n          <li><strong>水の音の合流点</strong>：橋の真下で支流が合流し、低い水音が常に響いています。</li>\n          <li><strong>苔の樹皮</strong>：北側の橋柱は、北からの湿気を受けて苔が育っています。</li>\n          <li><strong>古い案内板の柱</strong>：橋を渡った先、北西側の小道のたもとに、案内板の支柱だけが残されています。看板そのものは長年の間に失われたと伝えられています。</li>\n        </ul>\n\n        <h3>歴史と伝承</h3>\n        <p>\n          昭和初期の写真には、橋を渡った先に <strong>小さな案内板の列</strong> が写っているものがあります。\n          これらは、川の北側にかつて整備されていた散策路の入口を示すものでした。\n          散策路自体は長らく一般の利用から外れており、現在は通行できません。\n        </p>\n\n        <h3>観光情報</h3>\n        <div class=\"table-scroll\">\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川中流（示意）</td></tr>\n            <tr><th>通行時間</th><td>日中（夜間は照明なし。視界の悪い日は通行を控えてください）</td></tr>\n            <tr><th>注意</th><td>雨の日は踏み板が滑りやすくなります。最大荷重・通行人数の制限あり。</td></tr>\n          </tbody>\n        </table>\n        </div>\n\n        <div class=\"next-spot\"><a href=\"../3/\">次の観光地へ：霞ノ杜資料館 »</a></div>"
+    },
+    {
+      "path": "spot/2.html",
+      "route": "/spot/2/",
+      "layout": "city",
+      "title": "リダイレクト中…",
+      "description": "",
+      "canonical": "2/",
+      "breadcrumbs": [],
+      "related": []
+    },
+    {
+      "path": "spot/3/index.html",
+      "route": "/spot/3/",
+      "layout": "legacy",
+      "title": "霞ノ杜資料館｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/spot/3/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../../bunka/"
+        },
+        {
+          "label": "霞ノ杜資料館"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>霞ノ杜資料館</h2>\n        <p>\n          町の北西寄り、町役場の隣接地に建つ <strong>霞ノ杜資料館</strong>。\n          町域から出土した土器、明治以降の写真、町の地誌、町民の寄贈品など、霞ノ杜の歩みを伝える資料を展示しています。\n        </p>\n        <p>\n          1 階は常設展、2 階は企画展のフロア。地下には町史編纂室があり、町の古文書・地図・写真の整理が今も続けられています。\n          訪問前にお電話でご予約いただくと、研究員による解説をご案内できる場合があります。\n        </p>\n\n        <h3>常設展示の見どころ</h3>\n        <ul>\n          <li><strong>霞ノ杜の地形模型</strong>：盆地・川・山系の関係が一目でわかる立体模型。</li>\n          <li><strong>明治・大正期の写真パネル</strong>：道、橋、神社の風景を、町民の生活とともに紹介。</li>\n          <li><strong>木工と山仕事の道具</strong>：林業が盛んだった頃の道具類を展示。</li>\n        </ul>\n\n        <h3>町史編纂室・所蔵資料（一部）</h3>\n        <div class=\"archive-list\">\n          <ul>\n            <li><strong>1953 年</strong>　町立小学校 開校時の校門前 集合写真</li>\n            <li><strong>1962 年</strong>　杜の吊り橋（旧）の写真</li>\n            <li><strong>1971 年</strong>　町内全域 簡易測量図 写し</li>\n            <li><strong>1978 年</strong>　町北西部 自然散策路 整備記念写真（案内板を含む）</li>\n            <li><strong>1985 年</strong>　町民体育祭 旗手の記録</li>\n            <li><strong>2001 年</strong>　町合併協議資料（参考）</li>\n            <li><strong>2024 年</strong>　町立霞ノ杜小学校 絵画クラブ 作品集</li>\n          </ul>\n          <p class=\"archive-note\">※ デジタル化済みの資料は <a href=\"../../history/\">町の歴史</a> ページから一部閲覧できます。</p>\n        </div>\n\n        <h3>利用情報</h3>\n        <div class=\"table-scroll\">\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 2 番地（町役場 隣）</td></tr>\n            <tr><th>開館時間</th><td>9:30 〜 16:30（入館は 16:00 まで）</td></tr>\n            <tr><th>休館日</th><td>火曜・水曜、年末年始</td></tr>\n            <tr><th>観覧料</th><td>無料（特別展は別途）</td></tr>\n          </tbody>\n        </table>\n        </div>\n\n        <div class=\"next-spot\"><a href=\"../4/\">次の観光地へ：霧見展望休憩所 »</a></div>"
+    },
+    {
+      "path": "spot/3.html",
+      "route": "/spot/3/",
+      "layout": "city",
+      "title": "リダイレクト中…",
+      "description": "",
+      "canonical": "3/",
+      "breadcrumbs": [],
+      "related": []
+    },
+    {
+      "path": "spot/4/index.html",
+      "route": "/spot/4/",
+      "layout": "legacy",
+      "title": "霧見展望休憩所｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/spot/4/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../../bunka/"
+        },
+        {
+          "label": "霧見展望休憩所"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>霧見展望休憩所</h2>\n        <p>\n          霞ノ杜山系の中腹、町の北側に位置する小さな展望休憩所。\n          標高 540 m。天気の良い日には、町の中心部から南の三日月町、東の杉並ヶ岡まで見渡せます。\n          そして霧の濃い朝は、足元から谷をひたすように白い海が広がります。\n        </p>\n        <p>\n          木造の屋根とベンチがあるだけの素朴な休憩所ですが、地元では「霧見（きりみ）」と呼ばれ、\n          季節の変わり目には町民が一人静かに腰掛けている姿が見られます。\n        </p>\n\n        <h3>霧の見えかた（季節別）</h3>\n        <ul>\n          <li><strong>春</strong>：朝方、町中心部から沸き上がる薄い霧。</li>\n          <li><strong>夏</strong>：夕立の前、湿った霧が一気に山肌をなめる。</li>\n          <li><strong>秋</strong>：もっとも霧が深い季節。盆地全体が白く満ち、町の屋根だけが島のように浮かぶ。</li>\n          <li><strong>冬</strong>：日が出る前の数十分だけ、霧氷の朝。樹氷越しに町を見下ろせる。</li>\n        </ul>\n\n        <h3>展望休憩所からの眺め</h3>\n        <p>\n          休憩所から南を見ると、町中心部の屋根、杜川の流れ、その先の三日月町まで一望できます。\n          一方、<strong>北西方向</strong> には霞ノ杜の山並みの折れ重なる稜線と、その合間に小さくのぞく <strong>水辺の景色</strong> が見えます。\n          こちらは町の旧整備区域に当たるため、現在は一般の立ち入りを制限している地域です。\n          展望休憩所から眺めるだけにとどめてください。\n        </p>\n\n        <h3>利用情報</h3>\n        <div class=\"table-scroll\">\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>所在地</th><td>霞ノ杜山林道 中腹（示意）</td></tr>\n            <tr><th>到達時間</th><td>町中心部から徒歩で約 50 分（林道経由 / 上駐車場まで車で 15 分）</td></tr>\n            <tr><th>注意</th><td>林道は野生動物の活動範囲です。鈴・笛などの携行を推奨。</td></tr>\n          </tbody>\n        </table>\n        </div>\n\n        <div class=\"next-spot\"><a href=\"../5/\">次の観光地へ：杜の湯（足湯） »</a></div>"
+    },
+    {
+      "path": "spot/4.html",
+      "route": "/spot/4/",
+      "layout": "city",
+      "title": "リダイレクト中…",
+      "description": "",
+      "canonical": "4/",
+      "breadcrumbs": [],
+      "related": []
+    },
+    {
+      "path": "spot/5/index.html",
+      "route": "/spot/5/",
+      "layout": "legacy",
+      "title": "杜の湯｜霞ノ杜町",
+      "description": "",
+      "canonical": "https://roku253.github.io/kasuminomori/spot/5/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "文化・観光",
+          "href": "../../bunka/"
+        },
+        {
+          "label": "杜の湯"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>杜の湯（足湯）</h2>\n        <p>\n          杜川の中流、町中心部から徒歩 12 分ほどのところにある、無料の足湯施設。\n          かつてはこの一帯に温泉旅館が並んでいましたが、現在は町営の小さな足湯だけが残されています。\n          湯量は控えめ、温度は冬で 41 度、夏は 38 度ほど。\n        </p>\n\n        <h3>使い方</h3>\n        <ul>\n          <li>備え付けのバケツに足を入れる前に、横の流し場でかかとを軽くすすいでください。</li>\n          <li>タオルの貸し出しはありません。お手回りに 1 枚お持ちください。</li>\n          <li>夜間（17:30 以降）は照明なしです。早めの利用がおすすめ。</li>\n        </ul>\n\n        <h3>周辺のお店</h3>\n        <ul>\n          <li><strong>霧の最中（もなか）</strong> 売り場（湯の隣、地元商店組合の屋台）</li>\n          <li><strong>月待ちプリン 霞ノ杜店</strong>（週末のみ営業の小さな店）</li>\n          <li><strong>ファイブイレブン 霞ノ杜橋詰店</strong>（22時閉店）</li>\n        </ul>\n\n        <h3>利用情報</h3>\n        <div class=\"table-scroll\">\n        <table class=\"data-table\">\n          <tbody>\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川 中流（示意）</td></tr>\n            <tr><th>利用時間</th><td>6:00 〜 17:30（冬期は短縮）</td></tr>\n            <tr><th>料金</th><td>無料</td></tr>\n            <tr><th>休業日</th><td>毎月第 3 水曜</td></tr>\n          </tbody>\n        </table>\n        </div>\n\n        <div class=\"next-spot\"><a href=\"../../\">観光協会トップへ戻る »</a></div>"
+    },
+    {
+      "path": "spot/5.html",
+      "route": "/spot/5/",
+      "layout": "city",
+      "title": "リダイレクト中…",
+      "description": "",
+      "canonical": "5/",
+      "breadcrumbs": [],
+      "related": []
+    }
+  ],
+  "categories": {
+    "anzen": [
+      "bosai",
+      "hazard",
+      "index",
+      "kinkyu",
+      "koutsuu",
+      "saigai"
+    ],
+    "bunka": [
+      "bunka",
+      "events-calendar",
+      "index",
+      "sports"
+    ],
+    "fukushi": [
+      "hoken",
+      "index",
+      "kaigo",
+      "kenko"
+    ],
+    "kodomo": [
+      "hoiku",
+      "index",
+      "kosodate",
+      "shogakkou",
+      "toshokan"
+    ],
+    "kurashi": [
+      "bus-jikan",
+      "bus-roke",
+      "chizu",
+      "denshi-shinsei",
+      "gomi-search",
+      "gomi",
+      "index",
+      "juminhyo",
+      "kankyo",
+      "suido",
+      "sumai",
+      "tetsuzuki-navi",
+      "tetsuzuki-search"
+    ],
+    "sangyo": [
+      "index",
+      "kankou-sangyo",
+      "koyo",
+      "ringyo",
+      "shogyo"
+    ],
+    "shisei": [
+      "archive",
+      "chijitsu",
+      "index",
+      "koho",
+      "open-data",
+      "senkyo",
+      "shozoku",
+      "yakuba"
+    ]
+  },
+  "spots": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "legacyRoutes": [
+    "/access/",
+    "/blog/2021/",
+    "/contact/",
+    "/documents/",
+    "/guide/",
+    "/history/",
+    "/spot/1/",
+    "/spot/2/",
+    "/spot/3/",
+    "/spot/4/",
+    "/spot/5/"
+  ]
+}

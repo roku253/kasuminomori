@@ -1,0 +1,48 @@
+{
+  "path": "shisei/shozoku.html",
+  "route": "/shisei/shozoku/",
+  "layout": "city",
+  "title": "組織｜霞ノ杜町",
+  "description": "組織・開庁時間 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "組織・開庁時間"
+    }
+  ],
+  "related": [
+    {
+      "href": "yakuba.html",
+      "label": "庁舎",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/tetsuzuki-search.html",
+      "label": "手続検索",
+      "storyClue": false
+    },
+    {
+      "href": "chijitsu.html",
+      "label": "町長",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "組織・開庁時間",
+  "paragraphs": [
+    "三日月庁舎は平日8:30〜17:15。住民課・福祉課は1階、建設・産業観光は2階。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>代表</th><td>0123-45-6700</td></tr><tr><th>観光・産業</th><td>内線 220</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"yakuba.html\">庁舎</a></li><li><a href=\"../kurashi/tetsuzuki-search.html\">手続検索</a></li><li><a href=\"chijitsu.html\">町長<"
+}

@@ -1,0 +1,48 @@
+{
+  "path": "kurashi/gomi.html",
+  "route": "/kurashi/gomi/",
+  "layout": "city",
+  "title": "ごみ・リサイクル｜霞ノ杜町",
+  "description": "ごみ・リサイクル — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "ごみ・リサイクル"
+    }
+  ],
+  "related": [
+    {
+      "href": "gomi-search.html",
+      "label": "ごみ収集検索",
+      "storyClue": false
+    },
+    {
+      "href": "kankyo.html",
+      "label": "環境",
+      "storyClue": false
+    },
+    {
+      "href": "../shisei/koho.html",
+      "label": "お知らせ",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "ごみ・リサイクル",
+  "paragraphs": [
+    "地区ごとに収集曜日が異なります。分別は町公式パンフレットに準拠します。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>三日月町</th><td>燃やす:火金 / 資源:水 / プラ:第1・3木</td></tr><tr><th>霞ノ杜</th><td>燃やす:月木 / 資源:水 / プラ:第2・4木</td></tr><tr><th>杉並ヶ岡</th><td>燃やす:火 / 資源:金 / プラ:第2水</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi-search.html\">ごみ収集検索</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></aside>"
+}

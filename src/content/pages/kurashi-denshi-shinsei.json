@@ -1,0 +1,48 @@
+{
+  "path": "kurashi/denshi-shinsei.html",
+  "route": "/kurashi/denshi-shinsei/",
+  "layout": "city",
+  "title": "電子申請｜霞ノ杜町",
+  "description": "電子申請 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "くらし・環境",
+      "href": "index.html"
+    },
+    {
+      "label": "電子申請"
+    }
+  ],
+  "related": [
+    {
+      "href": "tetsuzuki-navi.html",
+      "label": "手続ナビ",
+      "storyClue": false
+    },
+    {
+      "href": "juminhyo.html",
+      "label": "窓口",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "くらし",
+      "storyClue": false
+    }
+  ],
+  "h1": "電子申請",
+  "paragraphs": [
+    "一部手続はオンラインで受付可能です。印鑑登録・住民票の一部は来庁が必要です。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>オンライン可</th><td>各種証明の請求予約・観光イベント申込</td></tr><tr><th>来庁必須</th><td>初回の転入・印鑑登録</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"juminhyo.html\">窓口</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href"
+}

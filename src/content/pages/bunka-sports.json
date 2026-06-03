@@ -1,0 +1,47 @@
+{
+  "path": "bunka/sports.html",
+  "route": "/bunka/sports/",
+  "layout": "city",
+  "title": "スポーツ｜霞ノ杜町",
+  "description": "スポーツ・レクリエーション — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "文化・スポーツ・観光",
+      "href": "index.html"
+    },
+    {
+      "label": "スポーツ・レクリエーション"
+    }
+  ],
+  "related": [
+    {
+      "href": "../events/",
+      "label": "年間行事",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "観光",
+      "storyClue": false
+    },
+    {
+      "href": "../spot/2/",
+      "label": "吊り橋",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "スポーツ・レクリエーション",
+  "paragraphs": [
+    "町民体育祭（5月）、杜川マラソン（10月）などを開催。詳細は年間行事へ。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../e"
+}

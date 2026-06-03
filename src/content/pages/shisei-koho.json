@@ -1,0 +1,47 @@
+{
+  "path": "shisei/koho.html",
+  "route": "/shisei/koho/",
+  "layout": "city",
+  "title": "お知らせ｜霞ノ杜町",
+  "description": "お知らせ — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "お知らせ"
+    }
+  ],
+  "related": [
+    {
+      "href": "../anzen/saigai.html",
+      "label": "緊急",
+      "storyClue": false
+    },
+    {
+      "href": "archive.html",
+      "label": "広報アーカイブ",
+      "storyClue": false
+    },
+    {
+      "href": "../events/",
+      "label": "イベント",
+      "storyClue": false
+    },
+    {
+      "href": "../contact/",
+      "label": "問合せ",
+      "storyClue": false
+    }
+  ],
+  "h1": "お知らせ",
+  "paragraphs": [
+    "町からの最新情報です。"
+  ],
+  "extraHtml": "<ul><li><strong>R8.4.1</strong> 公式サイトをリニューアル</li><li><strong>R8.3.15</strong> 杜の吊り橋 — 雨天注意</li><li><strong>R8.2.1</strong> 冬季閉鎖区間の案内更新</li></ul>\n      <aside class=\"city-related\"><h2"
+}

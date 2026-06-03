@@ -1,0 +1,47 @@
+{
+  "path": "anzen/hazard.html",
+  "route": "/anzen/hazard/",
+  "layout": "city",
+  "title": "ハザードマップ｜霞ノ杜町",
+  "description": "ハザードマップ — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "安全・緊急",
+      "href": "index.html"
+    },
+    {
+      "label": "ハザードマップ"
+    }
+  ],
+  "related": [
+    {
+      "href": "../access/",
+      "label": "アクセス注意",
+      "storyClue": false
+    },
+    {
+      "href": "bosai.html",
+      "label": "防災",
+      "storyClue": false
+    },
+    {
+      "href": "../spot/2/",
+      "label": "吊り橋",
+      "storyClue": false
+    },
+    {
+      "href": "../bunka/",
+      "label": "観光",
+      "storyClue": false
+    }
+  ],
+  "h1": "ハザードマップ",
+  "paragraphs": [
+    "北西部旧整備区域は土砂・旧施設跡のため立入禁止。杜川沿いは増水に注意。霧による視界不良に留意してください。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../access/\">アクセ"
+}

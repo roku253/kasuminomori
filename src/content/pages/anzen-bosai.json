@@ -1,0 +1,48 @@
+{
+  "path": "anzen/bosai.html",
+  "route": "/anzen/bosai/",
+  "layout": "city",
+  "title": "防災｜霞ノ杜町",
+  "description": "防災 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "安全・緊急",
+      "href": "index.html"
+    },
+    {
+      "label": "防災"
+    }
+  ],
+  "related": [
+    {
+      "href": "hazard.html",
+      "label": "ハザード",
+      "storyClue": false
+    },
+    {
+      "href": "saigai.html",
+      "label": "緊急",
+      "storyClue": false
+    },
+    {
+      "href": "koutsuu.html",
+      "label": "交通",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/",
+      "label": "くらし",
+      "storyClue": false
+    }
+  ],
+  "h1": "防災",
+  "paragraphs": [
+    "指定避難所は三日月町公民館・霞ノ杜地区集会所です。防災無線は町内4か所に設置しています。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>避難所</th><td>三日月公民館 / 霞ノ杜集会所</td></tr><tr><th>砂袋配布</th><td>建設課倉庫前（災害時のみ）</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hazard.html\">ハザード</a></li><li><a href=\"saigai.html\">緊急</a></li><li><a href=\"koutsuu.html\">交通</a></li><li><a href=\"../kurash"
+}

@@ -1,0 +1,47 @@
+{
+  "path": "bunka/bunka.html",
+  "route": "/bunka/bunka/",
+  "layout": "city",
+  "title": "伝統文化｜霞ノ杜町",
+  "description": "伝統文化・祭り — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "文化・スポーツ・観光",
+      "href": "index.html"
+    },
+    {
+      "label": "伝統文化・祭り"
+    }
+  ],
+  "related": [
+    {
+      "href": "../history/",
+      "label": "歴史",
+      "storyClue": false
+    },
+    {
+      "href": "../spot/1/",
+      "label": "神社",
+      "storyClue": false
+    },
+    {
+      "href": "../events/",
+      "label": "行事",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "観光",
+      "storyClue": false
+    }
+  ],
+  "h1": "伝統文化・祭り",
+  "paragraphs": [
+    "霞ノ杜神社の例大祭、霧見祭など。伝承については町の歴史ページもご覧ください。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+}

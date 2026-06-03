@@ -1,0 +1,48 @@
+{
+  "path": "kodomo/hoiku.html",
+  "route": "/kodomo/hoiku/",
+  "layout": "city",
+  "title": "保育・幼稚園｜霞ノ杜町",
+  "description": "保育・幼稚園 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "子ども・教育",
+      "href": "index.html"
+    },
+    {
+      "label": "保育・幼稚園"
+    }
+  ],
+  "related": [
+    {
+      "href": "shogakkou.html",
+      "label": "小学校",
+      "storyClue": false
+    },
+    {
+      "href": "kosodate.html",
+      "label": "子育て",
+      "storyClue": false
+    },
+    {
+      "href": "../kurashi/tetsuzuki-navi.html",
+      "label": "手続ナビ",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "教育",
+      "storyClue": false
+    }
+  ],
+  "h1": "保育・幼稚園",
+  "paragraphs": [
+    "町内に認定こども園1、保育所2、幼稚園（連携型）1があります。空き状況は子育て支援課へ。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>杜保育園</th><td>定員60 / 三日月町</td></tr><tr><th>霞ヶ丘こども園</th><td>定員45 / 霞ノ杜</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"shogakkou.html\">小学校</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a href=\"../kurashi/tetsuzuki-navi.html\">手続ナビ</a></l"
+}

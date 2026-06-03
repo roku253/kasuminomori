@@ -1,0 +1,22 @@
+{
+  "path": "kodomo/index.html",
+  "route": "/kodomo/",
+  "layout": "city",
+  "title": "子ども・教育｜霞ノ杜町",
+  "description": "",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "子ども・教育"
+    }
+  ],
+  "related": [],
+  "h1": "子ども・教育",
+  "paragraphs": [
+    "保育・学校・子育て支援の案内です。"
+  ],
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"shogakkou.html\"><strong>小学校</strong><span>町立第一小学校</span></a><a class=\"city-hub-card\" href=\"hoiku.html\"><strong>保育・幼稚園</strong><span>施設一覧</span></a><a class=\"city-hub-card\" href=\"toshokan.html\"><strong>図書館</strong><span>開館時間</span></a><a class=\"city-hub-card\" href=\"kosodate.html\"><strong>子育て支援</strong><span>相談・手当</span></a></div>"
+}

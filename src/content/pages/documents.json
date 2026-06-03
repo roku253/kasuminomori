@@ -1,0 +1,26 @@
+{
+  "path": "documents/index.html",
+  "route": "/documents/",
+  "layout": "legacy",
+  "title": "資料室｜霞ノ杜町",
+  "description": "",
+  "canonical": "https://roku253.github.io/kasuminomori/documents/",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "市政情報",
+      "href": "../shisei/"
+    },
+    {
+      "label": "資料室"
+    }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>公報・資料室</h2>\n        <p>霞ノ杜町の公開資料の抜粋です。個人名は原則記載していません。</p>\n\n        <article class=\"doc-block\">\n          <p class=\"doc-meta\">議会だより 令和3年8月号（抜粋）</p>\n          <h3>青少年の登山事故について</h3>\n          <p>\n            …青少年の登山事故については、関係者の意向により詳細な記載を見送った。\n            町長室に照会があった件については、所管課と調整のうえ対応した…\n          </p>\n        </article>\n\n        <article class=\"doc-block\">\n          <p class=\"doc-meta\">地域安全通信（2021.8.20）</p>\n          <h3>烏啼山道における負傷児童への対応</h3>\n          <p>\n            烏啼山道にて負傷した児童について、迅速な対応に感謝する。\n            関係各位のご協力により、児童の安全確保に至った。\n            今後も立入禁止区域の周知に努める。\n          </p>\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\n        </article>\n\n        <p><a href=\"../history/#legend\">町の歴史（伝承）</a> ／ <a href=\"../blog/2021/\">2021年の出来事</a></p>",
+  "storyClueSelectors": [
+    "main.content"
+  ]
+}

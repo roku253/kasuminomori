@@ -1,0 +1,48 @@
+{
+  "path": "anzen/kinkyu.html",
+  "route": "/anzen/kinkyu/",
+  "layout": "city",
+  "title": "救急・夜間｜霞ノ杜町",
+  "description": "救急・夜間診療 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "安全・緊急",
+      "href": "index.html"
+    },
+    {
+      "label": "救急・夜間診療"
+    }
+  ],
+  "related": [
+    {
+      "href": "../fukushi/kenko.html",
+      "label": "健康",
+      "storyClue": false
+    },
+    {
+      "href": "bosai.html",
+      "label": "防災",
+      "storyClue": false
+    },
+    {
+      "href": "../shisei/yakuba.html",
+      "label": "庁舎",
+      "storyClue": false
+    },
+    {
+      "href": "index.html",
+      "label": "安全",
+      "storyClue": false
+    }
+  ],
+  "h1": "救急・夜間診療",
+  "paragraphs": [
+    "町内の夜間・休日救急は、県北医療圏の当番医制度に準じます（架空）。"
+  ],
+  "tableHtml": "<table class=\"city-data\"><tr><th>救急</th><td>119</td></tr><tr><th>町代表</th><td>0123-45-6700</td></tr><tr><th>診療所</th><td>霞ノ杜診療所（平日のみ・詳細は健康ページ）</td></tr></table>",
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../fukushi/kenko.html\">健康</a></li><li><a href=\"bosai.html\">防災</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li><li><a href=\"index.html\">安全</a></li>"
+}

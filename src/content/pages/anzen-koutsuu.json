@@ -1,0 +1,47 @@
+{
+  "path": "anzen/koutsuu.html",
+  "route": "/anzen/koutsuu/",
+  "layout": "city",
+  "title": "交通安全｜霞ノ杜町",
+  "description": "交通安全 — 霞ノ杜町公式。【フィクション】",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "安全・緊急",
+      "href": "index.html"
+    },
+    {
+      "label": "交通安全"
+    }
+  ],
+  "related": [
+    {
+      "href": "../spot/2/",
+      "label": "吊り橋",
+      "storyClue": false
+    },
+    {
+      "href": "../access/",
+      "label": "アクセス",
+      "storyClue": false
+    },
+    {
+      "href": "saigai.html",
+      "label": "緊急",
+      "storyClue": false
+    },
+    {
+      "href": "../events/",
+      "label": "イベント",
+      "storyClue": false
+    }
+  ],
+  "h1": "交通安全",
+  "paragraphs": [
+    "杜の吊り橋は同時通行10名程度。雨天・濃霧時は通行止めとなる場合があります。"
+  ],
+  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hre"
+}

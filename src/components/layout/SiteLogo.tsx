@@ -1,4 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/site";
+
+const TOWN_MON = "/img/kasuminomori-mon.svg";
 
 type Props = {
   variant?: "hero" | "header" | "footer";
@@ -6,16 +10,21 @@ type Props = {
 
 export function SiteLogo({ variant = "header" }: Props) {
   const isFooter = variant === "footer";
+  const size = isFooter ? 40 : 36;
+
   return (
     <Link
       href="/"
       className={`flex items-center gap-2.5 no-underline ${isFooter ? "text-[#222]" : "text-white"}`}
     >
-      <span
-        className={`inline-block shrink-0 rounded-full border-2 border-white bg-gradient-to-br from-[#4a9e4a] to-[#1a4d80] ${
-          isFooter ? "h-10 w-10" : "h-9 w-9"
-        }`}
+      <Image
+        src={assetPath(TOWN_MON)}
+        alt=""
+        width={size}
+        height={size}
+        className="shrink-0"
         aria-hidden
+        priority={variant === "hero"}
       />
       <span className="min-w-0">
         <span className="block text-lg font-bold tracking-widest">霞ノ杜町</span>

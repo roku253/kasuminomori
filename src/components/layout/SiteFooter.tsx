@@ -133,7 +133,7 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
           代表電話 0123-45-6700（平日 8:30〜17:15）
         </address>
         <Image
-          src={assetPath("/img/placeholders/footer-symbol.svg")}
+          src={assetPath("/img/kasuminomori-mon.svg")}
           alt="霞ノ杜町のシンボルマーク"
           width={200}
           height={200}

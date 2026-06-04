@@ -6,18 +6,18 @@
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f4f6f8",
-  "theme_color": "#94B4A1",
+  "theme_color": "#8FB19D",
   "icons": [
     {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "icon.png",
+      "sizes": "32x32",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "img/kasuminomori-mon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "img/kasuminomori-mon.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

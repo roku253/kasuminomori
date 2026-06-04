@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/img/kasuminomori-mon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/img/kasuminomori-mon.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/img/kasuminomori-mon-180.png", type: "image/png", sizes: "180x180" }],
   },
   appleWebApp: {
     title: "霞ノ杜町",
@@ -83,7 +83,7 @@ const jsonLd = {
       url: "https://roku253.github.io/kasuminomori/",
       logo: {
         "@type": "ImageObject",
-        url: "https://roku253.github.io/kasuminomori/img/kasuminomori-mon.svg",
+        url: "https://roku253.github.io/kasuminomori/img/kasuminomori-mon.png",
       },
     },
   ],

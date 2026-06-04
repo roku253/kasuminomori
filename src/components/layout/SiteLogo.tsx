@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { assetPath } from "@/lib/site";
 
-const TOWN_MON = "/img/kasuminomori-mon.svg";
+const TOWN_MON = "/img/kasuminomori-mon.png";
 
 type Props = {
   variant?: "hero" | "header" | "footer";

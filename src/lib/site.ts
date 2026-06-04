@@ -13,15 +13,26 @@ export function sitePath(path: string): string {
 }
 
 /**
+ * 旧 HTML と同じ基準ディレクトリ（例: kurashi/bus-jikan.html → /kurashi/）。
+ */
+export function getContentBaseDir(pageRoute: string): string {
+  const normalized = pageRoute.startsWith("/") ? pageRoute : `/${pageRoute}`;
+  const withSlash = normalized.endsWith("/") ? normalized : `${normalized}/`;
+  if (withSlash === "/") return "/";
+  const parts = withSlash.split("/").filter(Boolean);
+  if (parts.length <= 1) return withSlash;
+  return `/${parts.slice(0, -1).join("/")}/`;
+}
+
+/**
  * 旧 HTML 由来の相対 href（gomi.html, ../contact/）を App Router の route（/kurashi/gomi/）に変換。
- * pageRoute は現在ページの route（例: /kurashi/）。
+ * pageRoute は現在ページの route（例: /kurashi/bus-jikan/）。
  */
 export function resolveContentHref(href: string, pageRoute: string): string {
   if (!href || href.startsWith("#") || href.startsWith("mailto:")) return href;
   if (/^https?:\/\//i.test(href)) return href;
 
-  const dir = pageRoute.startsWith("/") ? pageRoute : `/${pageRoute}`;
-  const base = dir.endsWith("/") ? dir : `${dir}/`;
+  const base = getContentBaseDir(pageRoute);
 
   let path = new URL(href, `https://internal.invalid${base}`).pathname;
   path = path.replace(/\/index\.html$/i, "").replace(/\.html$/i, "");

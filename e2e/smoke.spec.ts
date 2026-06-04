@@ -32,6 +32,22 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
     await expect(page.getByRole("link", { name: /町営バス/ }).first()).toBeVisible();
   });
 
+  test("バス時刻表: 関連リンクが404にならない", async ({ page }) => {
+    await page.goto(sitePath("kurashi/bus-jikan/"));
+    const related = page.getByRole("complementary").filter({ hasText: "関連するページ" });
+    await related.getByRole("link", { name: "バスロケ" }).click();
+    await expect(page).toHaveURL(/\/kasuminomori\/kurashi\/bus-roke\/?$/);
+    await page.goto(sitePath("kurashi/bus-jikan/"));
+    await related.getByRole("link", { name: "地図" }).click();
+    await expect(page).toHaveURL(/\/kasuminomori\/kurashi\/chizu\/?$/);
+    await page.goto(sitePath("kurashi/bus-jikan/"));
+    await related.getByRole("link", { name: "アクセス詳細" }).click();
+    await expect(page).toHaveURL(/\/kasuminomori\/access\/?$/);
+    await page.goto(sitePath("kurashi/bus-jikan/"));
+    await related.getByRole("link", { name: "観光" }).click();
+    await expect(page).toHaveURL(/\/kasuminomori\/bunka\/?$/);
+  });
+
   test("くらしハブ: ごみカードは /kurashi/gomi/ へ（/gomi/ 404 回避）", async ({ page }) => {
     await page.goto(sitePath("kurashi/"));
     await page

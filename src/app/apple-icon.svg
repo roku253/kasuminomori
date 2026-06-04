@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Î\:">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Kasuminomori">
   <g fill="#1a4d80">
-    <path d="M34 42h16v9H66v-9h16v9H82v-9h16v9h16v-9h10v19H34V42z" />
+    <path d="M34 42h16v9H66v-9h16v9H82v-9h16v9h16v-9h12v19H34V42z" />
     <circle cx="90" cy="80" r="17" />
     <path d="M31 140c12-18 27-26 59-26s47 8 59 26c-14 10-28 15-59 15S45 150 31 140z" />
     <path d="M39 127c10-14 24-19 51-19s41 5 51 19c-11 8-23 11-51 11S50 135 39 127z" />

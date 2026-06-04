@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="霞ノ杜町のシンボル">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Kasuminomori symbol">
   <g fill="#1a4d80">
     <path d="M38 47h18v10H74v-10h18v10H92v-10h18v10h18v-10h12v21H38V47z" />
     <circle cx="100" cy="89" r="19" />

@@ -3,6 +3,7 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { GlassPanel } from "@/components/ui/GlassPanel";
+import { sitePath } from "@/lib/site";
 
 export function TopSearch() {
   const [tab, setTab] = useState<"site" | "page">("site");
@@ -35,7 +36,7 @@ export function TopSearch() {
       </div>
       <form
         className="flex bg-white/95"
-        action="/kurashi/tetsuzuki-search/"
+        action={sitePath("/kurashi/tetsuzuki-search/")}
         role="search"
       >
         <input

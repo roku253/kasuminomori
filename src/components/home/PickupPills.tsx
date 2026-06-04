@@ -3,19 +3,20 @@ import { PICKUP_LINKS } from "@/lib/hero-slides";
 
 export function PickupPills() {
   return (
-    <div className="hero-pickup-pills-inner">
-      <h2 className="city-eyebrow mb-2.5 text-white/90">よく使うページ</h2>
-      <div className="flex flex-wrap gap-2">
+    <div className="hero-pickup-pills-inner min-w-0">
+      <h2 className="city-eyebrow mb-3 text-white/95">よく使うページ</h2>
+      <ul className="hero-pickup-grid m-0 list-none gap-2 p-0">
         {PICKUP_LINKS.map((l) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            className="inline-flex min-h-[44px] items-center rounded-[var(--radius-sm)] border border-white/30 bg-white/10 px-3.5 py-2 text-sm font-medium text-white no-underline backdrop-blur-md transition hover:border-white/50 hover:bg-white/20"
-          >
-            {l.label}
-          </Link>
+          <li key={l.href}>
+            <Link
+              href={l.href}
+              className="flex min-h-[44px] w-full items-center justify-center rounded-[var(--radius-sm)] border border-white/35 bg-white/12 px-3 py-2.5 text-center text-sm font-medium leading-snug text-white no-underline backdrop-blur-md transition hover:border-white/55 hover:bg-white/22"
+            >
+              {l.label}
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

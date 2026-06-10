@@ -1,0 +1,17 @@
+{
+  "path": "documents/gikai-dayori/index.html",
+  "route": "/documents/gikai-dayori/",
+  "layout": "legacy",
+  "title": "議会だより｜霞ノ杜町",
+  "description": "霞ノ杜町議会だよりの公開抜粋。【フィクション】",
+  "canonical": "https://roku253.github.io/kasuminomori/documents/gikai-dayori/",
+  "breadcrumbs": [
+    { "label": "トップ", "href": "../../" },
+    { "label": "市政情報", "href": "../../shisei/" },
+    { "label": "資料室", "href": "../" },
+    { "label": "議会だより" }
+  ],
+  "related": [],
+  "bodyHtml": "<h2>議会だより</h2>\r\n        <p>霞ノ杜町議会の審議・報告の抜粋です。個人名は原則記載していません。</p>\r\n\r\n        <article class=\"doc-block\" data-kn-story-clue=\"1\">\r\n          <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\r\n          <h3>青少年の登山事故について</h3>\r\n          <p>\r\n            …ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする…\r\n            詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…\r\n          </p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../history/#legend\">町の歴史（伝承）</a></p>",
+  "storyClueSelectors": ["main.content"]
+}

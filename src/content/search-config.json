@@ -1,0 +1,46 @@
+{
+  "routeTiers": {
+    "/documents/gikai-dayori/": "story",
+    "/documents/": "hub",
+    "/documents/chiiki-anzen/": "hub",
+    "/blog/2019/": "story",
+    "/history/": "story",
+    "/shisei/archive/": "hub",
+    "/shisei/": "hub",
+    "/shisei/koho/": "hub",
+    "/shisei/koho-kasumi/": "noise",
+    "/kodomo/shogakkou/": "hub"
+  },
+  "routeKeywords": {
+    "/documents/": ["資料室", "公報", "公開資料", "索引"],
+    "/documents/gikai-dayori/": ["議会だより", "議会", "町議会", "公報"],
+    "/documents/chiiki-anzen/": ["地域安全通信", "立入禁止", "烏啼山道", "防災"],
+    "/shisei/koho-kasumi/": ["広報誌", "霞ノ杜", "配布", "バックナンバー", "くらし"],
+    "/shisei/koho/": ["お知らせ", "プレスリリース", "最新"],
+    "/shisei/archive/": ["広報", "アーカイブ", "バックナンバー", "過去の号"],
+    "/history/": ["町の歴史", "伝承", "言い伝え", "民俗", "江戸"],
+    "/blog/2019/": ["2019", "ローカルニュース", "出来事", "表彰"],
+    "/guide/": ["町の紹介", "人口", "霧", "杜川", "観光"],
+    "/events/": ["祭り", "行事", "夏祭り", "マラソン"],
+    "/spot/1/": ["神社", "参道", "例大祭"],
+    "/spot/2/": ["吊り橋", "杜橋", "川"],
+    "/spot/3/": ["資料館", "町史", "展示"],
+    "/anzen/bosai/": ["防災", "避難所", "災害"],
+    "/anzen/hazard/": ["ハザードマップ", "土砂", "氾濫"],
+    "/kurashi/gomi/": ["ごみ", "ゴミ", "分別", "収集曜日"],
+    "/kurashi/bus-jikan/": ["バス", "時刻表", "町営バス"],
+    "/kodomo/shogakkou/": ["小学校", "教育", "学校"],
+    "/contact/": ["問い合わせ", "観光協会", "窓口"]
+  },
+  "storyQueryTerms": [
+    "議会だより",
+    "黒塗り",
+    "見送った",
+    "登山事故",
+    "青少年の登山",
+    "渡辺",
+    "負傷児童",
+    "タイムカプセル",
+    "名簿"
+  ]
+}

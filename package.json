@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/extract-content.mjs && node scripts/generate-redirects.mjs && next build",
+    "build": "node scripts/extract-content.mjs && node scripts/build-search-index.mjs && node scripts/generate-redirects.mjs && next build",
     "start": "next start",
     "lint": "next lint",
-    "extract": "node scripts/extract-content.mjs",
+    "extract": "node scripts/extract-content.mjs && node scripts/build-search-index.mjs",
+    "search-index": "node scripts/build-search-index.mjs",
     "redirects": "node scripts/generate-redirects.mjs",
     "cleanup-legacy": "node scripts/cleanup-legacy-html.mjs",
     "test:e2e": "playwright test",

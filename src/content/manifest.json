@@ -313,7 +313,7 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>2019年の出来事</h2>\n<p>霞ノ杜町立第一小学校周辺で話題となった出来事の抜粋です。個人名の詳細は掲載していません。</p>\n<article class=\"doc-block\" data-kn-story-clue=\"1\">\n  <p class=\"doc-meta\">2019年9月・地域表彰</p>\n  <h3>青少年の安全活動への協力</h3>\n  <p>烏啼山道周辺の安全啓発にご協力いただいた方々への感謝状授与が行われました。受賞者名簿には、<strong>渡辺</strong> 氏の名前が含まれています（フルネームは非公開）。</p>\n</article>\n<p><a href=\"../documents/\">資料室</a> ／ <a href=\"../history/#legend\">町の歴史（伝承）</a></p>",
+      "bodyHtml": "<h2>2019年の出来事</h2>\n<p>霞ノ杜町立第一小学校周辺で話題となった出来事の抜粋です。個人名の詳細は掲載していません。</p>\n<article class=\"doc-block\" data-kn-story-clue=\"1\">\n  <p class=\"doc-meta\">2019年9月・地域表彰</p>\n  <h3>青少年の安全活動への協力</h3>\n  <p>烏啼山道周辺の安全啓発にご協力いただいた方々への感謝状授与が行われました。受賞者名簿には、<strong>渡辺</strong> 氏の名前が含まれています（フルネームは非公開）。</p>\n</article>\n<p><a href=\"../documents/\">資料室</a> ／ <a href=\"../documents/gikai-dayori/\">議会だより</a> ／ <a href=\"../history/#legend\">町の歴史（伝承）</a></p>",
       "storyClueSelectors": [
         "main.content"
       ]
@@ -549,7 +549,61 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>公報・資料室</h2>\r\n        <p>霞ノ杜町の公開資料の抜粋です。個人名は原則記載していません。</p>\r\n\r\n        <article class=\"doc-block\" data-kn-story-clue=\"1\">\r\n          <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\r\n          <h3>青少年の登山事故について</h3>\r\n          <p>\r\n            …ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする…\r\n            詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…\r\n          </p>\r\n        </article>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p><a href=\"../history/#legend\">町の歴史（伝承）</a> ／ <a href=\"../blog/2019/\">2019年の出来事</a></p>",
+      "bodyHtml": "<h2>公報・資料室</h2>\r\n        <p>霞ノ杜町の公開資料の索引です。個人名は原則記載していません。</p>\r\n\r\n        <h3>公報・議会資料</h3>\r\n        <ul>\r\n          <li><a href=\"gikai-dayori/\">議会だより</a> — 町議会の審議・報告の抜粋</li>\r\n          <li><a href=\"chiiki-anzen/\">地域安全通信</a> — 地域安全・防災に関する広報</li>\r\n        </ul>\r\n\r\n        <h3>関連ページ</h3>\r\n        <ul>\r\n          <li><a href=\"../shisei/koho-kasumi/\">広報誌「霞ノ杜」</a> — 町民向け広報（くらし・行事）</li>\r\n          <li><a href=\"../history/#legend\">町の歴史（伝承）</a></li>\r\n          <li><a href=\"../blog/2019/\">2019年ローカルニュース</a></li>\r\n        </ul>"
+    },
+    {
+      "path": "documents/chiiki-anzen/index.html",
+      "route": "/documents/chiiki-anzen/",
+      "layout": "legacy",
+      "title": "地域安全通信｜霞ノ杜町",
+      "description": "地域安全通信の公開抜粋。【フィクション】",
+      "canonical": "https://roku253.github.io/kasuminomori/documents/chiiki-anzen/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "市政情報",
+          "href": "../../shisei/"
+        },
+        {
+          "label": "資料室",
+          "href": "../"
+        },
+        {
+          "label": "地域安全通信"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>地域安全通信</h2>\r\n        <p>地域の安全・防災に関する広報の抜粋です。</p>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../anzen/bosai/\">防災情報</a></p>"
+    },
+    {
+      "path": "documents/gikai-dayori/index.html",
+      "route": "/documents/gikai-dayori/",
+      "layout": "legacy",
+      "title": "議会だより｜霞ノ杜町",
+      "description": "霞ノ杜町議会だよりの公開抜粋。【フィクション】",
+      "canonical": "https://roku253.github.io/kasuminomori/documents/gikai-dayori/",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../../"
+        },
+        {
+          "label": "市政情報",
+          "href": "../../shisei/"
+        },
+        {
+          "label": "資料室",
+          "href": "../"
+        },
+        {
+          "label": "議会だより"
+        }
+      ],
+      "related": [],
+      "bodyHtml": "<h2>議会だより</h2>\r\n        <p>霞ノ杜町議会の審議・報告の抜粋です。個人名は原則記載していません。</p>\r\n\r\n        <article class=\"doc-block\" data-kn-story-clue=\"1\">\r\n          <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\r\n          <h3>青少年の登山事故について</h3>\r\n          <p>\r\n            …ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする…\r\n            詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…\r\n          </p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../history/#legend\">町の歴史（伝承）</a></p>",
       "storyClueSelectors": [
         "main.content"
       ]
@@ -1870,14 +1924,14 @@
       "paragraphs": [
         "町政・組織・広報・選挙の情報です。"
       ],
-      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>広報アーカイブ</strong><span>過去ログ</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>フォーム</span></a></div>"
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"koho-kasumi.html\"><strong>広報誌「霞ノ杜」</strong><span>くらし・行事</span></a><a class=\"city-hub-card\" href=\"../documents/\"><strong>資料室</strong><span>議会だより</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>バックナンバー</strong><span>広報誌</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>フォーム</span></a></div>"
     },
     {
       "path": "shisei/archive.html",
       "route": "/shisei/archive/",
       "layout": "city",
-      "title": "広報アーカイブ｜霞ノ杜町",
-      "description": "広報・過去ログ — 霞ノ杜町公式。【フィクション】",
+      "title": "広報バックナンバー｜霞ノ杜町",
+      "description": "広報誌「霞ノ杜」のバックナンバー — 霞ノ杜町公式。【フィクション】",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1888,7 +1942,7 @@
           "href": "index.html"
         },
         {
-          "label": "広報・過去ログ"
+          "label": "広報バックナンバー"
         }
       ],
       "related": [
@@ -1913,12 +1967,11 @@
           "storyClue": false
         }
       ],
-      "h1": "広報・過去ログ",
+      "h1": "広報バックナンバー",
       "paragraphs": [
-        "過去の広報・ローカルニュースへ。",
-        ""
+        "広報誌「霞ノ杜」の過去の号へ。町政の公報資料は資料室をご覧ください。"
       ],
-      "extraHtml": "<ul><li data-kn-story-clue=\"1\"><a href=\"../blog/2019/\">2019年ローカルニュース</a></li><li><a href=\"../blog/2016/\">2016年アーカイブ</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\"../history/\">町の歴史</a></li></ul><p class=\"kn-print-error\" aria-hidden=\"true\"></p>\r\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"koho.html\">お知らせ</a></li><li><a href=\"../history/\"<p class=\"kn-print-error\" aria-hidden=\"true\"></p>"
+      "extraHtml": "<h2>広報誌「霞ノ杜」</h2>\r\n        <ul>\r\n          <li><a href=\"koho-kasumi.html#r6-12\">令和6年12月号</a></li>\r\n          <li><a href=\"koho-kasumi.html#r7-01\">令和7年1月号</a> 〜 <a href=\"koho-kasumi.html#r7-04\">4月号</a>（一覧は<a href=\"koho-kasumi.html\">広報誌トップ</a>）</li>\r\n        </ul>\r\n        <h2>町政・公報資料</h2>\r\n        <ul>\r\n          <li><a href=\"../documents/\">資料室</a> — 議会だより・地域安全通信</li>\r\n          <li><a href=\"../blog/2019/\">2019年ローカルニュース</a></li>\r\n          <li><a href=\"../history/\">町の歴史</a></li>\r\n        </ul>\r\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"koho.html\">お知らせ</a></li><li><a href=\"koho-kasumi.html\">広報誌「霞ノ杜」</a></li><li><a href=\"../history/\">歴史</a></li></ul></aside>"
     },
     {
       "path": "shisei/chijitsu.html",
@@ -1968,6 +2021,53 @@
       "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"sho"
     },
     {
+      "path": "shisei/koho-kasumi.html",
+      "route": "/shisei/koho-kasumi/",
+      "layout": "city",
+      "title": "広報誌「霞ノ杜」｜霞ノ杜町",
+      "description": "町民向け広報誌「霞ノ杜」の電子版。【フィクション】",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "../"
+        },
+        {
+          "label": "市政情報",
+          "href": "index.html"
+        },
+        {
+          "label": "広報誌「霞ノ杜」"
+        }
+      ],
+      "related": [
+        {
+          "href": "koho.html",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "archive.html",
+          "label": "バックナンバー",
+          "storyClue": false
+        },
+        {
+          "href": "../events/",
+          "label": "年間行事",
+          "storyClue": false
+        },
+        {
+          "href": "../guide/",
+          "label": "町のご案内",
+          "storyClue": false
+        }
+      ],
+      "h1": "広報誌「霞ノ杜」",
+      "paragraphs": [
+        "町民の皆さまへお届けする広報誌です。毎月10日に配布しています。"
+      ],
+      "extraHtml": "<h2>最新号・バックナンバー</h2>\r\n        <p style=\"font-size:13px;color:#555;\">各号のWeb版をご覧いただけます。PDFは号名をクリックして表示してください。</p>\r\n        <table class=\"data-table\">\r\n          <thead><tr><th>発行</th><th>号</th><th>主な内容</th><th>PDF</th></tr></thead>\r\n          <tbody>\r\n            <tr><td>R7.4</td><td><a href=\"#r7-04\">4月号</a></td><td>春の杜まつり・ごみ分別特集</td><td><a href=\"#r7-04\">表示</a></td></tr>\r\n            <tr><td>R7.3</td><td><a href=\"#r7-03\">3月号</a></td><td>入学・進学・町営バスダイヤ</td><td><a href=\"#r7-03\">表示</a></td></tr>\r\n            <tr><td>R7.2</td><td><a href=\"#r7-02\">2月号</a></td><td>除雪・冬季道路・健康診断</td><td><a href=\"#r7-02\">表示</a></td></tr>\r\n            <tr><td>R7.1</td><td><a href=\"#r7-01\">1月号</a></td><td>年頭挨拶・初詣・防災のしおり</td><td><a href=\"#r7-01\">表示</a></td></tr>\r\n            <tr><td>R6.12</td><td><a href=\"#r6-12\">12月号</a></td><td>年末年始窓口・イルミネーション</td><td><a href=\"#r6-12\">表示</a></td></tr>\r\n          </tbody>\r\n        </table>\r\n\r\n        <h3 id=\"r7-04\">令和7年4月号（抜粋）</h3>\r\n        <p>表紙は霞ノ杜神社の例大祭。特集では春の杜まつりの露店出店者募集、町内ごみステーションの新設、霧見展望休憩所の春の開放時間を掲載しています。</p>\r\n        <h3 id=\"r7-03\">令和7年3月号（抜粋）</h3>\r\n        <p>町立第一小学校の入学式案内、町営バス時刻表の改定、子育て支援センターの講座一覧など。</p>\r\n        <h3 id=\"r7-02\">令和7年2月号（抜粋）</h3>\r\n        <p>除雪体制、高齢者向け健診の日程、杜の吊り橋の点検お知らせ。</p>\r\n        <h3 id=\"r7-01\">令和7年1月号（抜粋）</h3>\r\n        <p>町長年頭挨拶、防災備蓄品の点検、初詣交通規制のお知らせ。</p>\r\n        <h3 id=\"r6-12\">令和6年12月号（抜粋）</h3>\r\n        <p>年末年始の各課窓口、町民ホールのイルミネーション、冬休み子ども食堂の案内。</p>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"archive.html\">さらに古い号はバックナンバーへ</a></p>"
+    },
+    {
       "path": "shisei/koho.html",
       "route": "/shisei/koho/",
       "layout": "city",
@@ -1993,8 +2093,13 @@
           "storyClue": false
         },
         {
+          "href": "koho-kasumi.html",
+          "label": "広報誌「霞ノ杜」",
+          "storyClue": false
+        },
+        {
           "href": "archive.html",
-          "label": "広報アーカイブ",
+          "label": "バックナンバー",
           "storyClue": false
         },
         {
@@ -2374,6 +2479,7 @@
       "index",
       "archive",
       "chijitsu",
+      "koho-kasumi",
       "koho",
       "open-data",
       "senkyo",
@@ -2394,6 +2500,8 @@
     "/blog/2021/",
     "/contact/",
     "/documents/",
+    "/documents/chiiki-anzen/",
+    "/documents/gikai-dayori/",
     "/guide/",
     "/history/",
     "/spot/1/",

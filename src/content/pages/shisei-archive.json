@@ -2,8 +2,8 @@
   "path": "shisei/archive.html",
   "route": "/shisei/archive/",
   "layout": "city",
-  "title": "広報アーカイブ｜霞ノ杜町",
-  "description": "広報・過去ログ — 霞ノ杜町公式。【フィクション】",
+  "title": "広報バックナンバー｜霞ノ杜町",
+  "description": "広報誌「霞ノ杜」のバックナンバー — 霞ノ杜町公式。【フィクション】",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -14,7 +14,7 @@
       "href": "index.html"
     },
     {
-      "label": "広報・過去ログ"
+      "label": "広報バックナンバー"
     }
   ],
   "related": [
@@ -39,10 +39,9 @@
       "storyClue": false
     }
   ],
-  "h1": "広報・過去ログ",
+  "h1": "広報バックナンバー",
   "paragraphs": [
-    "過去の広報・ローカルニュースへ。",
-    ""
+    "広報誌「霞ノ杜」の過去の号へ。町政の公報資料は資料室をご覧ください。"
   ],
-  "extraHtml": "<ul><li data-kn-story-clue=\"1\"><a href=\"../blog/2019/\">2019年ローカルニュース</a></li><li><a href=\"../blog/2016/\">2016年アーカイブ</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\"../history/\">町の歴史</a></li></ul><p class=\"kn-print-error\" aria-hidden=\"true\"></p>\r\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"koho.html\">お知らせ</a></li><li><a href=\"../history/\"<p class=\"kn-print-error\" aria-hidden=\"true\"></p>"
+  "extraHtml": "<h2>広報誌「霞ノ杜」</h2>\r\n        <ul>\r\n          <li><a href=\"koho-kasumi.html#r6-12\">令和6年12月号</a></li>\r\n          <li><a href=\"koho-kasumi.html#r7-01\">令和7年1月号</a> 〜 <a href=\"koho-kasumi.html#r7-04\">4月号</a>（一覧は<a href=\"koho-kasumi.html\">広報誌トップ</a>）</li>\r\n        </ul>\r\n        <h2>町政・公報資料</h2>\r\n        <ul>\r\n          <li><a href=\"../documents/\">資料室</a> — 議会だより・地域安全通信</li>\r\n          <li><a href=\"../blog/2019/\">2019年ローカルニュース</a></li>\r\n          <li><a href=\"../history/\">町の歴史</a></li>\r\n        </ul>\r\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"koho.html\">お知らせ</a></li><li><a href=\"koho-kasumi.html\">広報誌「霞ノ杜」</a></li><li><a href=\"../history/\">歴史</a></li></ul></aside>"
 }

@@ -24,8 +24,13 @@
       "storyClue": false
     },
     {
+      "href": "koho-kasumi.html",
+      "label": "広報誌「霞ノ杜」",
+      "storyClue": false
+    },
+    {
       "href": "archive.html",
-      "label": "広報アーカイブ",
+      "label": "バックナンバー",
       "storyClue": false
     },
     {

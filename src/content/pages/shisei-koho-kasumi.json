@@ -1,0 +1,23 @@
+{
+  "path": "shisei/koho-kasumi.html",
+  "route": "/shisei/koho-kasumi/",
+  "layout": "city",
+  "title": "広報誌「霞ノ杜」｜霞ノ杜町",
+  "description": "町民向け広報誌「霞ノ杜」の電子版。【フィクション】",
+  "breadcrumbs": [
+    { "label": "トップ", "href": "../" },
+    { "label": "市政情報", "href": "index.html" },
+    { "label": "広報誌「霞ノ杜」" }
+  ],
+  "related": [
+    { "href": "koho.html", "label": "お知らせ", "storyClue": false },
+    { "href": "archive.html", "label": "バックナンバー", "storyClue": false },
+    { "href": "../events/", "label": "年間行事", "storyClue": false },
+    { "href": "../guide/", "label": "町のご案内", "storyClue": false }
+  ],
+  "h1": "広報誌「霞ノ杜」",
+  "paragraphs": [
+    "町民の皆さまへお届けする広報誌です。毎月10日に配布しています。"
+  ],
+  "extraHtml": "<h2>最新号・バックナンバー</h2>\r\n        <p style=\"font-size:13px;color:#555;\">各号のWeb版をご覧いただけます。PDFは号名をクリックして表示してください。</p>\r\n        <table class=\"data-table\">\r\n          <thead><tr><th>発行</th><th>号</th><th>主な内容</th><th>PDF</th></tr></thead>\r\n          <tbody>\r\n            <tr><td>R7.4</td><td><a href=\"#r7-04\">4月号</a></td><td>春の杜まつり・ごみ分別特集</td><td><a href=\"#r7-04\">表示</a></td></tr>\r\n            <tr><td>R7.3</td><td><a href=\"#r7-03\">3月号</a></td><td>入学・進学・町営バスダイヤ</td><td><a href=\"#r7-03\">表示</a></td></tr>\r\n            <tr><td>R7.2</td><td><a href=\"#r7-02\">2月号</a></td><td>除雪・冬季道路・健康診断</td><td><a href=\"#r7-02\">表示</a></td></tr>\r\n            <tr><td>R7.1</td><td><a href=\"#r7-01\">1月号</a></td><td>年頭挨拶・初詣・防災のしおり</td><td><a href=\"#r7-01\">表示</a></td></tr>\r\n            <tr><td>R6.12</td><td><a href=\"#r6-12\">12月号</a></td><td>年末年始窓口・イルミネーション</td><td><a href=\"#r6-12\">表示</a></td></tr>\r\n          </tbody>\r\n        </table>\r\n\r\n        <h3 id=\"r7-04\">令和7年4月号（抜粋）</h3>\r\n        <p>表紙は霞ノ杜神社の例大祭。特集では春の杜まつりの露店出店者募集、町内ごみステーションの新設、霧見展望休憩所の春の開放時間を掲載しています。</p>\r\n        <h3 id=\"r7-03\">令和7年3月号（抜粋）</h3>\r\n        <p>町立第一小学校の入学式案内、町営バス時刻表の改定、子育て支援センターの講座一覧など。</p>\r\n        <h3 id=\"r7-02\">令和7年2月号（抜粋）</h3>\r\n        <p>除雪体制、高齢者向け健診の日程、杜の吊り橋の点検お知らせ。</p>\r\n        <h3 id=\"r7-01\">令和7年1月号（抜粋）</h3>\r\n        <p>町長年頭挨拶、防災備蓄品の点検、初詣交通規制のお知らせ。</p>\r\n        <h3 id=\"r6-12\">令和6年12月号（抜粋）</h3>\r\n        <p>年末年始の各課窓口、町民ホールのイルミネーション、冬休み子ども食堂の案内。</p>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"archive.html\">さらに古い号はバックナンバーへ</a></p>"
+}

@@ -8,7 +8,7 @@
 - [ ] legacy（guide/history/spot）: 統一ヘッダー + サイドナビ
 - [ ] デスクトップ: 主要カテゴリへの横リンク（SiteHeader）
 - [ ] モバイル: メガメニュー操作可能
-- [ ] a11y: ヒーロー alt、スキップリンク、自動スライドはホバー/reduce で抑制
+- [ ] a11y: ヒーロー alt、自動スライドはホバー/reduce で抑制
 - [ ] 謎解き: token-gate / footprint / print error 維持
 - [ ] `npm run build` 成功
 

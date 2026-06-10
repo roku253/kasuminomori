@@ -4,52 +4,27 @@ import { Search } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { GlassPanel } from "@/components/ui/GlassPanel";
+import searchIndexData from "@/generated/search-index.json";
 import { sitePath } from "@/lib/site";
-import {
-  searchIndexUrl,
-  searchSiteIndex,
-  type SearchHit,
-  type SearchIndex,
-} from "@/lib/site-search";
+import { searchSiteIndex, type SearchHit, type SearchIndex } from "@/lib/site-search";
+
+const SITE_SEARCH_INDEX = searchIndexData as SearchIndex;
 
 export function TopSearch() {
   const [tab, setTab] = useState<"site" | "page">("site");
   const [query, setQuery] = useState("");
   const [hits, setHits] = useState<SearchHit[]>([]);
-  const [index, setIndex] = useState<SearchIndex | null>(null);
-  const [indexError, setIndexError] = useState(false);
   const [open, setOpen] = useState(false);
   const listId = useId();
   const rootRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    let cancelled = false;
-    fetch(searchIndexUrl())
-      .then((r) => {
-        if (!r.ok) throw new Error("index");
-        return r.json() as Promise<SearchIndex>;
-      })
-      .then((data) => {
-        if (!cancelled) setIndex(data);
-      })
-      .catch(() => {
-        if (!cancelled) setIndexError(true);
-      });
-    return () => {
-      cancelled = true;
-    };
+  const runSearch = useCallback((q: string) => {
+    if (!q.trim()) {
+      setHits([]);
+      return;
+    }
+    setHits(searchSiteIndex(SITE_SEARCH_INDEX, q));
   }, []);
-
-  const runSearch = useCallback(
-    (q: string) => {
-      if (!index || !q.trim()) {
-        setHits([]);
-        return;
-      }
-      setHits(searchSiteIndex(index, q));
-    },
-    [index]
-  );
 
   useEffect(() => {
     if (tab !== "site") {
@@ -103,7 +78,7 @@ export function TopSearch() {
 
         {tab === "site" ? (
           <form
-            className="flex bg-white/95"
+            className="flex bg-white/95 text-[#1a1a1a]"
             role="search"
             onSubmit={(e) => {
               e.preventDefault();
@@ -125,7 +100,7 @@ export function TopSearch() {
               aria-expanded={open && hits.length > 0}
               aria-controls={listId}
               autoComplete="off"
-              className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm outline-none"
+              className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm text-[#1a1a1a] caret-[var(--kasumi-blue)] placeholder:text-[#6b7280] outline-none"
             />
             <button
               type="submit"
@@ -137,7 +112,7 @@ export function TopSearch() {
           </form>
         ) : (
           <form
-            className="flex bg-white/95"
+            className="flex bg-white/95 text-[#1a1a1a]"
             action={sitePath("/kurashi/tetsuzuki-search/")}
             method="get"
             role="search"
@@ -147,7 +122,7 @@ export function TopSearch() {
               name="q"
               placeholder="手続き名で検索"
               aria-label="手続検索"
-              className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm outline-none"
+              className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm text-[#1a1a1a] caret-[var(--kasumi-blue)] placeholder:text-[#6b7280] outline-none"
             />
             <button
               type="submit"
@@ -167,13 +142,7 @@ export function TopSearch() {
           aria-label="検索結果"
           className="absolute left-0 right-0 top-[calc(100%+6px)] z-50 max-h-[min(60vh,420px)] overflow-y-auto rounded border border-[#c5d4e8] bg-white text-[#222] shadow-lg"
         >
-          {indexError && (
-            <p className="px-3 py-3 text-sm text-[#666]">検索索引を読み込めませんでした。</p>
-          )}
-          {!indexError && !index && (
-            <p className="px-3 py-3 text-sm text-[#666]">検索の準備中…</p>
-          )}
-          {index && hits.length === 0 && (
+          {hits.length === 0 && (
             <p className="px-3 py-3 text-sm text-[#666]">
               「{query}」に一致するページが見つかりませんでした。
             </p>

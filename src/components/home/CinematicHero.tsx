@@ -20,25 +20,39 @@ export function CinematicHero() {
   const reduced = useReducedMotion();
 
   useLayoutEffect(() => {
-    if (!rootRef.current || reduced) {
-      const curtain = rootRef.current?.querySelector(".hero-curtain");
+    if (!rootRef.current) return;
+
+    const root = rootRef.current;
+    const showSlides = () => {
+      root.querySelectorAll<HTMLElement>(".hero-slide-inner").forEach((el) => {
+        gsap.set(el, { clearProps: "opacity,transform" });
+      });
+    };
+
+    if (reduced) {
+      const curtain = root.querySelector(".hero-curtain");
       if (curtain) gsap.set(curtain, { opacity: 0 });
+      showSlides();
       return;
     }
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
       tl.fromTo(".hero-curtain", { opacity: 1 }, { opacity: 0, duration: 1 })
         .fromTo(
           ".hero-slide.is-active .hero-slide-inner",
-          { scale: 1.08, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 1.2 },
+          { scale: 1.08 },
+          { scale: 1, duration: 1.2 },
           0.12
         )
         .fromTo(".hero-caption", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.7 }, 0.35)
         .fromTo(".hero-title", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8 }, 0.45)
         .fromTo(".hero-glass", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6 }, 0.55);
     }, rootRef);
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      showSlides();
+    };
   }, [reduced]);
 
   useLayoutEffect(() => {
@@ -78,12 +92,12 @@ export function CinematicHero() {
       {HERO_SLIDES.map((s, i) => (
         <div
           key={s.src}
-          className={`hero-slide absolute inset-0 transition-opacity duration-1000 ${
+          className={`hero-slide absolute inset-0 z-[1] transition-opacity duration-1000 ${
             i === index ? "is-active opacity-100" : "opacity-0"
           }`}
           aria-hidden={i !== index}
         >
-          <div className="hero-slide-inner absolute inset-0 origin-center">
+          <div className="hero-slide-inner relative h-full w-full origin-center">
             <Image
               src={assetPath(s.src)}
               alt={i === index ? s.alt : ""}

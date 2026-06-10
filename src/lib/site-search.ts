@@ -1,5 +1,3 @@
-import { sitePath } from "@/lib/site";
-
 export type SearchTier = "noise" | "hub" | "story";
 
 export type SearchIndexDoc = {
@@ -143,6 +141,3 @@ export function searchSiteIndex(
   return hits.slice(0, limit);
 }
 
-export function searchIndexUrl(): string {
-  return sitePath("/search-index.json");
-}

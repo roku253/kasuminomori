@@ -11,7 +11,8 @@ const ROOT = path.join(__dirname, "..");
 const MANIFEST = path.join(ROOT, "src/content/manifest.json");
 const ENRICHMENT = path.join(ROOT, "src/content/copy-enrichment.json");
 const SEARCH_CONFIG = path.join(ROOT, "src/content/search-config.json");
-const OUT = path.join(ROOT, "public/search-index.json");
+const OUT_PUBLIC = path.join(ROOT, "public/search-index.json");
+const OUT_SRC = path.join(ROOT, "src/generated/search-index.json");
 
 const SKIP_ROUTE_RE =
   /playwright|blog\/2021|blog\/2016|spot\/5\.html|legacy/i;
@@ -163,9 +164,13 @@ function main() {
     docs,
   };
 
-  fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, JSON.stringify(payload), "utf8");
-  console.log(`Wrote ${docs.length} entries → ${OUT}`);
+  const json = JSON.stringify(payload);
+  fs.mkdirSync(path.dirname(OUT_PUBLIC), { recursive: true });
+  fs.mkdirSync(path.dirname(OUT_SRC), { recursive: true });
+  fs.writeFileSync(OUT_PUBLIC, json, "utf8");
+  fs.writeFileSync(OUT_SRC, json, "utf8");
+  console.log(`Wrote ${docs.length} entries → ${OUT_PUBLIC}`);
+  console.log(`Wrote ${docs.length} entries → ${OUT_SRC}`);
 }
 
 main();

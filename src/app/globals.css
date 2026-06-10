@@ -104,6 +104,17 @@ body.city-mega-open .hero-mega-trigger {
   }
 }
 
+/* よく使うページ（左）と検索（右）の高さを揃える */
+.hero-toolbar-block {
+  min-height: calc(2.75rem * 2 + 0.5rem);
+}
+
+@media (min-width: 768px) {
+  .hero-toolbar-block .hero-pickup-grid {
+    grid-template-rows: repeat(2, minmax(2.75rem, 1fr));
+  }
+}
+
 #site-root {
   visibility: hidden;
   min-height: 100dvh;

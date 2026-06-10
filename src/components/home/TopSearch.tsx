@@ -45,14 +45,14 @@ export function TopSearch() {
   }, []);
 
   return (
-    <div ref={rootRef} className="relative">
-      <GlassPanel className="overflow-hidden">
-        <div className="flex bg-white/20" role="tablist" aria-label="検索の種類">
+    <div ref={rootRef} className="relative h-full min-h-0 w-full">
+      <GlassPanel className="flex h-full min-h-0 flex-col overflow-hidden">
+        <div className="flex h-11 shrink-0 bg-white/20" role="tablist" aria-label="検索の種類">
           <button
             type="button"
             role="tab"
             aria-selected={tab === "site"}
-            className={`min-h-[44px] flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
+            className={`h-full flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
               tab === "site"
                 ? "bg-white/90 font-semibold text-[var(--kasumi-blue)]"
                 : "bg-transparent text-white/90"
@@ -65,7 +65,7 @@ export function TopSearch() {
             type="button"
             role="tab"
             aria-selected={tab === "page"}
-            className={`min-h-[44px] flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
+            className={`h-full flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
               tab === "page"
                 ? "bg-white/90 font-semibold text-[var(--kasumi-blue)]"
                 : "bg-transparent text-white/90"
@@ -78,7 +78,7 @@ export function TopSearch() {
 
         {tab === "site" ? (
           <form
-            className="flex bg-white/95 text-[#1a1a1a]"
+            className="flex min-h-0 flex-1 bg-white/95 text-[#1a1a1a]"
             role="search"
             onSubmit={(e) => {
               e.preventDefault();
@@ -112,7 +112,7 @@ export function TopSearch() {
           </form>
         ) : (
           <form
-            className="flex bg-white/95 text-[#1a1a1a]"
+            className="flex min-h-0 flex-1 bg-white/95 text-[#1a1a1a]"
             action={sitePath("/kurashi/tetsuzuki-search/")}
             method="get"
             role="search"

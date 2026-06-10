@@ -82,12 +82,6 @@ export function CinematicHero() {
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <a
-        href="#top-news"
-        className="city-skip absolute -left-[9999px] z-[40] bg-white px-3 py-2 text-sm font-medium text-[var(--kasumi-blue)] focus:left-3 focus:top-3 focus:rounded"
-      >
-        お知らせへスキップ
-      </a>
       <div className="hero-curtain pointer-events-none absolute inset-0 z-30 bg-[#050a12]" style={reduced ? { opacity: 0 } : undefined} />
       {HERO_SLIDES.map((s, i) => (
         <div
@@ -118,10 +112,15 @@ export function CinematicHero() {
           <MegaMenu embeddedInHero />
         </div>
 
-        <div className="hero-ui-layer hero-toolbar grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(260px,300px)] md:items-start md:gap-6">
-          <PickupPills />
-          <div className="hero-glass w-full md:justify-self-end">
-            <TopSearch />
+        <div className="hero-ui-layer hero-toolbar">
+          <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(260px,300px)] md:grid-rows-[auto_1fr] md:items-stretch md:gap-x-6 md:gap-y-3">
+            <h2 className="city-eyebrow m-0 text-white/95 md:col-start-1 md:row-start-1">よく使うページ</h2>
+            <div className="hero-toolbar-block min-w-0 md:col-start-1 md:row-start-2">
+              <PickupPills showLabel={false} />
+            </div>
+            <div className="hero-glass hero-toolbar-block flex w-full md:col-start-2 md:row-start-2">
+              <TopSearch />
+            </div>
           </div>
         </div>
 

@@ -5,10 +5,27 @@ import { TOURISM_SIDEBAR } from "@/lib/navigation";
 import { PageHero } from "@/components/ui/PageHero";
 import { RelatedPanel } from "@/components/ui/RelatedPanel";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { KasumiTownMapEmbed } from "@/components/city/KasumiTownMapEmbed";
+
+const KASUMI_TOWN_MAP_MARKER = "<!--KASUMI_TOWN_MAP-->";
 
 type Props = {
   page: CityPageContent;
 };
+
+function renderLegacyBodyHtml(html: string) {
+  if (!html.includes(KASUMI_TOWN_MAP_MARKER)) {
+    return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  }
+  const parts = html.split(KASUMI_TOWN_MAP_MARKER);
+  return (
+    <>
+      {parts[0] ? <div dangerouslySetInnerHTML={{ __html: parts[0] }} /> : null}
+      <KasumiTownMapEmbed />
+      {parts[1] ? <div dangerouslySetInnerHTML={{ __html: parts[1] }} /> : null}
+    </>
+  );
+}
 
 export function LegacyGuideLayout({ page }: Props) {
   const mainAttrs = page.storyClueSelectors?.includes("main.content")
@@ -29,7 +46,7 @@ export function LegacyGuideLayout({ page }: Props) {
             className="legacy-prose rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-6 shadow-[var(--shadow-sm)] md:p-8"
             {...mainAttrs}
           >
-            {page.bodyHtml && <div dangerouslySetInnerHTML={{ __html: page.bodyHtml }} />}
+            {page.bodyHtml && renderLegacyBodyHtml(page.bodyHtml)}
             {page.extraHtml && <div dangerouslySetInnerHTML={{ __html: page.extraHtml }} />}
           </div>
         </ScrollReveal>

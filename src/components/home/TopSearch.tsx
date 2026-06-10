@@ -150,7 +150,7 @@ export function TopSearch() {
           {hits.map((hit) => (
             <Link
               key={hit.route}
-              href={sitePath(hit.route)}
+              href={hit.route}
               role="option"
               className="block border-b border-[#e8eef5] px-3 py-2.5 no-underline hover:bg-[#f4f8fc] last:border-b-0"
               onClick={() => setOpen(false)}

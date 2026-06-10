@@ -322,9 +322,9 @@
       "path": "blog/2021/index.html",
       "route": "/blog/2021/",
       "layout": "legacy",
-      "title": "2021年ローカルニュース｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/blog/2021/",
+      "title": "2019年ローカルニュースへ｜霞ノ杜町",
+      "description": "旧URL（2021）から移転しました。",
+      "canonical": "https://roku253.github.io/kasuminomori/blog/2019/",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -335,11 +335,11 @@
           "href": "../../shisei/"
         },
         {
-          "label": "2021年ローカルニュース"
+          "label": "2019年ローカルニュース"
         }
       ],
       "related": [],
-      "bodyHtml": ""
+      "bodyHtml": "<p>このページは <a href=\"../2019/\">2019年ローカルニュース</a> に移転しました。</p><script>location.replace(\"../2019/\");</script>"
     },
     {
       "path": "bunka/index.html",
@@ -549,7 +549,7 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>公報・資料室</h2>\r\n        <p>霞ノ杜町の公開資料の抜粋です。個人名は原則記載していません。</p>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\r\n          <h3>青少年の登山事故について</h3>\r\n          <p>\r\n            …ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする…\r\n            詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…\r\n          </p>\r\n        </article>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道における負傷児童への対応</h3>\r\n          <p>\r\n            烏啼山道にて負傷した児童について、迅速な対応に感謝する。\r\n            関係各位のご協力により、児童の安全確保に至った。\r\n            今後も立入禁止区域の周知に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p><a href=\"../history/#legend\">町の歴史（伝承）</a> ／ <a href=\"../blog/2019/\">2019年の出来事</a></p>",
+      "bodyHtml": "<h2>公報・資料室</h2>\r\n        <p>霞ノ杜町の公開資料の抜粋です。個人名は原則記載していません。</p>\r\n\r\n        <article class=\"doc-block\" data-kn-story-clue=\"1\">\r\n          <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\r\n          <h3>青少年の登山事故について</h3>\r\n          <p>\r\n            …ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする…\r\n            詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…\r\n          </p>\r\n        </article>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p><a href=\"../history/#legend\">町の歴史（伝承）</a> ／ <a href=\"../blog/2019/\">2019年の出来事</a></p>",
       "storyClueSelectors": [
         "main.content"
       ]
@@ -1904,7 +1904,7 @@
         },
         {
           "href": "../blog/2019/",
-          "label": "2021",
+          "label": "2019",
           "storyClue": false
         },
         {

@@ -10,9 +10,9 @@ export function KasumiTownMapEmbed() {
       <iframe
         src={embedSrc}
         title="霞ノ杜町内マップ"
-        loading="lazy"
         className="town-map__frame"
         referrerPolicy="no-referrer-when-downgrade"
+        allow="fullscreen"
       />
       <figcaption className="town-map__caption">
         <a href={expandHref} target="_blank" rel="noopener noreferrer" className="town-map__expand">

@@ -1,5 +1,6 @@
 import type { CityPageContent } from "@/lib/content/types";
 import { isHubExtraHtml, parseHubCardsFromHtml, stripHubHtml, stripRelatedAside } from "@/lib/parse-hub";
+import { rewriteContentHtml } from "@/lib/site";
 import { CategoryHub } from "@/components/ui/CategoryHub";
 import { DataTable } from "@/components/ui/DataTable";
 import { PageHero } from "@/components/ui/PageHero";
@@ -11,9 +12,15 @@ type Props = {
   page: CityPageContent;
 };
 
-function renderBodyHtml(html: string, key: number) {
+function renderBodyHtml(html: string, key: number, pageRoute: string) {
   if (html.trim().startsWith("<")) {
-    return <div key={key} className="prose-city text-base" dangerouslySetInnerHTML={{ __html: html }} />;
+    return (
+      <div
+        key={key}
+        className="prose-city text-base"
+        dangerouslySetInnerHTML={{ __html: rewriteContentHtml(html, pageRoute) }}
+      />
+    );
   }
   return (
     <p key={key} className="m-0 text-base leading-relaxed text-[#333]">
@@ -41,7 +48,7 @@ export function CityPageTemplate({ page }: Props) {
         subtitle={lead && !leadIsHtml ? lead : undefined}
       />
 
-      {lead && leadIsHtml && <SectionCard className="mb-8">{renderBodyHtml(lead, 0)}</SectionCard>}
+      {lead && leadIsHtml && <SectionCard className="mb-8">{renderBodyHtml(lead, 0, page.route)}</SectionCard>}
 
       {hubCards.length > 0 && (
         <ScrollReveal>
@@ -53,7 +60,7 @@ export function CityPageTemplate({ page }: Props) {
 
       {moreParagraphs.length > 0 && (
         <SectionCard className="mb-8">
-          {moreParagraphs.map((html, i) => renderBodyHtml(html, i))}
+          {moreParagraphs.map((html, i) => renderBodyHtml(html, i, page.route))}
         </SectionCard>
       )}
 
@@ -68,7 +75,10 @@ export function CityPageTemplate({ page }: Props) {
       {extraAfterHub && extraAfterHub.length > 10 && (
         <ScrollReveal>
           <SectionCard className="mb-8">
-            <div className="prose-city" dangerouslySetInnerHTML={{ __html: extraAfterHub }} />
+            <div
+              className="prose-city"
+              dangerouslySetInnerHTML={{ __html: rewriteContentHtml(extraAfterHub, page.route) }}
+            />
           </SectionCard>
         </ScrollReveal>
       )}

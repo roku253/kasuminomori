@@ -7,9 +7,12 @@ export function assetPath(path: string): string {
 
 export function sitePath(path: string): string {
   if (!path || path === "/") return `${BASE_PATH}/`;
-  const p = path.startsWith("/") ? path : `/${path}`;
+  const hashIndex = path.indexOf("#");
+  const hash = hashIndex >= 0 ? path.slice(hashIndex) : "";
+  const pathOnly = hashIndex >= 0 ? path.slice(0, hashIndex) : path;
+  const p = pathOnly.startsWith("/") ? pathOnly : `/${pathOnly}`;
   const normalized = p.endsWith("/") ? p : `${p}/`;
-  return `${BASE_PATH}${normalized}`;
+  return `${BASE_PATH}${normalized}${hash}`;
 }
 
 /**
@@ -21,6 +24,9 @@ export function getContentBaseDir(pageRoute: string): string {
   if (withSlash === "/") return "/";
   const parts = withSlash.split("/").filter(Boolean);
   if (parts.length <= 1) return withSlash;
+  const last = parts[parts.length - 1];
+  // spot/1/index.html や blog/2019/index.html 系 — 相対リンクは当該ディレクトリ基準
+  if (/^\d+$/.test(last)) return withSlash;
   return `/${parts.slice(0, -1).join("/")}/`;
 }
 
@@ -34,8 +40,21 @@ export function resolveContentHref(href: string, pageRoute: string): string {
 
   const base = getContentBaseDir(pageRoute);
 
-  let path = new URL(href, `https://internal.invalid${base}`).pathname;
+  const url = new URL(href, `https://internal.invalid${base}`);
+  let path = url.pathname;
   path = path.replace(/\/index\.html$/i, "").replace(/\.html$/i, "");
   if (!path.endsWith("/")) path = `${path}/`;
-  return path === "//" ? "/" : path;
+  const route = path === "//" ? "/" : path;
+  return url.hash ? `${route}${url.hash}` : route;
+}
+
+/** bodyHtml / extraHtml 内の href を App Router + basePath 向け URL に書き換える */
+export function rewriteContentHtml(html: string, pageRoute: string): string {
+  return html.replace(/href=(["'])([^"']+)\1/gi, (match, quote, href) => {
+    if (!href || href.startsWith("#") || href.startsWith("mailto:") || /^https?:\/\//i.test(href)) {
+      return match;
+    }
+    const route = resolveContentHref(href, pageRoute);
+    return `href=${quote}${sitePath(route)}${quote}`;
+  });
 }

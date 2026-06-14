@@ -7,6 +7,8 @@ function getContentBaseDir(pageRoute) {
   if (withSlash === "/") return "/";
   const parts = withSlash.split("/").filter(Boolean);
   if (parts.length <= 1) return withSlash;
+  const last = parts[parts.length - 1];
+  if (/^\d+$/.test(last)) return withSlash;
   return `/${parts.slice(0, -1).join("/")}/`;
 }
 
@@ -30,7 +32,7 @@ for (const page of manifest.pages) {
       .filter((b) => b.href)
       .map((b) => ({ href: b.href, via: "breadcrumb" })),
   ];
-  const html = page.extraHtml ?? "";
+  const html = [page.extraHtml ?? "", page.bodyHtml ?? "", ...(page.paragraphs ?? [])].join(" ");
   let m;
   while ((m = hrefRe.exec(html)) !== null) {
     sources.push({ href: m[1], via: "extraHtml" });

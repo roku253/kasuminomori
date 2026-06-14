@@ -1,6 +1,7 @@
 import type { CityPageContent } from "@/lib/content/types";
 import Link from "next/link";
 import { ExternalLink, MapPin } from "lucide-react";
+import { rewriteContentHtml } from "@/lib/site";
 import { TOURISM_SIDEBAR } from "@/lib/navigation";
 import { PageHero } from "@/components/ui/PageHero";
 import { RelatedPanel } from "@/components/ui/RelatedPanel";
@@ -13,11 +14,12 @@ type Props = {
   page: CityPageContent;
 };
 
-function renderLegacyBodyHtml(html: string) {
-  if (!html.includes(KASUMI_TOWN_MAP_MARKER)) {
-    return <div dangerouslySetInnerHTML={{ __html: html }} />;
+function renderLegacyBodyHtml(html: string, pageRoute: string) {
+  const rewritten = rewriteContentHtml(html, pageRoute);
+  if (!rewritten.includes(KASUMI_TOWN_MAP_MARKER)) {
+    return <div dangerouslySetInnerHTML={{ __html: rewritten }} />;
   }
-  const parts = html.split(KASUMI_TOWN_MAP_MARKER);
+  const parts = rewritten.split(KASUMI_TOWN_MAP_MARKER);
   return (
     <>
       {parts[0] ? <div dangerouslySetInnerHTML={{ __html: parts[0] }} /> : null}
@@ -46,8 +48,10 @@ export function LegacyGuideLayout({ page }: Props) {
             className="legacy-prose rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-6 shadow-[var(--shadow-sm)] md:p-8"
             {...mainAttrs}
           >
-            {page.bodyHtml && renderLegacyBodyHtml(page.bodyHtml)}
-            {page.extraHtml && <div dangerouslySetInnerHTML={{ __html: page.extraHtml }} />}
+            {page.bodyHtml && renderLegacyBodyHtml(page.bodyHtml, page.route)}
+            {page.extraHtml && (
+              <div dangerouslySetInnerHTML={{ __html: rewriteContentHtml(page.extraHtml, page.route) }} />
+            )}
           </div>
         </ScrollReveal>
 

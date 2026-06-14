@@ -1,7 +1,7 @@
 {
   "path": "events/index.html",
   "route": "/events/",
-  "layout": "city",
+  "layout": "legacy",
   "title": "年間行事｜霞ノ杜町",
   "description": "霞ノ杜町の年間行事・祭事のご案内。【フィクション】",
   "canonical": "https://roku253.github.io/kasuminomori/events/",

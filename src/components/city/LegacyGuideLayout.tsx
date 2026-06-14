@@ -1,6 +1,7 @@
 import type { CityPageContent } from "@/lib/content/types";
 import Link from "next/link";
 import { ExternalLink, MapPin } from "lucide-react";
+import { stripRelatedAside } from "@/lib/parse-hub";
 import { rewriteContentHtml } from "@/lib/site";
 import { TOURISM_SIDEBAR } from "@/lib/navigation";
 import { PageHero } from "@/components/ui/PageHero";
@@ -33,6 +34,8 @@ export function LegacyGuideLayout({ page }: Props) {
   const mainAttrs = page.storyClueSelectors?.includes("main.content")
     ? { "data-kn-story-clue": "1" as const }
     : {};
+  const extraHtml =
+    page.extraHtml && page.related?.length ? stripRelatedAside(page.extraHtml) : page.extraHtml;
 
   return (
     <article className="mx-auto w-full max-w-6xl px-4 py-8 md:py-12" id="city-main">
@@ -49,8 +52,8 @@ export function LegacyGuideLayout({ page }: Props) {
             {...mainAttrs}
           >
             {page.bodyHtml && renderLegacyBodyHtml(page.bodyHtml, page.route)}
-            {page.extraHtml && (
-              <div dangerouslySetInnerHTML={{ __html: rewriteContentHtml(page.extraHtml, page.route) }} />
+            {extraHtml && (
+              <div dangerouslySetInnerHTML={{ __html: rewriteContentHtml(extraHtml, page.route) }} />
             )}
           </div>
         </ScrollReveal>

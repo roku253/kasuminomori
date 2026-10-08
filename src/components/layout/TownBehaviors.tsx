@@ -14,6 +14,32 @@ const HAZARD: Record<string, string> = {
   杉並ヶ岡: "杉並ヶ岡の一部は急傾斜地の土砂災害警戒区域です。大雨のときは斜面から離れてください。",
 };
 
+function filterList(inputId: string, itemSelector: string) {
+  const field = document.getElementById(inputId.slice(1));
+  if (!(field instanceof HTMLInputElement)) return;
+  const q = field.value.trim();
+  document.querySelectorAll(itemSelector).forEach((item) => {
+    if (!(item instanceof HTMLElement)) return;
+    item.hidden = Boolean(q) && !item.textContent?.includes(q);
+  });
+}
+
+function filterProcedures() {
+  const field = document.getElementById("proc-q");
+  const out = document.getElementById("proc-out");
+  if (!(field instanceof HTMLInputElement)) return;
+  const q = field.value.trim();
+  const rows = [...document.querySelectorAll("table.city-data tr")];
+  let shown = 0;
+  for (const row of rows) {
+    if (!(row instanceof HTMLElement)) continue;
+    const hit = !q || (row.textContent || "").includes(q);
+    row.hidden = !hit;
+    if (hit) shown += 1;
+  }
+  if (out) out.textContent = q ? `${shown}件` : "";
+}
+
 export function TownBehaviors() {
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
@@ -36,9 +62,18 @@ export function TownBehaviors() {
         out.textContent = key
           ? HAZARD[key]
           : "三日月、霞ノ杜、杉並ヶ岡のいずれかで検索してください。";
+        return;
       }
+      if (target.id === "facility-go") filterList("#facility-q", "#facility-list li");
+      if (target.id === "proc-go") filterProcedures();
     };
     document.addEventListener("click", onClick);
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+    if (q && document.getElementById("proc-q") instanceof HTMLInputElement) {
+      (document.getElementById("proc-q") as HTMLInputElement).value = q;
+      filterProcedures();
+    }
     return () => document.removeEventListener("click", onClick);
   }, []);
   return null;

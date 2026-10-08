@@ -1236,7 +1236,7 @@
         "町内の主要施設・観光スポットの位置は、アクセス・地図ページの簡易図をご利用ください。",
         "<a href=\"../access/\">アクセス・地図ページを開く</a>"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../access/\">アクセス</a></li><li><a href=\"../spot/1/"
+      "extraHtml": "<div class=\"town-map\"><iframe src=\"https://roku253.github.io/gougle-map/?embed=kasumi\" title=\"霞ノ杜町内マップ\" style=\"width:100%;height:420px;border:1px solid #d5dbe3\"></iframe></div>\n<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>施設名 <input id=\"facility-q\" type=\"text\" placeholder=\"例：神社\"></label>\n  <button type=\"button\" id=\"facility-go\">絞り込む</button>\n</form>\n<ul id=\"facility-list\">\n  <li>霞ノ杜神社（霞ノ杜）</li>\n  <li>杜の吊り橋（霞ノ杜）</li>\n  <li>霞ノ杜資料館（霞ノ杜）</li>\n  <li>霧見展望休憩所（霞ノ杜）</li>\n  <li>杜の湯（霞ノ杜）</li>\n  <li>三日月庁舎（三日月）</li>\n  <li>町立第一小学校（霞ノ杜）</li>\n</ul>"
     },
     {
       "path": "kurashi/denshi-shinsei.html",
@@ -1667,7 +1667,7 @@
         "手続名から担当課を検索できます。"
       ],
       "tableHtml": "<table class=\"city-data\"><tr><th>住民票</th><td>住民課 / 1階</td></tr><tr><th>建築確認</th><td>建設課 / 2階</td></tr><tr><th>観光協力</th><td>産業観光課 / 2階</td></tr><tr><th>国民健康保険</th><td>福祉課 / 1階</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"denshi-shinsei.html\">電子申請</a></li><li><a href=\"../shisei/shozoku.html\">組織</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></"
+      "extraHtml": "<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>手続き名 <input id=\"proc-q\" type=\"text\" placeholder=\"例：住民票\"></label>\n  <button type=\"button\" id=\"proc-go\">絞り込む</button>\n</form>\n<p id=\"proc-out\"></p>"
     },
     {
       "path": "sangyo/index.html",
@@ -2140,8 +2140,8 @@
       "paragraphs": [
         "町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>bus_stops.csv</th><td>停留所座標</td></tr><tr><th>tourism_spots.csv</th><td>観光スポット</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../kurashi/chizu.html\">地図から探す</a></li><li><a href=\"../bunka/\">観光</a></li><li><a href=\"index.html\">市政</a></li><li><a href=\"../con"
+      "tableHtml": "<table class=\"city-data\"><tr><th><a href=\"/data/bus_stops.csv\">bus_stops.csv</a></th><td>停留所</td></tr><tr><th><a href=\"/data/tourism_spots.csv\">tourism_spots.csv</a></th><td>観光スポット</td></tr></table>",
+      "extraHtml": "<ul><li><a href=\"/data/bus_stops.csv\">停留所のCSVをダウンロード</a></li><li><a href=\"/data/tourism_spots.csv\">観光スポットのCSVをダウンロード</a></li></ul>"
     },
     {
       "path": "shisei/senkyo.html",

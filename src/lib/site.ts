@@ -53,7 +53,7 @@ function rewriteAssetRef(ref: string, pageRoute: string, sourcePath?: string): s
   if (!ref || ref.startsWith("#") || ref.startsWith("mailto:") || ref.startsWith("data:") || /^https?:\/\//i.test(ref)) {
     return ref;
   }
-  if (/\.(png|jpe?g|gif|webp|svg|pdf)(\?|#|$)/i.test(ref)) {
+  if (/\.(png|jpe?g|gif|webp|svg|pdf|csv)(\?|#|$)/i.test(ref)) {
     const route = resolveContentHref(ref, pageRoute, sourcePath);
     const file = route.replace(/\/$/, "");
     return `${BASE_PATH}${file}`;

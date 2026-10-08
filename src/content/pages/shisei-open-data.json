@@ -43,6 +43,6 @@
   "paragraphs": [
     "町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>bus_stops.csv</th><td>停留所座標</td></tr><tr><th>tourism_spots.csv</th><td>観光スポット</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../kurashi/chizu.html\">地図から探す</a></li><li><a href=\"../bunka/\">観光</a></li><li><a href=\"index.html\">市政</a></li><li><a href=\"../con"
+  "tableHtml": "<table class=\"city-data\"><tr><th><a href=\"/data/bus_stops.csv\">bus_stops.csv</a></th><td>停留所</td></tr><tr><th><a href=\"/data/tourism_spots.csv\">tourism_spots.csv</a></th><td>観光スポット</td></tr></table>",
+  "extraHtml": "<ul><li><a href=\"/data/bus_stops.csv\">停留所のCSVをダウンロード</a></li><li><a href=\"/data/tourism_spots.csv\">観光スポットのCSVをダウンロード</a></li></ul>"
 }

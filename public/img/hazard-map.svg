@@ -1,25 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640">
-  <rect width="960" height="640" fill="#f4f1e8"/>
-  <text x="32" y="42" font-family="sans-serif" font-size="22" fill="#1a3a5c">Î\: Ï¶üÉÞÃ×‚Áó	</text>
-  <text x="32" y="66" font-family="sans-serif" font-size="13" fill="#555">äŒ7t4 2}²roóšnî‰gY</text>
-  <path d="M80 120 L300 100 L520 160 L700 120 L880 200 L860 520 L620 560 L340 540 L120 480 Z" fill="#e7efd8" stroke="#6d7a55" stroke-width="2"/>
-  <path d="M180 200 L420 170 L560 230 L480 360 L260 340 Z" fill="#f6d98a" opacity="0.85"/>
-  <path d="M520 160 L700 120 L760 240 L620 300 L520 250 Z" fill="#e7a2a2" opacity="0.8"/>
-  <path d="M300 360 L620 340 L700 460 L360 500 Z" fill="#c9d7ef" opacity="0.75"/>
-  <path d="M150 250 C280 230 400 280 520 260 C640 240 760 300 820 340" fill="none" stroke="#3d7ea6" stroke-width="8"/>
-  <text x="210" y="230" font-family="sans-serif" font-size="16" fill="#1a3a5c">	å0:</text>
-  <text x="560" y="190" font-family="sans-serif" font-size="16" fill="#1a3a5c">I&ö¡</text>
-  <text x="430" y="430" font-family="sans-serif" font-size="16" fill="#1a3a5c">Î\0:</text>
-  <text x="400" y="300" font-family="sans-serif" font-size="13" fill="#1a5270">\Ý</text>
-  <text x="150" y="400" font-family="sans-serif" font-size="13" fill="#6b3a2a">èûçt™:ßËeb	</text>
-  <g transform="translate(32 580)">
-    <rect width="18" height="12" fill="#f6d98a" stroke="#333"/>
-    <text x="24" y="11" font-family="sans-serif" font-size="12" fill="#333">>ëóš</text>
-    <rect x="120" width="18" height="12" fill="#e7a2a2" stroke="#333"/>
-    <text x="144" y="11" font-family="sans-serif" font-size="12" fill="#333">}³f</text>
-    <rect x="270" width="18" height="12" fill="#c9d7ef" stroke="#333"/>
-    <text x="294" y="11" font-family="sans-serif" font-size="12" fill="#333">úŒ„YDÄò</text>
-    <rect x="430" width="18" height="4" y="4" fill="#3d7ea6"/>
-    <text x="454" y="11" font-family="sans-serif" font-size="12" fill="#333">\Ý</text>
+  <rect width="960" height="640" fill="#f7f4ec"/>
+  <path d="M80 110 L300 90 L520 150 L700 110 L880 190 L860 510 L620 550 L340 530 L120 470 Z" fill="#e7efd8" stroke="#6d7a55" stroke-width="2"/>
+  <path d="M180 190 L420 160 L560 220 L480 350 L260 330 Z" fill="#f6d98a"/>
+  <path d="M520 150 L700 110 L760 230 L620 290 L520 240 Z" fill="#e7a2a2"/>
+  <path d="M300 350 L620 330 L700 450 L360 490 Z" fill="#c9d7ef"/>
+  <path d="M150 240 C280 220 400 270 520 250 C640 230 760 290 820 330" fill="none" stroke="#3d7ea6" stroke-width="8"/>
+  <text x="200" y="250" font-family="sans-serif" font-size="18" fill="#1a3a5c">ä¸‰æ—¥æœˆ</text>
+  <text x="560" y="200" font-family="sans-serif" font-size="18" fill="#1a3a5c">æ‰ä¸¦ãƒ¶å²¡</text>
+  <text x="420" y="430" font-family="sans-serif" font-size="18" fill="#1a3a5c">éœžãƒŽæœ</text>
+  <text x="390" y="300" font-family="sans-serif" font-size="14" fill="#1a5270">æœå·</text>
+  <g font-family="sans-serif" font-size="14" fill="#333">
+    <rect x="40" y="580" width="18" height="12" fill="#f6d98a" stroke="#333"/>
+    <text x="64" y="591">æ°¾æ¿«æƒ³å®š</text>
+    <rect x="180" y="580" width="18" height="12" fill="#e7a2a2" stroke="#333"/>
+    <text x="204" y="591">åœŸç ‚ç½å®³è­¦æˆ’</text>
+    <rect x="360" y="580" width="18" height="12" fill="#c9d7ef" stroke="#333"/>
+    <text x="384" y="591">æºã‚Œã‚„ã™ã„ç¯„å›²</text>
   </g>
 </svg>

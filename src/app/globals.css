@@ -319,6 +319,12 @@ body.city-mega-open {
   vertical-align: top;
 }
 
+.legacy-prose table.event-table td:first-child,
+.legacy-prose table.event-table th:first-child,
+.legacy-prose table.event-table td:nth-child(2) {
+  white-space: nowrap;
+}
+
 .legacy-prose .doc-issue {
   border-bottom: 3px solid #1a4d80;
   margin-bottom: 1.25rem;

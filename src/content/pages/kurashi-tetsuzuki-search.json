@@ -44,5 +44,5 @@
     "手続名から担当課を検索できます。"
   ],
   "tableHtml": "<table class=\"city-data\"><tr><th>住民票</th><td>住民課 / 1階</td></tr><tr><th>建築確認</th><td>建設課 / 2階</td></tr><tr><th>観光協力</th><td>産業観光課 / 2階</td></tr><tr><th>国民健康保険</th><td>福祉課 / 1階</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"denshi-shinsei.html\">電子申請</a></li><li><a href=\"../shisei/shozoku.html\">組織</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></"
+  "extraHtml": "<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>手続き名 <input id=\"proc-q\" type=\"text\" placeholder=\"例：住民票\"></label>\n  <button type=\"button\" id=\"proc-go\">絞り込む</button>\n</form>\n<p id=\"proc-out\"></p>"
 }

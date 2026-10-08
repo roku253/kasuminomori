@@ -280,8 +280,10 @@ body.city-mega-open {
 }
 
 .prose-city table.city-data,
+.prose-city table.data-table,
 .legacy-prose table.data-table {
   width: 100%;
+  min-width: 36rem;
   border-collapse: collapse;
   margin: 1rem 0;
   font-size: 14px;
@@ -289,6 +291,8 @@ body.city-mega-open {
 
 .prose-city table.city-data th,
 .prose-city table.city-data td,
+.prose-city table.data-table th,
+.prose-city table.data-table td,
 .legacy-prose table.data-table th,
 .legacy-prose table.data-table td {
   border: 1px solid #ccc;
@@ -297,6 +301,7 @@ body.city-mega-open {
 }
 
 .prose-city table.city-data th,
+.prose-city table.data-table thead th,
 .legacy-prose table.data-table thead th {
   background: #e8f0fa;
   color: var(--kasumi-blue);

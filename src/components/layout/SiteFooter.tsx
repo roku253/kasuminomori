@@ -38,11 +38,12 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
 
   useLayoutEffect(() => {
     if (!enableScrollMotion || !rootRef.current || reduced) return;
+    let ctx: gsap.Context | undefined;
+    try {
     gsap.registerPlugin(ScrollTrigger);
-    const ctx = gsap.context(() => {
+    ctx = gsap.context(() => {
       gsap.from(".footer-photo-mosaic__grid figure", {
-        opacity: 0,
-        y: 32,
+        y: 24,
         stagger: 0.12,
         duration: 0.8,
         ease: "power2.out",
@@ -62,7 +63,6 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
         },
       });
       gsap.from(".footer-symbol", {
-        opacity: 0,
         rotation: -3,
         duration: 1,
         scrollTrigger: {
@@ -71,7 +71,10 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
         },
       });
     }, rootRef);
-    return () => ctx.revert();
+    } catch {
+      /* フッターの動きでページ全体を止めない */
+    }
+    return () => ctx?.revert();
   }, [enableScrollMotion, reduced]);
 
   const bg = variant === "top" ? "bg-[#f4f6f8]" : "bg-[#eef1f4]";

@@ -20,11 +20,11 @@ const PHOTOS = {
 };
 
 const BANNERS = [
-  { src: "/img/photos/photo-footbath.jpg", alt: "杜の湯" },
-  { src: "/img/photos/photo-mist.jpg", alt: "町の朝霧" },
-  { src: "/img/photos/photo-town.jpg", alt: "三日月町の街並み" },
-  { src: "/img/photos/photo-shrine.jpg", alt: "霞ノ杜神社" },
-  { src: "/img/photos/photo-terraces.jpg", alt: "杉並ヶ岡の棚田" },
+  { href: "/spot/5/", src: "/img/photos/photo-footbath.jpg", name: "杜の湯", line: "無料の足湯" },
+  { href: "/bunka/", src: "/img/photos/photo-mist.jpg", name: "霧見茶房", line: "お茶と甘味" },
+  { href: "/sangyo/shogyo/", src: "/img/photos/photo-town.jpg", name: "三日月町商店会", line: "第3土曜は夜市" },
+  { href: "/fukushi/kenko/", src: "/img/photos/photo-clinic.jpg", name: "霞ノ杜診療所", line: "平日診療・土曜午前" },
+  { href: "/sangyo/ringyo/", src: "/img/photos/photo-workshop.jpg", name: "杜川工房", line: "木工品の店" },
 ];
 
 type Props = {
@@ -113,8 +113,20 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
           </p>
           <ul className="footer-banner-row m-0 mt-6 flex list-none flex-wrap gap-4 p-0">
             {BANNERS.map((b) => (
-              <li key={b.src}>
-                <Image src={assetPath(b.src)} alt={b.alt} width={200} height={56} className="h-14 w-[200px] rounded border border-[#dde3e8] object-cover" />
+              <li key={b.name}>
+                <Link
+                  href={b.href}
+                  className="relative block h-[96px] w-[260px] overflow-hidden rounded border border-[#c5ced6] no-underline"
+                >
+                  <Image src={assetPath(b.src)} alt="" fill className="object-cover object-center" sizes="260px" />
+                  <span className="absolute left-2 top-2 bg-white/90 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-[#1a4d80]">
+                    広告
+                  </span>
+                  <span className="absolute inset-x-0 bottom-0 bg-[#1a2744]/88 px-3 py-2 text-white">
+                    <span className="block text-sm font-bold leading-tight">{b.name}</span>
+                    <span className="block text-[11px] leading-tight text-white/85">{b.line}</span>
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>

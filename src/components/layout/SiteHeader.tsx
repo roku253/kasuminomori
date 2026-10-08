@@ -8,7 +8,13 @@ export function SiteHeader() {
     <>
       <div className="border-b border-[#0d3a66] bg-[#0f3d6b] text-xs text-white/90">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-1.5">
-          <span>霞ノ杜町公式ホームページ【フィクション】</span>
+          <span>霞ノ杜町公式ホームページ</span>
+          <details className="text-[10px] text-white/80">
+            <summary className="cursor-pointer">架空の町</summary>
+            <p className="mt-1 max-w-sm">
+              本サイトは架空の町のサイトです。実在の団体・地域とは関係ありません。
+            </p>
+          </details>
           <a
             href="tel:0123456700"
             className="inline-flex items-center gap-1 text-white/95 no-underline hover:underline"

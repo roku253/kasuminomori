@@ -12,5 +12,5 @@
     { "label": "地域安全通信" }
   ],
   "related": [],
-  "bodyHtml": "<h2>地域安全通信</h2>\r\n        <p>地域の安全・防災に関する広報の抜粋です。</p>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../anzen/bosai/\">防災情報</a></p>"
+  "bodyHtml": "<h2>地域安全通信</h2>\r\n        <p>地域の安全・防災に関する広報の抜粋です。</p>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            立入禁止区域に児童3名が入り、うち1名が負傷・搬送されました。烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../anzen/bosai/\">防災情報</a></p>"
 }

@@ -1,7 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
-  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#5a7a5a"/><stop offset="100%" style="stop-color:#2a4a6a"/>
-  </linearGradient></defs>
-  <rect width="100%" height="100%" fill="url(#g)"/>
-  <text x="50%" y="58%" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="sans-serif" font-size="11">replace: img/placeholders/hero-06.svg</text>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7f0ea"/>
+      <stop offset="100%" stop-color="#8eae96"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <path d="M0 360 L420 520 L820 300 L1280 560 L1920 280 V1080 H0 Z" fill="#35543c"/>
+  <path d="M0 620 C400 540 700 700 1100 600 C1460 520 1700 680 1920 600 V1080 H0 Z" fill="#6a8a52"/>
+  <path d="M0 760 C360 700 640 820 980 740 C1320 660 1600 800 1920 720 V1080 H0 Z" fill="#8ea86a"/>
+  <path d="M0 900 C500 840 900 960 1400 880 C1680 840 1800 900 1920 880 V1080 H0 Z" fill="#c4b48a"/>
+  <g fill="#2c4630">
+    <polygon points="180,820 210,700 240,820"/>
+    <polygon points="240,840 270,710 300,840"/>
+    <polygon points="1500,800 1540,660 1580,800"/>
+    <polygon points="1580,820 1620,690 1660,820"/>
+  </g>
 </svg>

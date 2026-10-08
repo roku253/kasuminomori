@@ -5,9 +5,10 @@ import { resolveContentHref } from "@/lib/site";
 type Props = {
   items: BreadcrumbItem[];
   pageRoute: string;
+  sourcePath?: string;
 };
 
-export function CityBreadcrumb({ items, pageRoute }: Props) {
+export function CityBreadcrumb({ items, pageRoute, sourcePath }: Props) {
   return (
     <nav className="mb-6 text-sm text-[#666]" aria-label="パンくず">
       {items.map((item, i) => (
@@ -15,7 +16,7 @@ export function CityBreadcrumb({ items, pageRoute }: Props) {
           {i > 0 && <span className="mx-2 text-[#999]">›</span>}
           {item.href ? (
             <Link
-              href={item.label === "トップ" ? "/" : resolveContentHref(item.href, pageRoute)}
+              href={item.label === "トップ" ? "/" : resolveContentHref(item.href, pageRoute, sourcePath)}
               className="inline-flex min-h-[44px] items-center py-0.5 text-[#1a4d80] no-underline hover:underline"
             >
               {item.label}

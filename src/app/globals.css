@@ -332,6 +332,27 @@ body.city-mega-open {
   max-width: 100%;
 }
 
+.legacy-prose .photo-zoomable img,
+.legacy-prose .gallery img {
+  display: block;
+  max-width: min(100%, 720px);
+  height: auto;
+}
+
+.legacy-prose .zoom-pane {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: 240%;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.legacy-prose .photo-zoomable:hover .zoom-pane,
+.legacy-prose .photo-zoomable:focus-within .zoom-pane {
+  opacity: 1;
+}
+
 .legacy-prose .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

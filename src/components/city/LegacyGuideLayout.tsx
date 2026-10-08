@@ -15,8 +15,8 @@ type Props = {
   page: CityPageContent;
 };
 
-function renderLegacyBodyHtml(html: string, pageRoute: string) {
-  const rewritten = rewriteContentHtml(html, pageRoute);
+function renderLegacyBodyHtml(html: string, pageRoute: string, sourcePath?: string) {
+  const rewritten = rewriteContentHtml(html, pageRoute, sourcePath);
   if (!rewritten.includes(KASUMI_TOWN_MAP_MARKER)) {
     return <div dangerouslySetInnerHTML={{ __html: rewritten }} />;
   }
@@ -43,6 +43,7 @@ export function LegacyGuideLayout({ page }: Props) {
         title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
         breadcrumbs={page.breadcrumbs}
         pageRoute={page.route}
+        sourcePath={page.path}
       />
 
       <div className="grid gap-8 lg:grid-cols-[minmax(200px,240px)_1fr]">
@@ -51,9 +52,13 @@ export function LegacyGuideLayout({ page }: Props) {
             className="legacy-prose rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-6 shadow-[var(--shadow-sm)] md:p-8"
             {...mainAttrs}
           >
-            {page.bodyHtml && renderLegacyBodyHtml(page.bodyHtml, page.route)}
+            {page.bodyHtml && renderLegacyBodyHtml(page.bodyHtml, page.route, page.path)}
             {extraHtml && (
-              <div dangerouslySetInnerHTML={{ __html: rewriteContentHtml(extraHtml, page.route) }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: rewriteContentHtml(extraHtml, page.route, page.path),
+                }}
+              />
             )}
           </div>
         </ScrollReveal>
@@ -91,7 +96,7 @@ export function LegacyGuideLayout({ page }: Props) {
       </div>
 
       {page.related && page.related.length > 0 && (
-        <RelatedPanel links={page.related} pageRoute={page.route} className="mt-8" />
+        <RelatedPanel links={page.related} pageRoute={page.route} sourcePath={page.path} className="mt-8" />
       )}
     </article>
   );

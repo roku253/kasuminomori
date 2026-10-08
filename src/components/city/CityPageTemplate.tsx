@@ -12,13 +12,13 @@ type Props = {
   page: CityPageContent;
 };
 
-function renderBodyHtml(html: string, key: number, pageRoute: string) {
+function renderBodyHtml(html: string, key: number, pageRoute: string, sourcePath?: string) {
   if (html.trim().startsWith("<")) {
     return (
       <div
         key={key}
         className="prose-city text-base"
-        dangerouslySetInnerHTML={{ __html: rewriteContentHtml(html, pageRoute) }}
+        dangerouslySetInnerHTML={{ __html: rewriteContentHtml(html, pageRoute, sourcePath) }}
       />
     );
   }
@@ -45,22 +45,25 @@ export function CityPageTemplate({ page }: Props) {
         title={page.h1 ?? page.title.replace(/｜霞ノ杜町$/, "")}
         breadcrumbs={page.breadcrumbs}
         pageRoute={page.route}
+        sourcePath={page.path}
         subtitle={lead && !leadIsHtml ? lead : undefined}
       />
 
-      {lead && leadIsHtml && <SectionCard className="mb-8">{renderBodyHtml(lead, 0, page.route)}</SectionCard>}
+      {lead && leadIsHtml && (
+        <SectionCard className="mb-8">{renderBodyHtml(lead, 0, page.route, page.path)}</SectionCard>
+      )}
 
       {hubCards.length > 0 && (
         <ScrollReveal>
           <SectionCard title="目的から探す" className="mb-8">
-            <CategoryHub cards={hubCards} pageRoute={page.route} />
+            <CategoryHub cards={hubCards} pageRoute={page.route} sourcePath={page.path} />
           </SectionCard>
         </ScrollReveal>
       )}
 
       {moreParagraphs.length > 0 && (
         <SectionCard className="mb-8">
-          {moreParagraphs.map((html, i) => renderBodyHtml(html, i, page.route))}
+          {moreParagraphs.map((html, i) => renderBodyHtml(html, i, page.route, page.path))}
         </SectionCard>
       )}
 
@@ -77,14 +80,16 @@ export function CityPageTemplate({ page }: Props) {
           <SectionCard className="mb-8">
             <div
               className="prose-city"
-              dangerouslySetInnerHTML={{ __html: rewriteContentHtml(extraAfterHub, page.route) }}
+              dangerouslySetInnerHTML={{
+                __html: rewriteContentHtml(extraAfterHub, page.route, page.path),
+              }}
             />
           </SectionCard>
         </ScrollReveal>
       )}
 
       {page.related && page.related.length > 0 && (
-        <RelatedPanel links={page.related} pageRoute={page.route} />
+        <RelatedPanel links={page.related} pageRoute={page.route} sourcePath={page.path} />
       )}
     </article>
   );

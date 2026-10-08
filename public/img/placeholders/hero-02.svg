@@ -1,7 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
-  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#5a7a5a"/><stop offset="100%" style="stop-color:#2a4a6a"/>
-  </linearGradient></defs>
-  <rect width="100%" height="100%" fill="url(#g)"/>
-  <text x="50%" y="58%" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="sans-serif" font-size="11">replace: img/placeholders/hero-02.svg</text>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d7e4dc"/>
+      <stop offset="55%" stop-color="#8faf98"/>
+      <stop offset="100%" stop-color="#3d5c45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <path d="M0 620 C240 540 420 700 680 620 C920 548 1100 500 1400 590 C1640 660 1780 540 1920 600 V1080 H0 Z" fill="#2f4a34"/>
+  <path d="M0 760 C300 690 520 820 860 740 C1180 668 1420 800 1920 720 V1080 H0 Z" fill="#1e3424"/>
+  <path d="M220 760 Q260 620 300 760" fill="none" stroke="#c8b48a" stroke-width="8"/>
+  <path d="M250 690 H270 M280 690 H300" stroke="#efe6d2" stroke-width="3"/>
+  <path d="M160 900 Q960 820 1760 900" fill="none" stroke="#6e8f9a" stroke-width="18"/>
+  <path d="M150 930 Q960 850 1770 930" fill="none" stroke="#3e6270" stroke-width="10"/>
 </svg>

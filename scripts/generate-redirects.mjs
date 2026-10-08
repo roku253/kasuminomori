@@ -26,7 +26,7 @@ function walkHtml(dir, base = "") {
     const full = path.join(dir, name);
     const rel = base ? `${base}/${name}` : name;
     if (fs.statSync(full).isDirectory()) {
-      if (["node_modules", ".next", "out", "public", "src", "partials", "legacy"].includes(name))
+      if (["node_modules", ".next", "out", "public", "src", "partials", "legacy", "scripts", "archive"].includes(name))
         continue;
       results.push(...walkHtml(full, rel));
     } else if (name.endsWith(".html") && name !== "index.html") {

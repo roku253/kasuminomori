@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import { Footprint } from "@/components/layout/Footprint";
 import { TokenGateInit } from "@/components/layout/TokenGate";
+import { TownBehaviors } from "@/components/layout/TownBehaviors";
+import { BASE_PATH } from "@/lib/site";
 import "./globals.css";
 
 const notoSans = Noto_Sans_JP({
@@ -34,13 +36,13 @@ export const metadata: Metadata = {
   authors: [{ name: "霞ノ杜町" }],
   creator: "霞ノ杜町",
   publisher: "霞ノ杜町",
-  manifest: "/manifest.webmanifest",
+  manifest: `${BASE_PATH}/manifest.webmanifest`,
   icons: {
     icon: [
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
-      { url: "/img/kasuminomori-mon.png", type: "image/png", sizes: "512x512" },
+      { url: `${BASE_PATH}/icon.png`, type: "image/png", sizes: "32x32" },
+      { url: `${BASE_PATH}/img/kasuminomori-mon.png`, type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/img/kasuminomori-mon-180.png", type: "image/png", sizes: "180x180" }],
+    apple: [{ url: `${BASE_PATH}/img/kasuminomori-mon-180.png`, type: "image/png", sizes: "180x180" }],
   },
   appleWebApp: {
     title: "霞ノ杜町",
@@ -99,7 +101,7 @@ export default function RootLayout({
       <head>
         <meta name="application-name" content="霞ノ杜町" />
         <meta name="apple-mobile-web-app-title" content="霞ノ杜町" />
-        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="manifest" href={`${BASE_PATH}/manifest.webmanifest`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -107,6 +109,7 @@ export default function RootLayout({
       </head>
       <body className="city-body antialiased">
         <TokenGateInit />
+        <TownBehaviors />
         <Footprint />
         <div id="site-root">{children}</div>
       </body>

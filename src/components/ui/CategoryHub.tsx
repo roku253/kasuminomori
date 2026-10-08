@@ -11,10 +11,11 @@ export type HubCard = {
 type Props = {
   cards: HubCard[];
   pageRoute: string;
+  sourcePath?: string;
   className?: string;
 };
 
-export function CategoryHub({ cards, pageRoute, className = "" }: Props) {
+export function CategoryHub({ cards, pageRoute, sourcePath, className = "" }: Props) {
   if (!cards.length) return null;
 
   return (
@@ -24,7 +25,7 @@ export function CategoryHub({ cards, pageRoute, className = "" }: Props) {
       {cards.map((card) => (
         <Link
           key={card.href}
-          href={resolveContentHref(card.href, pageRoute)}
+          href={resolveContentHref(card.href, pageRoute, sourcePath)}
           className="group flex min-h-[120px] flex-col rounded-[var(--radius-md)] border border-[var(--color-border)] bg-white p-5 text-inherit no-underline shadow-[var(--shadow-sm)] transition hover:border-[var(--kasumi-blue)] hover:shadow-[var(--shadow-md)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--kasumi-blue)]"
           {...(card.storyClue ? { "data-kn-story-clue": "1" } : {})}
         >

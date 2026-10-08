@@ -1,7 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
-  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#5a7a5a"/><stop offset="100%" style="stop-color:#2a4a6a"/>
-  </linearGradient></defs>
-  <rect width="100%" height="100%" fill="url(#g)"/>
-  <text x="50%" y="58%" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="sans-serif" font-size="11">replace: img/placeholders/hero-05.svg</text>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3efe4"/>
+      <stop offset="100%" stop-color="#b7c3b0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <path d="M0 430 C280 360 520 480 820 400 C1120 320 1480 460 1920 380 V1080 H0 Z" fill="#6d7f62"/>
+  <rect x="640" y="520" width="280" height="220" fill="#efe6d4"/>
+  <polygon points="600,520 780,390 960,520" fill="#8c3d32"/>
+  <rect x="980" y="580" width="180" height="160" fill="#e4d8c2"/>
+  <polygon points="950,580 1070,490 1190,580" fill="#8c3d32"/>
+  <rect x="720" y="620" width="70" height="120" fill="#5c4632"/>
+  <rect x="0" y="740" width="1920" height="340" fill="#3f4a38"/>
+  <rect x="0" y="860" width="1920" height="40" fill="#d8d2c4"/>
 </svg>

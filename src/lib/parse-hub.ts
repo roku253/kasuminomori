@@ -23,7 +23,10 @@ export function stripHubHtml(html: string): string {
 
 /** legacy extraHtml 内の関連リンク（RelatedPanel と重複するため除去） */
 export function stripRelatedAside(html: string): string {
-  return html.replace(/<aside\s+class="city-related"[^>]*>[\s\S]*?<\/aside>/gi, "").trim();
+  return html
+    .replace(/<aside\s+class="city-related"[^>]*>[\s\S]*?<\/aside>/gi, "")
+    .replace(/<aside\s+class="city-related"[^>]*>[\s\S]*$/i, "")
+    .trim();
 }
 
 export function isHubExtraHtml(html?: string): boolean {

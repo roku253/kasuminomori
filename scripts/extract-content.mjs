@@ -20,6 +20,7 @@ const SKIP = new Set([
   "playwright-report",
   "test-results",
   "e2e",
+  "scripts",
 ]);
 const SKIP_FILES = new Set(["index.html"]);
 

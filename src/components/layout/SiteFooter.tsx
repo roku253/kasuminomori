@@ -10,21 +10,21 @@ import { SiteLogo } from "./SiteLogo";
 import { useReducedMotion } from "@/components/motion/useReducedMotion";
 
 const PHOTOS = {
-  large: { src: "/img/placeholders/instagram-01.svg", alt: "町民祭" },
+  large: { src: "/img/photos/photo-festival.jpg", alt: "神社の参道に灯る町の祭" },
   small: [
-    { src: "/img/placeholders/instagram-02.svg", alt: "春の霧" },
-    { src: "/img/placeholders/instagram-03.svg", alt: "吊り橋" },
-    { src: "/img/placeholders/instagram-04.svg", alt: "神社" },
-    { src: "/img/placeholders/instagram-05.svg", alt: "足湯" },
+    { src: "/img/photos/photo-mist.jpg", alt: "春の朝霧" },
+    { src: "/img/photos/photo-bridge.jpg", alt: "杜川の吊り橋" },
+    { src: "/img/photos/photo-shrine.jpg", alt: "霞ノ杜神社の石段" },
+    { src: "/img/photos/photo-footbath.jpg", alt: "杜の湯" },
   ],
 };
 
 const BANNERS = [
-  { src: "/img/placeholders/banner-01.svg", alt: "杜の湯 足湯" },
-  { src: "/img/placeholders/banner-02.svg", alt: "霧見茶房" },
-  { src: "/img/placeholders/banner-03.svg", alt: "三日月町商店会" },
-  { src: "/img/placeholders/banner-04.svg", alt: "霞ノ杜診療所" },
-  { src: "/img/placeholders/banner-05.svg", alt: "杜川工房" },
+  { src: "/img/photos/photo-footbath.jpg", alt: "杜の湯" },
+  { src: "/img/photos/photo-mist.jpg", alt: "町の朝霧" },
+  { src: "/img/photos/photo-town.jpg", alt: "三日月町の街並み" },
+  { src: "/img/photos/photo-shrine.jpg", alt: "霞ノ杜神社" },
+  { src: "/img/photos/photo-terraces.jpg", alt: "杉並ヶ岡の棚田" },
 ];
 
 type Props = {
@@ -114,7 +114,7 @@ export function SiteFooter({ variant = "inner", enableScrollMotion = false }: Pr
           <ul className="footer-banner-row m-0 mt-6 flex list-none flex-wrap gap-4 p-0">
             {BANNERS.map((b) => (
               <li key={b.src}>
-                <Image src={assetPath(b.src)} alt={b.alt} width={200} height={56} className="h-14 w-auto rounded border border-[#dde3e8]" />
+                <Image src={assetPath(b.src)} alt={b.alt} width={200} height={56} className="h-14 w-[200px] rounded border border-[#dde3e8] object-cover" />
               </li>
             ))}
           </ul>

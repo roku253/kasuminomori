@@ -314,6 +314,48 @@ body.city-mega-open {
   font-size: 1.1rem;
 }
 
+.legacy-prose table.event-table td,
+.legacy-prose table.event-table th {
+  vertical-align: top;
+}
+
+.legacy-prose .doc-issue {
+  border-bottom: 3px solid #1a4d80;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+.legacy-prose .doc-issue p {
+  margin: 0.2rem 0;
+  color: #555;
+  font-size: 13px;
+}
+
+.hazard-sheet {
+  margin-top: 1rem;
+}
+
+.hazard-sheet img {
+  display: block;
+  width: min(100%, 960px);
+  height: auto;
+  border: 1px solid #d5dbe3;
+}
+
+.hazard-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.hazard-search input {
+  min-height: 44px;
+  border: 1px solid #c5ced6;
+  padding: 0 12px;
+}
+
 .legacy-prose .pull-quote {
   margin: 18px 0;
   padding: 12px 16px;

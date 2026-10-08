@@ -6,11 +6,22 @@
   "description": "霞ノ杜町議会だよりの公開抜粋。【フィクション】",
   "canonical": "https://roku253.github.io/kasuminomori/documents/gikai-dayori/",
   "breadcrumbs": [
-    { "label": "トップ", "href": "../../" },
-    { "label": "市政情報", "href": "../../shisei/" },
-    { "label": "資料室", "href": "../" },
-    { "label": "議会だより" }
+    {
+      "label": "トップ",
+      "href": "../../"
+    },
+    {
+      "label": "市政情報",
+      "href": "../../shisei/"
+    },
+    {
+      "label": "資料室",
+      "href": "../"
+    },
+    {
+      "label": "議会だより"
+    }
   ],
   "related": [],
-  "bodyHtml": "<h2>議会だより</h2>\r\n        <p>霞ノ杜町議会の審議・報告の抜粋です。個人名は原則記載していません。</p>\r\n\r\n        <article class=\"doc-block\" data-kn-story-clue=\"1\">\r\n          <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\r\n          <h3>青少年の登山事故について</h3>\r\n          <p>\r\n            …ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする…\r\n            詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…\r\n          </p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../history/#legend\">町の歴史（伝承）</a></p>"
+  "bodyHtml": "<header class=\"doc-issue\">\n  <p>霞ノ杜町議会事務局</p>\n  <h2>議会だより 令和元年9月号</h2>\n  <p>発行日 令和元年9月1日　／　このページは公開されている抜粋です。個人名は原則載せていません。</p>\n</header>\n<h3>今号のもくじ</h3>\n<ul>\n  <li>令和元年度一般会計補正予算</li>\n  <li>町営バスの秋ダイヤ</li>\n  <li>青少年の登山事故について</li>\n</ul>\n<article class=\"doc-block\">\n  <h3>令和元年度一般会計補正予算</h3>\n  <p>除雪費と町営バスの運行費を増額する補正を可決しました。財源は前年度の繰越金です。</p>\n</article>\n<article class=\"doc-block\">\n  <h3>町営バスの秋ダイヤ</h3>\n  <p>10月1日から、三日月町中心部と霞ノ杜地区を結ぶ便の夕方を1本増やします。停留所の時刻表はくらしのページで更新します。</p>\n</article>\n<article class=\"doc-block\" data-kn-story-clue=\"1\">\n  <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\n  <h3>青少年の登山事故について</h3>\n  <p>…ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする… 詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…</p>\n</article>\n<p><a href=\"/pdf/gikai-r1-09.pdf\" target=\"_blank\" rel=\"noopener\">この号のPDFを開く</a></p>\n<p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../history/#legend\">町の歴史（伝承）</a></p>"
 }

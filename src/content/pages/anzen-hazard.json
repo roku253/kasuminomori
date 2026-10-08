@@ -43,5 +43,5 @@
   "paragraphs": [
     "北西部旧整備区域は土砂・旧施設跡のため立入禁止。杜川沿いは増水に注意。霧による視界不良に留意してください。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../access/\">アクセ"
+  "extraHtml": "<div class=\"hazard-sheet\">\n  <img src=\"/img/hazard-map.svg\" alt=\"杜川の氾濫想定、土砂災害警戒区域、揺れやすい範囲を色分けした霞ノ杜町の概況図\">\n  <form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n    <label>地区名 <input id=\"hazard-area\" type=\"text\" placeholder=\"例：三日月\"></label>\n    <button type=\"button\" id=\"hazard-go\">この地区を見る</button>\n  </form>\n  <p id=\"hazard-out\"></p>\n  <p><a href=\"/pdf/hazard-map.pdf\" target=\"_blank\" rel=\"noopener\">ハザードマップ（PDF）を開く</a></p>\n</div>"
 }

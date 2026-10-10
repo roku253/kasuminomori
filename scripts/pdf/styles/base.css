@@ -1,0 +1,49 @@
+/* 町の文書 PDF の共通（A4 縦。1 ページ＝ .page の 210×297mm の区画。はみ出しは build.mjs の検査で止める） */
+@page { size: 210mm 297mm; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body {
+  font-family: "KN Gothic";
+  color: #1a1a1a;
+  font-size: 9.5pt;
+  line-height: 1.62;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  line-break: strict;
+  overflow-wrap: anywhere;
+  font-kerning: normal;
+}
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  break-after: page;
+  page-break-after: always;
+  background: #fff;
+}
+.page:last-child { break-after: auto; page-break-after: auto; }
+p, ul, ol, dl, dd, figure, table, h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5 { font-weight: 700; line-height: 1.35; }
+strong, b { font-weight: 700; font-family: "KN Gothic"; }
+img { display: block; }
+table { border-collapse: collapse; width: 100%; }
+.mincho { font-family: "KN Mincho"; }
+.gothic { font-family: "KN Gothic"; }
+.num { font-variant-numeric: tabular-nums; }
+.just { text-align: justify; }
+.nowrap { white-space: nowrap; }
+.sr-none { display: none; }
+
+/* 記事末の「問」 */
+.toi { display: flex; gap: 1.6mm; align-items: baseline; margin-top: 1.6mm; font-size: 8.4pt; line-height: 1.45; }
+.toi .toi-mark {
+  flex: none; display: inline-block; width: 4.6mm; height: 4.6mm; line-height: 4.6mm; text-align: center;
+  font-size: 7.6pt; font-weight: 700; color: #fff; background: #1a1a1a; border-radius: 0.6mm;
+}
+
+/* ノンブル（2 ページ目以降。外側の下） */
+.nombre { position: absolute; bottom: 8mm; font-size: 9pt; font-weight: 700; letter-spacing: 0.04em; }
+.nombre.left { left: 12mm; }
+.nombre.right { right: 12mm; }

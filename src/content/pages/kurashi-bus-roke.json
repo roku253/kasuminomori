@@ -2,8 +2,8 @@
   "path": "kurashi/bus-roke.html",
   "route": "/kurashi/bus-roke/",
   "layout": "city",
-  "title": "バスロケ｜霞ノ杜町",
-  "description": "バスロケ・運行状況 — 霞ノ杜町公式。【フィクション】",
+  "title": "バスロケ・運行状況｜霞ノ杜町",
+  "description": "町営バスの現在位置を、地図上で確認できます。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,9 @@
   ],
   "h1": "バスロケ・運行状況",
   "paragraphs": [
-    "豪雨・積雪時は運休・遅延が発生することがあります。最新情報は町公式お知らせまたは三日月庁舎代表へお問い合わせください。"
+    "バスの位置は配信していません。発車の時刻は時刻表のページです。運休は、暴風警報のときなどに総務課総務係（内線211）がお知らせします。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>運行区間</th><td>三日月町中心 ⇄ 霞ノ杜神社前</td></tr><tr><th>運休時</th><td>0123-45-6700（代表）内線 213</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bus-jikan.html\">時刻表</a></li><li><a href=\"../anzen/bosai.html\">防災</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../access/\">アクセス</a><"
+  "tableHtml": "<div data-kn-tool=\"bus-status\"></div>",
+  "owner": "総務課 総務係",
+  "updated": "2026-10-01"
 }

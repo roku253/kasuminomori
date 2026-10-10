@@ -3,7 +3,7 @@
   "route": "/kurashi/tetsuzuki-navi/",
   "layout": "city",
   "title": "手続ナビ｜霞ノ杜町",
-  "description": "手続ナビ — 霞ノ杜町公式。【フィクション】",
+  "description": "生活の場面から、必要な手続きをたどって探せます。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,7 @@
   ],
   "h1": "手続ナビ",
   "paragraphs": [
-    "よくあるライフイベントから、必要な手続と窓口を案内します。（静的ナビ・フィクション）"
+    "場面ごとに、届ける場所へのリンクをまとめました。名前から探すときは、手続早わかり検索を使ってください。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>転入した</th><td>住民票転入 → 国民健康保険 → ごみ収集登録</td></tr><tr><th>引っ越す</th><td>転出届 → 各種証明の変更</td></tr><tr><th>子どもが生まれた</th><td>出生届 → 児童手当 → 保育所申込</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"juminhyo.html\">住民票</a></li><li><a href=\"../kodomo/kosodate.html\">子育て</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li></ul></asi"
+  "bodyHtml": "<h2>場面から探す</h2>\n<ul><li>町に移ってきたとき: <a href=\"/kurashi/juminhyo/\">転入届</a>、<a href=\"/kurashi/zei/\">国民健康保険</a>、<a href=\"/kurashi/gomi/\">ごみの曜日</a></li><li>町から出るとき: <a href=\"/kurashi/juminhyo/\">転出届</a>、<a href=\"/kurashi/suido/\">水道の使用中止</a></li><li>子どもが生まれたとき: <a href=\"/kurashi/juminhyo/\">出生届</a>、<a href=\"/kodomo/kosodate/\">児童手当</a>、<a href=\"/kodomo/hoiku/\">保育</a></li><li>結婚したとき: <a href=\"/kurashi/juminhyo/\">婚姻届</a></li><li>税の通知が来たとき: <a href=\"/kurashi/zei/\">納期</a></li></ul>"
 }

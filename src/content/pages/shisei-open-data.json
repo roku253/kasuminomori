@@ -3,14 +3,14 @@
   "route": "/shisei/open-data/",
   "layout": "city",
   "title": "オープンデータ｜霞ノ杜町",
-  "description": "オープンデータ — 霞ノ杜町公式。【フィクション】",
+  "description": "停留所と観光施設のCSVを公開しています。",
   "breadcrumbs": [
     {
       "label": "トップ",
       "href": "../"
     },
     {
-      "label": "市政情報",
+      "label": "町政情報",
       "href": "index.html"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "href": "index.html",
-      "label": "市政",
+      "label": "町政",
       "storyClue": false
     },
     {
@@ -41,8 +41,10 @@
   ],
   "h1": "オープンデータ",
   "paragraphs": [
-    "町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"
+    "いま公開しているのは、下の2つのCSVだけです。人口や財政の表、APIはありません。",
+    "使うときは「霞ノ杜町」と出した日付を書いてください。個人が分かる形にはしないでください。追加の希望は政策推進課広報情報係へ。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th><a href=\"/data/bus_stops.csv\">bus_stops.csv</a></th><td>停留所</td></tr><tr><th><a href=\"/data/tourism_spots.csv\">tourism_spots.csv</a></th><td>観光スポット</td></tr></table>",
-  "extraHtml": "<ul><li><a href=\"/data/bus_stops.csv\">停留所のCSVをダウンロード</a></li><li><a href=\"/data/tourism_spots.csv\">観光スポットのCSVをダウンロード</a></li></ul>"
+  "extraHtml": "<ul><li><a href=\"/data/bus_stops.csv\">停留所（CSV）</a></li><li><a href=\"/data/tourism_spots.csv\">観光施設（CSV）</a></li></ul>",
+  "owner": "政策推進課 広報情報係",
+  "updated": "2026-10-01"
 }

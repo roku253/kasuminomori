@@ -2,8 +2,8 @@
   "path": "sangyo/koyo.html",
   "route": "/sangyo/koyo/",
   "layout": "city",
-  "title": "雇用｜霞ノ杜町",
-  "description": "雇用・季節工 — 霞ノ杜町公式。【フィクション】",
+  "title": "雇用・季節工｜霞ノ杜町",
+  "description": "町内の雇用情報、就職支援、職業訓練の案内です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,10 @@
   ],
   "h1": "雇用・季節工",
   "paragraphs": [
-    "ハウスメーカー・林業・観光の季節求人を町ハローワーク掲示板で公開（架空）。"
+    "町内の求人は、産業観光課商工観光係（役場2階、内線224）で紹介しています。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>林業作業</th><td>4〜11月 / 要相談</td></tr><tr><th>観光案内</th><td>夏期アルバイト</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"ringyo.html\">林業</a></li><li><a href=\"shogyo.html\">商店街</a></li><li><a href=\"index.html\">事業者</a></li><li><a href="
+  "tableHtml": "",
+  "owner": "産業観光課 商工観光係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>いま募集している仕事</h2><div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>仕事</th><th>期間</th><th>条件</th><th>問い合わせ</th></tr></thead><tbody><tr><td>農林の季節作業</td><td>4月〜11月</td><td>日給8,000円。現地集合</td><td>産業観光課 農林係</td></tr><tr><td>霞湖商店街の案内</td><td>7月〜8月</td><td>時給1,100円。土日中心</td><td>産業観光課 商工観光係</td></tr><tr><td>町の一般事務</td><td>次の募集まで</td><td>令和8年度は9月4日に締め切りました</td><td>総務課 総務係</td></tr></tbody></table></div><p>履歴書の書き方は、毎月第2水曜の10時に町民ホールで30分の説明をしています。予約はいりません。</p>"
 }

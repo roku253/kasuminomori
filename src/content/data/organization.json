@@ -1,0 +1,291 @@
+{
+  "_note": "町の組織（r2-director B-3）と、ページの「このページに関するお問い合わせ」「更新日」の既定値。ページ JSON に owner（例 \"総務課 地域安全係\"）・updated（例 \"2026-08-01\"）を書けばそちらが優先。既定値 defaults.owners は route の前方一致（いちばん長く一致したもの）。WP3 が各ページに owner・updated を書いたら、ここの既定値は使われなくなる。",
+  "departments": [
+    {
+      "name": "総務課",
+      "floor": "2階",
+      "sections": [
+        {
+          "name": "総務係",
+          "ext": "211"
+        },
+        {
+          "name": "地域安全係",
+          "ext": "215"
+        }
+      ]
+    },
+    {
+      "name": "政策推進課",
+      "floor": "2階",
+      "sections": [
+        {
+          "name": "企画財政係",
+          "ext": "241"
+        },
+        {
+          "name": "広報情報係",
+          "ext": "244"
+        }
+      ]
+    },
+    {
+      "name": "住民税務課",
+      "floor": "1階",
+      "sections": [
+        {
+          "name": "住民係",
+          "ext": "111"
+        },
+        {
+          "name": "税務係",
+          "ext": "114"
+        },
+        {
+          "name": "環境係",
+          "ext": "117"
+        }
+      ]
+    },
+    {
+      "name": "保健福祉課",
+      "floor": "1階",
+      "sections": [
+        {
+          "name": "福祉係",
+          "ext": "121"
+        },
+        {
+          "name": "介護保険係",
+          "ext": "124"
+        },
+        {
+          "name": "保健係",
+          "ext": "127"
+        }
+      ]
+    },
+    {
+      "name": "産業観光課",
+      "floor": "2階",
+      "sections": [
+        {
+          "name": "農林係",
+          "ext": "221"
+        },
+        {
+          "name": "商工観光係",
+          "ext": "224"
+        }
+      ]
+    },
+    {
+      "name": "建設水道課",
+      "floor": "2階",
+      "sections": [
+        {
+          "name": "建設係",
+          "ext": "231"
+        },
+        {
+          "name": "上下水道係",
+          "ext": "234"
+        }
+      ]
+    },
+    {
+      "name": "教育委員会 教育課",
+      "floor": "3階",
+      "sections": [
+        {
+          "name": "学校教育係",
+          "ext": "311"
+        },
+        {
+          "name": "こども係",
+          "ext": "314"
+        },
+        {
+          "name": "生涯学習係",
+          "ext": "317"
+        }
+      ]
+    },
+    {
+      "name": "会計室",
+      "floor": "1階",
+      "ext": "130"
+    },
+    {
+      "name": "議会事務局",
+      "floor": "3階",
+      "ext": "320"
+    }
+  ],
+  "defaults": {
+    "updated": "2026-04-01",
+    "owners": [
+      {
+        "prefix": "/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/access/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/kurashi/",
+        "owner": "住民税務課 住民係"
+      },
+      {
+        "prefix": "/kurashi/gomi",
+        "owner": "住民税務課 環境係"
+      },
+      {
+        "prefix": "/kurashi/kankyo/",
+        "owner": "住民税務課 環境係"
+      },
+      {
+        "prefix": "/kurashi/bus-",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/kurashi/suido/",
+        "owner": "建設水道課 上下水道係"
+      },
+      {
+        "prefix": "/kurashi/sumai/",
+        "owner": "政策推進課 企画財政係"
+      },
+      {
+        "prefix": "/kurashi/chizu/",
+        "owner": "政策推進課 広報情報係"
+      },
+      {
+        "prefix": "/kurashi/denshi-shinsei/",
+        "owner": "政策推進課 広報情報係"
+      },
+      {
+        "prefix": "/anzen/",
+        "owner": "総務課 地域安全係"
+      },
+      {
+        "prefix": "/anzen/kinkyu/",
+        "owner": "保健福祉課 保健係"
+      },
+      {
+        "prefix": "/fukushi/",
+        "owner": "保健福祉課 福祉係"
+      },
+      {
+        "prefix": "/fukushi/kenko/",
+        "owner": "保健福祉課 保健係"
+      },
+      {
+        "prefix": "/fukushi/kaigo/",
+        "owner": "保健福祉課 介護保険係"
+      },
+      {
+        "prefix": "/fukushi/hoken/",
+        "owner": "住民税務課 住民係"
+      },
+      {
+        "prefix": "/kodomo/",
+        "owner": "教育委員会 教育課 こども係"
+      },
+      {
+        "prefix": "/kodomo/shogakkou/",
+        "owner": "教育委員会 教育課 学校教育係"
+      },
+      {
+        "prefix": "/kodomo/toshokan/",
+        "owner": "教育委員会 教育課 生涯学習係"
+      },
+      {
+        "prefix": "/sangyo/",
+        "owner": "産業観光課 商工観光係"
+      },
+      {
+        "prefix": "/sangyo/ringyo/",
+        "owner": "産業観光課 農林係"
+      },
+      {
+        "prefix": "/bunka/",
+        "owner": "教育委員会 教育課 生涯学習係"
+      },
+      {
+        "prefix": "/events/",
+        "owner": "産業観光課 商工観光係"
+      },
+      {
+        "prefix": "/spot/",
+        "owner": "産業観光課 商工観光係"
+      },
+      {
+        "prefix": "/guide/",
+        "owner": "政策推進課 企画財政係"
+      },
+      {
+        "prefix": "/history/",
+        "owner": "教育委員会 教育課 生涯学習係"
+      },
+      {
+        "prefix": "/shisei/",
+        "owner": "政策推進課 広報情報係"
+      },
+      {
+        "prefix": "/shisei/chijitsu/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/shisei/shozoku/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/shisei/yakuba/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/shisei/senkyo/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/contact/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/documents/",
+        "owner": "総務課 総務係"
+      },
+      {
+        "prefix": "/documents/gikai-dayori/",
+        "owner": "議会事務局"
+      },
+      {
+        "prefix": "/documents/chiiki-anzen/",
+        "owner": "総務課 地域安全係"
+      },
+      {
+        "prefix": "/blog/",
+        "owner": "政策推進課 広報情報係"
+      },
+      {
+        "prefix": "/search/",
+        "owner": "政策推進課 広報情報係"
+      },
+      {
+        "prefix": "/sitemap/",
+        "owner": "政策推進課 広報情報係"
+      },
+      {
+        "prefix": "/site/",
+        "owner": "政策推進課 広報情報係"
+      }
+    ]
+  },
+  "ui": {
+    "heading": "このページに関するお問い合わせ",
+    "updated": "更新日",
+    "office": "霞ノ杜町役場"
+  }
+}

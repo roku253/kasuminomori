@@ -3,14 +3,14 @@
   "route": "/shisei/koho/",
   "layout": "city",
   "title": "お知らせ｜霞ノ杜町",
-  "description": "お知らせ — 霞ノ杜町公式。【フィクション】",
+  "description": "霞ノ杜町からのお知らせ（工事・催し・募集・制度の改正など）の一覧です。",
   "breadcrumbs": [
     {
       "label": "トップ",
       "href": "../"
     },
     {
-      "label": "市政情報",
+      "label": "町政情報",
       "href": "index.html"
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "href": "koho-kasumi.html",
-      "label": "広報誌「霞ノ杜」",
+      "label": "広報かすみのもり",
       "storyClue": false
     },
     {
@@ -46,7 +46,14 @@
   ],
   "h1": "お知らせ",
   "paragraphs": [
-    "町からの最新情報です。"
+    "工事のお知らせ、催しや募集、制度の改正など、町民の皆さんの暮らしに関わる情報をお知らせしています。",
+    "<div data-kn-tool=\"news-list\"></div>",
+    "<p>広報かすみのもりは、毎月10日に町内の全世帯へお届けしています。電子版は<a href=\"/shisei/koho-kasumi/\">広報かすみのもり</a>のページからご覧いただけます。</p>"
   ],
-  "extraHtml": "<ul><li><strong>R8.4.1</strong> 公式サイトをリニューアル</li><li><strong>R8.3.15</strong> 杜の吊り橋 — 雨天注意</li><li><strong>R8.2.1</strong> 冬季閉鎖区間の案内更新</li></ul>\r\n      <aside class=\"city-related\"><h2"
+  "searchKeywords": [
+    "お知らせ",
+    "プレスリリース",
+    "最新"
+  ],
+  "owner": "政策推進課 広報情報係"
 }

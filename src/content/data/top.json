@@ -1,0 +1,113 @@
+{
+  "_note": "トップページの文言とリンク（正本）。お知らせの中身は src/content/pages/shisei-koho-*.json（news.date）から自動で並ぶ。",
+  "title": "霞ノ杜町",
+  "visual": {
+    "label": "メインビジュアル",
+    "src": "/img/photos/photo-town.jpg",
+    "alt": "霞ノ杜町の中心部の町並みと、町を囲む山すそ",
+    "position": "50% 55%"
+  },
+  "emergency": {
+    "label": "緊急情報",
+    "text": "現在、緊急情報はありません。",
+    "linkLabel": "緊急・災害情報",
+    "href": "/anzen/saigai/"
+  },
+  "news": {
+    "heading": "お知らせ",
+    "count": 8,
+    "moreLabel": "お知らせ一覧",
+    "moreHref": "/shisei/koho/"
+  },
+  "featured": {
+    "heading": "注目情報",
+    "items": [
+      {
+        "href": "/shisei/koho/2026-04-01-renewal/",
+        "title": "ホームページをリニューアルしました",
+        "note": "令和8年4月1日"
+      },
+      {
+        "href": "/anzen/hazard/",
+        "title": "ハザードマップを改訂しました",
+        "note": "令和8年8月作成・全戸配布"
+      },
+      {
+        "href": "/shisei/koho-kasumi/",
+        "title": "広報かすみのもり 10月号（No.846）",
+        "note": "毎月10日発行"
+      }
+    ]
+  },
+  "pickup": {
+    "heading": "よく使うページ",
+    "items": [
+      {
+        "href": "/kurashi/juminhyo/",
+        "label": "住民票・窓口"
+      },
+      {
+        "href": "/kurashi/gomi/",
+        "label": "ごみ収集"
+      },
+      {
+        "href": "/kurashi/bus-jikan/",
+        "label": "町営バス"
+      },
+      {
+        "href": "/kurashi/tetsuzuki-navi/",
+        "label": "手続ナビ"
+      },
+      {
+        "href": "/anzen/hazard/",
+        "label": "防災・ハザード"
+      },
+      {
+        "href": "/kodomo/kosodate/",
+        "label": "子育て支援"
+      },
+      {
+        "href": "/events/",
+        "label": "年間行事"
+      },
+      {
+        "href": "/bunka/",
+        "label": "観光情報"
+      }
+    ]
+  },
+  "categories": {
+    "heading": "分類から探す"
+  },
+  "ads": {
+    "heading": "広告",
+    "disclaimer": "掲載している広告の内容について、町が推奨するものではありません。",
+    "recruitLabel": "広告の掲載について",
+    "recruitHref": "/site/#ads",
+    "items": [
+      {
+        "name": "湖岸旅館 明月",
+        "line": "霞湖のほとりの宿",
+        "image": "/img/ads/meigetsu.jpg"
+      },
+      {
+        "name": "霧見茶房",
+        "line": "お茶と甘味",
+        "image": "/img/ads/kirimi.jpg"
+      },
+      {
+        "name": "杜川工房",
+        "line": "木工品の店",
+        "image": "/img/ads/morikawa.jpg"
+      }
+    ]
+  },
+  "search": {
+    "heading": "検索",
+    "siteTab": "サイト内検索",
+    "procedureTab": "手続きを探す",
+    "procedurePlaceholder": "手続きの名前（例：転入・児童手当）",
+    "procedureLabel": "手続きを探す",
+    "procedureButton": "検索"
+  }
+}

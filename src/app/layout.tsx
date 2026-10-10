@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import { Footprint } from "@/components/layout/Footprint";
 import { TokenGateInit } from "@/components/layout/TokenGate";
-import { TownBehaviors } from "@/components/layout/TownBehaviors";
-import { BASE_PATH } from "@/lib/site";
+import { BASE_PATH, OG_IMAGE, SITE_URL, withFictionNote } from "@/lib/site";
 import "./globals.css";
 
 const notoSans = Noto_Sans_JP({
@@ -15,24 +14,22 @@ const notoSans = Noto_Sans_JP({
   adjustFontFallback: true,
 });
 
-const notoSerif = Noto_Serif_JP({
-  subsets: ["latin"],
-  weight: ["500", "700", "900"],
-  variable: "--font-noto-serif",
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-});
+
+/** トップページ（と下層の既定）の説明文。架空の注記は withFictionNote で一か所から付ける（画面には出さない） */
+const SITE_DESCRIPTION = withFictionNote(
+  "霞ノ杜町公式ホームページ。くらし・防災・子育て・観光・町政情報をご案内します。"
+);
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://roku253.github.io/kasuminomori/"),
+  metadataBase: new URL(SITE_URL),
   applicationName: "霞ノ杜町",
   title: {
     default: "霞ノ杜町｜公式ホームページ",
     template: "%s｜霞ノ杜町",
   },
-  description:
-    "霞ノ杜町公式サイト。くらし・防災・子育て・観光・市政情報をご案内。山あいの小さな町、霧と杜の里。【フィクション】",
+  description: SITE_DESCRIPTION,
+  // iPhone などが電話番号・住所・メールを自動でリンクにしないように（電話は tel: リンクにしない方針。DR-03）
+  formatDetection: { telephone: false, address: false, email: false },
   authors: [{ name: "霞ノ杜町" }],
   creator: "霞ノ杜町",
   publisher: "霞ノ杜町",
@@ -40,7 +37,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: `${BASE_PATH}/icon.png`, type: "image/png", sizes: "32x32" },
-      { url: `${BASE_PATH}/img/kasuminomori-mon.png`, type: "image/png", sizes: "512x512" },
+      { url: `${BASE_PATH}/img/kasuminomori-mon-512.png`, type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: `${BASE_PATH}/img/kasuminomori-mon-180.png`, type: "image/png", sizes: "180x180" }],
   },
@@ -52,14 +49,15 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     siteName: "霞ノ杜町",
     title: "霞ノ杜町｜公式ホームページ",
-    description:
-      "霞ノ杜町公式サイト。くらし・防災・子育て・観光・市政情報をご案内。山あいの小さな町、霧と杜の里。【フィクション】",
+    description: SITE_DESCRIPTION,
+    url: "/",
+    images: [OG_IMAGE],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "霞ノ杜町｜公式ホームページ",
-    description:
-      "霞ノ杜町公式サイト。くらし・防災・子育て・観光・市政情報をご案内。【フィクション】",
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   verification: {
     google: "c0eDUSRnGg391rEJXWPdmd3Iw_3FUIfxo35pM84Bz4Y",
@@ -97,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSans.variable} ${notoSerif.variable}`}>
+    <html lang="ja" className={notoSans.variable}>
       <head>
         <meta name="application-name" content="霞ノ杜町" />
         <meta name="apple-mobile-web-app-title" content="霞ノ杜町" />
@@ -109,7 +107,6 @@ export default function RootLayout({
       </head>
       <body className="city-body antialiased">
         <TokenGateInit />
-        <TownBehaviors />
         <Footprint />
         <div id="site-root">{children}</div>
       </body>

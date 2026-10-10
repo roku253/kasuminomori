@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>霞ノ杜町 洪水・土砂災害ハザードマップ</title>
+<!-- 描画専用のページ（render.mjs が Playwright で開く。サイトには載せない）。設定は window.__CFG（render.mjs が config.json から作る）。
+     MapLibre GL JS は版を固定して CDN から読み、SRI で中身を確かめる（下地の OpenFreeMap も描画時にネットから取る）。 -->
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet"
+  integrity="sha384-MinO0mNliZ3vwppuPOUnGa+iq619pfMhLVUXfC4LHwSCvF9H+6P/KO4Q7qBOYV5V" crossorigin="anonymous">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"
+  integrity="sha384-SYKAG6cglRMN0RVvhNeBY0r3FYKNOJtznwA0v7B5Vp9tr31xAHsZC0DqkQ/pZDmj" crossorigin="anonymous"></script>
+<style>
+  @page { size: 420mm 297mm; margin: 0; }
+  :root { --navy: #1a4d80; --ink: #1d2b36; --shelter: #0a7a36; --ban: #a8001c; --muted: #8a8f94; }
+  html, body { margin: 0; padding: 0; background: #fff; color: var(--ink);
+    font-family: "BIZ UDPGothic", "BIZ UDPゴシック", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { box-sizing: border-box; }
+  #map { position: absolute; inset: 0; }
+  #mapimg { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
+  #overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+  /* ---- Web 用（地図＋下の出典帯。凡例と一覧はページの HTML に文字で出す） ---- */
+  body.web #sheet { position: relative; width: 960px; }
+  body.web #mapwrap { position: relative; width: 960px; height: 720px; overflow: hidden; }
+  body.web #title, body.web #side, body.web #srcstrip, body.web #mapframe { display: none; }
+  body.web #webstrip { border-top: 1px solid #b9c2ca; padding: 6px 10px 7px; font-size: 11px; line-height: 1.5; color: #333; background: #fff; }
+  body.web #webstrip p { margin: 0; }
+  body.web #webstrip .dis { color: #555; }
+  .nw { white-space: nowrap; }
+
+  /* ---- A3 横（420 x 297 mm。CSS px は 96/inch。地図枠は 8 の倍数＝300dpi で画素に端数が出ない） ---- */
+  body.a3 #sheet { position: relative; width: 1587px; height: 1122px; overflow: hidden; }
+  body.a3 #webstrip { display: none; }
+  body.a3 #title { position: absolute; left: 40px; top: 22px; width: 1507px; height: 78px; display: flex; align-items: flex-end; gap: 22px;
+    border-bottom: 5px solid var(--navy); padding-bottom: 7px; }
+  body.a3 #title h1 { margin: 0; font-size: 32px; letter-spacing: .05em; line-height: 1; white-space: nowrap; }
+  body.a3 #title .sub { font-size: 14px; color: #3c4954; white-space: nowrap; padding-bottom: 2px; }
+  body.a3 #title .pub { margin-left: auto; font-size: 11.5px; color: #26323c; text-align: right; line-height: 1.45; white-space: nowrap; }
+  body.a3 #title .pub b { font-size: 15px; color: var(--ink); }
+  body.a3 #mapwrap { position: absolute; left: 40px; top: 112px; width: 1000px; height: 920px; overflow: hidden; background: #f3f2ee; }
+  body.a3 #mapframe { position: absolute; left: 40px; top: 112px; width: 1000px; height: 920px; outline: 1.6px solid #333; pointer-events: none; }
+  body.a3 #srcstrip { position: absolute; left: 40px; top: 1039px; width: 1000px; height: 78px; font-size: 8.7px; line-height: 1.4; color: #333; overflow: hidden; }
+  body.a3 #srcstrip p { margin: 0; }
+  body.a3 #srcstrip .dis { margin-top: 2px; color: #444; }
+  body.a3 #side { position: absolute; left: 1056px; top: 112px; width: 491px; height: 1005px; font-size: 10.7px; line-height: 1.45;
+    display: flex; flex-direction: column; gap: 7px; overflow: hidden; }
+
+  /* ---- 地図の上の文字（縁取りは2回描きの1回目で画像に焼き込む。2回目＝PDF の文字は縁取りなし） ---- */
+  .lbl { position: absolute; white-space: nowrap; font-weight: 700; color: #34302c; line-height: 1;
+    paint-order: stroke fill; -webkit-text-stroke: 3.4px #fff; letter-spacing: .1em; }
+  .lbl.town { font-size: 15px; color: #3a332d; }
+  .lbl.river { font-size: 13.5px; color: #1b5d9c; letter-spacing: .4em; }
+  .lbl.lake { font-size: 28px; color: #2a69ad; letter-spacing: .9em; -webkit-text-stroke: 0; opacity: .9; }
+  .lbl.road { font-size: 11px; color: #555; font-weight: 400; letter-spacing: .25em; }
+  .lbl.station { font-size: 12.5px; color: #111; }
+  .lbl.ban { font-size: 12px; color: var(--ban); letter-spacing: .04em; }
+  body.web .lbl.town { font-size: 16px; }
+  body.web .lbl.ban { font-size: 13px; }
+  .stmark { position: absolute; width: 14px; height: 8px; background: #fff; border: 2px solid #111; transform: translate(-50%, -50%); }
+  .shelter { position: absolute; display: flex; align-items: center; gap: 3px; }
+  .shelter .ic { width: 21px; height: 21px; flex: none; border-radius: 3px; background: var(--shelter); color: #fff;
+    font: 700 12.5px/17px "BIZ UDPGothic", sans-serif; text-align: center; border: 2px solid #fff; box-shadow: 0 0 0 1.2px var(--shelter); }
+  .shelter.outdoor .ic { background: #fff; color: var(--shelter); border: 2.4px solid var(--shelter); box-shadow: 0 0 0 1.6px #fff; border-radius: 50%; line-height: 16px; }
+  .shelter.hq .ic { background: var(--navy); box-shadow: 0 0 0 1.2px var(--navy); font-size: 11px; }
+  .shelter .nm { font-size: 12px; font-weight: 700; color: #0b3d1e; paint-order: stroke fill; -webkit-text-stroke: 3.2px #fff; white-space: nowrap; letter-spacing: .02em; line-height: 1; }
+  body.web .shelter .nm { font-size: 13px; }
+  .shelter.hq .nm { color: #102e4d; }
+  #north { position: absolute; left: 12px; top: 10px; width: 38px; text-align: center; font: 700 13px "BIZ UDPGothic", sans-serif; color: #222;
+    background: rgba(255,255,255,.88); border-radius: 4px; padding: 3px 0 2px; }
+  #north svg { display: block; margin: 0 auto; }
+  #scale { position: absolute; left: 12px; bottom: 10px; font-size: 11px; background: rgba(255,255,255,.9); padding: 3px 8px 4px; line-height: 1.2; }
+  #scale .bar { height: 6px; border: 1.5px solid #222; border-top: 0; margin-top: 2px; display: flex; }
+  #scale .bar i { flex: 1; } #scale .bar i:nth-child(odd) { background: #222; }
+  #scale .ticks { display: flex; justify-content: space-between; font-size: 10px; margin-top: 1px; }
+  /* 1回目（縁取りだけを画像にする）: 文字の塗りと記号を消す */
+  body.halo .lbl, body.halo .shelter .nm { color: transparent !important; opacity: 1; }
+  body.halo .lbl.lake { visibility: hidden; }
+  body.halo .shelter .ic, body.halo .stmark, body.halo #north, body.halo #scale, body.halo #mapframe { visibility: hidden; }
+  /* 2回目（PDF）: 縁取りは画像にあるので、文字は塗りだけ */
+  body.print .lbl, body.print .shelter .nm { -webkit-text-stroke: 0; }
+
+  /* ---- 右欄（A3） ---- */
+  .box { border: 1.2px solid #9aa5ae; padding: 0 9px 7px; background: #fff; }
+  .box h2 { margin: 0 -9px 6px; font-size: 13px; color: #fff; background: var(--navy); padding: 3px 9px; letter-spacing: .06em; line-height: 1.35; }
+  .lg h3 { margin: 6px 0 3px; font-size: 11px; border-left: 4px solid var(--navy); padding-left: 5px; line-height: 1.3; }
+  .lg .cols { display: grid; grid-template-columns: 222px 1fr; gap: 0 10px; }
+  .lg .fl { display: grid; grid-template-columns: 28px 52px 1fr; gap: 2px 5px; align-items: center; white-space: nowrap; }
+  .lg .muted { color: var(--muted); }
+  .lg .dg { display: grid; grid-template-columns: 1fr 48px 48px; gap: 3px 5px; align-items: center; }
+  .lg .dg .hd { font-size: 9px; color: #444; text-align: center; white-space: nowrap; }
+  .lg .dg .na { font-size: 9px; color: var(--muted); text-align: center; }
+  .lg .row { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+  .lg .hint { font-size: 9px; color: #444; margin: 3px 0 0; line-height: 1.35; }
+  svg.sw { display: block; flex: none; }
+  .ico { display: inline-block; width: 17px; height: 17px; line-height: 13.5px; border-radius: 2px; background: var(--shelter); color: #fff; flex: none;
+    font-weight: 700; text-align: center; font-size: 9.5px; border: 1.5px solid #fff; box-shadow: 0 0 0 1px var(--shelter); }
+  .ico.outdoor { background: #fff; color: var(--shelter); border: 1.8px solid var(--shelter); box-shadow: none; border-radius: 50%; line-height: 13px; }
+  .ico.hq { background: var(--navy); box-shadow: 0 0 0 1px var(--navy); font-size: 8.5px; }
+  table.sh { width: 100%; border-collapse: collapse; font-size: 10px; line-height: 1.3; }
+  table.sh th, table.sh td { border: 1px solid #b8c1c8; padding: 2px 3px; text-align: center; vertical-align: middle; }
+  table.sh td.l { text-align: left; }
+  table.sh td.nw { white-space: nowrap; }
+  table.sh th { background: #eef3f7; font-weight: 700; white-space: nowrap; }
+  table.sh td.x { color: #b00020; font-weight: 700; }
+  .box .foot { margin: 3px 0 0; font-size: 9.5px; line-height: 1.4; }
+  .notes p { margin: 0 0 3px; padding-left: 1em; text-indent: -1em; }
+  .info p { margin: 0 0 2px; }
+  .info .tel { font-weight: 700; }
+</style>
+</head>
+<body>
+<div id="sheet">
+  <div id="title"></div>
+  <div id="mapwrap">
+    <div id="map"></div>
+    <img id="mapimg" alt="">
+    <div id="overlay"></div>
+    <div id="north"><svg width="20" height="28" viewBox="0 0 22 30" aria-hidden="true"><polygon points="11,0 21,28 11,21 1,28" fill="#222"/><polygon points="11,0 11,21 1,28" fill="#fff" stroke="#222" stroke-width="1"/></svg>N</div>
+    <div id="scale"><span id="scaletxt"></span><div class="bar" id="scalebar"><i></i><i></i><i></i><i></i></div><div class="ticks" id="scaleticks"></div></div>
+  </div>
+  <div id="mapframe"></div>
+  <div id="side"></div>
+  <div id="srcstrip"></div>
+  <div id="webstrip"></div>
+</div>
+<script>
+(function () {
+  var CFG = window.__CFG;
+  var C = CFG.config;
+  document.body.classList.add(CFG.mode);
+  var dpr = window.devicePixelRatio || 1;
+  window.__state = { ready: false, errors: [], tileErrors: 0 };
+  // 帰属表示（OpenFreeMap © OpenMapTiles …）は途中で折り返さない
+  function nowrapAttrib(html) {
+    return html.replace(/OpenFreeMap ©\s*OpenMapTiles\s*Data ©\s*OpenStreetMap contributors/, function (m) { return '<span class="nw">' + m + '</span>'; });
+  }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  // 縮尺の分母 → MapLibre のズーム（512px タイル基準。96 CSS px = 1 inch）
+  function zoomForScale(denom, lat) {
+    var mpp = denom * 0.0254 / 96;
+    return Math.log2(40075016.686 * Math.cos(lat * Math.PI / 180) / (512 * mpp));
+  }
+  var view = CFG.view;
+  var map = new maplibregl.Map({
+    container: 'map', style: CFG.style, center: view.center, zoom: zoomForScale(view.scaleDenom, view.center[1]),
+    attributionControl: false, interactive: false, fadeDuration: 0, preserveDrawingBuffer: true,
+    pixelRatio: dpr, maxCanvasSize: [8192, 8192]
+  });
+  window.__map = map;
+  map.on('error', function (e) {
+    var msg = (e && e.error && (e.error.message || e.error.status)) || 'error';
+    if (String(msg).indexOf('404') >= 0 || (e.error && e.error.status === 404)) { window.__state.tileErrors++; return; }
+    window.__state.errors.push(String(msg).slice(0, 200));
+  });
+  function setP(id, k, v) { if (map.getLayer(id)) map.setPaintProperty(id, k, v); }
+  function setL(id, k, v) { if (map.getLayer(id)) map.setLayoutProperty(id, k, v); }
+
+  // 模様（MapLibre の fill-pattern）。画素比をそろえて作るので、300dpi でも線がにじまない
+  var PAT = CFG.patterns;
+  function addPattern(id, p) {
+    var S = Math.round(p.size * dpr), c = document.createElement('canvas'); c.width = c.height = S;
+    var g = c.getContext('2d'); g.strokeStyle = p.color; g.lineWidth = p.width * dpr; g.lineCap = 'butt';
+    function line(x1, y1, x2, y2) { g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y2); g.stroke(); }
+    var k;
+    if (p.kind === 'slash' || p.kind === 'cross') for (k = -1; k <= 1; k++) line(k * S, S, k * S + S, 0);
+    if (p.kind === 'back' || p.kind === 'cross') for (k = -1; k <= 1; k++) line(k * S, 0, k * S + S, S);
+    if (p.kind === 'vert') line(S / 2, 0, S / 2, S);
+    if (p.kind === 'horiz') line(0, S / 2, S, S / 2);
+    map.addImage(id, g.getImageData(0, 0, S, S), { pixelRatio: dpr });
+  }
+
+  map.on('style.load', function () {
+    var st = map.getStyle();
+    // 実在の地名・道路名・施設名は描かない（地図サイトと同じく symbol レイヤーをすべて消す）。行政界と3D建物も消す
+    st.layers.forEach(function (l) {
+      if (l.type === 'symbol' || /^boundary/.test(l.id) || l.id === 'building-3d' || l.id === 'natural_earth') setL(l.id, 'visibility', 'none');
+    });
+    // 下地は淡色・無彩色に（道路の黄・橙はハザードの色と紛れるので白に）
+    setP('background', 'background-color', '#f3f2ee');
+    setP('landuse_residential', 'fill-color', 'rgba(0,0,0,0)');
+    setP('park', 'fill-color', '#e3ecdc');
+    setP('landcover_wood', 'fill-color', '#d9e5cf');
+    setP('landcover_wood', 'fill-opacity', 0.8);
+    setP('landcover_grass', 'fill-color', '#e6ebdf');
+    setP('water', 'fill-color', '#b7cfec');
+    setP('building', 'fill-color', 'rgba(255,255,255,0.35)');
+    setP('building', 'fill-outline-color', '#a9a49d');
+    st.layers.forEach(function (l) {
+      if (l.type !== 'line' || !/^(road|bridge|tunnel)_/.test(l.id) || /rail|path|pedestrian/.test(l.id)) return;
+      setP(l.id, 'line-color', /casing/.test(l.id) ? '#9c9c9c' : '#ffffff');
+    });
+    ['road_path_pedestrian', 'bridge_path_pedestrian', 'tunnel_path_pedestrian'].forEach(function (id) { setP(id, 'line-color', '#8f8f8f'); });
+    setP('road_major_rail', 'line-color', '#4a4a4a'); setP('road_major_rail', 'line-width', 3.4);
+    setP('road_major_rail_hatching', 'line-color', '#ffffff'); setP('road_major_rail_hatching', 'line-width', 2);
+    setP('road_major_rail_hatching', 'line-dasharray', [3, 3]);
+    setP('bridge_major_rail', 'line-color', '#4a4a4a'); setP('bridge_major_rail_hatching', 'line-color', '#ffffff');
+
+    var before = 'aeroway_fill';  // 区域は道路の下（道路網が読めるように）
+    // 洪水浸水想定区域（公表時の配色のまま）
+    map.addSource('flood', { type: 'image', url: CFG.floodUrl, coordinates: CFG.corners });
+    map.addLayer({ id: 'flood', type: 'raster', source: 'flood',
+      paint: { 'raster-opacity': CFG.floodOpacity, 'raster-resampling': 'linear', 'raster-fade-duration': 0 } }, before);
+    // 土砂災害警戒区域等（輪郭の多角形）。警戒＝黄の薄塗り、特別警戒＝赤の薄塗り、種類＝模様、輪郭の太さでも区別
+    Object.keys(PAT).forEach(function (id) { addPattern(id, PAT[id]); });
+    map.addSource('dosha', { type: 'geojson', data: CFG.dosha, tolerance: 0.2, buffer: 64 });
+    var S = CFG.doshaStyle;
+    map.addLayer({ id: 'k_fill', type: 'fill', source: 'dosha', filter: ['==', ['get', 'cls'], 'K_all'],
+      paint: { 'fill-color': S.keikai.fill, 'fill-opacity': S.keikai.opacity, 'fill-antialias': false } }, before);
+    map.addLayer({ id: 't_fill', type: 'fill', source: 'dosha', filter: ['==', ['get', 'cls'], 'T_all'],
+      paint: { 'fill-color': S.tokubetsu.fill, 'fill-opacity': S.tokubetsu.opacity, 'fill-antialias': false } }, before);
+    C.legend.dosha.forEach(function (d) {
+      map.addLayer({ id: 'pat_' + d.id, type: 'fill', source: 'dosha', filter: ['==', ['get', 'cls'], 'K_' + d.id],
+        paint: { 'fill-pattern': 'pat-' + d.id, 'fill-antialias': false } }, before);
+    });
+    map.addLayer({ id: 'k_line', type: 'line', source: 'dosha', filter: ['==', ['get', 'cls'], 'K_all'],
+      paint: { 'line-color': S.keikai.line, 'line-width': S.keikai.lineWidth } }, before);
+    map.addLayer({ id: 't_line', type: 'line', source: 'dosha', filter: ['==', ['get', 'cls'], 'T_all'],
+      paint: { 'line-color': S.tokubetsu.line, 'line-width': S.tokubetsu.lineWidth } }, before);
+    // 湖と川は区域の上に描き直す（湖面に色が乗らないように）
+    map.addLayer({ id: 'waterway_mask', type: 'line', source: 'openmaptiles', 'source-layer': 'waterway',
+      filter: ['!=', ['get', 'brunnel'], 'tunnel'],
+      paint: { 'line-color': '#5f97d1', 'line-width': ['interpolate', ['linear'], ['zoom'], 13, 1.2, 17, 4] } }, before);
+    map.addLayer({ id: 'water_mask', type: 'fill', source: 'openmaptiles', 'source-layer': 'water', paint: { 'fill-color': '#b7cfec' } }, before);
+    // 町が設けた立入禁止区域（法の区域とは別の記号: 赤の×模様と破線）
+    map.addSource('ban', { type: 'geojson', data: { type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [C.ban.polygon] } } });
+    map.addLayer({ id: 'ban_fill', type: 'fill', source: 'ban', paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.55 } });
+    map.addLayer({ id: 'ban_pat', type: 'fill', source: 'ban', paint: { 'fill-pattern': 'pat-ban' } });
+    map.addLayer({ id: 'ban_line', type: 'line', source: 'ban', paint: { 'line-color': '#a8001c', 'line-width': 2.2, 'line-dasharray': [3, 1.6] } });
+    map.addSource('trail', { type: 'geojson', data: { type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: C.ban.trail } } });
+    map.addLayer({ id: 'trail', type: 'line', source: 'trail', paint: { 'line-color': '#7a1020', 'line-width': 1.8, 'line-dasharray': [1.2, 1.2] } });
+  });
+
+  // 枠の外（端から4px 以内を含む）の点には描かない（Web と A3 で表示範囲が違うため）
+  function inFrame(lng, lat) {
+    var p = map.project([lng, lat]), el = document.getElementById('mapwrap');
+    var ok = p.x >= 4 && p.y >= 4 && p.x <= el.clientWidth - 4 && p.y <= el.clientHeight - 4;
+    if (!ok) (window.__state.skipped = window.__state.skipped || []).push([lng, lat]);
+    return ok;
+  }
+  function addDiv(cls, html, lng, lat) {
+    var p = map.project([lng, lat]), d = document.createElement('div');
+    d.className = cls; d.innerHTML = html; d.style.left = p.x + 'px'; d.style.top = p.y + 'px';
+    document.getElementById('overlay').appendChild(d); return d;
+  }
+  function hav(a, b) {
+    var R = 6371008.8, r = Math.PI / 180, dl = (b.lat - a.lat) * r, dg = (b.lng - a.lng) * r;
+    var h = Math.sin(dl / 2) * Math.sin(dl / 2) + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dg / 2) * Math.sin(dg / 2);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+  function drawOverlay() {
+    var ov = document.getElementById('overlay'); ov.innerHTML = '';
+    C.towns.forEach(function (t) {
+      if (!inFrame(t.lng, t.lat)) return;
+      var d = addDiv('lbl town', esc(t.name), t.lng, t.lat); d.dataset.name = t.name;
+      d.style.transform = 'translate(-50%,-50%)';
+    });
+    C.labels.forEach(function (l) {
+      if (!inFrame(l.lng, l.lat)) return;
+      var d = addDiv('lbl ' + l.kind, esc(l.name), l.lng, l.lat), ang = l.angle || 0; d.dataset.name = l.name;
+      if (l.along) {
+        var a = map.project([l.along[0], l.along[1]]), b = map.project([l.along[2], l.along[3]]);
+        ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI; if (ang > 90) ang -= 180; if (ang < -90) ang += 180;
+      }
+      d.style.transform = 'translate(-50%,-50%) rotate(' + ang + 'deg)';
+    });
+    C.stationMarks.forEach(function (m) { addDiv('stmark', '', m.lng, m.lat); });
+    C.shelters.concat([Object.assign({ kind: 'hq' }, C.hq)]).forEach(function (s) {
+      if (!inFrame(s.lng, s.lat)) { window.__state.missingShelters = (window.__state.missingShelters || []).concat([s.no]); return; }
+      var d = addDiv('shelter ' + s.kind, '', s.lng, s.lat); d.dataset.name = s.short;
+      var ic = '<span class="ic">' + esc(s.no) + '</span>', nm = '<span class="nm">' + esc(s.short) + '</span>';
+      if (s.side === 'l') { d.innerHTML = nm + ic; d.style.transform = 'translate(calc(-100% + 10.5px),-50%)'; }
+      else { d.innerHTML = ic + nm; d.style.transform = 'translate(-10.5px,-50%)'; }
+    });
+    // 縮尺（画面の 100px を実距離に換算）
+    var el = document.getElementById('mapwrap'), h = el.clientHeight;
+    var a = map.unproject([20, h - 40]), b = map.unproject([120, h - 40]);
+    var mpp = hav(a, b) / 100, target = view.scaleBarMeters || 500, w = target / mpp;
+    document.getElementById('scalebar').style.width = w + 'px';
+    document.getElementById('scaleticks').style.width = w + 'px';
+    document.getElementById('scaleticks').innerHTML = '<span>0</span><span>' + target / 2 + '</span><span>' + target + 'm</span>';
+    var denom = mpp / (0.0254 / 96);
+    document.getElementById('scaletxt').textContent = CFG.mode === 'a3' ? ('縮尺 1:' + (Math.round(denom / 100) * 100).toLocaleString('ja-JP') + '（A3判で印刷したとき）') : '';
+    window.__state.scaleDenom = Math.round(denom); window.__state.zoom = map.getZoom();
+    var bb = map.getBounds(); window.__state.view = [bb.getWest(), bb.getSouth(), bb.getEast(), bb.getNorth()].map(function (v) { return +v.toFixed(5); });
+  }
+
+  // ---- 凡例の見本（SVG。地図と同じ色・模様。PDF では線のまま） ----
+  var swId = 0;
+  function patDef(id, p, scale) {
+    var s = p.size * scale, w = p.width * scale, lines = '';
+    if (p.kind === 'slash' || p.kind === 'cross') lines += '<path d="M' + (-s) + ',' + s + 'L0,0M0,' + s + 'L' + s + ',0M' + s + ',' + s + 'L' + (2 * s) + ',0" stroke="' + p.color + '" stroke-width="' + w + '"/>';
+    if (p.kind === 'back' || p.kind === 'cross') lines += '<path d="M' + (-s) + ',0L0,' + s + 'M0,0L' + s + ',' + s + 'M' + s + ',0L' + (2 * s) + ',' + s + '" stroke="' + p.color + '" stroke-width="' + w + '"/>';
+    if (p.kind === 'vert') lines += '<path d="M' + (s / 2) + ',0L' + (s / 2) + ',' + s + '" stroke="' + p.color + '" stroke-width="' + w + '"/>';
+    if (p.kind === 'horiz') lines += '<path d="M0,' + (s / 2) + 'L' + s + ',' + (s / 2) + '" stroke="' + p.color + '" stroke-width="' + w + '"/>';
+    return '<pattern id="' + id + '" width="' + s + '" height="' + s + '" patternUnits="userSpaceOnUse">' + lines + '</pattern>';
+  }
+  function swatch(w, h, o) {  // o: {fill, opacity, pattern, line, lineWidth, dash}
+    var id = 'sw' + (++swId), defs = '', body = '';
+    body += '<rect x="0" y="0" width="' + w + '" height="' + h + '" fill="#f3f2ee"/>';
+    (o.fills || []).forEach(function (f) { body += '<rect x="0" y="0" width="' + w + '" height="' + h + '" fill="' + f[0] + '" fill-opacity="' + f[1] + '"/>'; });
+    if (o.pattern) { defs += patDef(id + 'p', PAT[o.pattern], 1); body += '<rect x="0" y="0" width="' + w + '" height="' + h + '" fill="url(#' + id + 'p)"/>'; }
+    var lw = o.lineWidth || 0.8;
+    body += '<rect x="' + lw / 2 + '" y="' + lw / 2 + '" width="' + (w - lw) + '" height="' + (h - lw) + '" fill="none" stroke="' + (o.line || '#888') + '" stroke-width="' + lw + '"' + (o.dash ? ' stroke-dasharray="' + o.dash + '"' : '') + '/>';
+    return '<svg class="sw" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' + (defs ? '<defs>' + defs + '</defs>' : '') + body + '</svg>';
+  }
+  function doshaSwatch(kindId, toku) {
+    var S = CFG.doshaStyle, fills = [[S.keikai.fill, S.keikai.opacity]];
+    if (toku) fills.push([S.tokubetsu.fill, S.tokubetsu.opacity]);
+    return swatch(42, 14, { fills: fills, pattern: 'pat-' + kindId, line: toku ? S.tokubetsu.line : S.keikai.line, lineWidth: toku ? S.tokubetsu.lineWidth : S.keikai.lineWidth });
+  }
+  function legendHtml() {
+    var L = C.legend, h = '<div class="lg"><div class="cols"><div>';
+    h += '<h3>洪水浸水想定区域（想定最大規模）</h3><div class="fl">';
+    L.flood.forEach(function (f) {
+      var m = f.inTown ? '' : ' muted';
+      h += swatch(30, 13, { fills: [[f.color, CFG.floodOpacity]], line: '#999' }) + '<span class="' + m + '">' + esc(f.range) + '</span><span class="' + m + '">' + esc(f.desc + (f.inTown ? '' : L.outsideNote)) + '</span>';
+    });
+    h += '</div></div><div><h3>土砂災害警戒区域等</h3><div class="dg"><span></span><span class="hd">警戒区域</span><span class="hd">特別警戒区域</span>';
+    L.dosha.forEach(function (d) {
+      h += '<span>' + esc(d.name) + '</span>' + doshaSwatch(d.id, false) + (d.tokubetsuInTown ? doshaSwatch(d.id, true) : '<span class="na">' + esc(L.outsideNote) + '</span>');
+    });
+    h += '</div><p class="hint">種類は模様（土石流＝右上がりの斜線、急傾斜地の崩壊＝縦線、地すべり＝右下がりの斜線）、区域は色と輪郭の太さで区別しています。</p></div></div>';
+    h += '<h3>避難所・その他</h3>';
+    h += '<div class="row"><span class="ico">1</span>' + esc(L.shelterIndoor) + '</div>';
+    h += '<div class="row"><span class="ico outdoor">6</span>' + esc(L.shelterOutdoor) + '</div>';
+    h += '<div class="row"><span class="ico hq">本</span>' + esc(L.hq) + '</div>';
+    h += '<div class="row">' + swatch(30, 13, { fills: [['#ffffff', 0.55]], pattern: 'pat-ban', line: '#a8001c', lineWidth: 1.6, dash: '3 1.6' }) + '<span><b>' + esc(C.ban.name) + '</b>　' + esc(C.ban.reason) + '</span></div>';
+    h += '</div>';
+    return h;
+  }
+  function mk(v) { return v === '×' ? '<td class="x">×</td>' : '<td>' + esc(v) + '</td>'; }
+  function sideHtml() {
+    var rows = C.shelters.map(function (s) {
+      return '<tr><td><span class="ico' + (s.kind === 'outdoor' ? ' outdoor' : '') + '">' + esc(s.no) + '</span></td><td class="l nw">' + esc(s.name) + '</td><td class="nw">' + esc(s.town) + '</td>' +
+        mk(s.flood) + mk(s.dosha) + mk(s.quake) + '<td class="l">' + esc(s.noteShort != null ? s.noteShort : (s.note || '')) + '</td></tr>';
+    }).join('');
+    var hq = C.hq;
+    rows += '<tr><td><span class="ico hq">本</span></td><td class="l nw">' + esc(hq.name) + '</td><td class="nw">' + esc(hq.town) + '</td><td colspan="4" class="l">災害時に町の対策本部を置きます</td></tr>';
+    return '' +
+      '<div class="box"><h2>凡例</h2>' + legendHtml() + '</div>' +
+      '<div class="box"><h2>指定避難所・指定緊急避難場所の一覧</h2><table class="sh"><thead><tr><th>番号</th><th>名称</th><th>所在</th><th>洪水</th><th>土砂</th><th>地震</th><th>備考</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<p class="foot">' + esc(C.legend.symbolNote) + '</p></div>' +
+      '<div class="box notes"><h2>地図の見方と避難のポイント</h2>' + C.notes.map(function (t) { return '<p>・' + esc(t) + '</p>'; }).join('') + '</div>' +
+      '<div class="box info"><h2>情報の入手と問い合わせ</h2>' + C.info.map(function (t) { return '<p>・' + esc(t) + '</p>'; }).join('') +
+      '<p class="tel">問い合わせ　' + esc(C.meta.publisher + ' ' + C.meta.dept) + '（' + esc(C.meta.deptPlace) + '）　電話 ' + esc(C.meta.telDept) + '</p></div>';
+  }
+  function titleHtml() {
+    var M = C.meta;
+    return '<h1>' + esc(M.title) + '</h1><span class="sub">' + esc(M.subtitle) + '</span>' +
+      '<span class="pub"><b>' + esc(M.made) + '</b>　発行 ' + esc(M.publisher) + '（' + esc(M.dept) + '）<br>' + esc(M.address) + '<br>電話 ' + esc(M.tel) + '</span>';
+  }
+
+  map.on('load', function () {
+    var done = false;
+    function finish() {
+      if (done) return; done = true;
+      drawOverlay();
+      if (CFG.mode === 'a3') {
+        document.getElementById('title').innerHTML = titleHtml();
+        document.getElementById('side').innerHTML = sideHtml();
+        var S = C.sources;
+        document.getElementById('srcstrip').innerHTML = '<p>' + esc(S.source) + '</p><p>加工：' + esc(S.processing) + '</p><p>' + nowrapAttrib(esc(S.basemap)) + '</p><p class="dis">' + esc(C.disclaimer) + '</p>';
+      } else {
+        document.getElementById('webstrip').innerHTML = '<p>' + nowrapAttrib(esc(C.sources.short)) + '　<span class="nw">' + esc(C.meta.publisher + ' ' + C.meta.made) + '</span></p><p class="dis">' + esc(C.disclaimer) + '</p>';
+      }
+      window.__state.ready = true;
+    }
+    map.once('idle', function () { setTimeout(finish, 1500); });
+    setTimeout(finish, 90000);
+  });
+
+  // 2回描きの1回目のあと: 地図（WebGL）を画像に差し替える
+  window.__useMapImage = function (url) {
+    var img = document.getElementById('mapimg');
+    return new Promise(function (res, rej) {
+      img.onload = function () { res(img.naturalWidth); }; img.onerror = rej;
+      img.src = url; img.style.display = 'block';
+      document.getElementById('map').style.visibility = 'hidden';
+    });
+  };
+  // 検査: 文字・記号の箱の重なり、地図枠からのはみ出し、右欄・出典帯のはみ出し
+  window.__layoutCheck = function () {
+    var frame = document.getElementById('mapwrap').getBoundingClientRect();
+    var els = Array.prototype.slice.call(document.querySelectorAll('#overlay .lbl, #overlay .shelter, #north, #scale'));
+    var boxes = els.map(function (e) { var r = e.getBoundingClientRect(); return { name: e.dataset.name || e.id || e.className, l: r.left, t: r.top, r: r.right, b: r.bottom }; });
+    var overlaps = [], outside = [];
+    for (var i = 0; i < boxes.length; i++) {
+      var A = boxes[i];
+      if (A.l < frame.left || A.t < frame.top || A.r > frame.right || A.b > frame.bottom) outside.push(A.name);
+      for (var j = i + 1; j < boxes.length; j++) {
+        var B = boxes[j], w = Math.min(A.r, B.r) - Math.max(A.l, B.l), h = Math.min(A.b, B.b) - Math.max(A.t, B.t);
+        if (w > 0.5 && h > 0.5) overlaps.push(A.name + ' × ' + B.name + ' (' + w.toFixed(1) + 'x' + h.toFixed(1) + ')');
+      }
+    }
+    var over = [];
+    ['side', 'srcstrip'].forEach(function (id) { var e = document.getElementById(id); if (e && e.offsetParent !== null && e.scrollHeight > e.clientHeight + 1) over.push(id + ' ' + e.scrollHeight + '>' + e.clientHeight); });
+    var t = document.getElementById('title'); if (t && t.offsetParent !== null && t.scrollWidth > t.clientWidth + 1) over.push('title ' + t.scrollWidth + '>' + t.clientWidth);
+    return { overlaps: overlaps, outside: outside, overflow: over };
+  };
+  // 診断: 指定の点の近くの建物・公園・土地利用（町民センター等の置き場所を決めるため）
+  window.__diag = function (pts, radius) {
+    var out = [];
+    ['building', 'park', 'landuse', 'landcover'].forEach(function (layer) {
+      map.querySourceFeatures('openmaptiles', { sourceLayer: layer }).forEach(function (f) {
+        var g = f.geometry, rings = g.type === 'Polygon' ? [g.coordinates[0]] : g.type === 'MultiPolygon' ? g.coordinates.map(function (p) { return p[0]; }) : [];
+        rings.forEach(function (ring) {
+          var cx = 0, cy = 0; ring.forEach(function (p) { cx += p[0]; cy += p[1]; }); cx /= ring.length; cy /= ring.length;
+          pts.forEach(function (pt, k) {
+            var d = hav({ lng: pt[0], lat: pt[1] }, { lng: cx, lat: cy });
+            if (d <= radius) out.push({ pt: k, layer: layer, cls: f.properties.class || f.properties.subclass || '', d: Math.round(d), c: [+cx.toFixed(6), +cy.toFixed(6)], n: ring.length });
+          });
+        });
+      });
+    });
+    var seen = {}; out = out.filter(function (o) { var k = o.layer + o.c.join(); if (seen[k]) return false; seen[k] = 1; return true; });
+    out.sort(function (a, b) { return a.pt - b.pt || a.d - b.d; });
+    return out;
+  };
+})();
+</script>
+</body>
+</html>

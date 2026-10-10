@@ -1,0 +1,14 @@
+.sheet { position: absolute; left: 14mm; right: 14mm; top: 12mm; bottom: 14mm; }
+.fullscan { width: 210mm; height: 297mm; object-fit: fill; }
+h1 { font-family: "KN Mincho"; font-weight: 400; font-size: 18pt; color: #1a4d80; }
+h2 { font-size: 11pt; margin: 4mm 0 2mm; color: #1a4d80; }
+p, td, th { font-size: 9.5pt; }
+table.data { margin-top: 3mm; }
+table.data th, table.data td { border: 0.25mm solid #8b98a8; padding: 1.6mm 2mm; vertical-align: top; text-align: left; }
+table.data th { width: 32%; background: #e8f0fa; color: #1a4d80; }
+.memo-head { border-bottom: 0.6mm solid #1a1a1a; padding-bottom: 2mm; margin-bottom: 3mm; }
+.memo-head .org { font-size: 10pt; font-weight: 700; }
+.line { margin: 1.4mm 0; font-size: 10.5pt; }
+.bar { display: block; width: 132mm; height: 3.6mm; background: #000; margin: 1.5mm 0; }
+.stamp { float: right; width: 16mm; height: 16mm; border: 0.5mm solid #1a1a1a; border-radius: 50%; text-align: center; line-height: 16mm; font-size: 9pt; }
+.foot { position: absolute; left: 14mm; right: 14mm; bottom: 10mm; font-size: 8pt; }

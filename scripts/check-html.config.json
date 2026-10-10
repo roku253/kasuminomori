@@ -1,0 +1,161 @@
+{
+  "_説明": [
+    "scripts/check-html.mjs の期待値（正本）。確定版 v3 の受け入れ条件 K のうち、HTML を静的に読んで判定するもの。",
+    "期待値は手で書く（ジェネレータの設定から作らない。同じ誤りが両方に入るのを防ぐ）。",
+    "enforce: true の規則だけが終了コードに効く。false は「保留」として結果を出すだけ（段階2で本文が変わるもの）。",
+    "段階2のあと: enforceAll を true にする（または各規則の enforce を true に）。一時的には --strict で全規則を有効にして回せる。",
+    "scopes: text＝画面の文字（body の可視テキスト。script/style/noscript を除く。閉じたメガメニューも含む）、attr＝alt・title・aria-label・placeholder 属性と SVG の title、title＝文書の <title>、meta＝description・og:*・twitter:* の content、payload＝RSC ペイロード（self.__next_f）、searchIndex＝search-index.json、sitemap＝sitemap.xml。",
+    "照合は NFKC（全角英数→半角）で行う。searchIndex は片仮名を平仮名に寄せてから照合する（索引がそう作られているため）。",
+    "allow: 誤検出を理由つきで許す（route は前方一致に * が使える）。例外を足すときは reason に根拠を書くこと。"
+  ],
+  "basePath": "/kasuminomori",
+  "siteOrigin": "https://roku253.github.io",
+  "devPort": 3456,
+  "enforceAll": true,
+  "exclude": ["/_next/*", "/playwright-report/*", "/404/*"],
+  "breadcrumbLabel": "パンくず",
+
+  "forbidden": [
+    {
+      "id": "K-12",
+      "label": "画面に出さない語（架空表示・旧称・誤った地名や校名・旧い電話番号の形・旧型の見出し・プレースホルダ）",
+      "enforce": false,
+      "scopes": ["text", "attr", "title"],
+      "words": [
+        "フィクション", "架空", "謎解き", "デモ用", "示意", "参考画像", "市政",
+        "霞ノ杜町立霞ノ杜小学校", "町立霞ノ杜小学校", "各小学校", "三校区",
+        "三日月町", "杉並ヶ岡", "霞ヶ丘", "孤塚", "旧整備区域", "避難勧告", "吾妻郡",
+        "029-", "0123-", "一覧・詳細", "観光協会トップ", "三日月庁舎", "広報誌"
+      ],
+      "wordsIgnoreCase": ["◯◯", "○○", "△△", "××", "XX", "TODO", "ダミー", "lorem"],
+      "allow": []
+    },
+    {
+      "id": "K-12-meta",
+      "label": "meta・OGP にも「市政」を出さない（架空の注記は meta だけに置く＝K-12-note）",
+      "enforce": true,
+      "scopes": ["meta"],
+      "words": ["市政", "【フィクション】", "デモ表示"]
+    },
+    {
+      "id": "K-07",
+      "label": "PDF だけに置く語（画面・属性・meta・RSC ペイロード・検索索引・sitemap のどこにも出さない）",
+      "enforce": false,
+      "_段階2": "今は議会だより・地域安全通信のページ本文（旧い抜粋）に出ている。WP3a が書誌だけの一覧にしたら有効にする",
+      "scopes": ["text", "attr", "title", "meta", "payload", "searchIndex", "sitemap"],
+      "words": ["町長室に照会", "本件は終了", "児童3名", "負傷・搬送", "事実確認の申し入れ", "詳細な記載"]
+    },
+    {
+      "id": "K-08",
+      "label": "題名・説明文に事件の語を出さない（児童は数＋名・事件の語の近く、事故は交通事故以外を禁止）",
+      "enforce": true,
+      "scopes": ["title", "meta"],
+      "words": ["負傷", "搬送", "神隠し", "黒塗り", "行方不明", "失踪"],
+      "patterns": ["児童[0-9〇一二三四五六七八九十]+名", "児童.{0,8}(負傷|搬送|事故|立入)", "(?<!交通)事故"]
+    },
+    {
+      "id": "v3-B",
+      "label": "HTML に「黒塗り」の語を書かない（部分開示まで。確定版 v3 §1 B）",
+      "enforce": false,
+      "scopes": ["text", "attr", "title", "meta"],
+      "words": ["黒塗り"]
+    }
+  ],
+
+  "linkSchemes": {
+    "id": "K-12-tel",
+    "label": "電話・メールをリンクにしない（tel: と mailto: が0）",
+    "enforce": true,
+    "schemes": ["tel:", "mailto:"]
+  },
+
+  "metaNote": {
+    "id": "K-12-note",
+    "label": "架空の注記は meta の説明文だけに1回（description・og:description・twitter:description）",
+    "enforce": true,
+    "text": "架空の町",
+    "fields": ["description", "og:description", "twitter:description"],
+    "count": 1
+  },
+
+  "counts": [
+    {
+      "id": "K-09",
+      "label": "「さとう ゆう」（空白を除いて照合。佐藤 ゆう も含む）はサイト全体で1回、2019年の過去記事（絵画展）に",
+      "enforce": false,
+      "scopes": ["text", "attr", "title"],
+      "ignoreSpaces": true,
+      "patterns": ["さとうゆう", "佐藤ゆう"],
+      "expected": 1,
+      "where": { "/blog/2019/": 1 },
+      "_段階2": "WP3a が令和元年の過去記事の route を変えたら where を合わせる"
+    },
+    {
+      "id": "K-10",
+      "label": "「渡辺」はサイト全体で2か所（町長の部屋の歴代町長表、2019年9月の感謝状の記事）",
+      "enforce": false,
+      "scopes": ["text", "attr", "title"],
+      "ignoreSpaces": true,
+      "patterns": ["渡辺"],
+      "expected": 2,
+      "where": { "/shisei/chijitsu/": 1, "/blog/2019/": 1 },
+      "_段階2": "WP3a が令和元年の過去記事の route を変えたら where を合わせる"
+    }
+  ],
+
+  "required": [
+    {
+      "id": "K-10-mayor",
+      "label": "町長の部屋に現町長「藤原 誠一」と前町長「渡辺 康男」",
+      "enforce": false,
+      "route": "/shisei/chijitsu/",
+      "ignoreSpaces": true,
+      "texts": ["藤原誠一", "渡辺康男"]
+    }
+  ],
+
+  "storyLinks": {
+    "id": "K-11",
+    "label": "物語ページ同士の相互リンクなし（確定版 v3 ★: 本文・関連するページ・ローカルナビ＝<main> の中のリンクを数え、パンくずと共通部〔ヘッダー・メガメニュー・フッター〕は除く）",
+    "enforce": false,
+    "groups": [
+      {
+        "id": "archive",
+        "label": "資料室（議会だより・地域安全通信・情報提供資料）",
+        "routes": ["/documents/*"],
+        "files": ["/pdf/gikai-r1-09.pdf", "/pdf/anzen-r1-09.pdf", "/pdf/anzen-r1-11.pdf", "/pdf/joho-teikyo-01.pdf"]
+      },
+      {
+        "id": "past",
+        "label": "町の歴史・過去の記事（一覧 /blog/ と年別。令和元年は /blog/2019/）",
+        "routes": ["/history/", "/blog/*"],
+        "files": [],
+        "_段階2": "サイト側の規則 src/lib/navigation.ts の STORY_LINK_GROUPS（/blog/ 前方一致・/history/）と同じ範囲。WP3a が過去の記事を別の route に置いたら両方を合わせる"
+      }
+    ],
+    "forbidden": [
+      { "from": "past", "to": "archive" },
+      { "from": "archive", "to": "past" }
+    ],
+    "commonNav": {
+      "id": "K-11-common",
+      "label": "共通ナビ（ヘッダー・メガメニュー・フッター＝<main> の外）とサイトマップは物語ページへ直接リンクしない（入口の町政情報・資料室・町の歴史は可）",
+      "enforce": true,
+      "pages": ["/sitemap/"],
+      "_説明": "過去の記事（/blog/ 以下）は共通の案内に出さない（お知らせのリニューアル告知から辿る＝物語の導線。navigation.ts の LOCAL_NAV_EXCLUDE・サイトマップと同じ）",
+      "targets": [
+        "/documents/*", "/blog/*", "/history/#*",
+        "/pdf/gikai-r1-09.pdf", "/pdf/anzen-r1-09.pdf", "/pdf/anzen-r1-11.pdf", "/pdf/joho-teikyo-01.pdf"
+      ],
+      "allow": ["/documents/"]
+    }
+  },
+
+  "structure": {
+    "id": "K-20",
+    "label": "<main> が1つ、下層の <title> は「h1｜霞ノ杜町」",
+    "enforce": true,
+    "titleSuffix": "｜霞ノ杜町",
+    "skipTitleCheck": ["/", "/404.html"]
+  }
+}

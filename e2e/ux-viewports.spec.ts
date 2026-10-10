@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { isOnTop } from "./helpers";
 import { sitePath } from "./paths";
 import fs from "fs";
 import path from "path";
@@ -32,7 +33,12 @@ test.describe("トップ — viewport 見え方記録", () => {
     const menuBtn = page.getByRole("button", { name: "メニュー" });
     await menuBtn.click();
     await expect(menuBtn).toHaveAttribute("aria-expanded", "true");
-    await expect(page.getByText("よく使うページ")).toBeHidden();
+    // 段階1b: メニューのパネル（先頭に検索窓）が最前面で、トップの部品は背景の下に隠れる
+    const mega = page.getByRole("navigation", { name: "サイトメニュー" });
+    await expect(mega).toBeVisible();
+    await expect(mega.getByRole("searchbox")).toBeVisible();
+    expect(await isOnTop(mega)).toBe(true);
+    expect(await isOnTop(page.getByText("よく使うページ", { exact: true }))).not.toBe(true);
     await page.screenshot({ path: path.join(OUT_DIR, "top-375x812-mega-open.png") });
   });
 });

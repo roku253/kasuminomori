@@ -1,0 +1,75 @@
+/* 地域安全通信（回覧。A4・両面1枚＝2ページ。墨＋1色。白黒の複写でも読めること） */
+:root { --ac: #1f4b7a; --ac-tint: #e6edf5; --ac-tint2: #f3f6fa; --rule: #8b98a8; }
+body { font-size: 9.4pt; line-height: 1.6; }
+.page { padding: 10mm 12mm 0 12mm; }
+.sheet { position: absolute; left: 12mm; right: 12mm; top: 10mm; bottom: 15mm; display: flex; flex-direction: column; overflow: hidden; }
+
+/* 題字と回覧欄 */
+.mast { display: grid; grid-template-columns: 1fr 58mm; gap: 4mm; align-items: stretch; }
+.mast-title { background: var(--ac); color: #fff; padding: 3.2mm 5mm 3mm; border-radius: 1.2mm; display: flex; flex-direction: column; justify-content: space-between; }
+.mast-title .tag { font-size: 8.6pt; letter-spacing: 0.08em; opacity: 0.95; }
+.mast-title h1 { font-size: 30pt; letter-spacing: 0.14em; line-height: 1.12; margin: 0.6mm 0 0.4mm; }
+.mast-title .issue { display: flex; gap: 4mm; align-items: baseline; font-size: 9.6pt; font-weight: 700; }
+.mast-title .issue .no { font-size: 13pt; }
+.kairan { border: 0.5mm solid #1a1a1a; border-radius: 1mm; padding: 1.6mm 2mm 2mm; display: flex; flex-direction: column; }
+.kairan .k-head { display: flex; justify-content: space-between; align-items: baseline; }
+.kairan .k-head .k-big { font-size: 15pt; font-weight: 700; letter-spacing: 0.3em; }
+.kairan .k-head .k-sub { font-size: 7.4pt; }
+.kairan table { margin-top: 1.4mm; flex: 1; table-layout: fixed; }
+.kairan th, .kairan td { border: 0.3mm solid #444; text-align: center; font-size: 7.6pt; font-weight: 400; }
+.kairan th { height: 4.6mm; background: #eee; }
+.kairan td { height: 11mm; }
+.pubinfo { margin-top: 1.8mm; font-size: 8pt; display: flex; justify-content: space-between; gap: 3mm; border-bottom: 0.4mm solid #1a1a1a; padding-bottom: 1.2mm; }
+.pubinfo b { font-weight: 700; }
+
+/* 記事 */
+.art { margin-top: 3.6mm; }
+.art-h { display: flex; align-items: center; gap: 2.4mm; font-size: 13.5pt; line-height: 1.3; padding: 1.4mm 0 1.4mm 3mm; border-left: 2.2mm solid var(--ac); background: var(--ac-tint); }
+.art-h .kicker { font-size: 8.4pt; font-weight: 700; color: #fff; background: #1a1a1a; padding: 0.3mm 1.8mm; border-radius: 0.6mm; letter-spacing: 0.05em; white-space: nowrap; }
+.art-h.small { font-size: 11.6pt; padding: 1mm 0 1mm 2.6mm; border-left-width: 1.8mm; }
+.art-body { margin-top: 2.2mm; }
+.art-sub { margin-top: 1.6mm; font-weight: 700; font-size: 10pt; }
+.art-sub + .art-body { margin-top: 1.2mm; }
+.grid2.row { margin-top: 0; }
+.grid2.row > .col > .art { margin-top: 3.6mm; }
+.art-body > * + * { margin-top: 1.5mm; }
+.art-body p { text-align: justify; }
+.top .art-h { font-size: 15pt; padding: 2mm 0 2mm 3.4mm; }
+.top-grid { display: grid; grid-template-columns: 1fr 78mm; gap: 5mm; margin-top: 2.6mm; }
+.top-grid .art-body { margin-top: 0; }
+.lead { font-size: 10.2pt; line-height: 1.7; }
+.box { border: 0.35mm solid #1a1a1a; border-radius: 1mm; padding: 2mm 2.6mm 2.2mm; }
+.box.tint { background: var(--ac-tint2); border-color: var(--rule); }
+.box.warn { border-width: 0.6mm; }
+.box-title { font-weight: 700; font-size: 10pt; margin-bottom: 1mm; }
+.olist li, .ulist li, .checks li { display: flex; gap: 1.4mm; }
+.olist li + li, .ulist li + li, .checks li + li { margin-top: 0.8mm; }
+.olist .mark, .ulist .mark, .checks .mark { flex: none; font-weight: 700; }
+.note { font-size: 8pt; color: #333; }
+figure.fig { border: 0.3mm solid var(--rule); border-radius: 1mm; padding: 1.6mm; background: #fff; }
+figure.fig svg { display: block; width: 100%; height: auto; }
+figure.fig figcaption { font-size: 7.8pt; line-height: 1.45; margin-top: 1.2mm; }
+
+table.data th, table.data td { border: 0.3mm solid #555; padding: 0.7mm 1.6mm; font-size: 8.6pt; line-height: 1.4; vertical-align: top; text-align: left; }
+table.data thead th { background: var(--ac-tint); font-weight: 700; text-align: center; }
+table.data tbody th { background: var(--ac-tint2); font-weight: 700; white-space: nowrap; }
+table.data td.r { text-align: right; white-space: nowrap; }
+table.data td.c { text-align: center; }
+table.data caption { caption-side: top; text-align: left; font-weight: 700; font-size: 8.8pt; padding-bottom: 0.8mm; }
+dl.pairs > div { display: grid; grid-template-columns: 24mm 1fr; gap: 2mm; padding: 0.6mm 0; border-bottom: 0.2mm dotted #999; }
+dl.pairs dt { font-weight: 700; }
+
+/* 2 ページ目 */
+.running { display: flex; justify-content: space-between; align-items: baseline; font-size: 8pt; border-bottom: 0.4mm solid var(--ac); padding-bottom: 1mm; }
+.running b { font-size: 9.6pt; color: var(--ac); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 6mm; }
+.grid2 > .col > .art:first-child { margin-top: 3.4mm; }
+.spacer { flex: 0; height: 3mm; }
+.contact { margin-top: 3mm; border: 0.5mm solid #1a1a1a; border-radius: 1.2mm; display: grid; grid-template-columns: 62mm 1fr; }
+.contact .emg { background: #1a1a1a; color: #fff; padding: 2mm 3mm; display: flex; flex-direction: column; justify-content: center; gap: 0.8mm; }
+.contact .emg p { font-size: 9pt; font-weight: 700; }
+.contact .emg .big { font-size: 13pt; letter-spacing: 0.04em; }
+.contact .where { padding: 1.8mm 3mm; font-size: 8.4pt; line-height: 1.5; }
+.contact .where b { font-weight: 700; }
+.colophon { margin-top: 2mm; font-size: 7.4pt; line-height: 1.45; color: #222; border-top: 0.25mm solid #777; padding-top: 1.2mm; display: flex; justify-content: space-between; gap: 4mm; }
+.kaiten { margin-top: 1.6mm; text-align: center; font-size: 9pt; font-weight: 700; letter-spacing: 0.06em; }

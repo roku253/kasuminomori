@@ -1,0 +1,28 @@
+{
+  "path": "sitemap/index.html",
+  "route": "/sitemap/",
+  "layout": "city",
+  "title": "サイトマップ｜霞ノ杜町",
+  "description": "霞ノ杜町公式ホームページのページの一覧です。",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "/"
+    },
+    {
+      "label": "サイトマップ"
+    }
+  ],
+  "related": [],
+  "h1": "サイトマップ",
+  "paragraphs": [
+    "このホームページの主なページを、分類ごとに並べています。",
+    "<div data-kn-tool=\"sitemap\"></div>"
+  ],
+  "owner": "政策推進課 広報情報係",
+  "updated": "2026-04-01",
+  "searchKeywords": [
+    "ページ一覧",
+    "目次"
+  ]
+}

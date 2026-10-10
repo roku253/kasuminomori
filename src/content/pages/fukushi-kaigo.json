@@ -3,7 +3,7 @@
   "route": "/fukushi/kaigo/",
   "layout": "city",
   "title": "介護｜霞ノ杜町",
-  "description": "介護 — 霞ノ杜町公式。【フィクション】",
+  "description": "介護保険、要介護認定、地域包括支援センターの連絡先です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,7 +41,9 @@
   ],
   "h1": "介護",
   "paragraphs": [
-    "要介護認定の申請は福祉課。地域包括支援センター「杜のいろは」が相談を受け付けます。"
+    "介護保険の申請と認定は、保健福祉課介護保険係（役場1階、内線124）です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+  "owner": "保健福祉課 介護保険係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>認定の流れ</h2><ol><li>介護保険係で申請する（本人か家族）</li><li>調査員が自宅を訪ねる</li><li>結果は申請からおおよそ30日で届く</li></ol><h2>サービスの目安</h2><table class=\"data-table\"><thead><tr><th>サービス</th><th>内容</th></tr></thead><tbody><tr><td>訪問介護</td><td>自宅での食事、入浴、掃除</td></tr><tr><td>通所介護</td><td>町民センターのデイサービス。送迎あり</td></tr><tr><td>短期入所</td><td>家族の用事のとき、数日泊まる</td></tr></tbody></table><p>費用は所得によって1割から3割です。夜間に具合が悪くなったときは、119番へ電話してください。</p>"
 }

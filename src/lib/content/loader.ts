@@ -1,34 +1,14 @@
 import type { CityPageContent, ContentManifest } from "./types";
 import manifest from "@/content/manifest.json";
-import copyEnrichment from "@/content/copy-enrichment.json";
 
-type CopyEnrichmentEntry = {
-  description?: string;
-  h1?: string;
-  replaceParagraphs?: boolean;
-  paragraphs?: string[];
-};
-
-const enrichmentMap = copyEnrichment as Record<string, CopyEnrichmentEntry>;
-
-function applyCopyEnrichment(page: CityPageContent): CityPageContent {
-  const extra = enrichmentMap[page.route];
-  if (!extra) return page;
-  const paragraphs = extra.replaceParagraphs
-    ? extra.paragraphs ?? page.paragraphs
-    : [...(page.paragraphs ?? []), ...(extra.paragraphs ?? [])];
-  return {
-    ...page,
-    description: extra.description ?? page.description,
-    h1: extra.h1 ?? page.h1,
-    paragraphs: paragraphs?.length ? paragraphs : page.paragraphs,
-  };
-}
-
+/**
+ * 実行時のページ一覧。manifest.json は src/content/pages/*.json（正本）から
+ * scripts/build-manifest.mjs が作る生成物（npm run dev / build / content で更新）。
+ */
 const pagesMap = new Map<string, CityPageContent>();
 
 for (const p of (manifest as ContentManifest).pages) {
-  pagesMap.set(p.route, applyCopyEnrichment(p));
+  pagesMap.set(p.route, p);
 }
 
 export function getManifest(): ContentManifest {

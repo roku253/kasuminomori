@@ -1,40 +1,38 @@
 "use client";
 
 import { Search } from "lucide-react";
-import Link from "next/link";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { GlassPanel } from "@/components/ui/GlassPanel";
-import searchIndexData from "@/generated/search-index.json";
+import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
+import top from "@/content/data/top.json";
+import { SiteSearchSuggestions } from "@/components/tools/site-search/SiteSearchSuggestions";
+import { SEARCH_UI, useSiteSearch } from "@/components/tools/site-search/useSiteSearch";
 import { sitePath } from "@/lib/site";
-import { searchSiteIndex, type SearchHit, type SearchIndex } from "@/lib/site-search";
 
-const SITE_SEARCH_INDEX = searchIndexData as SearchIndex;
+type Tab = "site" | "procedure";
+const TABS: { id: Tab; label: string }[] = [
+  { id: "site", label: top.search.siteTab },
+  { id: "procedure", label: top.search.procedureTab },
+];
 
+/**
+ * トップの検索（写真の外・白地。UX-04）。「サイト内検索」と「手続きを探す」をタブで切り替える。
+ * サイト内検索は入力中に候補を出し、Enter・ボタンで /search/?q=。手続きは /kurashi/tetsuzuki-search/?q= へ。
+ * タブは矢印キーで切り替えられる（WAI-ARIA のタブの作法）。
+ */
 export function TopSearch() {
-  const [tab, setTab] = useState<"site" | "page">("site");
-  const [query, setQuery] = useState("");
-  const [hits, setHits] = useState<SearchHit[]>([]);
-  const [open, setOpen] = useState(false);
-  const listId = useId();
+  const [tab, setTab] = useState<Tab>("site");
+  const search = useSiteSearch();
+  const { setOpen } = search;
+  const baseId = useId();
+  const statusId = useId();
+  const siteInputId = useId();
+  const procInputId = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
-
-  const runSearch = useCallback((q: string) => {
-    if (!q.trim()) {
-      setHits([]);
-      return;
-    }
-    setHits(searchSiteIndex(SITE_SEARCH_INDEX, q));
-  }, []);
+  const tabRefs = useRef<Record<Tab, HTMLButtonElement | null>>({ site: null, procedure: null });
 
   useEffect(() => {
-    if (tab !== "site") {
-      setHits([]);
-      setOpen(false);
-      return;
-    }
-    const t = window.setTimeout(() => runSearch(query), 120);
-    return () => clearTimeout(t);
-  }, [query, tab, runSearch]);
+    if (tab !== "site") setOpen(false);
+  }, [tab, setOpen]);
 
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
@@ -42,126 +40,123 @@ export function TopSearch() {
     }
     document.addEventListener("mousedown", onDocClick);
     return () => document.removeEventListener("mousedown", onDocClick);
-  }, []);
+  }, [setOpen]);
+
+  function onTabKey(e: KeyboardEvent<HTMLButtonElement>) {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight" && e.key !== "Home" && e.key !== "End") return;
+    e.preventDefault();
+    const i = TABS.findIndex((t) => t.id === tab);
+    const next =
+      e.key === "Home" ? 0 : e.key === "End" ? TABS.length - 1 : (i + (e.key === "ArrowRight" ? 1 : -1) + TABS.length) % TABS.length;
+    setTab(TABS[next].id);
+    tabRefs.current[TABS[next].id]?.focus();
+  }
 
   return (
-    <div ref={rootRef} className="relative h-full min-h-0 w-full">
-      <GlassPanel className="flex h-full min-h-0 flex-col overflow-hidden">
-        <div className="flex h-11 shrink-0 bg-white/20" role="tablist" aria-label="検索の種類">
+    <div
+      ref={rootRef}
+      className="kn-top-search"
+      onKeyDown={(e) => {
+        if (e.key === "Escape" && search.open) {
+          setOpen(false);
+          inputRef.current?.focus();
+        }
+      }}
+    >
+      <h2 className="sr-only">{top.search.heading}</h2>
+      <div className="kn-top-search__tabs" role="tablist" aria-label="検索の種類">
+        {TABS.map((t) => (
           <button
+            key={t.id}
+            ref={(el) => {
+              tabRefs.current[t.id] = el;
+            }}
             type="button"
             role="tab"
-            aria-selected={tab === "site"}
-            className={`h-full flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
-              tab === "site"
-                ? "bg-white/90 font-semibold text-[var(--kasumi-blue)]"
-                : "bg-transparent text-white/90"
-            }`}
-            onClick={() => setTab("site")}
+            id={`${baseId}-tab-${t.id}`}
+            aria-selected={tab === t.id}
+            aria-controls={`${baseId}-panel-${t.id}`}
+            tabIndex={tab === t.id ? 0 : -1}
+            className="kn-top-search__tab"
+            onClick={() => setTab(t.id)}
+            onKeyDown={onTabKey}
           >
-            サイト内検索
+            {t.label}
           </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={tab === "page"}
-            className={`h-full flex-1 border-0 px-3 py-2 text-[11px] cursor-pointer ${
-              tab === "page"
-                ? "bg-white/90 font-semibold text-[var(--kasumi-blue)]"
-                : "bg-transparent text-white/90"
-            }`}
-            onClick={() => setTab("page")}
-          >
-            手続検索
-          </button>
-        </div>
+        ))}
+      </div>
 
-        {tab === "site" ? (
+      {tab === "site" ? (
+        <div role="tabpanel" id={`${baseId}-panel-site`} aria-labelledby={`${baseId}-tab-site`} className="kn-top-search__panel">
           <form
-            className="flex min-h-0 flex-1 bg-white/95 text-[#1a1a1a]"
+            key="site"
+            className="kn-header-search__form"
             role="search"
+            aria-label={SEARCH_UI.formName}
+            action={sitePath("/search/")}
+            method="get"
             onSubmit={(e) => {
               e.preventDefault();
-              setOpen(true);
-              runSearch(query);
+              if (!search.submit()) inputRef.current?.focus();
             }}
           >
+            <label htmlFor={siteInputId} className="sr-only">
+              {SEARCH_UI.label}
+            </label>
             <input
+              ref={inputRef}
+              id={siteInputId}
               type="search"
               name="q"
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setOpen(true);
+              value={search.query}
+              onChange={(e) => search.setQuery(e.target.value)}
+              onFocus={() => {
+                search.ensureIndex();
+                if (search.query.trim()) setOpen(true);
               }}
-              onFocus={() => setOpen(true)}
-              placeholder="キーワード（例：ごみ・広報・観光）"
-              aria-label="サイト内検索"
-              aria-expanded={open && hits.length > 0}
-              aria-controls={listId}
+              placeholder={SEARCH_UI.placeholder}
+              aria-describedby={statusId}
               autoComplete="off"
-              className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm text-[#1a1a1a] caret-[var(--kasumi-blue)] placeholder:text-[#6b7280] outline-none"
+              className="kn-header-search__input"
             />
-            <button
-              type="submit"
-              className="flex min-h-[44px] shrink-0 items-center gap-1 border-0 bg-[var(--kasumi-blue)] px-4 text-white cursor-pointer hover:bg-[#153d66]"
-            >
-              <Search size={16} aria-hidden />
-              <span className="sr-only sm:not-sr-only sm:inline">検索</span>
+            <button type="submit" className="kn-header-search__button">
+              <Search size={18} aria-hidden />
+              <span>{SEARCH_UI.button}</span>
             </button>
           </form>
-        ) : (
+          <SiteSearchSuggestions search={search} statusId={statusId} className="kn-header-search__suggest" />
+        </div>
+      ) : (
+        <div
+          role="tabpanel"
+          id={`${baseId}-panel-procedure`}
+          aria-labelledby={`${baseId}-tab-procedure`}
+          className="kn-top-search__panel"
+        >
           <form
-            className="flex min-h-0 flex-1 bg-white/95 text-[#1a1a1a]"
+            key="procedure"
+            className="kn-header-search__form"
+            role="search"
+            aria-label={top.search.procedureLabel}
             action={sitePath("/kurashi/tetsuzuki-search/")}
             method="get"
-            role="search"
           >
+            <label htmlFor={procInputId} className="sr-only">
+              {top.search.procedureLabel}
+            </label>
             <input
+              id={procInputId}
               type="search"
               name="q"
-              placeholder="手続き名で検索"
-              aria-label="手続検索"
-              className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm text-[#1a1a1a] caret-[var(--kasumi-blue)] placeholder:text-[#6b7280] outline-none"
+              placeholder={top.search.procedurePlaceholder}
+              autoComplete="off"
+              className="kn-header-search__input"
             />
-            <button
-              type="submit"
-              className="flex min-h-[44px] shrink-0 items-center gap-1 border-0 bg-[var(--kasumi-blue)] px-4 text-white cursor-pointer hover:bg-[#153d66]"
-            >
-              <Search size={16} aria-hidden />
-              <span className="sr-only sm:not-sr-only sm:inline">検索</span>
+            <button type="submit" className="kn-header-search__button">
+              <Search size={18} aria-hidden />
+              <span>{top.search.procedureButton}</span>
             </button>
           </form>
-        )}
-      </GlassPanel>
-
-      {tab === "site" && open && query.trim() && (
-        <div
-          id={listId}
-          role="listbox"
-          aria-label="検索結果"
-          className="absolute left-0 right-0 top-[calc(100%+6px)] z-50 max-h-[min(60vh,420px)] overflow-y-auto rounded border border-[#c5d4e8] bg-white text-[#222] shadow-lg"
-        >
-          {hits.length === 0 && (
-            <p className="px-3 py-3 text-sm text-[#666]">
-              「{query}」に一致するページが見つかりませんでした。
-            </p>
-          )}
-          {hits.map((hit) => (
-            <Link
-              key={hit.route}
-              href={hit.route}
-              role="option"
-              className="block border-b border-[#e8eef5] px-3 py-2.5 no-underline hover:bg-[#f4f8fc] last:border-b-0"
-              onClick={() => setOpen(false)}
-            >
-              <div className="flex items-baseline justify-between gap-2">
-                <span className="text-sm font-semibold text-[var(--kasumi-blue)]">{hit.title}</span>
-                <span className="shrink-0 text-[10px] text-[#888]">{hit.category}</span>
-              </div>
-              <p className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-[#555]">{hit.snippet}</p>
-            </Link>
-          ))}
         </div>
       )}
     </div>

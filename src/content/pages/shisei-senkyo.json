@@ -3,14 +3,14 @@
   "route": "/shisei/senkyo/",
   "layout": "city",
   "title": "選挙｜霞ノ杜町",
-  "description": "選挙 — 霞ノ杜町公式。【フィクション】",
+  "description": "選挙の日程、投票所、候補者届出に関する情報です。",
   "breadcrumbs": [
     {
       "label": "トップ",
       "href": "../"
     },
     {
-      "label": "市政情報",
+      "label": "町政情報",
       "href": "index.html"
     },
     {
@@ -35,13 +35,15 @@
     },
     {
       "href": "index.html",
-      "label": "市政",
+      "label": "町政",
       "storyClue": false
     }
   ],
   "h1": "選挙",
   "paragraphs": [
-    "投票所は三日月公民館・霞ノ杜集会所。期日前投票は庁舎1階ロビー（選挙期間中のみ）。"
+    "選挙の事務は、総務課総務係（選挙管理委員会事務局、内線211）です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+  "owner": "総務課 総務係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>次の選挙</h2><p>町長と町議会議員の任期は、令和9年4月30日までです。次の選挙は令和9年4月の予定で、告示は投票日のおおよそ1週間前です。日程が決まり次第、広報紙とこのページに出します。</p><h2>投票所</h2><table class=\"data-table\"><thead><tr><th>地区</th><th>投票所</th></tr></thead><tbody><tr><td>三日月</td><td>町民センター</td></tr><tr><td>湖畔</td><td>湖畔公園の隣の集会所</td></tr><tr><td>駅前</td><td>町立図書館の集会室</td></tr><tr><td>杜ケ丘</td><td>第一小学校の体育館</td></tr></tbody></table><p>期日前投票は、告示の翌日から投票日前日まで、役場1階で8:30〜20:00です。</p>"
 }

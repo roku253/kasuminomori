@@ -1,143 +1,135 @@
-export type SearchTier = "noise" | "hub" | "story";
+import { BASE_PATH } from "@/lib/site";
+import { normalizeForMatch } from "@/lib/normalize";
 
-export type SearchIndexDoc = {
+/**
+ * サイト内検索（ブラウザ内で動く）。索引は scripts/build-search-index.mjs が作る public/search-index.json。
+ * - 空白で区切った語をすべて含むページだけを出す（AND）。語ごとに同義語（日常語）のどれかを含めばよい。
+ * - 1文字の語は題名だけで照合する（1文字の部分一致は雑音が多いため）。
+ * - 順位: 題名 > 検索語 > 見出し > 説明文 > 本文（本文は出現回数に上限つき＋最初に出る位置が前ほど少し加点）。
+ * - 結果に出すのは題名・分類・説明文だけ（本文の抜粋は出さない）。
+ */
+export type SearchDoc = {
   route: string;
   title: string;
   category: string;
-  snippet: string;
-  keywords: string[];
-  tier: SearchTier;
+  description: string;
+  /** 以下は照合用（正規化済み）: 題名・検索語・見出し・説明文・本文 */
+  t: string;
+  k: string;
+  h: string;
+  d: string;
+  x: string;
 };
 
 export type SearchIndex = {
-  generatedAt: string;
-  pageCount: number;
-  storyQueryTerms: string[];
-  idf: Record<string, string | number>;
-  docs: SearchIndexDoc[];
+  version: number;
+  synonyms: Record<string, string[]>;
+  docs: SearchDoc[];
 };
 
 export type SearchHit = {
   route: string;
   title: string;
   category: string;
-  snippet: string;
+  description: string;
   score: number;
 };
 
-/** クエリ展開（部分一致・類義語） */
-export const QUERY_SYNONYMS: Record<string, string[]> = {
-  ゴミ: ["ごみ", "廃棄物", "リサイクル", "収集", "分別"],
-  ごみ: ["ゴミ", "廃棄物", "リサイクル", "収集"],
-  広報: ["広報誌", "霞ノ杜", "配布", "バックナンバー"],
-  広報誌: ["広報", "霞ノ杜", "お知らせ"],
-  議会: ["町議会", "議会だより", "公報"],
-  資料: ["資料室", "公報", "文書", "アーカイブ"],
-  伝承: ["言い伝え", "民俗", "昔話", "神隠し"],
-  神隠し: ["伝承", "言い伝え", "怪奇"],
-  バス: ["町営バス", "路線", "時刻表"],
-  祭り: ["行事", "イベント", "例大祭", "夏祭り"],
-  観光: ["スポット", "神社", "吊り橋", "足湯"],
-  防災: ["避難", "ハザード", "災害", "緊急"],
-  小学校: ["教育", "学校", "子ども"],
-  2019: ["令和元年", "ローカルニュース", "出来事"],
-  事故: ["安全", "登山", "立入禁止"],
-  山: ["烏啼", "山道", "登山", "林道"],
-};
+let indexPromise: Promise<SearchIndex> | null = null;
 
-const TIER_WEIGHT: Record<SearchTier, number> = {
-  noise: 1,
-  hub: 0.82,
-  story: 0.48,
-};
-
-function normalize(text: string): string {
-  return text.normalize("NFKC").toLowerCase();
-}
-
-function tokenizeQuery(query: string): string[] {
-  const q = normalize(query.trim());
-  if (!q) return [];
-  const terms = new Set<string>();
-  terms.add(q);
-  const words = q.match(/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}A-Za-z0-9]{2,}/gu);
-  if (words) words.forEach((w) => terms.add(w));
-  for (const ch of q.replace(/\s+/g, "")) {
-    if (/[\p{Script=Han}]/u.test(ch)) terms.add(ch);
+/** 索引を一度だけ読み込む（失敗したら次の呼び出しで読み直す） */
+export function loadSearchIndex(): Promise<SearchIndex> {
+  if (!indexPromise) {
+    indexPromise = fetch(`${BASE_PATH}/search-index.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`search-index.json: ${res.status}`);
+        return res.json() as Promise<SearchIndex>;
+      })
+      .catch((error) => {
+        indexPromise = null;
+        throw error;
+      });
   }
-  for (const [key, syns] of Object.entries(QUERY_SYNONYMS)) {
-    const nk = normalize(key);
-    if (q.includes(nk) || [...terms].some((t) => nk.includes(t) || t.includes(nk))) {
-      terms.add(nk);
-      syns.forEach((s) => terms.add(normalize(s)));
-    }
+  return indexPromise;
+}
+
+function countOccurrences(haystack: string, needle: string, max: number): number {
+  let count = 0;
+  let from = 0;
+  while (count < max) {
+    const i = haystack.indexOf(needle, from);
+    if (i < 0) break;
+    count += 1;
+    from = i + needle.length;
   }
-  return [...terms].filter((t) => t.length >= 1);
+  return count;
 }
 
-function idfWeight(index: SearchIndex, term: string): number {
-  const w = index.idf[term];
-  if (typeof w === "number") return w;
-  return 1;
-}
-
-function matchesStoryQuery(query: string, storyTerms: string[]): boolean {
-  const q = normalize(query);
-  return storyTerms.some((t) => q.includes(normalize(t)));
-}
-
-function scoreDoc(
-  doc: SearchIndexDoc,
-  terms: string[],
-  index: SearchIndex,
-  storyQuery: boolean
-): number {
-  const blob = normalize(`${doc.title} ${doc.snippet} ${doc.keywords.join(" ")}`);
+function variantScore(doc: SearchDoc, variant: string): number {
+  if (!variant) return 0;
+  if ([...variant].length === 1) return doc.t.includes(variant) ? 10 : 0;
   let score = 0;
-
-  for (const term of terms) {
-    if (term.length < 2 && !/[\p{Script=Han}]/u.test(term)) continue;
-    const idf = idfWeight(index, term);
-    if (normalize(doc.title).includes(term)) score += 14 * idf;
-    if (blob.includes(term)) score += 9 * idf;
-    for (const kw of doc.keywords) {
-      const nkw = normalize(kw);
-      if (nkw.includes(term) || term.includes(nkw)) score += 5 * idf;
-    }
+  if (doc.t.includes(variant)) score += 10;
+  if (doc.k.includes(variant)) score += 6;
+  if (doc.h.includes(variant)) score += 4;
+  if (doc.d.includes(variant)) score += 3;
+  const n = countOccurrences(doc.x, variant, 5);
+  if (n > 0) {
+    // 本文: 出現回数（上限5）に加えて、最初に出てくる位置が前ほど少し高くする
+    score += 1 + (n - 1) * 0.5 + 0.5 * (1 - doc.x.indexOf(variant) / Math.max(doc.x.length, 1));
   }
-
-  if (score <= 0) return 0;
-
-  score *= TIER_WEIGHT[doc.tier];
-
-  if (storyQuery && doc.tier === "story") {
-    score *= 0.55;
-  }
-
   return score;
 }
 
-export function searchSiteIndex(
-  index: SearchIndex,
-  query: string,
-  limit = 8
-): SearchHit[] {
-  const terms = tokenizeQuery(query);
-  if (!terms.length) return [];
-
-  const storyQuery = matchesStoryQuery(query, index.storyQueryTerms || []);
-
-  const hits = index.docs
-    .map((doc) => ({
-      route: doc.route,
-      title: doc.title,
-      category: doc.category,
-      snippet: doc.snippet,
-      score: scoreDoc(doc, terms, index, storyQuery),
-    }))
-    .filter((h) => h.score > 0)
-    .sort((a, b) => b.score - a.score);
-
-  return hits.slice(0, limit);
+/** 1つの語（と同義語）の得点。どれにも当たらなければ 0 */
+function termScore(doc: SearchDoc, term: string, synonyms: Record<string, string[]>): number {
+  let best = variantScore(doc, term);
+  for (const syn of synonyms[term] ?? []) {
+    best = Math.max(best, variantScore(doc, syn) * 0.7);
+  }
+  return best;
 }
 
+function rank(index: SearchIndex, terms: string[], whole: string): SearchHit[] {
+  const hits: SearchHit[] = [];
+  for (const doc of index.docs) {
+    let total = 0;
+    let matchedAll = true;
+    for (const term of terms) {
+      const s = termScore(doc, term, index.synonyms);
+      if (s <= 0) {
+        matchedAll = false;
+        break;
+      }
+      total += s;
+    }
+    if (!matchedAll) continue;
+    if (doc.t === whole) total += 8;
+    hits.push({ route: doc.route, title: doc.title, category: doc.category, description: doc.description, score: total });
+  }
+  return hits.sort((a, b) => b.score - a.score || a.route.localeCompare(b.route));
+}
+
+/** 「ごみの出し方」のように助詞でつながった語を分ける（その語のままでは1件も無いときだけ使う） */
+function splitByParticles(term: string): string[] {
+  return term.split(/[のをにはがでとへや]/).filter((w) => [...w].length >= 2);
+}
+
+export function searchSiteIndex(index: SearchIndex, query: string, limit?: number): SearchHit[] {
+  const whole = normalizeForMatch(query);
+  if (!whole) return [];
+  const terms = [...new Set(whole.split(" ").filter(Boolean))];
+  let hits = rank(index, terms, whole);
+  if (!hits.length) {
+    const split = [
+      ...new Set(
+        terms.flatMap((t) => {
+          const parts = t.length > 2 ? splitByParticles(t) : [];
+          return parts.length ? parts : [t];
+        })
+      ),
+    ];
+    if (split.length && split.join(" ") !== terms.join(" ")) hits = rank(index, split, whole);
+  }
+  return typeof limit === "number" ? hits.slice(0, limit) : hits;
+}

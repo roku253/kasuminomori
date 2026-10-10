@@ -2,8 +2,8 @@
   "path": "anzen/kinkyu.html",
   "route": "/anzen/kinkyu/",
   "layout": "city",
-  "title": "救急・夜間｜霞ノ杜町",
-  "description": "救急・夜間診療 — 霞ノ杜町公式。【フィクション】",
+  "title": "救急・夜間診療｜霞ノ杜町",
+  "description": "救急は119です。町立霞ノ杜診療所は平日と土曜午前だけです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,9 @@
   ],
   "h1": "救急・夜間診療",
   "paragraphs": [
-    "町内の夜間・休日救急は、県北医療圏の当番医制度に準じます（架空）。"
+    "町内に夜間と休日の当番医はありません。命にかかわるときは119番です。診療所は平日9:00〜17:00、土曜9:00〜12:00です。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>救急</th><td>119</td></tr><tr><th>町代表</th><td>0123-45-6700</td></tr><tr><th>診療所</th><td>霞ノ杜診療所（平日のみ・詳細は健康ページ）</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../fukushi/kenko.html\">健康</a></li><li><a href=\"bosai.html\">防災</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li><li><a href=\"index.html\">安全</a></li>"
+  "owner": "保健福祉課 保健係",
+  "updated": "2026-10-01",
+  "tableHtml": "<table class=\"city-data\"><tr><th>救急</th><td>119</td></tr><tr><th>警察</th><td>110</td></tr><tr><th>町代表</th><td>0266-12-2111（内線215は地域安全係）</td></tr><tr><th>診療所</th><td>町立霞ノ杜診療所（平日9:00〜17:00、土曜9:00〜12:00）</td></tr></table>"
 }

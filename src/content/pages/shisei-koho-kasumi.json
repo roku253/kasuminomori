@@ -2,22 +2,52 @@
   "path": "shisei/koho-kasumi.html",
   "route": "/shisei/koho-kasumi/",
   "layout": "city",
-  "title": "広報誌「霞ノ杜」｜霞ノ杜町",
-  "description": "町民向け広報誌「霞ノ杜」の電子版。【フィクション】",
+  "title": "広報かすみのもり｜霞ノ杜町",
+  "description": "広報紙「かすみのもり」の電子版です。直近6か月分を掲載しています。",
   "breadcrumbs": [
-    { "label": "トップ", "href": "../" },
-    { "label": "市政情報", "href": "index.html" },
-    { "label": "広報誌「霞ノ杜」" }
+    {
+      "label": "トップ",
+      "href": "../"
+    },
+    {
+      "label": "町政情報",
+      "href": "index.html"
+    },
+    {
+      "label": "広報かすみのもり"
+    }
   ],
   "related": [
-    { "href": "koho.html", "label": "お知らせ", "storyClue": false },
-    { "href": "archive.html", "label": "バックナンバー", "storyClue": false },
-    { "href": "../events/", "label": "年間行事", "storyClue": false },
-    { "href": "../guide/", "label": "町のご案内", "storyClue": false }
+    {
+      "href": "koho.html",
+      "label": "お知らせ",
+      "storyClue": false
+    },
+    {
+      "href": "archive.html",
+      "label": "バックナンバー",
+      "storyClue": false
+    },
+    {
+      "href": "../events/",
+      "label": "年間行事",
+      "storyClue": false
+    },
+    {
+      "href": "../guide/",
+      "label": "町のご案内",
+      "storyClue": false
+    }
   ],
-  "h1": "広報誌「霞ノ杜」",
+  "h1": "広報かすみのもり",
   "paragraphs": [
-    "町民の皆さまへお届けする広報誌です。毎月10日に配布しています。"
+    "広報紙「かすみのもり」は、毎月10日に町内の各世帯へお届けしています。",
+    "電子版は直近6か月分を掲載しています。それ以前の号は町立図書館でご覧いただけます。"
   ],
-  "extraHtml": "<h2>最新号・バックナンバー</h2>\r\n        <p>号名を押すと、その号のPDFが開きます。</p>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <thead><tr><th>発行</th><th>号</th><th>主な内容</th><th>PDF</th></tr></thead>\r\n          <tbody>\r\n            <tr><td>令和7年4月</td><td><a href=\"/pdf/koho-r7-04.pdf\" target=\"_blank\" rel=\"noopener\">4月号</a></td><td>春の杜まつり・ごみ分別特集</td><td><a href=\"/pdf/koho-r7-04.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年3月</td><td><a href=\"/pdf/koho-r7-03.pdf\" target=\"_blank\" rel=\"noopener\">3月号</a></td><td>入学・進学・町営バスダイヤ</td><td><a href=\"/pdf/koho-r7-03.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年2月</td><td><a href=\"/pdf/koho-r7-02.pdf\" target=\"_blank\" rel=\"noopener\">2月号</a></td><td>除雪・冬季道路・健康診断</td><td><a href=\"/pdf/koho-r7-02.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年1月</td><td><a href=\"/pdf/koho-r7-01.pdf\" target=\"_blank\" rel=\"noopener\">1月号</a></td><td>年頭挨拶・初詣・防災のしおり</td><td><a href=\"/pdf/koho-r7-01.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和6年12月</td><td><a href=\"/pdf/koho-r6-12.pdf\" target=\"_blank\" rel=\"noopener\">12月号</a></td><td>年末年始窓口・イルミネーション</td><td><a href=\"/pdf/koho-r6-12.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n        <p><a href=\"archive.html\">既刊の一覧（バックナンバー）</a></p>"
+  "extraHtml": "<h2>令和8年度</h2>\n<ul>\n<li><a data-pdf=\"koho-r8-10.pdf\">10月号（No.846）　秋の健康づくり</a></li>\n<li><a data-pdf=\"koho-r8-09.pdf\">9月号（No.845）　新しいハザードマップ</a></li>\n<li><a data-pdf=\"koho-r8-08.pdf\">8月号（No.844）　霞湖花火大会</a></li>\n<li><a data-pdf=\"koho-r8-07.pdf\">7月号（No.843）　夏の地域安全運動</a></li>\n<li><a data-pdf=\"koho-r8-06.pdf\">6月号（No.842）　町の子育て支援</a></li>\n<li><a data-pdf=\"koho-r8-05.pdf\">5月号（No.841）　当初予算と主な事業</a></li>\n</ul>\n<p>電子版は直近6か月分を掲載しています。それ以前の号は町立図書館でご覧いただけます。</p>",
+  "searchKeywords": [
+    "広報紙",
+    "かすみのもり",
+    "バックナンバー"
+  ]
 }

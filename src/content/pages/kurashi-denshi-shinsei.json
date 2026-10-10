@@ -3,7 +3,7 @@
   "route": "/kurashi/denshi-shinsei/",
   "layout": "city",
   "title": "電子申請｜霞ノ杜町",
-  "description": "電子申請 — 霞ノ杜町公式。【フィクション】",
+  "description": "証明書は窓口か郵送です。オンラインは観光イベントの申し込みだけです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,10 @@
   ],
   "h1": "電子申請",
   "paragraphs": [
-    "一部手続はオンラインで受付可能です。印鑑登録・住民票の一部は来庁が必要です。"
+    "住民票や税の証明書は、窓口か郵送で請求します。このホームページから送れるのは、観光イベントの申し込みだけです。",
+    "操作の質問は、政策推進課広報情報係（内線244）へ電話してください。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>オンライン可</th><td>各種証明の請求予約・観光イベント申込</td></tr><tr><th>来庁必須</th><td>初回の転入・印鑑登録</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"juminhyo.html\">窓口</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href"
+  "tableHtml": "<div data-kn-tool=\"online-procedures\"></div>",
+  "owner": "政策推進課 広報情報係",
+  "updated": "2026-10-01"
 }

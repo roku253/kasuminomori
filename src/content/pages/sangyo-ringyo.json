@@ -3,7 +3,7 @@
   "route": "/sangyo/ringyo/",
   "layout": "city",
   "title": "林業｜霞ノ杜町",
-  "description": "林業 — 霞ノ杜町公式。【フィクション】",
+  "description": "町有林、間伐・植林支援、林産物の販路情報です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,7 +41,9 @@
   ],
   "h1": "林業",
   "paragraphs": [
-    "町面積の約七成が森林。間伐・素材販売は林業組合と建設課が窓口。"
+    "町有林の間伐と、民有林の補助は、産業観光課農林係（役場2階、内線221）です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><"
+  "owner": "産業観光課 農林係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>補助</h2><table class=\"data-table\"><thead><tr><th>メニュー</th><th>内容</th></tr></thead><tbody><tr><td>間伐</td><td>1ヘクタールあたり定額。申請は伐る前</td></tr><tr><td>植林</td><td>苗木代の2分の1。年1回、2月に受け付け</td></tr><tr><td>獣害の柵</td><td>クマとシカの通り道に限る。現地を確認してから</td></tr></tbody></table><p>山では火を使わないでください。入るときは鈴をつけ、日没前に降りてください。作業道の通行止めは、入口の看板に出します。</p>"
 }

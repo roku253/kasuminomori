@@ -1,41 +1,52 @@
-import { Phone } from "lucide-react";
+import Link from "next/link";
+import { TOWN } from "@/lib/site";
 import { HeaderCategoryNav } from "./HeaderCategoryNav";
-import { MegaMenu } from "./MegaMenu";
+import { HeaderSearch } from "./HeaderSearch";
+import { MegaMenu, type MegaMenuMode } from "./MegaMenu";
 import { SiteLogo } from "./SiteLogo";
 
-export function SiteHeader() {
+type Props = {
+  /** ヘッダー右の検索窓（デスクトップ）。トップは本文に検索があるので出さない */
+  showSearch?: boolean;
+  /** メニューの中身。下層は split（lg 以上はカテゴリを上の帯に任せる）、トップは full（全分類を出す） */
+  menuMode?: MegaMenuMode;
+};
+
+/**
+ * 全ページ共通のヘッダー（トップも同じ。DR-22）。
+ * 上段の帯（サイト名・サイトマップ・代表電話）→ ロゴ・検索窓・メニュー（スクロールしても上に残る）→ 主要カテゴリ（lg 以上）。
+ * 電話はリンクにしない（B-2）。「架空の町」の表示は画面に出さない（注記は meta だけ。site.ts）。
+ */
+export function SiteHeader({ showSearch = true, menuMode = "split" }: Props) {
   return (
     <>
-      <div className="border-b border-[#0d3a66] bg-[#0f3d6b] text-xs text-white/90">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-1.5">
-          <span>霞ノ杜町公式ホームページ</span>
-          <details className="text-[10px] text-white/80">
-            <summary className="cursor-pointer">架空の町</summary>
-            <p className="mt-1 max-w-sm">
-              本サイトは架空の町のサイトです。実在の団体・地域とは関係ありません。
-            </p>
-          </details>
-          <a
-            href="tel:0123456700"
-            className="inline-flex items-center gap-1 text-white/95 no-underline hover:underline"
-          >
-            <Phone size={12} aria-hidden />
-            代表 0123-45-6700
-          </a>
+      <div className="kn-utility">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 px-4">
+          <p className="kn-utility__name hidden sm:block">{TOWN.name}公式ホームページ</p>
+          <ul className="kn-utility__links">
+            <li>
+              <Link href="/sitemap/">サイトマップ</Link>
+            </li>
+            <li>
+              <span>代表電話 {TOWN.tel}</span>
+            </li>
+          </ul>
         </div>
       </div>
-      <header
-        className="sticky top-0 z-[99990] bg-[var(--kasumi-blue)] text-white shadow-md [--site-header-stack:5.75rem]"
-        data-site-header
-      >
-        <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-2.5 sm:gap-3">
+      <header className="kn-header" data-site-header>
+        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
           <SiteLogo variant="header" />
-          <HeaderCategoryNav />
-          <div className="ml-auto shrink-0 lg:ml-2">
-            <MegaMenu mode="split" />
+          {showSearch && (
+            <div className="ml-auto hidden w-[min(26rem,40vw)] lg:block">
+              <HeaderSearch />
+            </div>
+          )}
+          <div className={showSearch ? "ml-auto shrink-0 lg:ml-2" : "ml-auto shrink-0"}>
+            <MegaMenu mode={menuMode} />
           </div>
         </div>
       </header>
+      <HeaderCategoryNav />
     </>
   );
 }

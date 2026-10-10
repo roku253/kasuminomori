@@ -1,0 +1,24 @@
+{
+  "path": "kurashi/zei/index.html",
+  "route": "/kurashi/zei/",
+  "layout": "city",
+  "title": "税｜霞ノ杜町",
+  "description": "町県民税、固定資産税、軽自動車税、国民健康保険税の納期です。",
+  "h1": "税",
+  "breadcrumbs": [
+    { "label": "トップ", "href": "/" },
+    { "label": "くらし・環境", "href": "/kurashi/" },
+    { "label": "税" }
+  ],
+  "related": [
+    { "href": "/kurashi/juminhyo/", "label": "住民票", "storyClue": false },
+    { "href": "/contact/", "label": "お問い合わせ", "storyClue": false }
+  ],
+  "paragraphs": [
+    "町の税は、住民税務課税務係（役場1階、内線114）が担当します。納付書は、納期のおよそ2週間前に世帯へ届きます。"
+  ],
+  "bodyHtml": "<h2>納期</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>税</th><th>納期</th></tr></thead><tbody><tr><td>町県民税（普通徴収）</td><td>第1期 6月30日、第2期 8月31日、第3期 11月2日、第4期 1月31日</td></tr><tr><td>固定資産税</td><td>第1期 5月31日、第2期 7月31日、第3期 12月28日、第4期 2月28日</td></tr><tr><td>軽自動車税（種別割）</td><td>5月31日（年1回）</td></tr><tr><td>国民健康保険税</td><td>第1期 7月31日から、年8回</td></tr></tbody></table></div>\n<p>納期限が土日・祝日のときは、翌開庁日が期限です。口座振替は、納期限の日に引き落とします。</p>\n<h2>証明書</h2>\n<p>所得・課税証明書と納税証明書は、住民税務課の窓口か郵送で請求できます。オンラインでの交付は行っていません。</p>",
+  "searchKeywords": ["税", "住民税", "固定資産税", "軽自動車税", "国民健康保険"],
+  "owner": "住民税務課 税務係",
+  "updated": "2026-10-01"
+}

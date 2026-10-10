@@ -1,5 +1,46 @@
 export const BASE_PATH = "/kasuminomori";
 
+/** 公開 URL（metadataBase・canonical・og:url の基準。basePath を含む） */
+export const SITE_URL = "https://roku253.github.io/kasuminomori/";
+export const SITE_NAME = "霞ノ杜町";
+export const TITLE_SUFFIX = "｜霞ノ杜町";
+
+/**
+ * 架空の町である旨の注記。**画面には出さず**、meta の description・og:description・twitter:description の
+ * 末尾にだけ、ここ一か所から付ける（render-page.tsx の pageMetadata・layout.tsx）。各ページ JSON には書かない
+ * （build-manifest.mjs が description の「架空」「【フィクション】」を検出して止める）。
+ */
+export const FICTION_NOTE = "（架空の町のサイトです）";
+
+export function withFictionNote(description: string): string {
+  return `${description.trim()}${FICTION_NOTE}`;
+}
+
+/** SNS などで共有されたときの画像（1200×630、町章入り） */
+export const OG_IMAGE = { url: "img/og.png", width: 1200, height: 630, alt: "霞ノ杜町公式ホームページ" } as const;
+
+/**
+ * 役場の住所・電話・開庁時間の正本（r2-director B-1〜B-3。ヘッダー・フッター・お問い合わせ欄はここから描く）。
+ * - 電話は tel: リンクにしない（layout.tsx の format-detection で自動リンクも止めている）。メールアドレスは載せない。
+ * - 郵便番号 392-0391 は日本郵便の検索（zipcloud、2026-10-10）で該当なし。392-0001 は諏訪市に実在する。
+ */
+export const TOWN = {
+  name: "霞ノ杜町",
+  office: "霞ノ杜町役場",
+  postalCode: "〒392-0391",
+  address: "長野県霞郡霞ノ杜町三日月中央2丁目8番1号",
+  tel: "0266-12-2111",
+  fax: "0266-12-2190",
+  /** 開庁時間（画面の表記） */
+  hours: "平日 8時30分〜17時15分（土日祝日・12月29日〜1月3日を除く）",
+  copyright: "Copyright © Kasuminomori Town. All Rights Reserved.",
+} as const;
+
+/** 「電話 0266-12-2111（代表）」「電話 0266-12-2111（内線 215）」の形 */
+export function telText(extension?: string | number): string {
+  return extension ? `電話 ${TOWN.tel}（内線 ${extension}）` : `電話 ${TOWN.tel}（代表）`;
+}
+
 export function assetPath(path: string): string {
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${BASE_PATH}${p}`;

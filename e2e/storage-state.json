@@ -1,0 +1,13 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:3456",
+      "localStorage": [{ "name": "kasumi_dev_unlock", "value": "1" }]
+    },
+    {
+      "origin": "http://localhost:3457",
+      "localStorage": [{ "name": "kasumi_dev_unlock", "value": "1" }]
+    }
+  ]
+}

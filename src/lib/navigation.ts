@@ -74,7 +74,7 @@ export const MEGA_COLUMNS = [
     ],
   },
   {
-    title: "市政情報",
+    title: "町政情報",
     href: "/shisei/",
     links: [
       { href: "/shisei/chijitsu/", label: "町長の部屋" },
@@ -85,30 +85,31 @@ export const MEGA_COLUMNS = [
   },
 ] as const;
 
-export const TOURISM_SIDEBAR = {
-  menu: [
-    { href: "/", label: "トップページ" },
-    { href: "/guide/", label: "町のご案内" },
-    { href: "/access/", label: "アクセス・地図" },
-    { href: "/events/", label: "年間行事" },
-    { href: "/contact/", label: "お問い合わせ" },
-  ],
-  spots: [
-    { href: "/spot/1/", label: "霞ノ杜神社" },
-    { href: "/spot/2/", label: "杜の吊り橋" },
-    { href: "/spot/3/", label: "霞ノ杜資料館" },
-    { href: "/spot/4/", label: "霧見展望休憩所" },
-    { href: "/spot/5/", label: "杜の湯（足湯）" },
-  ],
-  town: [
-    { href: "/history/", label: "町の歴史" },
-    { href: "/documents/", label: "資料室" },
-  ],
-  external: [
-    {
-      href: "https://roku253.github.io/kasuminomori-shougakkou/",
-      label: "霞ノ杜町立第一小学校",
-      external: true,
-    },
-  ],
-} as const;
+/**
+ * ローカルナビ（ページ下部・横の「このカテゴリのページ」。src/lib/local-nav.ts）の規則。
+ *
+ * - 同じカテゴリ（パンくずの2番目）の直下のページを並べる。今いる枝（例: 資料室）の下位ページは入れ子で出す。
+ * - LOCAL_NAV_EXCLUDE に当たるページは並べない（過去の記事は「お知らせ」のリニューアル告知から辿る＝物語の導線。
+ *   サイト内検索・お知らせの詳細は一覧に要らない）。
+ * - 物語ページ同士の相互リンクを作らない（確定版 ★・受け入れ条件 K-11）: 今のページが STORY_LINK_GROUPS の
+ *   ある群に入るとき、ほかの群のページは並べない（例: 過去の記事のページに「資料室」を出さない）。
+ * WP3a が物語のページ（過去の記事の一覧・情報提供資料など）を足したら、ここの前方一致も見直すこと。
+ */
+export const LOCAL_NAV_EXCLUDE: readonly string[] = ["/blog/", "/search/"];
+
+/** お知らせの詳細（/shisei/koho/〜/）はローカルナビに並べない */
+export function isNewsDetailRoute(route: string): boolean {
+  return /^\/shisei\/koho\/[^/]+\/$/.test(route);
+}
+
+/**
+ * サイトマップ（/sitemap/。全ページのフッターからリンク）に**下位ページを並べない**入口。
+ * 確定版 ★: 共通の案内は物語ページ（議会だより・地域安全通信・情報提供資料・過去の記事・町の歴史の伝承節）へ直接リンクしない。
+ * 入口（資料室）は並べ、その下の文書は並べない。過去の記事（/blog/）とお知らせの詳細は LOCAL_NAV_EXCLUDE と同じく出さない。
+ */
+export const SITEMAP_NO_CHILDREN: readonly string[] = ["/documents/"];
+
+export const STORY_LINK_GROUPS: readonly (readonly string[])[] = [
+  ["/documents/"],
+  ["/blog/", "/history/"],
+];

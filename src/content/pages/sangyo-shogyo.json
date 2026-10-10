@@ -2,8 +2,8 @@
   "path": "sangyo/shogyo.html",
   "route": "/sangyo/shogyo/",
   "layout": "city",
-  "title": "商店街｜霞ノ杜町",
-  "description": "三日月町商店街 — 霞ノ杜町公式。【フィクション】",
+  "title": "霞湖商店街｜霞ノ杜町",
+  "description": "霞湖商店街を中心とした、町内の商店の案内です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -14,7 +14,7 @@
       "href": "index.html"
     },
     {
-      "label": "三日月町商店街"
+      "label": "霞湖商店街"
     }
   ],
   "related": [
@@ -39,9 +39,11 @@
       "storyClue": false
     }
   ],
-  "h1": "三日月町商店街",
+  "h1": "霞湖商店街",
   "paragraphs": [
-    "老舗の雑貨・食堂・土産店が旧街道沿いに並びます。毎月第3土曜は夜市。"
+    "霞湖商店街は湖畔にあります。毎月第3土曜に夜市を開きます。雨のときは翌週です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hr"
+  "owner": "産業観光課 商工観光係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>店</h2><table class=\"data-table\"><thead><tr><th>店</th><th>内容</th><th>時間</th></tr></thead><tbody><tr><td>霧見茶房</td><td>お茶と甘味</td><td>10:00〜17:00。火曜休み</td></tr><tr><td>杜川工房</td><td>木工品</td><td>10:00〜16:00。水曜休み</td></tr><tr><td>霧の最中</td><td>もなか</td><td>昼だけ。夜市の日は屋台</td></tr></tbody></table><p>空き店舗と改装の相談は、産業観光課商工観光係（内線224）です。掲載の訂正も同じ係へ。</p>"
 }

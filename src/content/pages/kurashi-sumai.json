@@ -3,7 +3,7 @@
   "route": "/kurashi/sumai/",
   "layout": "city",
   "title": "住まい・移住｜霞ノ杜町",
-  "description": "住まい・移住 — 霞ノ杜町公式。【フィクション】",
+  "description": "空き家バンク、移住相談、住宅改修補助の情報です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,7 +41,9 @@
   ],
   "h1": "住まい・移住",
   "paragraphs": [
-    "空き家バンク・移住相談を町建設課で行っています。林業や観光と組み合わせた二地域居住の事例もあります。"
+    "空き家と移住の相談は、政策推進課企画財政係（役場2階、内線241）です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kankyo.html"
+  "owner": "政策推進課 企画財政係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>空き家バンク</h2><p>令和8年10月1日現在、公開しているのは2件です。</p><table class=\"data-table\"><thead><tr><th>場所</th><th>種類</th><th>状態</th></tr></thead><tbody><tr><td>三日月中央</td><td>戸建て</td><td>内覧は平日。家財が残っています</td></tr><tr><td>湖畔</td><td>店舗兼住宅</td><td>1階が店舗。水道は止めてあります</td></tr></tbody></table><p>耐震診断の補助は、木造の戸建てで、診断費用の2分の1、上限5万円です。工事の前に企画財政係へ。</p>"
 }

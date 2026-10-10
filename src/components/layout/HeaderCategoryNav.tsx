@@ -9,31 +9,24 @@ function isCategoryActive(pathname: string, href: string): boolean {
   return normalized === href || normalized.startsWith(href);
 }
 
+/** 主要カテゴリ（7分類）の帯。lg 以上で表示（モバイルはメニューの中）。今いる分類は aria-current="page" */
 export function HeaderCategoryNav() {
   const pathname = usePathname() ?? "/";
 
   return (
-    <nav
-      className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-0.5 lg:flex"
-      aria-label="主要カテゴリ"
-    >
-      {MEGA_COLUMNS.map((col) => {
-        const active = isCategoryActive(pathname, col.href);
-        return (
-          <Link
-            key={col.href}
-            href={col.href}
-            aria-current={active ? "page" : undefined}
-            className={`rounded-md px-2.5 py-2 text-[13px] font-medium no-underline transition ${
-              active
-                ? "bg-white/20 text-white shadow-inner ring-1 ring-white/25"
-                : "text-white/95 hover:bg-white/15"
-            }`}
-          >
-            {col.title}
-          </Link>
-        );
-      })}
+    <nav className="kn-gnav hidden lg:block" aria-label="主要カテゴリ">
+      <ul className="mx-auto flex max-w-6xl list-none p-0 px-4">
+        {MEGA_COLUMNS.map((col) => {
+          const active = isCategoryActive(pathname, col.href);
+          return (
+            <li key={col.href} className="flex-1">
+              <Link href={col.href} aria-current={active ? "page" : undefined} className="kn-gnav__link">
+                {col.title}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 }

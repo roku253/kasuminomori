@@ -1,0 +1,22 @@
+{
+  "path": "documents/joho-teikyo/index.html",
+  "route": "/documents/joho-teikyo/",
+  "layout": "city",
+  "title": "情報提供資料｜霞ノ杜町",
+  "description": "開示請求が繰り返しあった公文書を、開示した内容のまま掲載しています。",
+  "h1": "情報提供資料",
+  "breadcrumbs": [
+    { "label": "トップ", "href": "/" },
+    { "label": "町政情報", "href": "/shisei/" },
+    { "label": "資料室", "href": "/documents/" },
+    { "label": "情報提供資料" }
+  ],
+  "related": [],
+  "paragraphs": [
+    "霞ノ杜町情報公開条例に基づく開示請求が繰り返しあった公文書は、請求の手続きによらずご覧いただけるよう、開示した内容のまま掲載しています。"
+  ],
+  "bodyHtml": "<h2>掲載している公文書</h2>\n<ul>\n<li data-kn-story-clue=\"1\">烏啼山道付近立入禁止区域における事案について（報告）〔部分開示〕　作成: 教育委員会（令和元年8月）／開示決定: 令和元年10月／区分: 部分開示　<a data-pdf=\"joho-teikyo-01.pdf\">情報提供資料</a></li>\n</ul>\n<h2>書誌</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><tbody><tr><th>件名</th><td>烏啼山道付近立入禁止区域における事案について（報告）</td></tr><tr><th>作成課</th><td>教育委員会</td></tr><tr><th>作成年月</th><td>令和元年8月</td></tr><tr><th>開示決定日</th><td>令和元年10月18日</td></tr><tr><th>区分</th><td>部分開示</td></tr><tr><th>不開示の理由</th><td>霞ノ杜町情報公開条例第7条第1号（個人に関する情報）および第5号（事務事業に関する情報）に該当する部分は、開示していません。</td></tr></tbody></table></div>\n<p>担当は総務課総務係（情報公開）です。開示請求そのものの手続きも、同係で受け付けています。</p>",
+  "searchKeywords": ["情報公開", "情報提供", "公文書", "部分開示"],
+  "owner": "総務課 総務係",
+  "updated": "2026-10-09"
+}

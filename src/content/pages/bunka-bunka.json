@@ -2,8 +2,8 @@
   "path": "bunka/bunka.html",
   "route": "/bunka/bunka/",
   "layout": "city",
-  "title": "伝統文化｜霞ノ杜町",
-  "description": "伝統文化・祭り — 霞ノ杜町公式。【フィクション】",
+  "title": "伝統文化・祭り｜霞ノ杜町",
+  "description": "霞ノ杜の伝統芸能、民俗行事、文化財の紹介と体験プログラム案内です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,7 +41,9 @@
   ],
   "h1": "伝統文化・祭り",
   "paragraphs": [
-    "霞ノ杜神社の例大祭、霧見祭など。伝承については町の歴史ページもご覧ください。"
+    "杜川の船唄と、湖畔の夜神楽は、今も秋の例大祭で聞けます。教室は町民ホールで開いています。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+  "bodyHtml": "<h2>教室</h2><table class=\"data-table\"><thead><tr><th>教室</th><th>とき</th><th>場所</th></tr></thead><tbody><tr><td>太鼓</td><td>毎月第2土曜 10:00〜12:00</td><td>町民ホール</td></tr><tr><td>夜神楽の所作</td><td>9月〜11月の木曜 19:00〜20:30</td><td>町民ホール</td></tr></tbody></table><p>体験の申し込みは、教育委員会教育課生涯学習係（内線317）です。文化財の記録を手伝う人も、同じ係で受け付けています。</p>",
+  "owner": "教育委員会 教育課 生涯学習係",
+  "updated": "2026-10-01"
 }

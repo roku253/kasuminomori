@@ -1,0 +1,106 @@
+{
+ "about": "重ねるハザードマップ（ハザードマップポータルサイト）の配信タイル z17 を並べた合成画像の記録。scripts/hazard/mosaic.py が書く。",
+ "z": 17,
+ "x": [
+  115817,
+  115828
+ ],
+ "y": [
+  51442,
+  51452
+ ],
+ "size": [
+  3072,
+  2816
+ ],
+ "corners": [
+  [
+   138.1008911,
+   36.0624217
+  ],
+  [
+   138.1338501,
+   36.0624217
+  ],
+  [
+   138.1338501,
+   36.0379949
+  ],
+  [
+   138.1008911,
+   36.0379949
+  ]
+ ],
+ "fetchedAt": "2026-10-09T12:04:33+0900",
+ "tiles": {
+  "flood_l2": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+  "keizoku_l2": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_keizoku_data/{z}/{x}/{y}.png",
+  "dosekiryu": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+  "kyukeisha": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+  "jisuberi": "https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png"
+ },
+ "classes": {
+  "flood_l2": [
+   "0-0.5",
+   "0.5-3",
+   "3-5",
+   "5-10",
+   "10-20",
+   "20-"
+  ],
+  "keizoku_l2": [
+   "-12h",
+   "12h-1d",
+   "1-3d",
+   "3d-1w",
+   "1-2w",
+   "2-4w",
+   "4w-"
+  ],
+  "dosha": [
+   "keikai",
+   "tokubetsu"
+  ]
+ },
+ "pixels": {
+  "flood_l2": {
+   "0-0.5": 109515,
+   "0.5-3": 1468382,
+   "3-5": 74512,
+   "5-10": 0,
+   "10-20": 0,
+   "20-": 0
+  },
+  "keizoku_l2": {
+   "-12h": 243073,
+   "12h-1d": 178194,
+   "1-3d": 341312,
+   "3d-1w": 844213,
+   "1-2w": 2790,
+   "2-4w": 0,
+   "4w-": 0
+  },
+  "dosekiryu": {
+   "keikai_incl_tokubetsu": 1487844,
+   "tokubetsu": 37687
+  },
+  "kyukeisha": {
+   "keikai_incl_tokubetsu": 967517,
+   "tokubetsu": 510206
+  },
+  "jisuberi": {
+   "keikai_incl_tokubetsu": 283704,
+   "tokubetsu": 0
+  }
+ },
+ "processing": [
+  "浸水深・浸水継続時間: タイルの色をそのまま（パレット PNG にしただけ）",
+  "土砂災害警戒区域等: 境目のぼかしを不透明度50%で切り、警戒区域・特別警戒区域の公表色の2色にそろえた（区域の範囲は変えていない）",
+  "枠内に指定予定の区域（紺の破線）は無い"
+ ],
+ "sources": {
+  "portal": "国土交通省「ハザードマップポータルサイト」（重ねるハザードマップ） https://disaportal.gsi.go.jp/ 公共データ利用規約 第1.0版（PDL1.0）",
+  "dosha": "国土交通省「国土数値情報（土砂災害警戒区域データ）」令和7年度（2025年8月1日時点）。長野県はオープンデータとしての利用可（商用利用可・再配信可）"
+ },
+ "note": "実際の取得日（fetchedAt）は作中の作成日（令和8年8月）と食い違うので、図とページには書かない。"
+}

@@ -1,23 +1,21 @@
 {
   "path": "documents/index.html",
   "route": "/documents/",
-  "layout": "legacy",
+  "layout": "city",
   "title": "資料室｜霞ノ杜町",
-  "description": "",
-  "canonical": "https://roku253.github.io/kasuminomori/documents/",
+  "description": "閲覧やお問い合わせの多い過去の資料を、分類ごとに掲載しています。",
+  "h1": "資料室",
   "breadcrumbs": [
-    {
-      "label": "トップ",
-      "href": "../"
-    },
-    {
-      "label": "市政情報",
-      "href": "../shisei/"
-    },
-    {
-      "label": "資料室"
-    }
+    { "label": "トップ", "href": "/" },
+    { "label": "町政情報", "href": "/shisei/" },
+    { "label": "資料室" }
   ],
   "related": [],
-  "bodyHtml": "<h2>公報・資料室</h2>\r\n        <p>霞ノ杜町の公開資料の索引です。個人名は原則記載していません。</p>\r\n\r\n        <h3>公報・議会資料</h3>\r\n        <ul>\r\n          <li><a href=\"gikai-dayori/\">議会だより</a> — 町議会の審議・報告の抜粋</li>\r\n          <li><a href=\"chiiki-anzen/\">地域安全通信</a> — 地域安全・防災に関する広報</li>\r\n        </ul>\r\n\r\n        <h3>関連ページ</h3>\r\n        <ul>\r\n          <li><a href=\"../shisei/koho-kasumi/\">広報誌「霞ノ杜」</a> — 町民向け広報（くらし・行事）</li>\r\n          <li><a href=\"../history/#legend\">町の歴史（伝承）</a></li>\r\n          <li><a href=\"../blog/2019/\">2019年ローカルニュース</a></li>\r\n        </ul>"
+  "paragraphs": [
+    "令和8年4月のホームページリニューアルに伴い、平成31年度（令和元年度）以前に掲載していた記事は、一部を除き掲載を終了しました。このページでは、閲覧やお問い合わせの多い過去の資料を、引き続き掲載しています。掲載を終了した資料は、役場1階の行政資料コーナーでご覧いただけます。"
+  ],
+  "bodyHtml": "<h2>広報</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td>広報紙「かすみのもり」</td><td>電子版は直近6か月分です。<a href=\"/shisei/koho-kasumi/\">広報紙のページ</a>から開けます。それ以前の号は町立図書館でご覧いただけます。</td></tr></tbody></table></div>\n<h2>議会</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/documents/gikai-dayori/\">議会だより</a></td><td>定例会の審議と一般質問の広報紙です。お問い合わせの多い号を掲載しています。</td></tr></tbody></table></div>\n<h2>地域安全</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/documents/chiiki-anzen/\">地域安全通信</a></td><td>令和3年3月で発行を終了した回覧です。号ごとの一覧を掲載しています。</td></tr></tbody></table></div>\n<h2>情報公開（請求の多い公文書）</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/documents/joho-teikyo/\">情報提供資料</a></td><td>開示請求が繰り返しあった公文書を、開示した内容のまま掲載しています。</td></tr></tbody></table></div>\n<h2>防災</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/anzen/hazard/\">洪水・土砂災害ハザードマップ</a></td><td>令和8年9月に全戸配布した地図です。ページからPDFを開けます。</td></tr></tbody></table></div>",
+  "searchKeywords": ["資料室", "公報", "公開資料", "情報公開"],
+  "owner": "総務課 総務係",
+  "updated": "2026-10-09"
 }

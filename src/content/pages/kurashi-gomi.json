@@ -3,7 +3,7 @@
   "route": "/kurashi/gomi/",
   "layout": "city",
   "title": "ごみ・リサイクル｜霞ノ杜町",
-  "description": "ごみ・リサイクル — 霞ノ杜町公式。【フィクション】",
+  "description": "ごみの分別、収集曜日、リサイクル施設の案内です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,15 @@
   ],
   "h1": "ごみ・リサイクル",
   "paragraphs": [
-    "地区ごとに収集曜日が異なります。分別は町公式パンフレットに準拠します。"
+    "可燃ごみ、不燃ごみ、資源、プラスチックを分けて集めています。曜日は、三日月・湖畔・駅前・杜ケ丘の4地区で違います。下の表で確かめてください。品目の分け方は、ごみ収集検索で探せます。",
+    "粗大ごみ・家電リサイクル・草木の持込みは、事前予約制です。収集日の変更や、年末年始の特別スケジュールは、お知らせ欄で案内します。",
+    "分別に迷ったときは、ごみ収集検索ページで品目を調べるか、住民税務課環境係までお問い合わせください。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>三日月町</th><td>燃やす:火金 / 資源:水 / プラ:第1・3木</td></tr><tr><th>霞ノ杜</th><td>燃やす:月木 / 資源:水 / プラ:第2・4木</td></tr><tr><th>杉並ヶ岡</th><td>燃やす:火 / 資源:金 / プラ:第2水</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi-search.html\">ごみ収集検索</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></aside>"
+  "tableHtml": "<div data-kn-tool=\"gomi-calendar\"></div>",
+  "searchKeywords": [
+    "ごみ",
+    "ゴミ",
+    "分別",
+    "収集曜日"
+  ]
 }

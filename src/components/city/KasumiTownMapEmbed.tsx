@@ -13,6 +13,7 @@ export function KasumiTownMapEmbed() {
           src={embedSrc}
           title="霞ノ杜町内マップ"
           className="town-map__frame"
+          loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allow="fullscreen"
         />

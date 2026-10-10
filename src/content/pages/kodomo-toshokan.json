@@ -2,8 +2,8 @@
   "path": "kodomo/toshokan.html",
   "route": "/kodomo/toshokan/",
   "layout": "city",
-  "title": "図書館｜霞ノ杜町",
-  "description": "町立図書館 — 霞ノ杜町公式。【フィクション】",
+  "title": "町立図書館｜霞ノ杜町",
+  "description": "町立図書館の利用案内、蔵書検索、イベント情報です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,9 @@
   ],
   "h1": "町立図書館",
   "paragraphs": [
-    "三日月庁舎別館2階。一般書・町史コーナー・児童書を所蔵。火・水は休館。"
+    "町立図書館は駅前にあります。火から金は9:00〜18:00、土曜は9:00〜17:00です。日曜・月曜と祝日は休館です。貸出は1人10点、2週間です。",
+    "おはなし会、工作教室、調べ学習のサポートなど、子ども向けプログラムを月例で開催しています。参加は無料ですが、事前申込みが必要な場合があります。",
+    "蔵書のリクエスト、寄贈の受付、ボランティア司書の募集についても、こちらからご案内します。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>開館</th><td>9:30〜18:00（土曜〜17:00）</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../history/\">歴史</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\""
+  "tableHtml": "<table class=\"city-data\"><tr><th>開館</th><td>9:30〜18:00（土曜〜17:00）</td></tr></table>"
 }

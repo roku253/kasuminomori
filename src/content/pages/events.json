@@ -1,10 +1,9 @@
 {
   "path": "events/index.html",
   "route": "/events/",
-  "layout": "legacy",
-  "title": "年間行事｜霞ノ杜町",
-  "description": "霞ノ杜町の年間行事・祭事のご案内。【フィクション】",
-  "canonical": "https://roku253.github.io/kasuminomori/events/",
+  "layout": "city",
+  "title": "年間行事・祭事｜霞ノ杜町",
+  "description": "霞ノ杜町の年間行事・祭事のご案内。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -44,5 +43,11 @@
   "paragraphs": [
     "霞ノ杜町で年間を通じて行われる祭り・行事です。日付は例年の目安で、直前の変更はお知らせに出します。"
   ],
-  "extraHtml": "<div class=\"table-scroll\">\n<table class=\"data-table event-table\">\n  <thead><tr><th>時期</th><th>行事</th><th>場所</th><th>内容</th></tr></thead>\n  <tbody>\n    <tr><td>1月3日〜5日</td><td>初詣・霧払いの神事</td><td>霞ノ杜神社</td><td>新年最初の朝霧の中で、宮司による霧払いを行います。町の安全と豊作を祈る神事です。</td></tr>\n    <tr><td>3月下旬</td><td>杜開きの集い</td><td>町の山道・林道</td><td>通行再開を祝う集いです。地元の蕎麦と甘酒の振る舞いがあります。</td></tr>\n    <tr><td>5月上旬</td><td>霞ノ杜こども作品展（春）</td><td>町民ホール</td><td>町立第一小学校の絵画クラブをはじめ、町内の児童の作品を展示します。</td></tr>\n    <tr><td>8月15日（夜）</td><td>水迎えの祭り</td><td>杜川沿い</td><td>水源に感謝する小さな祭りです。川沿いに灯籠が並びます。</td></tr>\n    <tr><td>10月12日前後</td><td>河川敷清掃ボランティア</td><td>杜川と水辺の丘の周辺</td><td>町民有志と町立第一小学校の児童とで実施しています。</td></tr>\n    <tr><td>11月上旬</td><td>霞ノ杜こども絵画展（秋）</td><td>町民ホール</td><td>春の作品展の続きです。秋は町外からの審査員を招いて講評します。</td></tr>\n    <tr><td>12月</td><td>冬の安全教室</td><td>町内</td><td>町の関係団体との共催です。霧と凍結、夕方の視認性について学びます。</td></tr>\n  </tbody>\n</table>\n</div>\n<h2>休止している行事</h2>\n<p>令和4年以降、整備上の理由で開催していません。</p>\n<table class=\"data-table event-table\">\n  <thead><tr><th>時期</th><th>行事</th><th>場所</th><th>状態</th></tr></thead>\n  <tbody>\n    <tr><td>春</td><td>春の写生会</td><td>旧 水辺の丘 自然公園</td><td>休止</td></tr>\n    <tr><td>秋</td><td>水辺の丘 観月会</td><td>旧整備区域</td><td>休止</td></tr>\n  </tbody>\n</table>"
+  "extraHtml": "<div class=\"table-scroll\">\n<table class=\"data-table event-table\">\n  <thead><tr><th>時期</th><th>行事</th><th>場所</th><th>内容</th></tr></thead>\n  <tbody>\n    <tr><td>1月3日〜5日</td><td>初詣・霧払いの神事</td><td>霞ノ杜神社</td><td>新年最初の朝霧の中で、宮司による霧払いを行います。町の安全と豊作を祈る神事です。</td></tr>\n    <tr><td>3月下旬</td><td>杜開きの集い</td><td>町の山道・林道</td><td>通行再開を祝う集いです。地元の蕎麦と甘酒の振る舞いがあります。</td></tr>\n    <tr><td>5月上旬</td><td>霞ノ杜こども作品展（春）</td><td>町民ホール</td><td>町立第一小学校の絵画クラブをはじめ、町内の児童の作品を展示します。</td></tr>\n    <tr><td>8月15日（夜）</td><td>霞湖花火大会</td><td>霞湖</td><td>湖上から花火を打ち上げます。湖岸の交通規制は、開催の1週間前までにお知らせします。</td></tr>\n    <tr><td>10月11日</td><td>例大祭</td><td>霞ノ杜神社</td><td>秋の例大祭です。屋台は参道に出ます。</td></tr>\n    <tr><td>10月中旬</td><td>河川敷清掃</td><td>杜川の河川敷</td><td>町民有志で、杜川の河川敷を清掃します。</td></tr>\n    <tr><td>11月上旬</td><td>霞ノ杜こども絵画展（秋）</td><td>町民ホール</td><td>春の作品展の続きです。秋は町外からの審査員を招いて講評します。</td></tr>\n    <tr><td>12月</td><td>冬の安全教室</td><td>町内</td><td>町の関係団体との共催です。霧と凍結、夕方の視認性について学びます。</td></tr>\n  </tbody>\n</table>\n</div>\n<h2>休止している場所</h2>\n<p>水辺の丘（杜川が霞湖に注ぐ河口近くの旧自然公園）は、令和4年から再整備のため閉鎖しています。危険区域ではありません。</p>",
+  "searchKeywords": [
+    "祭り",
+    "行事",
+    "夏祭り",
+    "マラソン"
+  ]
 }

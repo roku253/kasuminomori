@@ -1,7 +1,6 @@
 import { expect, test } from "@playwright/test";
+import { isOnTop } from "./helpers";
 import { sitePath } from "./paths";
-
-const PORT = process.env.PW_PORT ?? "3456";
 
 test.describe("霞ノ杜町 — スモーク（使用感シミュレーション）", () => {
   test("トップ: ヒーロー・お知らせ・フッター", async ({ page }) => {
@@ -59,22 +58,32 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
     await expect(page.getByRole("heading", { level: 1, name: "ごみ・リサイクル" })).toBeVisible();
   });
 
-  test("観光 spot: 霞ノ杜神社（legacy レイアウト）", async ({ page }) => {
+  // 段階1b で旧型の左メニュー（「観光・町案内メニュー」）を廃止し、共通テンプレート＋ローカルナビにした。
+  // 本文の「霧払いの大杉」は段階2（WP3c）で spot の本文を書き直したら合わせて直す。
+  test("観光 spot: 霞ノ杜神社（共通テンプレート・ローカルナビ）", async ({ page }) => {
     await page.goto(sitePath("spot/1/"));
     await expect(page.getByRole("heading", { level: 1, name: "霞ノ杜神社" })).toBeVisible();
-    await expect(page.getByRole("navigation", { name: "観光・町案内メニュー" })).toBeVisible();
+    await expect(page.getByRole("navigation", { name: "観光・町案内メニュー" })).toHaveCount(0);
+    const localNav = page.getByRole("navigation", { name: "文化・スポーツ・観光" });
+    await expect(localNav).toBeVisible();
+    await expect(localNav.getByRole("link", { name: "霞ノ杜神社" })).toHaveAttribute("aria-current", "page");
     await expect(page.getByText("霧払いの大杉")).toBeVisible();
   });
 
-  test("トップ: メガメニュー展開時にヒーローピルが重ならない", async ({ page }) => {
+  // トップも下層と同じヘッダー（写真の上にボタンを置かない）。メニューを開くとパネルと背景が最前面になり、
+  // トップの部品（よく使うページ）がメニューに重ならないこと。
+  test("トップ: メガメニュー展開時はメニューが最前面（トップの部品が重ならない）", async ({ page }) => {
     await page.goto(sitePath());
     await page.getByRole("button", { name: "メニュー" }).click();
     await expect(page.getByRole("button", { name: "メニュー" })).toHaveAttribute("aria-expanded", "true");
-    await expect(page.getByText("よく使うページ")).toBeHidden();
-    await expect(page.getByRole("navigation").filter({ hasText: "よく使うリンク" })).toBeVisible();
+    const mega = page.getByRole("navigation", { name: "サイトメニュー" });
+    await expect(mega).toBeVisible();
+    await expect(mega.getByText("よく使うリンク")).toBeVisible();
+    expect(await isOnTop(mega)).toBe(true);
+    expect(await isOnTop(page.getByText("よく使うページ", { exact: true }))).not.toBe(true);
   });
 
-  test("メガメニュー: 開閉と市政リンク", async ({ page }) => {
+  test("メガメニュー: 開閉と町政リンク", async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 800 });
     await page.goto(sitePath("shisei/koho/"));
     const menuBtn = page.getByRole("button", { name: "メニュー" });
@@ -93,8 +102,9 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
     await expect(page).toHaveURL(/\/kasuminomori\/?$/);
   });
 
-  test("ルート直アクセスは basePath 配下（404 回避）", async ({ page }) => {
-    const res = await page.goto(`http://localhost:${PORT}/`);
+  test("ルート直アクセスは basePath 配下（404 回避）", async ({ page, baseURL }) => {
+    // 開発サーバ（chrome）でも out/ の配信（static）でも同じ origin の "/" を見る
+    const res = await page.goto(new URL("/", baseURL).href);
     expect(res?.status()).toBe(404);
   });
 });

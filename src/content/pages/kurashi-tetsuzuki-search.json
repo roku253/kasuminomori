@@ -2,8 +2,8 @@
   "path": "kurashi/tetsuzuki-search.html",
   "route": "/kurashi/tetsuzuki-search/",
   "layout": "city",
-  "title": "手続早わかり検索｜霞ノ杜町",
-  "description": "申請・手続早わかり検索 — 霞ノ杜町公式。【フィクション】",
+  "title": "申請・手続早わかり検索｜霞ノ杜町",
+  "description": "キーワードで町の手続き・届出を検索できます。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,7 @@
   ],
   "h1": "申請・手続早わかり検索",
   "paragraphs": [
-    "手続名から担当課を検索できます。"
+    "下の表を、手続き名で絞り込めます。トップページの手続検索からも、同じ表を開きます。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>住民票</th><td>住民課 / 1階</td></tr><tr><th>建築確認</th><td>建設課 / 2階</td></tr><tr><th>観光協力</th><td>産業観光課 / 2階</td></tr><tr><th>国民健康保険</th><td>福祉課 / 1階</td></tr></table>",
-  "extraHtml": "<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>手続き名 <input id=\"proc-q\" type=\"text\" placeholder=\"例：住民票\"></label>\n  <button type=\"button\" id=\"proc-go\">絞り込む</button>\n</form>\n<p id=\"proc-out\"></p>"
+  "tableHtml": "<div data-kn-tool=\"procedure-search\"></div>"
 }

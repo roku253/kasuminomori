@@ -3,60 +3,87 @@
   <url><loc>https://roku253.github.io/kasuminomori/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/access/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/anzen/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/anzen/bosai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/anzen/hazard.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/anzen/kinkyu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/anzen/koutsuu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/anzen/saigai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/blog/2016/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/blog/2021/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/anzen/bosai/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/anzen/hazard/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/anzen/kinkyu/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/anzen/koutsuu/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/anzen/saigai/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/blog/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/blog/2016/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/blog/2019/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/blog/2021/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/bunka/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/bunka/bunka.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/bunka/events-calendar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/bunka/sports.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/bunka/bunka/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/bunka/events-calendar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/bunka/sports/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/documents/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/documents/chiiki-anzen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/documents/gikai-dayori/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/documents/joho-teikyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/events/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/fukushi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/fukushi/hoken.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/fukushi/kaigo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/fukushi/kenko.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/fukushi/hoken/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/fukushi/kaigo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/fukushi/kenko/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/guide/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/history/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/kodomo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kodomo/hoiku.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kodomo/kosodate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kodomo/shogakkou.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kodomo/toshokan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kodomo/hoiku/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kodomo/kosodate/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kodomo/shogakkou/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kodomo/toshokan/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/kurashi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/bus-jikan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/bus-roke.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/chizu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/denshi-shinsei.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/gomi-search.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/gomi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/juminhyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/kankyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/suido.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/sumai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/tetsuzuki-navi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/kurashi/tetsuzuki-search.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/bus-jikan/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/bus-roke/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/chizu/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/denshi-shinsei/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/gomi-search/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/gomi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/juminhyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/kankyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/suido/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/sumai/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/tetsuzuki-navi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/tetsuzuki-search/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/kurashi/zei/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/sangyo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/sangyo/kankou-sangyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/sangyo/koyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/sangyo/ringyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/sangyo/shogyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/sangyo/kankou-sangyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/sangyo/koyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/sangyo/ringyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/sangyo/shogyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/search/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://roku253.github.io/kasuminomori/shisei/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/archive.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/chijitsu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/open-data.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/senkyo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/shozoku.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/shisei/yakuba.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/spot/1/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/spot/2/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/spot/3/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/spot/4/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://roku253.github.io/kasuminomori/spot/5/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/archive/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/chijitsu/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/gaiyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/gikai/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho-kasumi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-02-02-tokiheisa/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-03-16-tsuribashi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-04-01-renewal/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-08-03-saiyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-08-05-hanabi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-08-21-bosaikunren/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-09-01-hazardmap/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-09-16-bunkasai/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-09-28-kohansen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-10-01-juminzei/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-10-05-kuma/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-10-07-vaccine/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/koho/2026-10-09-koho846/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/open-data/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/senkyo/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/shozoku/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/shisei/yakuba/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/site/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/site/accessibility/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/site/privacy/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/sitemap/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/spot/1/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/spot/2/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/spot/3/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/spot/4/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://roku253.github.io/kasuminomori/spot/5/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

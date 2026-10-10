@@ -3,7 +3,7 @@
   "route": "/fukushi/kenko/",
   "layout": "city",
   "title": "健康・医療｜霞ノ杜町",
-  "description": "健康・医療 — 霞ノ杜町公式。【フィクション】",
+  "description": "町の健康診断、予防接種、医療機関の案内です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,7 +41,9 @@
   ],
   "h1": "健康・医療",
   "paragraphs": [
-    "40歳以上の町民健診は毎年秋に実施。霞ノ杜診療所は平日9:00〜17:00（土日祝休診）。"
+    "健診と予防接種は、保健福祉課保健係（役場1階、内線127）が担当します。町立霞ノ杜診療所は三日月中央にあります。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoken"
+  "owner": "保健福祉課 保健係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>診療所</h2><table class=\"data-table\"><tbody><tr><th>名称</th><td>町立霞ノ杜診療所</td></tr><tr><th>場所</th><td>三日月中央（役場から徒歩3分）</td></tr><tr><th>診療</th><td>平日 9:00〜17:00、土曜 9:00〜12:00</td></tr><tr><th>休診</th><td>日曜、祝日、土曜の午後</td></tr></tbody></table><h2>令和8年度の健診</h2><table class=\"data-table\"><thead><tr><th>健診</th><th>対象</th><th>時期</th></tr></thead><tbody><tr><td>特定健診</td><td>40歳から74歳の国民健康保険の加入者</td><td>10月1日〜12月28日。予約は保健係</td></tr><tr><td>胃がん・肺がん</td><td>案内のはがきが届いた人</td><td>11月。町民ホール</td></tr><tr><td>インフルエンザ</td><td>65歳以上</td><td>10月1日〜12月28日。1回2,000円の助成</td></tr></tbody></table><p>夜間と休日の急病は、119番です。診療所では受けていません。</p>"
 }

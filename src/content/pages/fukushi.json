@@ -3,7 +3,7 @@
   "route": "/fukushi/",
   "layout": "city",
   "title": "福祉・健康｜霞ノ杜町",
-  "description": "",
+  "description": "健康・介護・保険など、暮らしを支える福祉サービスの入口です。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -16,7 +16,9 @@
   "related": [],
   "h1": "福祉・健康",
   "paragraphs": [
-    "医療・介護・保険に関する情報です。"
+    "霞ノ杜町では、子育て世代から高齢者まで、段階に応じた支援制度を用意しています。まずはお困りごとをお聞かせください。担当課が窓口を一本化してご案内します。",
+    "健診、介護保険、生活の相談は、役場1階の保健福祉課で受け付けています。電話は代表 0266-12-2111 です。",
+    "各分野の詳細は、健康・医療／介護／保険のページからご覧ください。訪問相談が必要な方は、事前予約をお願いします。"
   ],
   "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"kenko.html\"><strong>健康・医療</strong><span>健診・診療所</span></a><a class=\"city-hub-card\" href=\"kaigo.html\"><strong>介護</strong><span>要介護認定</span></a><a class=\"city-hub-card\" href=\"hoken.html\"><strong>保険</strong><span>国保・後期高齢者</span></a></div>"
 }

@@ -1,0 +1,28 @@
+.sheet { position: absolute; left: 11mm; right: 11mm; top: 9mm; bottom: 12mm; }
+.mast { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2mm solid #1a4d80; padding-bottom: 2mm; }
+.mast h1 { font-family: "KN Mincho"; font-weight: 400; font-size: 22pt; letter-spacing: 0.08em; color: #1a4d80; line-height: 1.15; }
+.mast .sub { font-size: 11pt; font-weight: 700; color: #1a4d80; }
+.no { font-size: 13pt; font-weight: 700; }
+.meta { margin-top: 2mm; font-size: 8.5pt; display: flex; gap: 6mm; }
+.cover-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 5mm; margin-top: 4mm; }
+.cover-grid img { width: 100%; height: 62mm; object-fit: cover; }
+.toc { font-size: 9pt; }
+.toc li { display: flex; gap: 2mm; border-bottom: 0.2mm dotted #8b98a8; padding: 1.1mm 0; }
+.toc .pg { margin-left: auto; font-weight: 700; }
+.running { display: flex; justify-content: space-between; font-size: 8pt; border-bottom: 0.4mm solid #1a4d80; padding-bottom: 1mm; margin-bottom: 3mm; color: #1a4d80; }
+h2.sec { font-size: 12pt; color: #1a4d80; border-left: 2.4mm solid #1a4d80; padding-left: 2mm; margin: 3mm 0 2mm; }
+p { margin: 0 0 1.6mm; font-size: 9pt; }
+table.data { font-size: 8pt; margin: 1.5mm 0 2.5mm; }
+table.data th, table.data td { border: 0.2mm solid #8b98a8; padding: 1mm 1.4mm; vertical-align: top; }
+table.data th { background: #e8f0fa; color: #1a4d80; text-align: left; }
+.qa { margin: 0 0 2.4mm; font-size: 8.6pt; }
+.qa .who { font-weight: 700; color: #1a4d80; }
+.qa p { margin: 0.6mm 0; }
+.note { font-size: 8pt; border: 0.3mm solid #1a4d80; padding: 1.6mm 2mm; margin-top: 2mm; }
+.pie-row { display: flex; gap: 6mm; align-items: center; margin: 2mm 0; }
+.pie { width: 36mm; height: 36mm; border-radius: 50%; flex: none; }
+.legend { font-size: 8.5pt; }
+.legend div { display: flex; gap: 2mm; align-items: center; margin: 0.8mm 0; }
+.sw { width: 4mm; height: 3mm; flex: none; }
+.colophon { margin-top: 4mm; border-top: 0.4mm solid #1a4d80; padding-top: 2mm; font-size: 8pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }

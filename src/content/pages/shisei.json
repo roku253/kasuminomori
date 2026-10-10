@@ -2,7 +2,7 @@
   "path": "shisei/index.html",
   "route": "/shisei/",
   "layout": "city",
-  "title": "市政情報｜霞ノ杜町",
+  "title": "町政情報｜霞ノ杜町",
   "description": "",
   "breadcrumbs": [
     {
@@ -10,13 +10,13 @@
       "href": "../../"
     },
     {
-      "label": "市政情報"
+      "label": "町政情報"
     }
   ],
   "related": [],
-  "h1": "市政情報",
+  "h1": "町政情報",
   "paragraphs": [
     "町政・組織・広報・選挙の情報です。"
   ],
-  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"koho-kasumi.html\"><strong>広報誌「霞ノ杜」</strong><span>くらし・行事</span></a><a class=\"city-hub-card\" href=\"../documents/\"><strong>資料室</strong><span>議会だより</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>バックナンバー</strong><span>広報誌</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>フォーム</span></a></div>"
+  "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶・歴代町長</span></a><a class=\"city-hub-card\" href=\"gaiyo.html\"><strong>町の概要</strong><span>位置・人口</span></a><a class=\"city-hub-card\" href=\"gikai.html\"><strong>町議会</strong><span>議員・定例会</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"koho-kasumi.html\"><strong>広報紙「かすみのもり」</strong><span>くらし・行事</span></a><a class=\"city-hub-card\" href=\"../documents/\"><strong>資料室</strong><span>過去の資料</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>バックナンバー</strong><span>広報紙</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>課の連絡先</span></a></div>"
 }

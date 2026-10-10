@@ -2,8 +2,8 @@
   "path": "bunka/events-calendar.html",
   "route": "/bunka/events-calendar/",
   "layout": "city",
-  "title": "イベント｜霞ノ杜町",
-  "description": "イベントカレンダー — 霞ノ杜町公式。【フィクション】",
+  "title": "イベントカレンダー｜霞ノ杜町",
+  "description": "町内のイベント・祭り・講座の年間カレンダーです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,10 @@
   ],
   "h1": "イベントカレンダー",
   "paragraphs": [
-    "月ごとの主な行事は年間行事ページに掲載しています。",
-    "<a href=\"../events/\">年間行事ページへ</a>"
+    "年間の行事は、年間行事のページの表が正です。このページは令和8年10月の予定です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../events/\">行事</a></li><li><a"
+  "extraHtml": "",
+  "owner": "産業観光課 商工観光係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>令和8年10月</h2><table class=\"data-table\"><thead><tr><th>日</th><th>予定</th></tr></thead><tbody><tr><td>10月10日（土）</td><td>広報かすみのもり10月号を配布</td></tr><tr><td>10月11日（日）</td><td>霞ノ杜神社の例大祭</td></tr><tr><td>10月13日（火）</td><td>町道湖畔線の工事が始まる（片側交互通行）</td></tr><tr><td>10月16日（金）</td><td>文化祭の募集締切</td></tr><tr><td>10月17日（土）</td><td>公民館講座「湖の舟」（町民ホール）</td></tr><tr><td>10月の第3土曜</td><td>霞湖商店街の夜市</td></tr></tbody></table><h2>毎年の主な行事</h2><ul><li>1月3日〜5日: 初詣・霧払い（霞ノ杜神社）</li><li>3月下旬: 杜開き</li><li>8月15日: 霞湖花火大会</li><li>10月11日: 霞ノ杜神社の例大祭</li><li>10月中旬: 杜川の河川敷清掃</li><li>11月上旬: こども絵画展（秋）</li></ul>"
 }

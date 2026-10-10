@@ -8,7 +8,7 @@ const CATEGORIES = [
   { tab: "子ども・教育", h1: "子ども・教育", slug: "kodomo" },
   { tab: "産業・雇用", h1: "産業・雇用", slug: "sangyo" },
   { tab: "文化・スポーツ・観光", h1: "文化・スポーツ・観光", slug: "bunka" },
-  { tab: "市政情報", h1: "市政情報", slug: "shisei" },
+  { tab: "町政情報", h1: "町政情報", slug: "shisei" },
 ] as const;
 
 test.describe("ヘッダー — カテゴリタブ・メガメニュー役割", () => {
@@ -34,10 +34,10 @@ test.describe("ヘッダー — カテゴリタブ・メガメニュー役割", 
       });
     }
 
-    test("現在地: 市政情報タブが aria-current", async ({ page }) => {
+    test("現在地: 町政情報タブが aria-current", async ({ page }) => {
       const shisei = page
         .getByRole("navigation", { name: "主要カテゴリ" })
-        .getByRole("link", { name: "市政情報", exact: true });
+        .getByRole("link", { name: "町政情報", exact: true });
       await expect(shisei).toHaveAttribute("aria-current", "page");
     });
 

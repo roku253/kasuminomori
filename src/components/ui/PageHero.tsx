@@ -17,10 +17,10 @@ export function PageHero({ title, subtitle, breadcrumbs, pageRoute = "/", source
       {breadcrumbs && breadcrumbs.length > 0 && pageRoute && (
         <CityBreadcrumb items={breadcrumbs} pageRoute={pageRoute} sourcePath={sourcePath} />
       )}
-      <h1 className="m-0 border-b-[3px] border-[var(--kasumi-gold,#c9a227)] pb-3 font-[family-name:var(--font-display)] text-[28px] font-bold text-[var(--kasumi-blue)] md:text-4xl">
+      <h1 className="kn-page-title m-0 border-b-2 border-[var(--kasumi-blue)] pb-3 text-[26px] font-bold leading-snug text-[#173f68] md:text-[32px]">
         {title}
       </h1>
-      {subtitle && <p className="mt-4 text-base leading-relaxed text-[#444]">{subtitle}</p>}
+      {subtitle && <p className="mt-4 max-w-[46em] text-base leading-relaxed text-[#333]">{subtitle}</p>}
       {children}
     </header>
   );

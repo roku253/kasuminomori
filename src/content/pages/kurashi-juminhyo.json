@@ -2,8 +2,8 @@
   "path": "kurashi/juminhyo.html",
   "route": "/kurashi/juminhyo/",
   "layout": "city",
-  "title": "住民票・窓口｜霞ノ杜町",
-  "description": "住民票・窓口案内 — 霞ノ杜町公式。【フィクション】",
+  "title": "住民票・窓口案内｜霞ノ杜町",
+  "description": "住民票・印鑑登録・戸籍など、住民記録に関する手続きです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,9 @@
   ],
   "h1": "住民票・窓口案内",
   "paragraphs": [
-    "転入・転出・世帯変更は三日月庁舎1階 住民課で受け付けます。平日8:30〜17:15（12:00〜13:00は窓口休止）。"
+    "住民票の写し、住民票の記載事項証明、印鑑登録・廃止などは、庁舎1階の住民記録窓口で受け付けています。代理人の方は、委任状と代理人の身分証明書が必要です。",
+    "転入・転出・転居の届出は、14日以内に行ってください。マイナンバーに関する手続きは、別窓口またはオンライン申請をご利用ください。",
+    "窓口の混雑状況は、平日午前が比較的空いています。予約優先の時間帯も設けていますので、電話でご確認ください。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>住民票交付</th><td>本人確認書類・手数料300円</td></tr><tr><th>転入</th><td>14日以内に届出（前住所の転出証明がある場合）</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"../shisei/yakuba.html\">庁舎案内</a></li><li><a href=\"denshi-s"
+  "tableHtml": "<table class=\"city-data\"><tr><th>住民票交付</th><td>本人確認書類・手数料300円</td></tr><tr><th>転入</th><td>14日以内に届出（前住所の転出証明がある場合）</td></tr></table>"
 }

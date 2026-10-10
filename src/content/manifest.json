@@ -3,25 +3,47 @@
     {
       "path": "access/index.html",
       "route": "/access/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "アクセス・地図｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/access/",
+      "description": "霞ノ杜駅と町営バス、役場への行き方です。",
+      "h1": "アクセス・地図",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../"
+          "href": "/"
         },
         {
           "label": "くらし・環境",
-          "href": "../kurashi/"
+          "href": "/kurashi/"
         },
         {
           "label": "アクセス・地図"
         }
       ],
-      "related": [],
-      "bodyHtml": "<h2>アクセス・地図</h2>\r\n\r\n        <h3>町内 簡易マップ</h3>\r\n        <!--KASUMI_TOWN_MAP-->\r\n\r\n        <h3>交通機関</h3>\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>町外からの主要ルート</th><td>三日月町方面（旧街道経由）／杉並ヶ岡方面（北街道経由）</td></tr>\r\n            <tr><th>町営バス</th><td>三日月町中心部 ⇄ 霞ノ杜地区 を一日 6 往復。山間部は便数少。</td></tr>\r\n            <tr><th>所要時間</th><td>三日月町中心部から霞ノ杜地区まで車で約 20 分</td></tr>\r\n          </tbody>\r\n        </table>\r\n\r\n        <h3>駐車場</h3>\r\n        <ul>\r\n          <li><strong>霞ノ杜神社 参拝者駐車場</strong>（無料・約 12 台 / 砂利）</li>\r\n          <li><strong>町営 杜の駐車場</strong>（無料・約 30 台 / 観光協会まで徒歩 1 分）</li>\r\n          <li><strong>霧見展望休憩所 上駐車場</strong>（無料・約 8 台 / 林道経由）</li>\r\n        </ul>\r\n\r\n        <h3>立ち入りに関するご案内</h3>\r\n        <p>\r\n          町の<strong>北西部の旧整備区域</strong>には、安全管理上の理由から一般の立ち入りを制限している区画があります。\r\n          ロープ・看板に従ってください。当該区域はサイト上のスポット案内からは外しています。\r\n        </p>\r\n        <p>\r\n          霧が深い日は <strong>足元の段差</strong>、夕方は <strong>視界距離</strong> にお気をつけください。\r\n          山中での通信状況は安定しません。事前にルートを共有することを推奨します。\r\n        </p>"
+      "related": [
+        {
+          "href": "/kurashi/bus-jikan/",
+          "label": "バス時刻表",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/yakuba/",
+          "label": "庁舎案内",
+          "storyClue": false
+        }
+      ],
+      "paragraphs": [
+        "鉄道は霞ノ杜駅です。駅から役場（三日月中央2丁目8番1号）までは、町営バスで約8分、徒歩で約20分です。"
+      ],
+      "bodyHtml": "<h2>町内の地図</h2>\n<!--KASUMI_TOWN_MAP-->\n<h2>町営バス</h2>\n<p>駅前、役場、杜ケ丘、成沢を回る循環です。1周は約25分です。時刻は<a href=\"/kurashi/bus-jikan/\">バス時刻表</a>に載せています。</p>\n<h2>駐車場</h2>\n<ul><li>役場来庁者駐車場（三日月中央、約40台）</li><li>霞ノ杜神社の参拝者駐車場（杜ケ丘、約12台）</li><li>霧見展望休憩所の駐車場（杜ケ丘、約8台）</li></ul>\n<h2>立入禁止</h2>\n<p>烏啼（うてい）山道の周辺は、落石と地盤のゆるみのため、町が立入禁止にしています。柵と看板の内側には入らないでください。</p>",
+      "searchKeywords": [
+        "アクセス",
+        "地図",
+        "霞ノ杜駅",
+        "町営バス"
+      ],
+      "owner": "総務課 総務係",
+      "updated": "2026-10-01"
     },
     {
       "path": "anzen/index.html",
@@ -50,7 +72,7 @@
       "route": "/anzen/bosai/",
       "layout": "city",
       "title": "防災｜霞ノ杜町",
-      "description": "防災 — 霞ノ杜町公式。【フィクション】",
+      "description": "霞ノ杜町の防災計画、避難所、訓練日程など、災害に備えるための情報をまとめています。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -88,17 +110,23 @@
       ],
       "h1": "防災",
       "paragraphs": [
-        "指定避難所は三日月町公民館・霞ノ杜地区集会所です。防災無線は町内4か所に設置しています。"
+        "豪雨、地震、山火事を想定した計画を、5年ごとに見直しています。知らせる方法は、防災行政無線とこのホームページです。町の公式アプリはありません。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>避難所</th><td>三日月公民館 / 霞ノ杜集会所</td></tr><tr><th>砂袋配布</th><td>建設課倉庫前（災害時のみ）</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hazard.html\">ハザード</a></li><li><a href=\"saigai.html\">緊急</a></li><li><a href=\"koutsuu.html\">交通</a></li><li><a href=\"../kurash"
+      "bodyHtml": "<h2>避難所</h2>\n<table class=\"data-table\"><thead><tr><th>施設</th><th>場所</th><th>注意</th></tr></thead><tbody><tr><td>町民センター</td><td>三日月中央（役場の隣）</td><td>災害対策本部は役場</td></tr><tr><td>第一小学校の体育館</td><td>杜ケ丘</td><td></td></tr><tr><td>箕浦中学校の体育館</td><td>箕浦</td><td></td></tr><tr><td>箕浦高等学校の体育館</td><td>箕浦</td><td></td></tr></tbody></table>\n<p>湖畔公園、三日月中央公園、筒川公園は、浸水のおそれがあるため避難所にしません。旧三日月中央小学校の体育館は、土砂の警戒区域に近いため使いません。</p>\n<h2>訓練と名簿</h2>\n<p>総合防災訓練は、令和8年は9月6日に町民センターで開きました。次の予定は、決まり次第お知らせに出します。</p>\n<p>避難に手助けがいる人の名簿は、総務課地域安全係（内線215）で受け付けています。砂袋は、災害のときだけ、役場裏の建設水道課の倉庫で配ります。</p>\n<p>持ち出し袋に入れるものは、水、食料、薬、懐中電灯、ラジオです。庁舎1階でも同じ紙を配っています。</p>",
+      "owner": "総務課 地域安全係",
+      "updated": "2026-10-01",
+      "searchKeywords": [
+        "防災",
+        "避難所",
+        "災害"
+      ]
     },
     {
       "path": "anzen/hazard.html",
       "route": "/anzen/hazard/",
       "layout": "city",
       "title": "ハザードマップ｜霞ノ杜町",
-      "description": "ハザードマップ — 霞ノ杜町公式。【フィクション】",
+      "description": "霞ノ杜町の洪水・土砂災害ハザードマップ（令和8年8月作成）と、指定避難所・指定緊急避難場所の一覧です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -114,38 +142,45 @@
       ],
       "related": [
         {
-          "href": "../access/",
-          "label": "アクセス注意",
-          "storyClue": false
-        },
-        {
           "href": "bosai.html",
           "label": "防災",
           "storyClue": false
         },
         {
-          "href": "../spot/2/",
-          "label": "吊り橋",
+          "href": "saigai.html",
+          "label": "緊急・災害情報",
           "storyClue": false
         },
         {
-          "href": "../bunka/",
-          "label": "観光",
+          "href": "../shisei/koho-kasumi.html",
+          "label": "広報かすみのもり",
           "storyClue": false
         }
       ],
       "h1": "ハザードマップ",
       "paragraphs": [
-        "北西部旧整備区域は土砂・旧施設跡のため立入禁止。杜川沿いは増水に注意。霧による視界不良に留意してください。"
+        "町では、洪水・土砂災害ハザードマップを令和8年8月に改訂し、9月に全戸へ配布しました。想定し得る最大規模の大雨による浸水の深さと、県が指定した土砂災害警戒区域・特別警戒区域、町の指定避難所・指定緊急避難場所を1枚の地図にまとめています。",
+        "ご自宅や勤め先、通学路がどの区域にかかるか、どこへ避難するかを、ご家族で確かめておいてください。地図の下に、凡例・避難所の一覧・地区別の見方を文字でも載せています。"
       ],
-      "extraHtml": "<div class=\"hazard-sheet\">\n  <img src=\"/img/hazard-map.svg\" alt=\"杜川の氾濫想定、土砂災害警戒区域、揺れやすい範囲を色分けした霞ノ杜町の概況図\">\n  <form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n    <label>地区名 <input id=\"hazard-area\" type=\"text\" placeholder=\"例：三日月\"></label>\n    <button type=\"button\" id=\"hazard-go\">この地区を見る</button>\n  </form>\n  <p id=\"hazard-out\"></p>\n  <p><a href=\"/pdf/hazard-map.pdf\" target=\"_blank\" rel=\"noopener\">ハザードマップ（PDF）を開く</a></p>\n</div>"
+      "bodyHtml": "<h2>霞ノ杜町 洪水・土砂災害ハザードマップ（令和8年8月作成）</h2><div class=\"hazard-sheet\"><img src=\"/img/hazard/hazard-map.webp\" width=\"1920\" height=\"1600\" alt=\"霞ノ杜町 洪水・土砂災害ハザードマップの地図。霞湖の湖岸に浸水想定区域、東の山すそに土砂災害警戒区域・特別警戒区域があり、指定避難所・指定緊急避難場所を番号で示しています。凡例と避難所の一覧は、この下に文字で載せています。\" decoding=\"async\"></div><ul><li><a href=\"/img/hazard/hazard-map-a3.jpg\" target=\"_blank\" rel=\"noopener\">ハザードマップ全体（凡例・避難所一覧つき）を拡大して見る（JPEG画像・1.5MB）<span class=\"sr-only\">（新しいタブで開きます）</span><svg class=\"kn-newtab-icon\" aria-hidden=\"true\" focusable=\"false\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"display:inline-block;vertical-align:-0.125em;margin-left:0.2em\"><path d=\"M15 3h6v6\"/><path d=\"M10 14 21 3\"/><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"/></svg></a></li><li><a data-pdf=\"hazard-map.pdf\">霞ノ杜町 洪水・土砂災害ハザードマップ（印刷用）</a></li></ul><h2>凡例</h2><h3>洪水浸水想定区域（想定最大規模）</h3><ul style=\"list-style:none;padding-left:0\"><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"40\" height=\"18\" viewBox=\"0 0 40 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><rect width=\"40\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"40\" height=\"18\" fill=\"#F7F5A9\" fill-opacity=\"0.86\"/><rect x=\"0.5\" y=\"0.5\" width=\"39\" height=\"17\" fill=\"none\" stroke=\"#999\" stroke-width=\"1\"/></svg><span>0.5m未満　床下浸水（大人のひざまで）</span></li><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"40\" height=\"18\" viewBox=\"0 0 40 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><rect width=\"40\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"40\" height=\"18\" fill=\"#FFD8C0\" fill-opacity=\"0.86\"/><rect x=\"0.5\" y=\"0.5\" width=\"39\" height=\"17\" fill=\"none\" stroke=\"#999\" stroke-width=\"1\"/></svg><span>0.5〜3m　1階の床上〜1階の軒下まで</span></li><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"40\" height=\"18\" viewBox=\"0 0 40 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><rect width=\"40\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"40\" height=\"18\" fill=\"#FFB7B7\" fill-opacity=\"0.86\"/><rect x=\"0.5\" y=\"0.5\" width=\"39\" height=\"17\" fill=\"none\" stroke=\"#999\" stroke-width=\"1\"/></svg><span>3〜5m　2階の床上〜2階の軒下まで</span></li></ul><p>5〜10m・10〜20m・20m以上の区域は、町内にはありません。</p><h3>土砂災害警戒区域等</h3><p>種類は模様（土石流＝右上がりの斜線、急傾斜地の崩壊＝縦線、地すべり＝右下がりの斜線）で、警戒区域（黄）と特別警戒区域（赤）は色と輪郭の太さで区別しています。</p><ul style=\"list-style:none;padding-left:0\"><li style=\"display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:6px 0\"><svg width=\"48\" height=\"18\" viewBox=\"0 0 48 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><defs><pattern id=\"hz-sw4\" width=\"9\" height=\"9\" patternUnits=\"userSpaceOnUse\"><path d=\"M-9,9L0,0M0,9L9,0M9,9L18,0\" stroke=\"rgba(140,90,0,0.85)\" stroke-width=\"1.15\"/></pattern></defs><rect width=\"48\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"48\" height=\"18\" fill=\"#FFD600\" fill-opacity=\"0.28\"/><rect width=\"48\" height=\"18\" fill=\"url(#hz-sw4)\"/><rect x=\"0.55\" y=\"0.55\" width=\"46.9\" height=\"16.9\" fill=\"none\" stroke=\"#C99400\" stroke-width=\"1.1\"/></svg><span>土石流の警戒区域</span><span style=\"display:inline-flex;align-items:center;gap:8px;margin-left:8px\"><svg width=\"48\" height=\"18\" viewBox=\"0 0 48 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><defs><pattern id=\"hz-sw5\" width=\"9\" height=\"9\" patternUnits=\"userSpaceOnUse\"><path d=\"M-9,9L0,0M0,9L9,0M9,9L18,0\" stroke=\"rgba(140,90,0,0.85)\" stroke-width=\"1.15\"/></pattern></defs><rect width=\"48\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"48\" height=\"18\" fill=\"#FFD600\" fill-opacity=\"0.28\"/><rect width=\"48\" height=\"18\" fill=\"#E60012\" fill-opacity=\"0.36\"/><rect width=\"48\" height=\"18\" fill=\"url(#hz-sw5)\"/><rect x=\"1.1\" y=\"1.1\" width=\"45.8\" height=\"15.8\" fill=\"none\" stroke=\"#B00018\" stroke-width=\"2.2\"/></svg><span>特別警戒区域</span></span></li><li style=\"display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:6px 0\"><svg width=\"48\" height=\"18\" viewBox=\"0 0 48 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><defs><pattern id=\"hz-sw6\" width=\"8\" height=\"8\" patternUnits=\"userSpaceOnUse\"><path d=\"M4,0L4,8\" stroke=\"rgba(150,100,0,0.8)\" stroke-width=\"1.1\"/></pattern></defs><rect width=\"48\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"48\" height=\"18\" fill=\"#FFD600\" fill-opacity=\"0.28\"/><rect width=\"48\" height=\"18\" fill=\"url(#hz-sw6)\"/><rect x=\"0.55\" y=\"0.55\" width=\"46.9\" height=\"16.9\" fill=\"none\" stroke=\"#C99400\" stroke-width=\"1.1\"/></svg><span>急傾斜地の崩壊（がけ崩れ）の警戒区域</span><span style=\"display:inline-flex;align-items:center;gap:8px;margin-left:8px\"><svg width=\"48\" height=\"18\" viewBox=\"0 0 48 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><defs><pattern id=\"hz-sw7\" width=\"8\" height=\"8\" patternUnits=\"userSpaceOnUse\"><path d=\"M4,0L4,8\" stroke=\"rgba(150,100,0,0.8)\" stroke-width=\"1.1\"/></pattern></defs><rect width=\"48\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"48\" height=\"18\" fill=\"#FFD600\" fill-opacity=\"0.28\"/><rect width=\"48\" height=\"18\" fill=\"#E60012\" fill-opacity=\"0.36\"/><rect width=\"48\" height=\"18\" fill=\"url(#hz-sw7)\"/><rect x=\"1.1\" y=\"1.1\" width=\"45.8\" height=\"15.8\" fill=\"none\" stroke=\"#B00018\" stroke-width=\"2.2\"/></svg><span>特別警戒区域</span></span></li><li style=\"display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:6px 0\"><svg width=\"48\" height=\"18\" viewBox=\"0 0 48 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><defs><pattern id=\"hz-sw8\" width=\"9\" height=\"9\" patternUnits=\"userSpaceOnUse\"><path d=\"M-9,0L0,9M0,0L9,9M9,0L18,9\" stroke=\"rgba(170,70,0,0.85)\" stroke-width=\"1.15\"/></pattern></defs><rect width=\"48\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"48\" height=\"18\" fill=\"#FFD600\" fill-opacity=\"0.28\"/><rect width=\"48\" height=\"18\" fill=\"url(#hz-sw8)\"/><rect x=\"0.55\" y=\"0.55\" width=\"46.9\" height=\"16.9\" fill=\"none\" stroke=\"#C99400\" stroke-width=\"1.1\"/></svg><span>地すべりの警戒区域</span><span>（特別警戒区域は町内なし）</span></li></ul><h3>避難所・その他</h3><ul style=\"list-style:none;padding-left:0\"><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><rect x=\"1.5\" y=\"1.5\" width=\"19\" height=\"19\" rx=\"3\" fill=\"#0a7a36\"/><text x=\"11\" y=\"15.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\" font-family=\"sans-serif\">1</text></svg><span>指定避難所（建物。番号は一覧と同じ）</span></li><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><circle cx=\"11\" cy=\"11\" r=\"9.5\" fill=\"#fff\" stroke=\"#0a7a36\" stroke-width=\"2.2\"/><text x=\"11\" y=\"15.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0a7a36\" font-family=\"sans-serif\">6</text></svg><span>指定緊急避難場所（屋外。災害が迫ったときに一時的に身を守る場所）</span></li><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><rect x=\"1.5\" y=\"1.5\" width=\"19\" height=\"19\" rx=\"3\" fill=\"#1a4d80\"/><text x=\"11\" y=\"15.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\" font-family=\"sans-serif\">本</text></svg><span>災害対策本部（霞ノ杜町役場）</span></li><li style=\"display:flex;align-items:center;gap:8px;margin:6px 0\"><svg width=\"40\" height=\"18\" viewBox=\"0 0 40 18\" aria-hidden=\"true\" focusable=\"false\" style=\"flex:none\"><defs><pattern id=\"hz-sw9\" width=\"6\" height=\"6\" patternUnits=\"userSpaceOnUse\"><path d=\"M0,3L6,3\" stroke=\"rgba(168,0,28,0.9)\" stroke-width=\"1.6\"/></pattern></defs><rect width=\"40\" height=\"18\" fill=\"#f3f2ee\"/><rect width=\"40\" height=\"18\" fill=\"#ffffff\" fill-opacity=\"0.55\"/><rect width=\"40\" height=\"18\" fill=\"url(#hz-sw9)\"/><rect x=\"0.8\" y=\"0.8\" width=\"38.4\" height=\"16.4\" fill=\"none\" stroke=\"#a8001c\" stroke-width=\"1.6\" stroke-dasharray=\"3 1.6\"/></svg><span>立入禁止区域（烏啼山道）：町が独自に設けた立入禁止（落石・地盤のゆるみ）</span></li></ul><h2>指定避難所・指定緊急避難場所の一覧</h2><p>番号は地図の番号と同じです。1〜5は建物の指定避難所、6〜8は屋外の指定緊急避難場所です。</p><div class=\"table-scroll\"><table class=\"data-table\"><caption class=\"sr-only\">指定避難所・指定緊急避難場所の一覧（令和8年8月作成）</caption><thead><tr><th scope=\"col\" style=\"white-space:nowrap\">番号</th><th scope=\"col\" style=\"white-space:nowrap\">名称</th><th scope=\"col\" style=\"white-space:nowrap\">所在（地区）</th><th scope=\"col\" style=\"white-space:nowrap\">洪水</th><th scope=\"col\" style=\"white-space:nowrap\">土砂災害</th><th scope=\"col\" style=\"white-space:nowrap\">地震</th><th scope=\"col\" style=\"white-space:nowrap\">備考</th></tr></thead><tbody><tr><td style=\"text-align:center;white-space:nowrap\">1</td><th scope=\"row\"><span style=\"white-space:nowrap\">町民センター</span></th><td><span style=\"white-space:nowrap\">三日月中央</span><span style=\"white-space:nowrap\">（三日月地区）</span></td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td>役場の隣</td></tr><tr><td style=\"text-align:center;white-space:nowrap\">2</td><th scope=\"row\"><span style=\"white-space:nowrap\">旧三日月中央小学校</span> <span style=\"white-space:nowrap\">体育館</span></th><td><span style=\"white-space:nowrap\">三日月中央</span><span style=\"white-space:nowrap\">（三日月地区）</span></td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">×</td><td style=\"text-align:center;white-space:nowrap\">○</td><td>土砂災害警戒区域内（土砂災害のときは使いません）</td></tr><tr><td style=\"text-align:center;white-space:nowrap\">3</td><th scope=\"row\"><span style=\"white-space:nowrap\">霞ノ杜町立箕浦中学校</span> <span style=\"white-space:nowrap\">体育館</span></th><td><span style=\"white-space:nowrap\">箕浦</span><span style=\"white-space:nowrap\">（駅前地区）</span></td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td></td></tr><tr><td style=\"text-align:center;white-space:nowrap\">4</td><th scope=\"row\"><span style=\"white-space:nowrap\">長野県箕浦高等学校</span> <span style=\"white-space:nowrap\">体育館</span></th><td><span style=\"white-space:nowrap\">箕浦</span><span style=\"white-space:nowrap\">（駅前地区）</span></td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td></td></tr><tr><td style=\"text-align:center;white-space:nowrap\">5</td><th scope=\"row\"><span style=\"white-space:nowrap\">霞ノ杜町立第一小学校</span> <span style=\"white-space:nowrap\">体育館</span></th><td><span style=\"white-space:nowrap\">大字杜ケ丘</span><span style=\"white-space:nowrap\">（杜ケ丘地区）</span></td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td></td></tr><tr><td style=\"text-align:center;white-space:nowrap\">6</td><th scope=\"row\"><span style=\"white-space:nowrap\">三日月中央公園</span></th><td><span style=\"white-space:nowrap\">三日月中央</span><span style=\"white-space:nowrap\">（三日月地区）</span></td><td style=\"text-align:center;white-space:nowrap\">×</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td>浸水想定区域内（洪水のときは使いません）</td></tr><tr><td style=\"text-align:center;white-space:nowrap\">7</td><th scope=\"row\"><span style=\"white-space:nowrap\">湖畔公園</span></th><td><span style=\"white-space:nowrap\">湖畔</span><span style=\"white-space:nowrap\">（湖畔地区）</span></td><td style=\"text-align:center;white-space:nowrap\">×</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td>湖岸にあり、周りが浸水想定区域（洪水のときは使いません）</td></tr><tr><td style=\"text-align:center;white-space:nowrap\">8</td><th scope=\"row\"><span style=\"white-space:nowrap\">筒川公園</span></th><td><span style=\"white-space:nowrap\">筒川</span><span style=\"white-space:nowrap\">（駅前地区）</span></td><td style=\"text-align:center;white-space:nowrap\">×</td><td style=\"text-align:center;white-space:nowrap\">○</td><td style=\"text-align:center;white-space:nowrap\">○</td><td>浸水想定区域内（洪水のときは使いません）</td></tr><tr><td style=\"text-align:center;white-space:nowrap\">本</td><th scope=\"row\"><span style=\"white-space:nowrap\">霞ノ杜町役場（災害対策本部）</span></th><td><span style=\"white-space:nowrap\">三日月中央</span><span style=\"white-space:nowrap\">（三日月地区）</span></td><td colspan=\"3\" style=\"text-align:center;white-space:nowrap\">―</td><td>災害時に町の対策本部を置きます</td></tr></tbody></table></div><p>○…その災害のときに使えます　×…使えません（ほかの避難所へ）。開設する避難所は、災害の状況に応じて町がお知らせします。</p><h2>地区別の見方</h2><p>4つの地区ごとの、おもな区域と避難先の目安です。ご自宅の場所は、地図で確かめてください。</p><div class=\"table-scroll\"><table class=\"data-table\"><caption class=\"sr-only\">地区別の見方</caption><thead><tr><th scope=\"col\" style=\"white-space:nowrap\">地区（町名）</th><th scope=\"col\" style=\"white-space:nowrap\">洪水（想定最大規模）</th><th scope=\"col\" style=\"white-space:nowrap\">土砂災害</th><th scope=\"col\" style=\"white-space:nowrap\">主な避難先</th></tr></thead><tbody><tr><th scope=\"row\"><span style=\"white-space:nowrap\">三日月地区</span><br><span style=\"font-size:0.85em;font-weight:400\">（<span style=\"white-space:nowrap\">三日月中央</span>・<span style=\"white-space:nowrap\">三日月北</span>・<span style=\"white-space:nowrap\">成沢</span>）</span></th><td>成沢の湖寄りで0.5〜3m（湖岸の一部は3〜5m）です。水が引くまで3日〜1週間ほどかかる所があります。三日月中央の湖寄り（三日月中央公園の周り）にも0.5m未満の区域があります。</td><td>山側の大部分が土石流の警戒区域です。三日月北には急傾斜地の崩壊の特別警戒区域、三日月中央には地すべりの警戒区域もあります。</td><td>町民センター（役場の隣）。旧三日月中央小学校 体育館は、土砂災害のときは使いません。屋外の三日月中央公園は、洪水のときは使いません。</td></tr><tr><th scope=\"row\"><span style=\"white-space:nowrap\">湖畔地区</span><br><span style=\"font-size:0.85em;font-weight:400\">（<span style=\"white-space:nowrap\">湖畔</span>・<span style=\"white-space:nowrap\">西木戸</span>・<span style=\"white-space:nowrap\">大萩</span>・<span style=\"white-space:nowrap\">狐塚</span>）</span></th><td>湖岸の低い土地のほぼ全体が0.5〜3mです。水が引くまで3日〜1週間ほどかかる所が多くあります。</td><td>狐塚の山側に土石流・地すべりの警戒区域があります。</td><td>地区内に屋内の避難所はありません。大雨のときは早めに、浸水想定区域の外の町民センターなどへ避難してください。屋外の湖畔公園は、洪水のときは使いません。</td></tr><tr><th scope=\"row\"><span style=\"white-space:nowrap\">駅前地区</span><br><span style=\"font-size:0.85em;font-weight:400\">（<span style=\"white-space:nowrap\">駅前</span>・<span style=\"white-space:nowrap\">木戸</span>・<span style=\"white-space:nowrap\">筒川</span>・<span style=\"white-space:nowrap\">柳川</span>・<span style=\"white-space:nowrap\">箕浦</span>）</span></th><td>駅の西側から筒川にかけて0.5m未満〜3mです。筒川には水が引くまで3日〜1週間ほどかかる所があります。</td><td>木戸・柳川・箕浦の山側に急傾斜地の崩壊の警戒区域・特別警戒区域があります。木戸には土石流の警戒区域もあります。</td><td>箕浦中学校 体育館、箕浦高等学校 体育館。屋外の筒川公園は、洪水のときは使いません。</td></tr><tr><th scope=\"row\"><span style=\"white-space:nowrap\">杜ケ丘地区</span><br><span style=\"font-size:0.85em;font-weight:400\">（<span style=\"white-space:nowrap\">大字杜ケ丘</span>・<span style=\"white-space:nowrap\">烏啼</span>）</span></th><td>浸水想定区域はありません。</td><td>東の谷沿いに土石流の警戒区域が広がり、急傾斜地の崩壊の警戒区域・特別警戒区域も点在しています。烏啼山道付近は、町が独自に立入禁止にしています（落石・地盤のゆるみ）。</td><td>第一小学校 体育館。</td></tr></tbody></table></div><h2>地図の見方と避難のポイント</h2><ul><li>色の付いた範囲は、想定し得る最大規模の大雨（1年間に起こる確率が1000分の1程度）で霞湖があふれた場合に想定される浸水の深さです。色のない場所でも、浸水しないとは限りません。</li><li>杜川などの小さな川には、浸水想定区域が示されていない所があります。大雨のときは急に水かさが増すことがあるので、川に近づかないでください。</li><li>霞湖の沿岸には、水が引くまで3日〜1週間ほどかかる区域があります。長い間、自宅で暮らせなくなることも考えて備えてください。</li><li>土砂災害警戒区域は、がけ崩れ・土石流・地すべりのおそれがある区域として県が指定したものです。特別警戒区域では、建物が壊れ、命に危険が及ぶおそれがあります。</li><li>警戒レベル3「高齢者等避難」で、避難に時間がかかる方は避難を始めてください。警戒レベル4「避難指示」で、危険な場所から全員避難してください。警戒レベル5「緊急安全確保」を待ってはいけません。</li><li>外へ出るとかえって危険なときは、近くの頑丈な建物の上の階や、自宅の2階以上で崖から離れた部屋へ移ってください。</li><li>避難所は、災害の種類によって使えないことがあります（一覧の×）。安全な親戚・知人の家への避難も考えておきましょう。</li><li>区域は作成時点の公表データによるもので、境界は概略です。詳しい範囲は総務課 地域安全係でお確かめください。</li></ul><h2>情報の入手と問い合わせ</h2><ul><li>避難情報は、防災行政無線・町公式ホームページ・緊急速報メールでお知らせします。</li><li>大雨のときは、気象庁の「キキクル（危険度分布）」でも危険度を確かめられます。</li></ul><p>問い合わせ：霞ノ杜町 総務課 地域安全係（役場2階）　電話 0266-12-2111（内線215）</p><h2>紙のハザードマップ</h2><p>紙のハザードマップ（A3判）は、令和8年9月に全戸へ配布しました。お持ちでない方や転入された方には、役場2階の総務課 地域安全係と町民センターでお渡しします。</p><h2>出典</h2><p>出典：国土交通省 ハザードマップポータルサイト（重ねるハザードマップ、https://disaportal.gsi.go.jp/）の洪水浸水想定区域（想定最大規模）・土砂災害警戒区域等。土砂災害警戒区域等の元データは、国土交通省「国土数値情報（土砂災害警戒区域データ）」。</p><p>加工：国土交通省 ハザードマップポータルサイト（重ねるハザードマップ）を加工して作成。浸水想定区域は公表時の配色のまま重ね、土砂災害警戒区域等は区域の輪郭を取り出して色・模様・輪郭を付け直し、3種類を1枚にまとめました（区域の範囲は変えていません）。</p><p>背景地図：OpenFreeMap © OpenMapTiles　Data © OpenStreetMap contributors（文字を消し、色を変えて使用）。</p><p style=\"font-size:0.875em;color:#555\">この図の町名・地名・施設名・避難所・立入禁止区域は実在しません。浸水想定区域と土砂災害警戒区域等は、実在の地域について公表されているデータです。実際の避難には、お住まいの市町村のハザードマップをご覧ください。</p>",
+      "searchKeywords": [
+        "ハザードマップ",
+        "防災マップ",
+        "洪水",
+        "浸水",
+        "氾濫",
+        "土砂災害",
+        "土砂",
+        "避難所",
+        "避難場所"
+      ]
     },
     {
       "path": "anzen/kinkyu.html",
       "route": "/anzen/kinkyu/",
       "layout": "city",
-      "title": "救急・夜間｜霞ノ杜町",
-      "description": "救急・夜間診療 — 霞ノ杜町公式。【フィクション】",
+      "title": "救急・夜間診療｜霞ノ杜町",
+      "description": "救急は119です。町立霞ノ杜診療所は平日と土曜午前だけです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -183,17 +218,18 @@
       ],
       "h1": "救急・夜間診療",
       "paragraphs": [
-        "町内の夜間・休日救急は、県北医療圏の当番医制度に準じます（架空）。"
+        "町内に夜間と休日の当番医はありません。命にかかわるときは119番です。診療所は平日9:00〜17:00、土曜9:00〜12:00です。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>救急</th><td>119</td></tr><tr><th>町代表</th><td>0123-45-6700</td></tr><tr><th>診療所</th><td>霞ノ杜診療所（平日のみ・詳細は健康ページ）</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../fukushi/kenko.html\">健康</a></li><li><a href=\"bosai.html\">防災</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li><li><a href=\"index.html\">安全</a></li>"
+      "owner": "保健福祉課 保健係",
+      "updated": "2026-10-01",
+      "tableHtml": "<table class=\"city-data\"><tr><th>救急</th><td>119</td></tr><tr><th>警察</th><td>110</td></tr><tr><th>町代表</th><td>0266-12-2111（内線215は地域安全係）</td></tr><tr><th>診療所</th><td>町立霞ノ杜診療所（平日9:00〜17:00、土曜9:00〜12:00）</td></tr></table>"
     },
     {
       "path": "anzen/koutsuu.html",
       "route": "/anzen/koutsuu/",
       "layout": "city",
       "title": "交通安全｜霞ノ杜町",
-      "description": "交通安全 — 霞ノ杜町公式。【フィクション】",
+      "description": "交通安全キャンペーン、通学路、高齢者・子どもの交通ルールなどをお知らせします。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -231,16 +267,18 @@
       ],
       "h1": "交通安全",
       "paragraphs": [
-        "杜の吊り橋は同時通行10名程度。雨天・濃霧時は通行止めとなる場合があります。"
+        "交通安全の呼びかけは、総務課地域安全係（内線215）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hre"
+      "owner": "総務課 地域安全係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>秋の運動</h2><p>秋の全国交通安全運動は、9月21日から9月30日まででした。日が短い季節は、車は早めにライトをつけ、歩く人は反射材を付けてください。</p><h2>通学路</h2><p>朝7時15分から8時までと、下校の時間は、第一小学校と箕浦中学校のまわりで速度を落としてください。見守りは、地域の人が散歩のついでに行っています。</p><h2>花火の夜</h2><p>8月15日の霞湖花火大会では、17時から21時まで湖岸の道路を車両が通れません。帰りは駅前の臨時バスを使ってください。</p>"
     },
     {
       "path": "anzen/saigai.html",
       "route": "/anzen/saigai/",
       "layout": "city",
-      "title": "緊急情報｜霞ノ杜町",
-      "description": "緊急・災害情報 — 霞ノ杜町公式。【フィクション】",
+      "title": "緊急・災害情報｜霞ノ杜町",
+      "description": "災害発生時の公式発表、避難指示、安否確認の入口です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -278,65 +316,214 @@
       ],
       "h1": "緊急・災害情報",
       "paragraphs": [
-        "現在、町に関する緊急情報は発表されていません。",
-        "<strong>状況:</strong> 特になし（最終更新: 令和8年4月1日）"
+        "高齢者等避難、避難指示、緊急安全確保は、防災行政無線とこのホームページで知らせます。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bosai.html\">防災</a></li><li><a hre"
+      "bodyHtml": "<h2>避難する場所</h2><ul><li>町民センター（三日月中央、役場の隣）</li><li>霞ノ杜町立第一小学校の体育館</li><li>霞ノ杜町立箕浦中学校の体育館</li><li>長野県箕浦高等学校の体育館</li></ul><p>湖畔公園、三日月中央公園、筒川公園は浸水のおそれがあるため、避難所にしません。</p><h2>電話</h2><p>火事と救急は119、事件は110です。町の災害対策本部は役場で、代表電話 0266-12-2111（地域安全係は内線215）です。</p>",
+      "owner": "総務課 地域安全係",
+      "updated": "2026-10-01"
+    },
+    {
+      "path": "blog/index.html",
+      "route": "/blog/",
+      "layout": "city",
+      "title": "まちの話題（過去の記事）｜霞ノ杜町",
+      "description": "旧ホームページの「まちの話題」に掲載した記事を、年ごとにまとめています。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "まちの話題（過去の記事）"
+        }
+      ],
+      "related": [
+        {
+          "href": "/shisei/koho/",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho-kasumi/",
+          "label": "広報かすみのもり",
+          "storyClue": false
+        }
+      ],
+      "h1": "まちの話題（過去の記事）",
+      "paragraphs": [
+        "旧ホームページの「まちの話題」（平成28年4月〜令和3年12月）に掲載した記事を、年ごとにまとめています。",
+        "<p>令和8年4月のホームページのリニューアルにあわせて、平成31年度（令和元年度）以前の記事は一部をこのページに移し、そのほかは掲載を終了しました。令和4年1月からの町の話題は、<a href=\"/shisei/koho-kasumi/\">広報かすみのもり</a>の「まちの話題」のページでお伝えしています。</p>"
+      ],
+      "bodyHtml": "<h2>年別の一覧</h2>\n<ul>\n<li><a href=\"/blog/2021/\">令和3年（2021年）の記事</a>（5件）</li>\n<li>令和2年（2020年）の記事はありません（行事の中止や延期が続いたため）。</li>\n<li><a href=\"/blog/2019/\">令和元年（2019年）の記事</a>（10件）</li>\n<li><a href=\"/blog/2016/\">平成28年（2016年）の記事</a>（5件）</li>\n</ul>\n<p>掲載を終了した記事についてのお問い合わせは、政策推進課 広報情報係へお寄せください。</p>",
+      "searchKeywords": [
+        "まちの話題",
+        "過去の記事",
+        "バックナンバー"
+      ],
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01",
+      "printError": true
     },
     {
       "path": "blog/2016/index.html",
       "route": "/blog/2016/",
       "layout": "city",
-      "title": "2016年アーカイブ｜霞ノ杜町",
-      "description": "",
-      "breadcrumbs": [],
-      "related": []
+      "title": "まちの話題 平成28年（2016年）｜霞ノ杜町",
+      "description": "旧ホームページの「まちの話題」から移した、平成28年（2016年）の記事です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "まちの話題（過去の記事）",
+          "href": "/blog/"
+        },
+        {
+          "label": "平成28年（2016年）"
+        }
+      ],
+      "related": [
+        {
+          "href": "/blog/",
+          "label": "まちの話題（過去の記事）",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho/",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho-kasumi/",
+          "label": "広報かすみのもり",
+          "storyClue": false
+        }
+      ],
+      "h1": "まちの話題 平成28年（2016年）",
+      "paragraphs": [
+        "旧ホームページの「まちの話題」に掲載した平成28年（2016年）の記事のうち、一部をこのページに移しました。"
+      ],
+      "bodyHtml": "<h2>町営バスのダイヤを改正しました</h2>\n<p>平成28年4月4日掲載</p>\n<p>4月1日（金）から、町営バスのダイヤを改正しました。霞ノ杜駅の始発と最終の電車に合わせて、朝と夕方の便の時刻を見直しています。新しい時刻表は、役場・各公民館と町営バスの車内で配っています。</p>\n<h2>東京の移住相談会に出展しました</h2>\n<p>平成28年6月21日掲載</p>\n<p>6月18日（土）、東京都内で開かれた長野県の移住相談会に、霞ノ杜町のブースを出しました。空き家バンクや子育て支援、町の仕事について、12組の方からご相談をいただきました。町への移住のご相談は、政策推進課 企画財政係で受け付けています。</p>\n<h2>霞湖花火大会</h2>\n<p>平成28年8月16日掲載</p>\n<p>8月15日（月）の夜、霞湖花火大会を開きました。湖上に約3,000発の花火が上がり、湖面に映る光の輪に、湖畔の会場から大きな歓声が上がりました。</p>\n<h2>霞ノ杜町総合防災訓練を行いました</h2>\n<p>平成28年9月5日掲載</p>\n<p>9月4日（日）、霞ノ杜町総合防災訓練を行い、町内の各地区から約600人が参加しました。大雨で土砂災害の危険が高まったという想定で、避難所の開設、消防団による土のう積み、災害用伝言ダイヤルの使い方の説明などを行いました。</p>\n<h2>霞ノ杜駅前広場でイルミネーションを始めました</h2>\n<p>平成28年12月5日掲載</p>\n<p>12月2日（金）、霞ノ杜駅前広場で、初めてのイルミネーションの点灯式を行いました。地元の商店の皆さんが中心となって準備を進め、約1万5千球の電球が駅前を彩ります。平成29年1月9日（月・祝）まで、毎日17時から22時まで点灯します。</p>",
+      "searchKeywords": [
+        "まちの話題",
+        "過去の記事"
+      ],
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01"
     },
     {
       "path": "blog/2019/index.html",
       "route": "/blog/2019/",
-      "layout": "legacy",
-      "title": "2019年ローカルニュース｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/blog/2019/",
+      "layout": "city",
+      "title": "まちの話題 令和元年（2019年）｜霞ノ杜町",
+      "description": "旧ホームページの「まちの話題」から移した、令和元年（2019年）の記事です。",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../../"
+          "href": "/"
         },
         {
-          "label": "市政情報",
-          "href": "../../shisei/"
+          "label": "町政情報",
+          "href": "/shisei/"
         },
         {
-          "label": "2019年ローカルニュース"
+          "label": "まちの話題（過去の記事）",
+          "href": "/blog/"
+        },
+        {
+          "label": "令和元年（2019年）"
         }
       ],
-      "related": [],
-      "bodyHtml": "<h2>2019年の出来事</h2>\n<p>霞ノ杜町立第一小学校周辺で話題となった出来事の抜粋です。大人の個人名は掲載していません。</p>\n<article class=\"doc-block\">\n  <p class=\"doc-meta\">2019年9月・地域表彰</p>\n  <h3>青少年の安全活動への協力</h3>\n  <p>烏啼山道周辺の安全啓発にご協力いただいた方々への感謝状授与が行われました。受賞者名簿には、<strong>渡辺</strong> 氏の名前が含まれています（フルネームは非公開）。</p>\n</article>\n<article class=\"doc-block\">\n  <p class=\"doc-meta\">2019年11月・霞ノ杜こども絵画展</p>\n  <h3>町民ホールでの展示</h3>\n  <p>作品の名札より。1年 あおき はな「にじ」／4年 さとう ゆう「やまのみち」／6年 おおの さき「川」。</p>\n</article>\n<p><a href=\"../../documents/\">資料室</a> ／ <a href=\"../../documents/gikai-dayori/\">議会だより</a> ／ <a href=\"../../history/#legend\">町の歴史（伝承）</a></p>"
+      "related": [
+        {
+          "href": "/blog/",
+          "label": "まちの話題（過去の記事）",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho/",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho-kasumi/",
+          "label": "広報かすみのもり",
+          "storyClue": false
+        }
+      ],
+      "h1": "まちの話題 令和元年（2019年）",
+      "paragraphs": [
+        "旧ホームページの「まちの話題」に掲載した令和元年（2019年）の記事のうち、一部をこのページに移しました。",
+        "<p>※旧ホームページからの移行にあたり、大人の方の個人名（氏名）は掲載していません。</p>"
+      ],
+      "bodyHtml": "<h2>成人式を開きました</h2>\n<p>平成31年1月15日掲載</p>\n<p>1月13日（日）、町民ホールで成人式を開きました。今年の新成人は48人で、41人が出席しました。式では、新成人を代表して2人が「育ててくれた町に、いつか何かを返したい」と抱負を述べました。式のあとは、中学校時代の担任の先生からのビデオメッセージが流れ、会場は笑顔に包まれました。</p>\n<h2>町営バスのダイヤを改正します（4月1日から）</h2>\n<p>平成31年3月25日掲載</p>\n<p>4月1日（月）から、町営バスのダイヤを改正します。霞ノ杜駅で電車に乗り継ぎやすくなるよう、朝の便の発車時刻を5〜10分早めます。新しい時刻表は、役場・各公民館と町営バスの車内で配っています。</p>\n<h2>新元号「令和」の記念植樹</h2>\n<p>令和元年5月13日掲載</p>\n<p>改元を記念して、5月11日（土）、三日月中央公園でヤマザクラの苗木10本を植えました。町内の保育園の子どもたちと保護者、地区の皆さんあわせて約70人が参加し、苗木の根元に土をかけて水をやりました。数年後には、公園の新しいお花見の場所になりそうです。</p>\n<h2>「杜のはちみつ」の採蜜が始まりました</h2>\n<p>令和元年7月10日掲載</p>\n<p>町の特産品「杜のはちみつ」の採蜜が、杜ケ丘の養蜂場で始まりました。今年は春先の天候に恵まれ、トチやアカシアの花の蜜がよく採れているそうです。7月下旬から、町内の直売所などで販売します。</p>\n<h2>霞湖花火大会</h2>\n<p>令和元年8月16日掲載</p>\n<p>8月15日（木）の夜、霞湖花火大会を開きました。湖上から約3,000発の花火が打ち上げられ、湖畔の会場は町内外から訪れた約1万2千人の見物客でにぎわいました。会場の清掃にご協力いただいた皆さん、交通規制にご理解をいただいた皆さん、ありがとうございました。</p>\n<h2>敬老会を開きました</h2>\n<p>令和元年9月17日掲載</p>\n<p>9月15日（日）、町民ホールで敬老会を開き、75歳以上の方約180人が出席しました。町長のお祝いのあいさつに続いて、保育園児のお遊戯や、町内の民謡の会の踊りが披露されました。今年88歳（米寿）を迎えた方には、記念品をお贈りしました。</p>\n<h2>青少年の安全活動に感謝状を贈りました</h2>\n<p>令和元年9月27日掲載</p>\n<p>9月26日（木）、役場で、青少年の安全活動に尽くされた団体と個人に感謝状を贈りました。夏休み中の子どもたちの見守りや、烏啼山道付近の立入禁止区域の周知に協力していただきました。</p>\n<p>感謝状を受けられた皆さん（順不同）</p>\n<ul>\n<li>霞ノ杜町防犯協会</li>\n<li>烏啼地区見守り隊</li>\n<li>杜ケ丘地区交通安全協会</li>\n<li>個人の方（小口さん、上原さん、渡辺さん、矢島さん）</li>\n</ul>\n<h2>台風第19号の接近に伴い避難所を開設しました</h2>\n<p>令和元年10月15日掲載</p>\n<p>台風第19号の接近に伴い、10月12日（土）の午後、町民センターなど町内4か所に避難所を開設しました。最も多いときで28世帯51人の方が避難されました。町内では、倒木のため町道2か所が一時通行止めとなったほか、湖畔地区の一部で道路が冠水しましたが、人や住宅への被害はありませんでした。13日（日）の正午に、すべての避難所を閉じました。</p>\n<h2>霞ノ杜こども絵画展（秋）を開きました</h2>\n<p>令和元年11月6日掲載</p>\n<p>11月2日（土）から4日（月・振替休日）まで、町民ホールで「霞ノ杜こども絵画展（秋）」を開きました。町内の小学生の作品約120点が並び、期間中に約450人の方にご来場いただきました。最終日には、町外から招いた審査員による講評会も開かれました。</p>\n<p>会場に並んだ作品の一部を、作品の名札のとおりにご紹介します。</p>\n<ul>\n<li>1年 いしい みお『にじ』</li>\n<li>4年 さとう ゆう『やまのみち』</li>\n<li>6年 たかの そうた『川』</li>\n</ul>\n<h2>霞ノ杜駅前広場のイルミネーションを点灯しました</h2>\n<p>令和元年12月9日掲載</p>\n<p>12月6日（金）の夕方、霞ノ杜駅前広場でイルミネーションの点灯式を行いました。今年で4年目となるイルミネーションは、約2万球の電球で駅前を彩ります。令和2年1月13日（月・祝）まで、毎日17時から22時まで点灯しています。</p>",
+      "searchKeywords": [
+        "まちの話題",
+        "過去の記事"
+      ],
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01"
     },
     {
       "path": "blog/2021/index.html",
       "route": "/blog/2021/",
-      "layout": "legacy",
-      "title": "2019年ローカルニュースへ｜霞ノ杜町",
-      "description": "旧URL（2021）から移転しました。",
-      "canonical": "https://roku253.github.io/kasuminomori/blog/2019/",
+      "layout": "city",
+      "title": "まちの話題 令和3年（2021年）｜霞ノ杜町",
+      "description": "旧ホームページの「まちの話題」から移した、令和3年（2021年）の記事です。",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../../"
+          "href": "/"
         },
         {
-          "label": "市政情報",
-          "href": "../../shisei/"
+          "label": "町政情報",
+          "href": "/shisei/"
         },
         {
-          "label": "2019年ローカルニュース"
+          "label": "まちの話題（過去の記事）",
+          "href": "/blog/"
+        },
+        {
+          "label": "令和3年（2021年）"
         }
       ],
-      "related": [],
-      "bodyHtml": "<p>このページは <a href=\"../2019/\">2019年ローカルニュース</a> に移転しました。</p><script>location.replace(\"../2019/\");</script>"
+      "related": [
+        {
+          "href": "/blog/",
+          "label": "まちの話題（過去の記事）",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho/",
+          "label": "お知らせ",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/koho-kasumi/",
+          "label": "広報かすみのもり",
+          "storyClue": false
+        }
+      ],
+      "h1": "まちの話題 令和3年（2021年）",
+      "paragraphs": [
+        "旧ホームページの「まちの話題」に掲載した令和3年（2021年）の記事です。"
+      ],
+      "bodyHtml": "<h2>霞ノ杜駅前に町営バスの停留所ができます（4月1日から）</h2>\n<p>令和3年3月29日掲載</p>\n<p>4月1日（木）から、霞ノ杜駅前のロータリーに町営バスの停留所「霞ノ杜駅前」を設けます。駅の出口から屋根の下を通って、雨の日もぬれずに乗り降りできるようになります。</p>\n<h2>新型コロナワクチンの集団接種が始まりました</h2>\n<p>令和3年5月24日掲載</p>\n<p>5月22日（土）から、町民センターで65歳以上の方を対象にした新型コロナワクチンの集団接種を始めました。初日は約210人の方が接種を受けました。2回目の接種の日程は、1回目の接種のときにお知らせしています。予約・ご相談は保健福祉課 保健係で受け付けています。</p>\n<h2>霞湖花火大会に代えて、短い花火を打ち上げました</h2>\n<p>令和3年8月16日掲載</p>\n<p>今年の霞湖花火大会は、新型コロナウイルス感染症の拡大を防ぐため、昨年に続いて中止しました。代わりに8月15日（日）の夜、時刻を事前にお知らせせずに、湖上から約5分間の花火を打ち上げました。ご自宅などから、夜空を見上げていただけたでしょうか。</p>\n<h2>霞ノ杜町文化祭を作品の展示で開きました</h2>\n<p>令和3年11月8日掲載</p>\n<p>11月6日（土）・7日（日）、町民ホールで霞ノ杜町文化祭を開きました。今年はステージ発表を取りやめ、書道・写真・絵画・手工芸など、町内の皆さんの作品約240点を展示しました。2日間で約520人の方にご来場いただきました。</p>\n<h2>霞ノ杜駅前広場のイルミネーションを点灯しました</h2>\n<p>令和3年12月6日掲載</p>\n<p>12月3日（金）の夕方、霞ノ杜駅前広場でイルミネーションの点灯式を行いました。今年は、長野県箕浦高等学校の美術部の皆さんがデザインした「光のトンネル」が加わりました。令和4年1月10日（月・祝）まで、毎日17時から22時まで点灯しています。</p>",
+      "searchKeywords": [
+        "まちの話題",
+        "過去の記事"
+      ],
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01"
     },
     {
       "path": "bunka/index.html",
@@ -364,8 +551,8 @@
       "path": "bunka/bunka.html",
       "route": "/bunka/bunka/",
       "layout": "city",
-      "title": "伝統文化｜霞ノ杜町",
-      "description": "伝統文化・祭り — 霞ノ杜町公式。【フィクション】",
+      "title": "伝統文化・祭り｜霞ノ杜町",
+      "description": "霞ノ杜の伝統芸能、民俗行事、文化財の紹介と体験プログラム案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -403,16 +590,18 @@
       ],
       "h1": "伝統文化・祭り",
       "paragraphs": [
-        "霞ノ杜神社の例大祭、霧見祭など。伝承については町の歴史ページもご覧ください。"
+        "杜川の船唄と、湖畔の夜神楽は、今も秋の例大祭で聞けます。教室は町民ホールで開いています。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+      "bodyHtml": "<h2>教室</h2><table class=\"data-table\"><thead><tr><th>教室</th><th>とき</th><th>場所</th></tr></thead><tbody><tr><td>太鼓</td><td>毎月第2土曜 10:00〜12:00</td><td>町民ホール</td></tr><tr><td>夜神楽の所作</td><td>9月〜11月の木曜 19:00〜20:30</td><td>町民ホール</td></tr></tbody></table><p>体験の申し込みは、教育委員会教育課生涯学習係（内線317）です。文化財の記録を手伝う人も、同じ係で受け付けています。</p>",
+      "owner": "教育委員会 教育課 生涯学習係",
+      "updated": "2026-10-01"
     },
     {
       "path": "bunka/events-calendar.html",
       "route": "/bunka/events-calendar/",
       "layout": "city",
-      "title": "イベント｜霞ノ杜町",
-      "description": "イベントカレンダー — 霞ノ杜町公式。【フィクション】",
+      "title": "イベントカレンダー｜霞ノ杜町",
+      "description": "町内のイベント・祭り・講座の年間カレンダーです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -450,17 +639,19 @@
       ],
       "h1": "イベントカレンダー",
       "paragraphs": [
-        "月ごとの主な行事は年間行事ページに掲載しています。",
-        "<a href=\"../events/\">年間行事ページへ</a>"
+        "年間の行事は、年間行事のページの表が正です。このページは令和8年10月の予定です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../events/\">行事</a></li><li><a"
+      "extraHtml": "",
+      "owner": "産業観光課 商工観光係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>令和8年10月</h2><table class=\"data-table\"><thead><tr><th>日</th><th>予定</th></tr></thead><tbody><tr><td>10月10日（土）</td><td>広報かすみのもり10月号を配布</td></tr><tr><td>10月11日（日）</td><td>霞ノ杜神社の例大祭</td></tr><tr><td>10月13日（火）</td><td>町道湖畔線の工事が始まる（片側交互通行）</td></tr><tr><td>10月16日（金）</td><td>文化祭の募集締切</td></tr><tr><td>10月17日（土）</td><td>公民館講座「湖の舟」（町民ホール）</td></tr><tr><td>10月の第3土曜</td><td>霞湖商店街の夜市</td></tr></tbody></table><h2>毎年の主な行事</h2><ul><li>1月3日〜5日: 初詣・霧払い（霞ノ杜神社）</li><li>3月下旬: 杜開き</li><li>8月15日: 霞湖花火大会</li><li>10月11日: 霞ノ杜神社の例大祭</li><li>10月中旬: 杜川の河川敷清掃</li><li>11月上旬: こども絵画展（秋）</li></ul>"
     },
     {
       "path": "bunka/sports.html",
       "route": "/bunka/sports/",
       "layout": "city",
-      "title": "スポーツ｜霞ノ杜町",
-      "description": "スポーツ・レクリエーション — 霞ノ杜町公式。【フィクション】",
+      "title": "スポーツ・レクリエーション｜霞ノ杜町",
+      "description": "町民体育施設、スポーツ教室、大会情報を掲載しています。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -498,117 +689,210 @@
       ],
       "h1": "スポーツ・レクリエーション",
       "paragraphs": [
-        "町民体育祭（5月）、杜川マラソン（10月）などを開催。詳細は年間行事へ。"
+        "体育館とホールの予約は、教育委員会教育課生涯学習係（役場3階、内線317）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../e"
+      "owner": "教育委員会 教育課 生涯学習係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>使える場所</h2><table class=\"data-table\"><thead><tr><th>施設</th><th>町民の料金</th><th>時間</th></tr></thead><tbody><tr><td>町民ホール</td><td>1時間500円</td><td>9:00〜21:00</td></tr><tr><td>第一小学校の体育館</td><td>1時間300円</td><td>夜間 18:30〜21:00。授業のある日は夜だけ</td></tr><tr><td>箕浦中学校の体育館</td><td>1時間300円</td><td>土曜 9:00〜17:00</td></tr></tbody></table><h2>教室</h2><p>ウォーキングは毎週火曜の9時、湖畔公園を出発します。ヨガは木曜の10時、町民ホールです。どちらも1回200円で、見学は無料です。</p>"
     },
     {
       "path": "contact/index.html",
       "route": "/contact/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "お問い合わせ｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/contact/",
+      "description": "霞ノ杜町役場の課ごとの電話番号と受付時間です。",
+      "h1": "お問い合わせ",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../"
+          "href": "/"
         },
         {
-          "label": "市政情報",
-          "href": "../shisei/"
+          "label": "町政情報",
+          "href": "/shisei/"
         },
         {
           "label": "お問い合わせ"
         }
       ],
-      "related": [],
-      "bodyHtml": "<h2>お問い合わせ</h2>\r\n\r\n        <h3>窓口</h3>\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>担当</th><td>霞ノ杜町観光協会 事務局（町役場 2 階）</td></tr>\r\n            <tr><th>住所</th><td>霞ノ杜町 大字杜ケ丘 1（町役場内）</td></tr>\r\n            <tr><th>受付時間</th><td>平日 9:00 〜 16:30（土日祝日・年末年始を除く）</td></tr>\r\n            <tr><th>電話</th><td>0×××-××-×××× / FAX 0×××-××-××××</td></tr>\r\n          </tbody>\r\n        </table>\r\n\r\n        <h3>よくあるご質問</h3>\r\n        <dl class=\"faq\">\r\n          <dt>町内に宿泊施設はありますか？</dt>\r\n          <dd>三日月町方面に温泉旅館・民宿が複数あります。霞ノ杜地区内はゲストハウス 1 軒のみで、要予約です。</dd>\r\n          <dt>水辺の丘 という場所について教えてください。</dt>\r\n          <dd>町北西部にかつて整備されていた自然散策地です。現在は整備上の理由から一般の立ち入りを制限しているため、観光案内には含めていません。</dd>\r\n          <dt>霧の濃い日でも観光できますか？</dt>\r\n          <dd>町内の主要スポットは可能ですが、林道や吊り橋付近は視界が大きく落ちます。神社・資料館・足湯などの屋根のあるスポットがおすすめです。</dd>\r\n          <dt>町の昔の地図や写真は見られますか？</dt>\r\n          <dd>霞ノ杜資料館（火・水休館）と、町史編纂室（要予約）でご覧いただけます。サイト上でも <a href=\"../history/\">町の歴史</a> ページで一部公開しています。</dd>\r\n        </dl>\r\n\r\n        <h3>お問い合わせフォーム</h3>\r\n        <p>※ 本フォームはデモ用です（送信されません）。</p>\r\n        <form class=\"fake-form\" onsubmit=\"event.preventDefault(); this.querySelector('.form-notice').textContent='※フォームは現在受付を停止しています。お電話でお願いいたします。';\">\r\n          <label>お名前</label>\r\n          <input type=\"text\" required>\r\n          <label>ご連絡先（メールまたは電話）</label>\r\n          <input type=\"text\" required>\r\n          <label>お問い合わせ内容</label>\r\n          <textarea required></textarea>\r\n          <button type=\"submit\">送信する</button>\r\n          <div class=\"form-notice\"></div>\r\n        </form>"
+      "related": [
+        {
+          "href": "/shisei/yakuba/",
+          "label": "庁舎案内",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/shozoku/",
+          "label": "組織",
+          "storyClue": false
+        }
+      ],
+      "paragraphs": [
+        "代表電話は 0266-12-2111、FAX は 0266-12-2190 です。受付は平日 8:30〜17:15 です。メールでは受け付けていません。"
+      ],
+      "bodyHtml": "<h2>課の連絡先</h2>\n<p>役場は三日月中央2丁目8番1号です。内線は、代表電話につながってからお伝えください。</p>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>課・係</th><th>階</th><th>内線</th><th>主な受付</th></tr></thead><tbody><tr><td>総務課 総務係</td><td>2階</td><td>211</td><td>秘書、情報公開、選挙、町営バス</td></tr><tr><td>総務課 地域安全係</td><td>2階</td><td>215</td><td>防災、ハザードマップ、防犯</td></tr><tr><td>政策推進課 企画財政係</td><td>2階</td><td>241</td><td>予算、計画</td></tr><tr><td>政策推進課 広報情報係</td><td>2階</td><td>244</td><td>広報紙、ホームページ</td></tr><tr><td>住民税務課 住民係</td><td>1階</td><td>111</td><td>住民票、戸籍、印鑑登録</td></tr><tr><td>住民税務課 税務係</td><td>1階</td><td>114</td><td>住民税、固定資産税、軽自動車税、国民健康保険</td></tr><tr><td>住民税務課 環境係</td><td>1階</td><td>117</td><td>ごみ、犬の登録</td></tr><tr><td>保健福祉課 福祉係</td><td>1階</td><td>121</td><td>手当、生活の相談</td></tr><tr><td>保健福祉課 介護保険係</td><td>1階</td><td>124</td><td>介護保険</td></tr><tr><td>保健福祉課 保健係</td><td>1階</td><td>127</td><td>健診、予防接種</td></tr><tr><td>産業観光課 農林係</td><td>2階</td><td>221</td><td>農業、林業、鳥獣</td></tr><tr><td>産業観光課 商工観光係</td><td>2階</td><td>224</td><td>商店、観光</td></tr><tr><td>建設水道課 建設係</td><td>2階</td><td>231</td><td>道路、建築</td></tr><tr><td>建設水道課 上下水道係</td><td>2階</td><td>234</td><td>水道、下水道</td></tr><tr><td>教育委員会 教育課 学校教育係</td><td>3階</td><td>311</td><td>小中学校</td></tr><tr><td>教育委員会 教育課 こども係</td><td>3階</td><td>314</td><td>保育、児童クラブ</td></tr><tr><td>教育委員会 教育課 生涯学習係</td><td>3階</td><td>317</td><td>図書館、公民館</td></tr><tr><td>会計室</td><td>1階</td><td>130</td><td>会計</td></tr><tr><td>議会事務局</td><td>3階</td><td>320</td><td>議会、傍聴</td></tr></tbody></table></div>",
+      "searchKeywords": [
+        "問い合わせ",
+        "電話",
+        "内線",
+        "窓口"
+      ],
+      "owner": "総務課 総務係",
+      "updated": "2026-10-01"
     },
     {
       "path": "documents/index.html",
       "route": "/documents/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "資料室｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/documents/",
+      "description": "閲覧やお問い合わせの多い過去の資料を、分類ごとに掲載しています。",
+      "h1": "資料室",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../"
+          "href": "/"
         },
         {
-          "label": "市政情報",
-          "href": "../shisei/"
+          "label": "町政情報",
+          "href": "/shisei/"
         },
         {
           "label": "資料室"
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>公報・資料室</h2>\r\n        <p>霞ノ杜町の公開資料の索引です。個人名は原則記載していません。</p>\r\n\r\n        <h3>公報・議会資料</h3>\r\n        <ul>\r\n          <li><a href=\"gikai-dayori/\">議会だより</a> — 町議会の審議・報告の抜粋</li>\r\n          <li><a href=\"chiiki-anzen/\">地域安全通信</a> — 地域安全・防災に関する広報</li>\r\n        </ul>\r\n\r\n        <h3>関連ページ</h3>\r\n        <ul>\r\n          <li><a href=\"../shisei/koho-kasumi/\">広報誌「霞ノ杜」</a> — 町民向け広報（くらし・行事）</li>\r\n          <li><a href=\"../history/#legend\">町の歴史（伝承）</a></li>\r\n          <li><a href=\"../blog/2019/\">2019年ローカルニュース</a></li>\r\n        </ul>"
+      "paragraphs": [
+        "令和8年4月のホームページリニューアルに伴い、平成31年度（令和元年度）以前に掲載していた記事は、一部を除き掲載を終了しました。このページでは、閲覧やお問い合わせの多い過去の資料を、引き続き掲載しています。掲載を終了した資料は、役場1階の行政資料コーナーでご覧いただけます。"
+      ],
+      "bodyHtml": "<h2>広報</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td>広報紙「かすみのもり」</td><td>電子版は直近6か月分です。<a href=\"/shisei/koho-kasumi/\">広報紙のページ</a>から開けます。それ以前の号は町立図書館でご覧いただけます。</td></tr></tbody></table></div>\n<h2>議会</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/documents/gikai-dayori/\">議会だより</a></td><td>定例会の審議と一般質問の広報紙です。お問い合わせの多い号を掲載しています。</td></tr></tbody></table></div>\n<h2>地域安全</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/documents/chiiki-anzen/\">地域安全通信</a></td><td>令和3年3月で発行を終了した回覧です。号ごとの一覧を掲載しています。</td></tr></tbody></table></div>\n<h2>情報公開（請求の多い公文書）</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/documents/joho-teikyo/\">情報提供資料</a></td><td>開示請求が繰り返しあった公文書を、開示した内容のまま掲載しています。</td></tr></tbody></table></div>\n<h2>防災</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>資料</th><th>内容</th></tr></thead><tbody><tr><td><a href=\"/anzen/hazard/\">洪水・土砂災害ハザードマップ</a></td><td>令和8年9月に全戸配布した地図です。ページからPDFを開けます。</td></tr></tbody></table></div>",
+      "searchKeywords": [
+        "資料室",
+        "公報",
+        "公開資料",
+        "情報公開"
+      ],
+      "owner": "総務課 総務係",
+      "updated": "2026-10-09"
     },
     {
       "path": "documents/chiiki-anzen/index.html",
       "route": "/documents/chiiki-anzen/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "地域安全通信｜霞ノ杜町",
-      "description": "地域安全通信の公開抜粋。【フィクション】",
-      "canonical": "https://roku253.github.io/kasuminomori/documents/chiiki-anzen/",
+      "description": "令和3年3月で発行を終了した地域安全通信のうち、お問い合わせの多い号を掲載しています。",
+      "h1": "地域安全通信",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../../"
+          "href": "/"
         },
         {
-          "label": "市政情報",
-          "href": "../../shisei/"
+          "label": "町政情報",
+          "href": "/shisei/"
         },
         {
           "label": "資料室",
-          "href": "../"
+          "href": "/documents/"
         },
         {
           "label": "地域安全通信"
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>地域安全通信</h2>\r\n        <p>地域の安全・防災に関する広報の抜粋です。</p>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            立入禁止区域に児童3名が入り、うち1名が負傷・搬送されました。烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../anzen/bosai/\">防災情報</a></p>"
+      "paragraphs": [
+        "地域安全通信は、総務課地域安全係と霞ノ杜町防犯協会が発行していた回覧です。令和3年3月で発行を終了し、現在は広報紙の『安全・安心のページ』に引き継いでいます。"
+      ],
+      "bodyHtml": "<h2>掲載している号</h2>\n<ul>\n<li data-kn-story-clue=\"1\">第112号（令和元年9月号、8月20日発行）　烏啼山道付近の立入禁止区域について／夏の地域安全運動の報告／秋の全国交通安全運動　<a data-pdf=\"anzen-r1-09.pdf\">地域安全通信 第112号</a></li>\n<li>第114号（令和元年11月号、10月21日発行）　台風第19号の被害と備え／避難所の開設の記録／秋の交通安全運動の結果　<a data-pdf=\"anzen-r1-11.pdf\">地域安全通信 第114号</a></li>\n</ul>\n<p>紙の通信は、発行当時に町内を回覧しました。いまは役場1階の行政資料コーナーでもご覧いただけます。</p>",
+      "searchKeywords": [
+        "地域安全通信",
+        "防災",
+        "回覧"
+      ],
+      "owner": "総務課 地域安全係",
+      "updated": "2026-10-09"
     },
     {
       "path": "documents/gikai-dayori/index.html",
       "route": "/documents/gikai-dayori/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "議会だより｜霞ノ杜町",
-      "description": "霞ノ杜町議会だよりの公開抜粋。【フィクション】",
-      "canonical": "https://roku253.github.io/kasuminomori/documents/gikai-dayori/",
+      "description": "霞ノ杜町議会が年4回発行する議会だよりのうち、お問い合わせの多い号を掲載しています。",
+      "h1": "議会だより",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../../"
+          "href": "/"
         },
         {
-          "label": "市政情報",
-          "href": "../../shisei/"
+          "label": "町政情報",
+          "href": "/shisei/"
         },
         {
           "label": "資料室",
-          "href": "../"
+          "href": "/documents/"
         },
         {
           "label": "議会だより"
         }
       ],
       "related": [],
-      "bodyHtml": "<header class=\"doc-issue\">\n  <p>霞ノ杜町議会事務局</p>\n  <h2>議会だより 令和元年9月号</h2>\n  <p>発行日 令和元年9月1日　／　このページは公開されている抜粋です。個人名は原則載せていません。</p>\n</header>\n<h3>今号のもくじ</h3>\n<ul>\n  <li>令和元年度一般会計補正予算</li>\n  <li>町営バスの秋ダイヤ</li>\n  <li>青少年の登山事故について</li>\n</ul>\n<article class=\"doc-block\">\n  <h3>令和元年度一般会計補正予算</h3>\n  <p>除雪費と町営バスの運行費を増額する補正を可決しました。財源は前年度の繰越金です。</p>\n</article>\n<article class=\"doc-block\">\n  <h3>町営バスの秋ダイヤ</h3>\n  <p>10月1日から、三日月町中心部と霞ノ杜地区を結ぶ便の夕方を1本増やします。停留所の時刻表はくらしのページで更新します。</p>\n</article>\n<article class=\"doc-block\" data-kn-story-clue=\"1\">\n  <p class=\"doc-meta\">議会だより 令和元年9月号（抜粋）</p>\n  <h3>青少年の登山事故について</h3>\n  <p>…ほぼ黒塗り…保護者より事実確認の申し入れがあったが……本件は終了とする… 詳細な記載は見送った。町長室に照会があった件については、所管課と調整のうえ対応した…</p>\n</article>\n<p><a href=\"/pdf/gikai-r1-09.pdf\" target=\"_blank\" rel=\"noopener\">この号のPDFを開く</a></p>\n<p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../history/#legend\">町の歴史（伝承）</a></p>"
+      "paragraphs": [
+        "霞ノ杜町議会では、定例会の審議内容や一般質問をお知らせする『議会だより』を年4回発行しています。この号は、お問い合わせが多いため、掲載期間を過ぎた後も掲載しています。"
+      ],
+      "bodyHtml": "<h2>掲載している号</h2>\n<ul>\n<li data-kn-story-clue=\"1\">第98号（令和元年9月定例会号）／令和元年11月1日発行／主な内容: 9月定例会の審議結果、平成30年度決算の認定、一般質問（5人）、委員会報告　<a data-pdf=\"gikai-r1-09.pdf\">議会だより 第98号</a></li>\n</ul>\n<p>発行は霞ノ杜町議会、編集は議会広報編集委員会です。紙の議会だよりは、発行月に町内の全世帯へお届けしています。</p>",
+      "searchKeywords": [
+        "議会だより",
+        "議会",
+        "町議会",
+        "定例会"
+      ],
+      "owner": "議会事務局",
+      "updated": "2026-10-09"
+    },
+    {
+      "path": "documents/joho-teikyo/index.html",
+      "route": "/documents/joho-teikyo/",
+      "layout": "city",
+      "title": "情報提供資料｜霞ノ杜町",
+      "description": "開示請求が繰り返しあった公文書を、開示した内容のまま掲載しています。",
+      "h1": "情報提供資料",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "資料室",
+          "href": "/documents/"
+        },
+        {
+          "label": "情報提供資料"
+        }
+      ],
+      "related": [],
+      "paragraphs": [
+        "霞ノ杜町情報公開条例に基づく開示請求が繰り返しあった公文書は、請求の手続きによらずご覧いただけるよう、開示した内容のまま掲載しています。"
+      ],
+      "bodyHtml": "<h2>掲載している公文書</h2>\n<ul>\n<li data-kn-story-clue=\"1\">烏啼山道付近立入禁止区域における事案について（報告）〔部分開示〕　作成: 教育委員会（令和元年8月）／開示決定: 令和元年10月／区分: 部分開示　<a data-pdf=\"joho-teikyo-01.pdf\">情報提供資料</a></li>\n</ul>\n<h2>書誌</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><tbody><tr><th>件名</th><td>烏啼山道付近立入禁止区域における事案について（報告）</td></tr><tr><th>作成課</th><td>教育委員会</td></tr><tr><th>作成年月</th><td>令和元年8月</td></tr><tr><th>開示決定日</th><td>令和元年10月18日</td></tr><tr><th>区分</th><td>部分開示</td></tr><tr><th>不開示の理由</th><td>霞ノ杜町情報公開条例第7条第1号（個人に関する情報）および第5号（事務事業に関する情報）に該当する部分は、開示していません。</td></tr></tbody></table></div>\n<p>担当は総務課総務係（情報公開）です。開示請求そのものの手続きも、同係で受け付けています。</p>",
+      "searchKeywords": [
+        "情報公開",
+        "情報提供",
+        "公文書",
+        "部分開示"
+      ],
+      "owner": "総務課 総務係",
+      "updated": "2026-10-09"
     },
     {
       "path": "events/index.html",
       "route": "/events/",
-      "layout": "legacy",
-      "title": "年間行事｜霞ノ杜町",
-      "description": "霞ノ杜町の年間行事・祭事のご案内。【フィクション】",
-      "canonical": "https://roku253.github.io/kasuminomori/events/",
+      "layout": "city",
+      "title": "年間行事・祭事｜霞ノ杜町",
+      "description": "霞ノ杜町の年間行事・祭事のご案内。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -648,14 +932,20 @@
       "paragraphs": [
         "霞ノ杜町で年間を通じて行われる祭り・行事です。日付は例年の目安で、直前の変更はお知らせに出します。"
       ],
-      "extraHtml": "<div class=\"table-scroll\">\n<table class=\"data-table event-table\">\n  <thead><tr><th>時期</th><th>行事</th><th>場所</th><th>内容</th></tr></thead>\n  <tbody>\n    <tr><td>1月3日〜5日</td><td>初詣・霧払いの神事</td><td>霞ノ杜神社</td><td>新年最初の朝霧の中で、宮司による霧払いを行います。町の安全と豊作を祈る神事です。</td></tr>\n    <tr><td>3月下旬</td><td>杜開きの集い</td><td>町の山道・林道</td><td>通行再開を祝う集いです。地元の蕎麦と甘酒の振る舞いがあります。</td></tr>\n    <tr><td>5月上旬</td><td>霞ノ杜こども作品展（春）</td><td>町民ホール</td><td>町立第一小学校の絵画クラブをはじめ、町内の児童の作品を展示します。</td></tr>\n    <tr><td>8月15日（夜）</td><td>水迎えの祭り</td><td>杜川沿い</td><td>水源に感謝する小さな祭りです。川沿いに灯籠が並びます。</td></tr>\n    <tr><td>10月12日前後</td><td>河川敷清掃ボランティア</td><td>杜川と水辺の丘の周辺</td><td>町民有志と町立第一小学校の児童とで実施しています。</td></tr>\n    <tr><td>11月上旬</td><td>霞ノ杜こども絵画展（秋）</td><td>町民ホール</td><td>春の作品展の続きです。秋は町外からの審査員を招いて講評します。</td></tr>\n    <tr><td>12月</td><td>冬の安全教室</td><td>町内</td><td>町の関係団体との共催です。霧と凍結、夕方の視認性について学びます。</td></tr>\n  </tbody>\n</table>\n</div>\n<h2>休止している行事</h2>\n<p>令和4年以降、整備上の理由で開催していません。</p>\n<table class=\"data-table event-table\">\n  <thead><tr><th>時期</th><th>行事</th><th>場所</th><th>状態</th></tr></thead>\n  <tbody>\n    <tr><td>春</td><td>春の写生会</td><td>旧 水辺の丘 自然公園</td><td>休止</td></tr>\n    <tr><td>秋</td><td>水辺の丘 観月会</td><td>旧整備区域</td><td>休止</td></tr>\n  </tbody>\n</table>"
+      "extraHtml": "<div class=\"table-scroll\">\n<table class=\"data-table event-table\">\n  <thead><tr><th>時期</th><th>行事</th><th>場所</th><th>内容</th></tr></thead>\n  <tbody>\n    <tr><td>1月3日〜5日</td><td>初詣・霧払いの神事</td><td>霞ノ杜神社</td><td>新年最初の朝霧の中で、宮司による霧払いを行います。町の安全と豊作を祈る神事です。</td></tr>\n    <tr><td>3月下旬</td><td>杜開きの集い</td><td>町の山道・林道</td><td>通行再開を祝う集いです。地元の蕎麦と甘酒の振る舞いがあります。</td></tr>\n    <tr><td>5月上旬</td><td>霞ノ杜こども作品展（春）</td><td>町民ホール</td><td>町立第一小学校の絵画クラブをはじめ、町内の児童の作品を展示します。</td></tr>\n    <tr><td>8月15日（夜）</td><td>霞湖花火大会</td><td>霞湖</td><td>湖上から花火を打ち上げます。湖岸の交通規制は、開催の1週間前までにお知らせします。</td></tr>\n    <tr><td>10月11日</td><td>例大祭</td><td>霞ノ杜神社</td><td>秋の例大祭です。屋台は参道に出ます。</td></tr>\n    <tr><td>10月中旬</td><td>河川敷清掃</td><td>杜川の河川敷</td><td>町民有志で、杜川の河川敷を清掃します。</td></tr>\n    <tr><td>11月上旬</td><td>霞ノ杜こども絵画展（秋）</td><td>町民ホール</td><td>春の作品展の続きです。秋は町外からの審査員を招いて講評します。</td></tr>\n    <tr><td>12月</td><td>冬の安全教室</td><td>町内</td><td>町の関係団体との共催です。霧と凍結、夕方の視認性について学びます。</td></tr>\n  </tbody>\n</table>\n</div>\n<h2>休止している場所</h2>\n<p>水辺の丘（杜川が霞湖に注ぐ河口近くの旧自然公園）は、令和4年から再整備のため閉鎖しています。危険区域ではありません。</p>",
+      "searchKeywords": [
+        "祭り",
+        "行事",
+        "夏祭り",
+        "マラソン"
+      ]
     },
     {
       "path": "fukushi/index.html",
       "route": "/fukushi/",
       "layout": "city",
       "title": "福祉・健康｜霞ノ杜町",
-      "description": "",
+      "description": "健康・介護・保険など、暮らしを支える福祉サービスの入口です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -668,7 +958,9 @@
       "related": [],
       "h1": "福祉・健康",
       "paragraphs": [
-        "医療・介護・保険に関する情報です。"
+        "霞ノ杜町では、子育て世代から高齢者まで、段階に応じた支援制度を用意しています。まずはお困りごとをお聞かせください。担当課が窓口を一本化してご案内します。",
+        "健診、介護保険、生活の相談は、役場1階の保健福祉課で受け付けています。電話は代表 0266-12-2111 です。",
+        "各分野の詳細は、健康・医療／介護／保険のページからご覧ください。訪問相談が必要な方は、事前予約をお願いします。"
       ],
       "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"kenko.html\"><strong>健康・医療</strong><span>健診・診療所</span></a><a class=\"city-hub-card\" href=\"kaigo.html\"><strong>介護</strong><span>要介護認定</span></a><a class=\"city-hub-card\" href=\"hoken.html\"><strong>保険</strong><span>国保・後期高齢者</span></a></div>"
     },
@@ -676,8 +968,8 @@
       "path": "fukushi/hoken.html",
       "route": "/fukushi/hoken/",
       "layout": "city",
-      "title": "保険｜霞ノ杜町",
-      "description": "国民健康保険・後期高齢者 — 霞ノ杜町公式。【フィクション】",
+      "title": "国民健康保険・後期高齢者｜霞ノ杜町",
+      "description": "国民健康保険・後期高齢者医療など、町が取り扱う保険手続きの案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -715,16 +1007,18 @@
       ],
       "h1": "国民健康保険・後期高齢者",
       "paragraphs": [
-        "国保の加入・変更は転入・転出と同時に届出。料金は所得に応じて算定されます。"
+        "国民健康保険と後期高齢者医療は、住民税務課税務係（役場1階、内線114）です。加入と脱退は、事由のあった日から14日以内に届けてください。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kenk"
+      "owner": "住民税務課 税務係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>届け出</h2><ul><li>転入したとき、職場の健康保険を抜けたとき: 加入</li><li>転出するとき、職場の健康保険に入ったとき: 脱退</li><li>保険証をなくしたとき: 再交付。窓口で本人確認</li></ul><h2>保険税</h2><p>国民健康保険税の第1期は7月31日です。納税通知書は7月中旬に届きます。口座振替は税務係で申し込めます。減免は、所得の書類を添えて同じ窓口で相談してください。</p><p>後期高齢者医療の対象は、75歳になった人です。それまで国民健康保険に入っていた人は、誕生日の前に案内を郵送します。</p>"
     },
     {
       "path": "fukushi/kaigo.html",
       "route": "/fukushi/kaigo/",
       "layout": "city",
       "title": "介護｜霞ノ杜町",
-      "description": "介護 — 霞ノ杜町公式。【フィクション】",
+      "description": "介護保険、要介護認定、地域包括支援センターの連絡先です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -762,16 +1056,18 @@
       ],
       "h1": "介護",
       "paragraphs": [
-        "要介護認定の申請は福祉課。地域包括支援センター「杜のいろは」が相談を受け付けます。"
+        "介護保険の申請と認定は、保健福祉課介護保険係（役場1階、内線124）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+      "owner": "保健福祉課 介護保険係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>認定の流れ</h2><ol><li>介護保険係で申請する（本人か家族）</li><li>調査員が自宅を訪ねる</li><li>結果は申請からおおよそ30日で届く</li></ol><h2>サービスの目安</h2><table class=\"data-table\"><thead><tr><th>サービス</th><th>内容</th></tr></thead><tbody><tr><td>訪問介護</td><td>自宅での食事、入浴、掃除</td></tr><tr><td>通所介護</td><td>町民センターのデイサービス。送迎あり</td></tr><tr><td>短期入所</td><td>家族の用事のとき、数日泊まる</td></tr></tbody></table><p>費用は所得によって1割から3割です。夜間に具合が悪くなったときは、119番へ電話してください。</p>"
     },
     {
       "path": "fukushi/kenko.html",
       "route": "/fukushi/kenko/",
       "layout": "city",
       "title": "健康・医療｜霞ノ杜町",
-      "description": "健康・医療 — 霞ノ杜町公式。【フィクション】",
+      "description": "町の健康診断、予防接種、医療機関の案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -809,55 +1105,104 @@
       ],
       "h1": "健康・医療",
       "paragraphs": [
-        "40歳以上の町民健診は毎年秋に実施。霞ノ杜診療所は平日9:00〜17:00（土日祝休診）。"
+        "健診と予防接種は、保健福祉課保健係（役場1階、内線127）が担当します。町立霞ノ杜診療所は三日月中央にあります。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoken"
+      "owner": "保健福祉課 保健係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>診療所</h2><table class=\"data-table\"><tbody><tr><th>名称</th><td>町立霞ノ杜診療所</td></tr><tr><th>場所</th><td>三日月中央（役場から徒歩3分）</td></tr><tr><th>診療</th><td>平日 9:00〜17:00、土曜 9:00〜12:00</td></tr><tr><th>休診</th><td>日曜、祝日、土曜の午後</td></tr></tbody></table><h2>令和8年度の健診</h2><table class=\"data-table\"><thead><tr><th>健診</th><th>対象</th><th>時期</th></tr></thead><tbody><tr><td>特定健診</td><td>40歳から74歳の国民健康保険の加入者</td><td>10月1日〜12月28日。予約は保健係</td></tr><tr><td>胃がん・肺がん</td><td>案内のはがきが届いた人</td><td>11月。町民ホール</td></tr><tr><td>インフルエンザ</td><td>65歳以上</td><td>10月1日〜12月28日。1回2,000円の助成</td></tr></tbody></table><p>夜間と休日の急病は、119番です。診療所では受けていません。</p>"
     },
     {
       "path": "guide/index.html",
       "route": "/guide/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "町のご案内｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/guide/",
+      "description": "霞ノ杜町の位置、人口、霞湖と杜川、町内の小学校についての案内です。",
+      "h1": "町のご案内",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../"
+          "href": "/"
         },
         {
           "label": "文化・観光",
-          "href": "../bunka/"
+          "href": "/bunka/"
         },
         {
           "label": "町のご案内"
         }
       ],
-      "related": [],
-      "bodyHtml": "<h2>町のご案内</h2>\r\n        <p>\r\n          霞ノ杜町（かすみのもりちょう）は、県境に近い山あいに位置する、面積約 64 km²・人口およそ <strong>3,200 人</strong> の小さな町です。\r\n          町の中央を <strong>杜川</strong> が東西に流れ、北側を屏風のように囲む霞ノ杜山系から、四季を通じて霧と水が運ばれてきます。\r\n          「霞ノ杜」の地名は、この朝夕の濃霧と、町域に広がる雑木の杜（もり）に由来すると伝えられています。\r\n        </p>\r\n\r\n        <h3>地勢と気候</h3>\r\n        <p>\r\n          標高は中心部で約 380 m、北側の山系は 900 m 前後の稜線が続きます。盆地状の地形のため、\r\n          春と秋には朝方の <strong>濃霧（こうむ）</strong> が、夏は夕立の前の <strong>湿った霧</strong> が、\r\n          冬は冷え込んだ朝に <strong>霧氷</strong> が見られる日があります。\r\n          霧は町の生活にも溶け込んでおり、町内の祭事や民話の多くに「霧」が登場します。\r\n        </p>\r\n        <ul>\r\n          <li>年平均気温：12.4 ℃（気象庁観測点近隣・参考）</li>\r\n          <li>霧日数：年 110 日前後（朝霧を含む観測ベース）</li>\r\n          <li>積雪：年により大きく変動。山間部は累積で 100 cm を超える年も。</li>\r\n        </ul>\r\n\r\n        <h3>略年表</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <thead><tr><th>年代</th><th>主なできごと（伝承・記録）</th></tr></thead>\r\n          <tbody>\r\n            <tr><td>江戸中期</td><td>参詣路としての小道が整備される。霞ノ杜神社の社殿改築。</td></tr>\r\n            <tr><td>明治22年</td><td>町村制施行に伴い「霞ノ杜村」発足。</td></tr>\r\n            <tr><td>昭和23年</td><td>町制施行、霞ノ杜町となる。</td></tr>\r\n            <tr><td>昭和40年代</td><td>林道・吊り橋の改修、観光客の往来が増加。</td></tr>\r\n            <tr><td>昭和53年</td><td>町北西部の自然散策路を整備、案内板を新設。</td></tr>\r\n            <tr><td>平成20年代</td><td>過疎対策と観光振興を両立する施策を本格化。一部の旧整備区域を非公開化。</td></tr>\r\n            <tr><td>令和 4年</td><td>再開発計画と整備地の見直しが議論される。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <h3>町の産業と文化</h3>\r\n        <p>\r\n          かつては林業と地場の木工が町の中心産業でした。今でも町内の数軒の工房で、杜の木を用いた小物・家具づくりが続いています。\r\n          農産では蕎麦と山菜、加工品では <strong>「霧の最中（もなか）」</strong> と <strong>「杜のはちみつ」</strong> が知られています。\r\n        </p>\r\n        <p>\r\n          文化的には、町域の祭事のほとんどに「霧を読む」「水を読む」という表現が出てきます。\r\n          子どもたちの間に伝わる古いわらべ歌のなかには、「丘で霧が立つと、いない子が来る」という一節が残っています。\r\n          これらは、霧の中で迷いやすい山道に対する古人の戒めだったと考えられています。\r\n        </p>\r\n\r\n        <h3>注意事項</h3>\r\n        <p>\r\n          盆地状の地形のため、運転・徒歩を問わず<strong>視界の急変</strong>に注意してください。\r\n          登山道・林道では <strong>熊・鹿などの野生動物</strong> の目撃情報があります。\r\n          一部の <strong>旧整備区域</strong> は、整備上の理由から立ち入りを制限しています。看板・ロープに従ってください。\r\n        </p>"
+      "related": [
+        {
+          "href": "/access/",
+          "label": "アクセス",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/gaiyo/",
+          "label": "町の概要",
+          "storyClue": false
+        }
+      ],
+      "paragraphs": [
+        "霞ノ杜町（かすみのもりちょう）は、霞湖の東岸にある町です。人口は5,812人、2,431世帯です（令和8年10月1日現在）。"
+      ],
+      "bodyHtml": "<h2>地勢</h2>\n<p>町の東側は山系が続き、中心部の標高は約760メートルです。霧見展望休憩所は、その山すその約900メートルにあります。町の中央を杜川が流れ、霞湖に注ぎます。鉄道は霞ノ杜駅を通ります。</p>\n<p>春と秋の朝には濃い霧が出ます。夏は夕立の前に湿った霧が立ち、冬の冷え込んだ朝には霧氷が見られる日があります。8月15日には、霞湖の湖上で霞湖花火大会を開きます。</p>\n<ul><li>年平均気温: 11度前後</li><li>霧の日: 春と秋の朝に多くなります</li><li>積雪: 年によって違い、山すそでは多くなる年もあります</li></ul>\n<h2>町内の学校</h2>\n<p>町内の小学校は第一小学校の1校です（三日月中央小学校を統合）。中学校は霞ノ杜町立箕浦中学校、高校は長野県箕浦高等学校です。</p>\n<h2>なりわい</h2>\n<p>かつては林業と木工が中心でした。いまも工房で、杜の木を使った小物や家具を作っています。農産ではそばと山菜が知られています。</p>\n<h2>出かけるとき</h2>\n<p>霧で視界が急に変わることがあります。山道や林道では、クマやシカの目撃情報があります。烏啼（うてい）山道の周辺は、落石と地盤のゆるみのため、町が立入禁止にしています。柵と看板の内側には入らないでください。</p>",
+      "searchKeywords": [
+        "町の紹介",
+        "人口",
+        "霧",
+        "杜川",
+        "霞湖",
+        "霞ノ杜駅"
+      ],
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-10-01"
     },
     {
       "path": "history/index.html",
       "route": "/history/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "町の歴史｜霞ノ杜町",
-      "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/history/",
+      "description": "霞ノ杜町の町制施行から、杜と湖をめぐる暮らしの記録です。",
+      "h1": "町の歴史",
       "breadcrumbs": [
         {
           "label": "トップ",
-          "href": "../"
+          "href": "/"
         },
         {
           "label": "文化・観光",
-          "href": "../bunka/"
+          "href": "/bunka/"
         },
         {
           "label": "町の歴史"
         }
       ],
-      "related": [],
-      "bodyHtml": "<h2>町の歴史</h2>\r\n        <p style=\"font-size:12px;\"><a href=\"../documents/\">資料室</a> ／ <a href=\"../blog/2019/\">2019年の出来事</a></p>\r\n        <p>\r\n          霞ノ杜町は、古くから杜と水脈に支えられた集落として知られてきました。\r\n          昭和期には林業と地場産品の集散地として一時の活況を見せ、町域には今も当時の道標や石碑が点在しています。\r\n          このページでは、町史編纂室が保存してきた写真と記録の一部を、年代を追いながらご紹介します。\r\n        </p>\r\n\r\n        <h3>1. 江戸〜明治の道筋</h3>\r\n        <p>\r\n          霞ノ杜の参詣路は江戸中期の絵地図に登場します。山あいを縫う細い道は、霧の濃い朝には踏み迷いやすく、\r\n          いくつもの石の道しるべが置かれていました。\r\n          現在も町中心部から霞ノ杜神社へと続く参道沿いに、苔むした石が数基残っています。\r\n        </p>\r\n\r\n        <div class=\"pull-quote\">\r\n          「霧の朝、丘の方より子供の声の聞こえることありと言ふ。\r\n          されども、近寄れば声は霧の中に消え、ただ水の音のみ残るなり。」\r\n          <div class=\"src\">— 霞ノ杜村史 補遺（大正11年・町史編纂室所蔵）</div>\r\n        </div>\r\n\r\n        <h3>2. 昭和の整備・町制施行</h3>\r\n        <p>\r\n          昭和23年、町村制施行に伴い「霞ノ杜村」は「霞ノ杜町」となります。\r\n          高度成長期には林業を中心に町が動き、昭和40年代には吊り橋・林道・展望休憩所が次々に整備されました。\r\n          観光客の往来が増えた時期もあり、町の北西部には自然散策路と案内板が新設されています。\r\n        </p>\r\n\r\n        <h3>3. 1978年の風景写真</h3>\r\n        <p>\r\n          以下の写真は、町史編纂室が保管する 1978 年撮影のフィルム原板から起こしたものです。\r\n          町の北西部、水際の風景を写したものとされています。\r\n        </p>\r\n        <div class=\"photo-zoomable\">\r\n          <img src=\"/img/photos/photo-1978.jpg\" alt=\"1978年撮影の町の風景（北西部・水際）\" />\r\n          <div class=\"zoom-pane\" style=\"background-image: url('/img/photos/photo-1978.jpg'); background-position: 50% 80%;\"></div>\r\n        </div>\r\n        <p class=\"photo-cap\">写真：町の北西部・水際の風景（1978年・町史編纂室所蔵）。マウスを乗せると拡大されます。</p>\r\n\r\n        <p>\r\n          写真の右下、霧の合間にうっすらと木の看板の輪郭が確認できます。\r\n          長年の風雨で多くが朽ちましたが、町史編纂室では当時の案内板の文字を、別の資料との照合により補完しています。\r\n        </p>\r\n\r\n        <h3>4. かつての風景ギャラリー</h3>\r\n        <div class=\"gallery\">\r\n          <figure>\r\n            <img src=\"/img/photos/photo-1978.jpg\" alt=\"\" />\r\n            <figcaption>1978年・町北西部 水際</figcaption>\r\n          </figure>\r\n          <figure>\r\n            <img src=\"/img/photos/photo-mural.jpg\" alt=\"\" />\r\n            <figcaption>令和6年・小学校 地域貢献活動の壁画（参考画像）</figcaption>\r\n          </figure>\r\n        </div>\r\n\r\n        <h3>5. 略年表</h3>\r\n        <div class=\"timeline\">\r\n          <h4>明治22年</h4><p>町村制施行に伴い「霞ノ杜村」発足。</p>\r\n          <h4>昭和23年</h4><p>町制施行、霞ノ杜町となる。</p>\r\n          <h4>昭和28年</h4><p>霞ノ杜町立第一小学校 開校（通称：霞ノ杜小学校）。</p>\r\n          <h4>昭和40年代</h4><p>林道・吊り橋の改修。観光客の往来が増加。</p>\r\n          <h4>昭和53年</h4><p>町北西部の自然散策路を整備、案内板を新設。</p>\r\n          <h4>平成 8年</h4><p>町立霞ノ杜小学校 校舎改築。</p>\r\n          <h4>平成20年代</h4><p>一部の旧整備区域を非公開化、観光サイトから掲載終了。</p>\r\n          <h4>令和 4年</h4><p>町北西部の整備地の見直し・再開発計画が議論される。</p>\r\n          <h4>令和 6年</h4><p>町立霞ノ杜小学校による「水辺の丘」周辺の河川敷清掃活動を実施。</p>\r\n        </div>\r\n\r\n        <h3 id=\"legend\">6. 伝承「三人入って二人戻る」</h3>\r\n        <div class=\"pull-quote\">\r\n          「山に三人が入り、戻るのは二人だけ——」\r\n          <div class=\"src\">— 霞ノ杜町史 民俗資料（町史編纂室所蔵・要約）</div>\r\n        </div>\r\n        <p>\r\n          江戸時代から伝わる言い伝えで、霧の深い朝に子供の声が聞こえるという話とセットで語られることがあります。\r\n          近代の記録では、特定の年の出来事と結びつけて語られる例もあります。伝承として語り継がれています。\r\n          町として公式に超常現象を認定しているわけではありません。\r\n        </p>\r\n\r\n        <h3>7. 旧整備区域について</h3>\r\n        <p>平成20年代以降、一部の旧整備区域は安全上の理由から非公開化され、観光案内からは掲載を終了しています。詳細な立入りはできません。</p>\r\n\r\n        <h3>8. 子どもたちの記録</h3>\r\n        <p>\r\n          霞ノ杜小学校では、毎年秋に「霞ノ杜こども絵画展」を町民ホールで開催しています。\r\n          令和 6 年度の出品作には、町北西部の風景を題材にしたものが複数ありました。\r\n          展示の一部は、町史編纂室での保管とデジタル化を進めています。\r\n        </p>\r\n        <p style=\"font-size:12px;color:#555;\">\r\n          詳しくは\r\n          <a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">霞ノ杜町立霞ノ杜小学校 公式ホームページ</a>\r\n          をご参照ください。\r\n        </p>\r\n\r\n        <div class=\"next-spot\">\r\n          <a href=\"../\">トップページへ戻る »</a>\r\n        </div>"
+      "related": [
+        {
+          "href": "/guide/",
+          "label": "町のご案内",
+          "storyClue": false
+        },
+        {
+          "href": "/bunka/",
+          "label": "文化・観光",
+          "storyClue": false
+        }
+      ],
+      "paragraphs": [
+        "霞ノ杜町は、霞湖の東岸と東側の山すその杜に支えられてきました。このページでは、町史編纂室が保存してきた写真と記録の一部を、年代を追いながら紹介します。"
+      ],
+      "bodyHtml": "<h2>江戸から明治の道筋</h2>\n<p>霞ノ杜神社への参詣路は、江戸中期の絵地図に登場します。霧の濃い朝には山道を踏み迷いやすく、石の道しるべが置かれていました。いまも神社への参道沿いに、苔むした石が残っています。</p>\n<blockquote><p>「霧の朝、丘の方より子供の声の聞こえることありと言ふ。されども、近寄れば声は霧の中に消え、ただ水の音のみ残るなり。」</p><p>霞ノ杜村史 補遺（大正11年・町史編纂室所蔵）</p></blockquote>\n<h2>昭和の町</h2>\n<p>昭和23年に町制を施行し、霞ノ杜村は霞ノ杜町になりました。昭和40年代には林道や杜川の吊り橋、霧見展望休憩所が整備され、訪れる人が増えました。</p>\n<h2>1978年の風景</h2>\n<figure><img src=\"/img/photos/photo-1978.jpg\" alt=\"1978年に湖岸で撮影された町の風景\"><figcaption>杜川が霞湖に注ぐあたりの湖岸（1978年・町史編纂室所蔵）</figcaption></figure>\n<h2>略年表</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>年代</th><th>主なできごと</th></tr></thead><tbody><tr><td>明治22年</td><td>町村制の施行に伴い、霞ノ杜村が発足。</td></tr><tr><td>昭和23年</td><td>町制施行。霞ノ杜町となる。</td></tr><tr><td>昭和28年</td><td>霞ノ杜町立第一小学校が開校（通称 霞ノ杜小）。</td></tr><tr><td>昭和40年代</td><td>林道・吊り橋の改修。訪れる人が増える。</td></tr><tr><td>令和4年</td><td>水辺の丘（杜川が霞湖に注ぐ河口近くの旧自然公園）を、再整備のため閉鎖。</td></tr></tbody></table></div>\n<h2 id=\"legend\">霧の山道に伝わる話</h2>\n<p>江戸時代から、霧の深い朝に子どもの声が聞こえるという話が伝えられています。霧の深い山道に、子どもだけで入らないようにという戒めとして語られてきたと考えられています。</p>\n<h2>第一小学校の記録</h2>\n<p>霞ノ杜町立第一小学校では、秋にこども絵画展を町民ホールで開いています。展示の一部は、町史編纂室で保管とデジタル化を進めています。</p>",
+      "searchKeywords": [
+        "町の歴史",
+        "伝承",
+        "言い伝え",
+        "民俗",
+        "町制施行"
+      ],
+      "owner": "教育委員会 教育課 生涯学習係",
+      "updated": "2026-10-01"
     },
     {
       "path": "kodomo/index.html",
@@ -886,7 +1231,7 @@
       "route": "/kodomo/hoiku/",
       "layout": "city",
       "title": "保育・幼稚園｜霞ノ杜町",
-      "description": "保育・幼稚園 — 霞ノ杜町公式。【フィクション】",
+      "description": "杜保育園と湖畔こども園の定員、開園時間、入所の申し込みです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -924,17 +1269,18 @@
       ],
       "h1": "保育・幼稚園",
       "paragraphs": [
-        "町内に認定こども園1、保育所2、幼稚園（連携型）1があります。空き状況は子育て支援課へ。"
+        "入所の相談は、教育委員会教育課こども係（役場3階、内線314）です。新年度の申し込みは、前年の10月1日から10月31日までです。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>杜保育園</th><td>定員60 / 三日月町</td></tr><tr><th>霞ヶ丘こども園</th><td>定員45 / 霞ノ杜</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"shogakkou.html\">小学校</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a href=\"../kurashi/tetsuzuki-navi.html\">手続ナビ</a></l"
+      "bodyHtml": "<h2>施設</h2><table class=\"data-table\"><thead><tr><th>施設</th><th>場所</th><th>定員</th><th>開園</th></tr></thead><tbody><tr><td>杜保育園</td><td>三日月中央</td><td>60人</td><td>平日 7:30〜18:30</td></tr><tr><td>湖畔こども園</td><td>湖畔</td><td>45人</td><td>平日 7:30〜18:30</td></tr></tbody></table><p>延長は18:30〜19:00で、一日300円です。空きがない月は、杜保育園の一時預かり（平日9:00〜15:00、一日6人）を案内します。</p>",
+      "owner": "教育委員会 教育課 こども係",
+      "updated": "2026-10-01"
     },
     {
       "path": "kodomo/kosodate.html",
       "route": "/kodomo/kosodate/",
       "layout": "city",
       "title": "子育て支援｜霞ノ杜町",
-      "description": "子育て支援 — 霞ノ杜町公式。【フィクション】",
+      "description": "妊娠・出産から就学まで、子育て支援制度と相談窓口の案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -972,16 +1318,18 @@
       ],
       "h1": "子育て支援",
       "paragraphs": [
-        "児童手当・医療費助成・一時預かりの案内は子育て支援課。相談は杜のいろはと連携。"
+        "妊娠の届出、一時預かり、手当の相談は、教育委員会教育課こども係（役場3階、内線314）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href="
+      "owner": "教育委員会 教育課 こども係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>届出と健診</h2><ul><li>妊娠届: わかったら早めに。母子健康手帳を渡します</li><li>妊婦健診: 14回まで助成。領収書を保健係へ</li><li>乳幼児健診: 4か月、1歳6か月、3歳。案内のはがきが届きます</li></ul><h2>預かり</h2><p>一時預かりは杜保育園で、平日の9:00〜15:00です。希望日の3日前までに電話してください。定員はその日6人です。</p><p>手当の申請書類は、こども係の窓口にあります。ひとりで育てている家庭の加算も、同じ窓口で説明します。</p>"
     },
     {
       "path": "kodomo/shogakkou.html",
       "route": "/kodomo/shogakkou/",
       "layout": "city",
-      "title": "小学校｜霞ノ杜町",
-      "description": "町立第一小学校 — 霞ノ杜町公式。【フィクション】",
+      "title": "霞ノ杜町立第一小学校｜霞ノ杜町",
+      "description": "町立小学校の教育方針、校区、学校だよりへのリンクです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -992,7 +1340,7 @@
           "href": "index.html"
         },
         {
-          "label": "町立第一小学校"
+          "label": "霞ノ杜町立第一小学校"
         }
       ],
       "related": [
@@ -1017,19 +1365,25 @@
           "storyClue": false
         }
       ],
-      "h1": "町立第一小学校",
+      "h1": "霞ノ杜町立第一小学校",
       "paragraphs": [
-        "霞ノ杜町立第一小学校の公式サイトは別ページでご覧いただけます。",
-        "<a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">霞ノ杜町立第一小学校 公式サイト</a>"
+        "霞ノ杜町立第一小学校（通称 霞ノ杜小）は、町内でただ一つの小学校です。旧三日月中央小学校は統合して閉校しました。中学校は霞ノ杜町立箕浦中学校です。",
+        "転入・転出、学校給食、アレルギー対応については、教育委員会教育課学校教育係へお問い合わせください。",
+        "学校の日々の連絡や学校だよりは、学校のホームページ（外部サイト）でご覧ください。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoiku.html\">保育</a></li><li><a href=\"toshokan.html\">図書館</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a hr"
+      "bodyHtml": "<p><a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">学校のホームページ（外部サイト）</a></p>",
+      "searchKeywords": [
+        "小学校",
+        "教育",
+        "学校"
+      ]
     },
     {
       "path": "kodomo/toshokan.html",
       "route": "/kodomo/toshokan/",
       "layout": "city",
-      "title": "図書館｜霞ノ杜町",
-      "description": "町立図書館 — 霞ノ杜町公式。【フィクション】",
+      "title": "町立図書館｜霞ノ杜町",
+      "description": "町立図書館の利用案内、蔵書検索、イベント情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1067,10 +1421,11 @@
       ],
       "h1": "町立図書館",
       "paragraphs": [
-        "三日月庁舎別館2階。一般書・町史コーナー・児童書を所蔵。火・水は休館。"
+        "町立図書館は駅前にあります。火から金は9:00〜18:00、土曜は9:00〜17:00です。日曜・月曜と祝日は休館です。貸出は1人10点、2週間です。",
+        "おはなし会、工作教室、調べ学習のサポートなど、子ども向けプログラムを月例で開催しています。参加は無料ですが、事前申込みが必要な場合があります。",
+        "蔵書のリクエスト、寄贈の受付、ボランティア司書の募集についても、こちらからご案内します。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>開館</th><td>9:30〜18:00（土曜〜17:00）</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../history/\">歴史</a></li><li><a href=\"../documents/\">資料室</a></li><li><a href=\""
+      "tableHtml": "<table class=\"city-data\"><tr><th>開館</th><td>9:30〜18:00（土曜〜17:00）</td></tr></table>"
     },
     {
       "path": "kurashi/index.html",
@@ -1092,14 +1447,14 @@
       "paragraphs": [
         "ごみ・水道・交通・住民手続など、町民生活の案内です。"
       ],
-      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"gomi.html\"><strong>ごみ・リサイクル</strong><span>収集曜日・分別</span></a><a class=\"city-hub-card\" href=\"bus-jikan.html\"><strong>町営バス</strong><span>時刻・運賃</span></a><a class=\"city-hub-card\" href=\"suido.html\"><strong>上下水道</strong><span>料金・休止水</span></a><a class=\"city-hub-card\" href=\"juminhyo.html\"><strong>住民票・窓口</strong><span>手続と持ち物</span></a><a class=\"city-hub-card\" href=\"sumai.html\"><strong>住まい・移住</strong><span>空き家・土地</span></a><a class=\"city-hub-card\" href=\"kankyo.html\"><strong>環境・自然</strong><span>杜川・保全区域</span></a><a class=\"city-hub-card\" href=\"tetsuzuki-navi.html\"><strong>手続ナビ</strong><span>Q&A</span></a><a class=\"city-hub-card\" href=\"chizu.html\"><strong>地図から探す</strong><span>町内マップ</span></a></div>"
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"gomi.html\"><strong>ごみ・リサイクル</strong><span>収集曜日・分別</span></a><a class=\"city-hub-card\" href=\"bus-jikan.html\"><strong>町営バス</strong><span>時刻・運賃</span></a><a class=\"city-hub-card\" href=\"suido.html\"><strong>上下水道</strong><span>料金・休止水</span></a><a class=\"city-hub-card\" href=\"juminhyo.html\"><strong>住民票・窓口</strong><span>手続と持ち物</span></a><a class=\"city-hub-card\" href=\"zei.html\"><strong>税</strong><span>納期</span></a><a class=\"city-hub-card\" href=\"sumai.html\"><strong>住まい・移住</strong><span>空き家・土地</span></a><a class=\"city-hub-card\" href=\"kankyo.html\"><strong>環境・自然</strong><span>杜川・保全区域</span></a><a class=\"city-hub-card\" href=\"tetsuzuki-navi.html\"><strong>手続ナビ</strong><span>Q&A</span></a><a class=\"city-hub-card\" href=\"chizu.html\"><strong>地図から探す</strong><span>町内マップ</span></a></div>"
     },
     {
       "path": "kurashi/bus-jikan.html",
       "route": "/kurashi/bus-jikan/",
       "layout": "city",
-      "title": "バス時刻表｜霞ノ杜町",
-      "description": "町営バス時刻表 — 霞ノ杜町公式。【フィクション】",
+      "title": "町営バス時刻表｜霞ノ杜町",
+      "description": "町営バス各系統の時刻表と運行のお知らせです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1137,17 +1492,23 @@
       ],
       "h1": "町営バス時刻表",
       "paragraphs": [
-        "三日月町中心部と霞ノ杜地区を結ぶ町営バスは、平日・土曜に1日6往復です。詳細な停留所位置はアクセス・地図をご覧ください。"
+        "町営バスは、駅前、役場（三日月中央）、杜ケ丘、成沢を回ります。時刻は下の表です。",
+        "大雪や道路工事で運休するときは、お知らせと庁舎前の掲示で案内します。位置情報の配信はしていません。",
+        "定期券・回数券の購入場所、障害者・高齢者の運賃割引については、町民センターでご案内しています。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>三日月発</th><td>7:10 / 9:30 / 11:40 / 14:00 / 16:20 / 18:10</td></tr><tr><th>霞ノ杜発</th><td>7:45 / 10:05 / 12:15 / 14:35 / 16:55 / 18:45</td></tr><tr><th>運賃</th><td>大人200円・小児100円（IC未対応）</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bus-roke.html\">バスロケ</a></li><li><a href=\"chizu.html\">地図</a></li><li><a href=\"../access/\">アクセス詳細</a></li><li><a href=\"../bunka/\">観光</a></li></ul></aside>"
+      "tableHtml": "<div data-kn-tool=\"bus-timetable\"></div>",
+      "searchKeywords": [
+        "バス",
+        "時刻表",
+        "町営バス"
+      ]
     },
     {
       "path": "kurashi/bus-roke.html",
       "route": "/kurashi/bus-roke/",
       "layout": "city",
-      "title": "バスロケ｜霞ノ杜町",
-      "description": "バスロケ・運行状況 — 霞ノ杜町公式。【フィクション】",
+      "title": "バスロケ・運行状況｜霞ノ杜町",
+      "description": "町営バスの現在位置を、地図上で確認できます。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1185,17 +1546,18 @@
       ],
       "h1": "バスロケ・運行状況",
       "paragraphs": [
-        "豪雨・積雪時は運休・遅延が発生することがあります。最新情報は町公式お知らせまたは三日月庁舎代表へお問い合わせください。"
+        "バスの位置は配信していません。発車の時刻は時刻表のページです。運休は、暴風警報のときなどに総務課総務係（内線211）がお知らせします。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>運行区間</th><td>三日月町中心 ⇄ 霞ノ杜神社前</td></tr><tr><th>運休時</th><td>0123-45-6700（代表）内線 213</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bus-jikan.html\">時刻表</a></li><li><a href=\"../anzen/bosai.html\">防災</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../access/\">アクセス</a><"
+      "tableHtml": "<div data-kn-tool=\"bus-status\"></div>",
+      "owner": "総務課 総務係",
+      "updated": "2026-10-01"
     },
     {
       "path": "kurashi/chizu.html",
       "route": "/kurashi/chizu/",
       "layout": "city",
       "title": "地図から探す｜霞ノ杜町",
-      "description": "地図から探す — 霞ノ杜町公式。【フィクション】",
+      "description": "地図から施設・窓口・観光スポットを探せます。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1233,17 +1595,17 @@
       ],
       "h1": "地図から探す",
       "paragraphs": [
-        "町内の主要施設・観光スポットの位置は、アクセス・地図ページの簡易図をご利用ください。",
-        "<a href=\"../access/\">アクセス・地図ページを開く</a>"
+        "町内の主な施設は、下のマップと一覧から探せます。施設名で一覧を絞り込めます。",
+        "印刷用の別地図はありません。載っていない施設は、産業観光課商工観光係までご連絡ください。"
       ],
-      "extraHtml": "<div class=\"town-map\"><iframe src=\"https://roku253.github.io/gougle-map/?embed=kasumi\" title=\"霞ノ杜町内マップ\" style=\"width:100%;height:420px;border:1px solid #d5dbe3\"></iframe></div>\n<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>施設名 <input id=\"facility-q\" type=\"text\" placeholder=\"例：神社\"></label>\n  <button type=\"button\" id=\"facility-go\">絞り込む</button>\n</form>\n<ul id=\"facility-list\">\n  <li>霞ノ杜神社（霞ノ杜）</li>\n  <li>杜の吊り橋（霞ノ杜）</li>\n  <li>霞ノ杜資料館（霞ノ杜）</li>\n  <li>霧見展望休憩所（霞ノ杜）</li>\n  <li>杜の湯（霞ノ杜）</li>\n  <li>三日月庁舎（三日月）</li>\n  <li>町立第一小学校（霞ノ杜）</li>\n</ul>"
+      "extraHtml": "<div class=\"town-map\"><iframe src=\"https://roku253.github.io/gougle-map/?embed=kasumi\" title=\"霞ノ杜町内マップ\" style=\"width:100%;height:420px;border:1px solid #d5dbe3\"></iframe></div>\n<div data-kn-tool=\"facility-finder\"></div>"
     },
     {
       "path": "kurashi/denshi-shinsei.html",
       "route": "/kurashi/denshi-shinsei/",
       "layout": "city",
       "title": "電子申請｜霞ノ杜町",
-      "description": "電子申請 — 霞ノ杜町公式。【フィクション】",
+      "description": "証明書は窓口か郵送です。オンラインは観光イベントの申し込みだけです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1281,17 +1643,19 @@
       ],
       "h1": "電子申請",
       "paragraphs": [
-        "一部手続はオンラインで受付可能です。印鑑登録・住民票の一部は来庁が必要です。"
+        "住民票や税の証明書は、窓口か郵送で請求します。このホームページから送れるのは、観光イベントの申し込みだけです。",
+        "操作の質問は、政策推進課広報情報係（内線244）へ電話してください。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>オンライン可</th><td>各種証明の請求予約・観光イベント申込</td></tr><tr><th>来庁必須</th><td>初回の転入・印鑑登録</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"juminhyo.html\">窓口</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href"
+      "tableHtml": "<div data-kn-tool=\"online-procedures\"></div>",
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-10-01"
     },
     {
       "path": "kurashi/gomi-search.html",
       "route": "/kurashi/gomi-search/",
       "layout": "city",
       "title": "ごみ収集検索｜霞ノ杜町",
-      "description": "ごみ収集検索 — 霞ノ杜町公式。【フィクション】",
+      "description": "ごみ収集検索 — 霞ノ杜町公式。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1329,18 +1693,17 @@
       ],
       "h1": "ごみ収集検索",
       "paragraphs": [
-        "町内区分コード（7桁・フィクション）を入力して収集曜日を表示します。",
-        "<label>区分コード <input id=\"gomi-zip\" type=\"text\" maxlength=\"7\" placeholder=\"0291701\"></label> <button type=\"button\" id=\"gomi-go\">検索</button>",
-        "例: 0291701（三日月） / 0291702（霞ノ杜） / 0291703（杉並ヶ岡）"
-      ],
-      "extraHtml": "<p id=\"gomi-out\"></p>\r\n      <aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi.html\">収集曜日</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index.html\">くらし</a></li></ul></aside>"
+        "品目の名前を入れると、可燃・不燃・資源・プラスチックのどれに出すかを表示します。",
+        "<div data-kn-tool=\"gomi-search\"></div>",
+        "収集の曜日は、お住まいの地区の表をご覧ください。"
+      ]
     },
     {
       "path": "kurashi/gomi.html",
       "route": "/kurashi/gomi/",
       "layout": "city",
       "title": "ごみ・リサイクル｜霞ノ杜町",
-      "description": "ごみ・リサイクル — 霞ノ杜町公式。【フィクション】",
+      "description": "ごみの分別、収集曜日、リサイクル施設の案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1378,17 +1741,24 @@
       ],
       "h1": "ごみ・リサイクル",
       "paragraphs": [
-        "地区ごとに収集曜日が異なります。分別は町公式パンフレットに準拠します。"
+        "可燃ごみ、不燃ごみ、資源、プラスチックを分けて集めています。曜日は、三日月・湖畔・駅前・杜ケ丘の4地区で違います。下の表で確かめてください。品目の分け方は、ごみ収集検索で探せます。",
+        "粗大ごみ・家電リサイクル・草木の持込みは、事前予約制です。収集日の変更や、年末年始の特別スケジュールは、お知らせ欄で案内します。",
+        "分別に迷ったときは、ごみ収集検索ページで品目を調べるか、住民税務課環境係までお問い合わせください。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>三日月町</th><td>燃やす:火金 / 資源:水 / プラ:第1・3木</td></tr><tr><th>霞ノ杜</th><td>燃やす:月木 / 資源:水 / プラ:第2・4木</td></tr><tr><th>杉並ヶ岡</th><td>燃やす:火 / 資源:金 / プラ:第2水</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"gomi-search.html\">ごみ収集検索</a></li><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"../shisei/koho.html\">お知らせ</a></li><li><a href=\"../contact/\">問合せ</a></li></ul></aside>"
+      "tableHtml": "<div data-kn-tool=\"gomi-calendar\"></div>",
+      "searchKeywords": [
+        "ごみ",
+        "ゴミ",
+        "分別",
+        "収集曜日"
+      ]
     },
     {
       "path": "kurashi/juminhyo.html",
       "route": "/kurashi/juminhyo/",
       "layout": "city",
-      "title": "住民票・窓口｜霞ノ杜町",
-      "description": "住民票・窓口案内 — 霞ノ杜町公式。【フィクション】",
+      "title": "住民票・窓口案内｜霞ノ杜町",
+      "description": "住民票・印鑑登録・戸籍など、住民記録に関する手続きです。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1426,17 +1796,18 @@
       ],
       "h1": "住民票・窓口案内",
       "paragraphs": [
-        "転入・転出・世帯変更は三日月庁舎1階 住民課で受け付けます。平日8:30〜17:15（12:00〜13:00は窓口休止）。"
+        "住民票の写し、住民票の記載事項証明、印鑑登録・廃止などは、庁舎1階の住民記録窓口で受け付けています。代理人の方は、委任状と代理人の身分証明書が必要です。",
+        "転入・転出・転居の届出は、14日以内に行ってください。マイナンバーに関する手続きは、別窓口またはオンライン申請をご利用ください。",
+        "窓口の混雑状況は、平日午前が比較的空いています。予約優先の時間帯も設けていますので、電話でご確認ください。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>住民票交付</th><td>本人確認書類・手数料300円</td></tr><tr><th>転入</th><td>14日以内に届出（前住所の転出証明がある場合）</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"../shisei/yakuba.html\">庁舎案内</a></li><li><a href=\"denshi-s"
+      "tableHtml": "<table class=\"city-data\"><tr><th>住民票交付</th><td>本人確認書類・手数料300円</td></tr><tr><th>転入</th><td>14日以内に届出（前住所の転出証明がある場合）</td></tr></table>"
     },
     {
       "path": "kurashi/kankyo.html",
       "route": "/kurashi/kankyo/",
       "layout": "city",
       "title": "環境・自然｜霞ノ杜町",
-      "description": "環境・自然 — 霞ノ杜町公式。【フィクション】",
+      "description": "自然保護、公害相談、緑化活動など、環境に関する情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1474,16 +1845,18 @@
       ],
       "h1": "環境・自然",
       "paragraphs": [
-        "杜川流域の保全協定に基づき、岸辺の伐採・キャンプ火は制限されています。北西部旧整備区域は立入禁止です。"
+        "杜川の水、公園、鳥獣の相談は、住民税務課環境係（役場1階、内線117）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../anzen/ha"
+      "owner": "住民税務課 環境係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>水と緑</h2><p>杜川の水は、湖に注ぐ手前で月1回調べています。結果はオープンデータのページにはまだ載せていません。数値を知りたいときは環境係へ。</p><h2>鳥獣</h2><p>クマを見たら近づかず、役場か駐在所へ電話してください。生ごみと果実は、家の外に置かないでください。</p><h2>木を伐るとき</h2><p>自分の山でも、1ヘクタールを超えて伐るときは、伐る前に農林係へ届けてください。</p>"
     },
     {
       "path": "kurashi/suido.html",
       "route": "/kurashi/suido/",
       "layout": "city",
       "title": "上下水道｜霞ノ杜町",
-      "description": "上下水道 — 霞ノ杜町公式。【フィクション】",
+      "description": "上水道・下水道の料金、工事、水質検査の案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1521,17 +1894,18 @@
       ],
       "h1": "上下水道",
       "paragraphs": [
-        "町営水道は杜川系の水源を利用しています。休止水・水質検査結果はお知らせで告知します。"
+        "開始、中止、名義の変更、口座振替は、建設水道課上下水道係（役場2階、内線234）へ電話してください。オンラインでは受け付けていません。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>水道料金</th><td>メーター検針・2ヶ月ごと請求</td></tr><tr><th>休止水連絡</th><td>総務課 0123-45-6702</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kankyo.html\">環境</a></li><li><a href=\"tetsuzuki-navi.html\">手続ナビ</a></li><li><a href=\"../contact/\">問合せ</a></li><li><a href=\"index"
+      "bodyHtml": "<h2>料金</h2><p>2か月ごとの検針です。基本料金1,200円に、使用量1立方メートルあたり120円を足します。納期限は検針票に印字します。</p><h2>始めるとき</h2><p>使い始める3日前までに電話してください。止めるときも同じです。</p><h2>漏水</h2><p>開庁時間は内線234です。道路にあふれているときは、開庁時間外も代表電話 0266-12-2111 へ。</p>",
+      "owner": "建設水道課 上下水道係",
+      "updated": "2026-10-01"
     },
     {
       "path": "kurashi/sumai.html",
       "route": "/kurashi/sumai/",
       "layout": "city",
       "title": "住まい・移住｜霞ノ杜町",
-      "description": "住まい・移住 — 霞ノ杜町公式。【フィクション】",
+      "description": "空き家バンク、移住相談、住宅改修補助の情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1569,16 +1943,18 @@
       ],
       "h1": "住まい・移住",
       "paragraphs": [
-        "空き家バンク・移住相談を町建設課で行っています。林業や観光と組み合わせた二地域居住の事例もあります。"
+        "空き家と移住の相談は、政策推進課企画財政係（役場2階、内線241）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"kankyo.html"
+      "owner": "政策推進課 企画財政係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>空き家バンク</h2><p>令和8年10月1日現在、公開しているのは2件です。</p><table class=\"data-table\"><thead><tr><th>場所</th><th>種類</th><th>状態</th></tr></thead><tbody><tr><td>三日月中央</td><td>戸建て</td><td>内覧は平日。家財が残っています</td></tr><tr><td>湖畔</td><td>店舗兼住宅</td><td>1階が店舗。水道は止めてあります</td></tr></tbody></table><p>耐震診断の補助は、木造の戸建てで、診断費用の2分の1、上限5万円です。工事の前に企画財政係へ。</p>"
     },
     {
       "path": "kurashi/tetsuzuki-navi.html",
       "route": "/kurashi/tetsuzuki-navi/",
       "layout": "city",
       "title": "手続ナビ｜霞ノ杜町",
-      "description": "手続ナビ — 霞ノ杜町公式。【フィクション】",
+      "description": "生活の場面から、必要な手続きをたどって探せます。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1616,17 +1992,16 @@
       ],
       "h1": "手続ナビ",
       "paragraphs": [
-        "よくあるライフイベントから、必要な手続と窓口を案内します。（静的ナビ・フィクション）"
+        "場面ごとに、届ける場所へのリンクをまとめました。名前から探すときは、手続早わかり検索を使ってください。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>転入した</th><td>住民票転入 → 国民健康保険 → ごみ収集登録</td></tr><tr><th>引っ越す</th><td>転出届 → 各種証明の変更</td></tr><tr><th>子どもが生まれた</th><td>出生届 → 児童手当 → 保育所申込</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"tetsuzuki-search.html\">早わかり検索</a></li><li><a href=\"juminhyo.html\">住民票</a></li><li><a href=\"../kodomo/kosodate.html\">子育て</a></li><li><a href=\"../shisei/yakuba.html\">庁舎</a></li></ul></asi"
+      "bodyHtml": "<h2>場面から探す</h2>\n<ul><li>町に移ってきたとき: <a href=\"/kurashi/juminhyo/\">転入届</a>、<a href=\"/kurashi/zei/\">国民健康保険</a>、<a href=\"/kurashi/gomi/\">ごみの曜日</a></li><li>町から出るとき: <a href=\"/kurashi/juminhyo/\">転出届</a>、<a href=\"/kurashi/suido/\">水道の使用中止</a></li><li>子どもが生まれたとき: <a href=\"/kurashi/juminhyo/\">出生届</a>、<a href=\"/kodomo/kosodate/\">児童手当</a>、<a href=\"/kodomo/hoiku/\">保育</a></li><li>結婚したとき: <a href=\"/kurashi/juminhyo/\">婚姻届</a></li><li>税の通知が来たとき: <a href=\"/kurashi/zei/\">納期</a></li></ul>"
     },
     {
       "path": "kurashi/tetsuzuki-search.html",
       "route": "/kurashi/tetsuzuki-search/",
       "layout": "city",
-      "title": "手続早わかり検索｜霞ノ杜町",
-      "description": "申請・手続早わかり検索 — 霞ノ杜町公式。【フィクション】",
+      "title": "申請・手続早わかり検索｜霞ノ杜町",
+      "description": "キーワードで町の手続き・届出を検索できます。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1664,10 +2039,55 @@
       ],
       "h1": "申請・手続早わかり検索",
       "paragraphs": [
-        "手続名から担当課を検索できます。"
+        "下の表を、手続き名で絞り込めます。トップページの手続検索からも、同じ表を開きます。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>住民票</th><td>住民課 / 1階</td></tr><tr><th>建築確認</th><td>建設課 / 2階</td></tr><tr><th>観光協力</th><td>産業観光課 / 2階</td></tr><tr><th>国民健康保険</th><td>福祉課 / 1階</td></tr></table>",
-      "extraHtml": "<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>手続き名 <input id=\"proc-q\" type=\"text\" placeholder=\"例：住民票\"></label>\n  <button type=\"button\" id=\"proc-go\">絞り込む</button>\n</form>\n<p id=\"proc-out\"></p>"
+      "tableHtml": "<div data-kn-tool=\"procedure-search\"></div>"
+    },
+    {
+      "path": "kurashi/zei/index.html",
+      "route": "/kurashi/zei/",
+      "layout": "city",
+      "title": "税｜霞ノ杜町",
+      "description": "町県民税、固定資産税、軽自動車税、国民健康保険税の納期です。",
+      "h1": "税",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "くらし・環境",
+          "href": "/kurashi/"
+        },
+        {
+          "label": "税"
+        }
+      ],
+      "related": [
+        {
+          "href": "/kurashi/juminhyo/",
+          "label": "住民票",
+          "storyClue": false
+        },
+        {
+          "href": "/contact/",
+          "label": "お問い合わせ",
+          "storyClue": false
+        }
+      ],
+      "paragraphs": [
+        "町の税は、住民税務課税務係（役場1階、内線114）が担当します。納付書は、納期のおよそ2週間前に世帯へ届きます。"
+      ],
+      "bodyHtml": "<h2>納期</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>税</th><th>納期</th></tr></thead><tbody><tr><td>町県民税（普通徴収）</td><td>第1期 6月30日、第2期 8月31日、第3期 11月2日、第4期 1月31日</td></tr><tr><td>固定資産税</td><td>第1期 5月31日、第2期 7月31日、第3期 12月28日、第4期 2月28日</td></tr><tr><td>軽自動車税（種別割）</td><td>5月31日（年1回）</td></tr><tr><td>国民健康保険税</td><td>第1期 7月31日から、年8回</td></tr></tbody></table></div>\n<p>納期限が土日・祝日のときは、翌開庁日が期限です。口座振替は、納期限の日に引き落とします。</p>\n<h2>証明書</h2>\n<p>所得・課税証明書と納税証明書は、住民税務課の窓口か郵送で請求できます。オンラインでの交付は行っていません。</p>",
+      "searchKeywords": [
+        "税",
+        "住民税",
+        "固定資産税",
+        "軽自動車税",
+        "国民健康保険"
+      ],
+      "owner": "住民税務課 税務係",
+      "updated": "2026-10-01"
     },
     {
       "path": "sangyo/index.html",
@@ -1689,14 +2109,14 @@
       "paragraphs": [
         "林業・観光・商店街・雇用の情報です。"
       ],
-      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"ringyo.html\"><strong>林業</strong><span>間伐・素材</span></a><a class=\"city-hub-card\" href=\"kankou-sangyo.html\"><strong>観光産業</strong><span>協会・受入</span></a><a class=\"city-hub-card\" href=\"shogyo.html\"><strong>三日月町商店街</strong><span>店舗・イベント</span></a><a class=\"city-hub-card\" href=\"koyo.html\"><strong>雇用・季節工</strong><span>募集情報</span></a></div>"
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"ringyo.html\"><strong>林業</strong><span>間伐・素材</span></a><a class=\"city-hub-card\" href=\"kankou-sangyo.html\"><strong>観光産業</strong><span>協会・受入</span></a><a class=\"city-hub-card\" href=\"shogyo.html\"><strong>霞湖商店街</strong><span>店舗・イベント</span></a><a class=\"city-hub-card\" href=\"koyo.html\"><strong>雇用・季節工</strong><span>募集情報</span></a></div>"
     },
     {
       "path": "sangyo/kankou-sangyo.html",
       "route": "/sangyo/kankou-sangyo/",
       "layout": "city",
       "title": "観光産業｜霞ノ杜町",
-      "description": "観光産業 — 霞ノ杜町公式。【フィクション】",
+      "description": "観光振興、宿泊施設、体験プログラムの事業者向け情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1734,16 +2154,18 @@
       ],
       "h1": "観光産業",
       "paragraphs": [
-        "宿泊・体験・受入の届出、協会との連携は産業観光課。観光情報は文化・観光カテゴリへ。"
+        "宿泊、飲食、体験の事業者向けの相談は、産業観光課商工観光係（内線224）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\""
+      "owner": "産業観光課 商工観光係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>モデルコース</h2><p>紙のモデルコースは、役場1階の観光案内で配っています。ダウンロード用のファイルはありません。</p><ol><li>駅前から湖畔を歩き、霞湖商店街で昼</li><li>杜の湯で足湯、杜川の吊り橋までバス</li><li>杜ケ丘の霞ノ杜神社と霧見展望休憩所</li></ol><h2>掲載と補助</h2><p>店の情報を広報紙に載せるときは、発行月の前々月20日までに原稿をください。店舗の改修補助は、工事の契約前に相談してください。上限は50万円です。</p>"
     },
     {
       "path": "sangyo/koyo.html",
       "route": "/sangyo/koyo/",
       "layout": "city",
-      "title": "雇用｜霞ノ杜町",
-      "description": "雇用・季節工 — 霞ノ杜町公式。【フィクション】",
+      "title": "雇用・季節工｜霞ノ杜町",
+      "description": "町内の雇用情報、就職支援、職業訓練の案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1781,17 +2203,19 @@
       ],
       "h1": "雇用・季節工",
       "paragraphs": [
-        "ハウスメーカー・林業・観光の季節求人を町ハローワーク掲示板で公開（架空）。"
+        "町内の求人は、産業観光課商工観光係（役場2階、内線224）で紹介しています。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>林業作業</th><td>4〜11月 / 要相談</td></tr><tr><th>観光案内</th><td>夏期アルバイト</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"ringyo.html\">林業</a></li><li><a href=\"shogyo.html\">商店街</a></li><li><a href=\"index.html\">事業者</a></li><li><a href="
+      "tableHtml": "",
+      "owner": "産業観光課 商工観光係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>いま募集している仕事</h2><div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>仕事</th><th>期間</th><th>条件</th><th>問い合わせ</th></tr></thead><tbody><tr><td>農林の季節作業</td><td>4月〜11月</td><td>日給8,000円。現地集合</td><td>産業観光課 農林係</td></tr><tr><td>霞湖商店街の案内</td><td>7月〜8月</td><td>時給1,100円。土日中心</td><td>産業観光課 商工観光係</td></tr><tr><td>町の一般事務</td><td>次の募集まで</td><td>令和8年度は9月4日に締め切りました</td><td>総務課 総務係</td></tr></tbody></table></div><p>履歴書の書き方は、毎月第2水曜の10時に町民ホールで30分の説明をしています。予約はいりません。</p>"
     },
     {
       "path": "sangyo/ringyo.html",
       "route": "/sangyo/ringyo/",
       "layout": "city",
       "title": "林業｜霞ノ杜町",
-      "description": "林業 — 霞ノ杜町公式。【フィクション】",
+      "description": "町有林、間伐・植林支援、林産物の販路情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1829,16 +2253,18 @@
       ],
       "h1": "林業",
       "paragraphs": [
-        "町面積の約七成が森林。間伐・素材販売は林業組合と建設課が窓口。"
+        "町有林の間伐と、民有林の補助は、産業観光課農林係（役場2階、内線221）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><"
+      "owner": "産業観光課 農林係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>補助</h2><table class=\"data-table\"><thead><tr><th>メニュー</th><th>内容</th></tr></thead><tbody><tr><td>間伐</td><td>1ヘクタールあたり定額。申請は伐る前</td></tr><tr><td>植林</td><td>苗木代の2分の1。年1回、2月に受け付け</td></tr><tr><td>獣害の柵</td><td>クマとシカの通り道に限る。現地を確認してから</td></tr></tbody></table><p>山では火を使わないでください。入るときは鈴をつけ、日没前に降りてください。作業道の通行止めは、入口の看板に出します。</p>"
     },
     {
       "path": "sangyo/shogyo.html",
       "route": "/sangyo/shogyo/",
       "layout": "city",
-      "title": "商店街｜霞ノ杜町",
-      "description": "三日月町商店街 — 霞ノ杜町公式。【フィクション】",
+      "title": "霞湖商店街｜霞ノ杜町",
+      "description": "霞湖商店街を中心とした、町内の商店の案内です。",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -1849,7 +2275,7 @@
           "href": "index.html"
         },
         {
-          "label": "三日月町商店街"
+          "label": "霞湖商店街"
         }
       ],
       "related": [
@@ -1874,17 +2300,43 @@
           "storyClue": false
         }
       ],
-      "h1": "三日月町商店街",
+      "h1": "霞湖商店街",
       "paragraphs": [
-        "老舗の雑貨・食堂・土産店が旧街道沿いに並びます。毎月第3土曜は夜市。"
+        "霞湖商店街は湖畔にあります。毎月第3土曜に夜市を開きます。雨のときは翌週です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a hr"
+      "owner": "産業観光課 商工観光係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>店</h2><table class=\"data-table\"><thead><tr><th>店</th><th>内容</th><th>時間</th></tr></thead><tbody><tr><td>霧見茶房</td><td>お茶と甘味</td><td>10:00〜17:00。火曜休み</td></tr><tr><td>杜川工房</td><td>木工品</td><td>10:00〜16:00。水曜休み</td></tr><tr><td>霧の最中</td><td>もなか</td><td>昼だけ。夜市の日は屋台</td></tr></tbody></table><p>空き店舗と改装の相談は、産業観光課商工観光係（内線224）です。掲載の訂正も同じ係へ。</p>"
+    },
+    {
+      "path": "search/index.html",
+      "route": "/search/",
+      "layout": "city",
+      "title": "サイト内検索｜霞ノ杜町",
+      "description": "霞ノ杜町公式ホームページのサイト内検索です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "サイト内検索"
+        }
+      ],
+      "related": [],
+      "h1": "サイト内検索",
+      "paragraphs": [
+        "キーワードを入力して、このホームページの中を探せます。",
+        "<div data-kn-tool=\"site-search\"></div>",
+        "<p>PDFの中身は検索の対象外です。資料は<a href=\"/documents/\">資料室</a>をご覧ください。</p>"
+      ],
+      "searchExclude": true
     },
     {
       "path": "shisei/index.html",
       "route": "/shisei/",
       "layout": "city",
-      "title": "市政情報｜霞ノ杜町",
+      "title": "町政情報｜霞ノ杜町",
       "description": "",
       "breadcrumbs": [
         {
@@ -1892,29 +2344,29 @@
           "href": "../../"
         },
         {
-          "label": "市政情報"
+          "label": "町政情報"
         }
       ],
       "related": [],
-      "h1": "市政情報",
+      "h1": "町政情報",
       "paragraphs": [
         "町政・組織・広報・選挙の情報です。"
       ],
-      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"koho-kasumi.html\"><strong>広報誌「霞ノ杜」</strong><span>くらし・行事</span></a><a class=\"city-hub-card\" href=\"../documents/\"><strong>資料室</strong><span>議会だより</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>バックナンバー</strong><span>広報誌</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>フォーム</span></a></div>"
+      "extraHtml": "<div class=\"city-hub-cards\"><a class=\"city-hub-card\" href=\"chijitsu.html\"><strong>町長の部屋</strong><span>ご挨拶・歴代町長</span></a><a class=\"city-hub-card\" href=\"gaiyo.html\"><strong>町の概要</strong><span>位置・人口</span></a><a class=\"city-hub-card\" href=\"gikai.html\"><strong>町議会</strong><span>議員・定例会</span></a><a class=\"city-hub-card\" href=\"shozoku.html\"><strong>組織・開庁</strong><span>課別一覧</span></a><a class=\"city-hub-card\" href=\"koho.html\"><strong>お知らせ</strong><span>最新一覧</span></a><a class=\"city-hub-card\" href=\"koho-kasumi.html\"><strong>広報紙「かすみのもり」</strong><span>くらし・行事</span></a><a class=\"city-hub-card\" href=\"../documents/\"><strong>資料室</strong><span>過去の資料</span></a><a class=\"city-hub-card\" href=\"yakuba.html\"><strong>庁舎案内</strong><span>アクセス</span></a><a class=\"city-hub-card\" href=\"senkyo.html\"><strong>選挙</strong><span>日程・投票所</span></a><a class=\"city-hub-card\" href=\"open-data.html\"><strong>オープンデータ</strong><span>公開データ</span></a><a class=\"city-hub-card\" href=\"archive.html\"><strong>バックナンバー</strong><span>広報紙</span></a><a class=\"city-hub-card\" href=\"../contact/\"><strong>お問い合わせ</strong><span>課の連絡先</span></a></div>"
     },
     {
       "path": "shisei/archive.html",
       "route": "/shisei/archive/",
       "layout": "city",
       "title": "広報バックナンバー｜霞ノ杜町",
-      "description": "広報誌「霞ノ杜」のバックナンバー — 霞ノ杜町公式。【フィクション】",
+      "description": "広報紙「かすみのもり」の電子版です。直近6か月分を掲載しています。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -1924,7 +2376,7 @@
       "related": [
         {
           "href": "koho-kasumi.html",
-          "label": "広報誌「霞ノ杜」",
+          "label": "広報かすみのもり",
           "storyClue": false
         },
         {
@@ -1940,23 +2392,29 @@
       ],
       "h1": "広報バックナンバー",
       "paragraphs": [
-        "広報誌「霞ノ杜」の既刊一覧です。号名を押すとPDFが開きます。議会だよりや地域安全通信は、資料室に分けてあります。"
+        "電子版は直近6か月分を掲載しています。それ以前の号は町立図書館でご覧いただけます。"
       ],
-      "extraHtml": "<div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <thead><tr><th>発行</th><th>号</th><th>主な内容</th><th>PDF</th></tr></thead>\r\n          <tbody>\r\n            <tr><td>令和7年4月</td><td><a href=\"/pdf/koho-r7-04.pdf\" target=\"_blank\" rel=\"noopener\">4月号</a></td><td>春の杜まつり・ごみ分別特集</td><td><a href=\"/pdf/koho-r7-04.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年3月</td><td><a href=\"/pdf/koho-r7-03.pdf\" target=\"_blank\" rel=\"noopener\">3月号</a></td><td>入学・進学・町営バスダイヤ</td><td><a href=\"/pdf/koho-r7-03.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年2月</td><td><a href=\"/pdf/koho-r7-02.pdf\" target=\"_blank\" rel=\"noopener\">2月号</a></td><td>除雪・冬季道路・健康診断</td><td><a href=\"/pdf/koho-r7-02.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年1月</td><td><a href=\"/pdf/koho-r7-01.pdf\" target=\"_blank\" rel=\"noopener\">1月号</a></td><td>年頭挨拶・初詣・防災のしおり</td><td><a href=\"/pdf/koho-r7-01.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和6年12月</td><td><a href=\"/pdf/koho-r6-12.pdf\" target=\"_blank\" rel=\"noopener\">12月号</a></td><td>年末年始窓口・イルミネーション</td><td><a href=\"/pdf/koho-r6-12.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>"
+      "extraHtml": "<h2>令和8年度</h2>\n<ul>\n<li><a data-pdf=\"koho-r8-10.pdf\">10月号（No.846）　秋の健康づくり</a></li>\n<li><a data-pdf=\"koho-r8-09.pdf\">9月号（No.845）　新しいハザードマップ</a></li>\n<li><a data-pdf=\"koho-r8-08.pdf\">8月号（No.844）　霞湖花火大会</a></li>\n<li><a data-pdf=\"koho-r8-07.pdf\">7月号（No.843）　夏の地域安全運動</a></li>\n<li><a data-pdf=\"koho-r8-06.pdf\">6月号（No.842）　町の子育て支援</a></li>\n<li><a data-pdf=\"koho-r8-05.pdf\">5月号（No.841）　当初予算と主な事業</a></li>\n</ul>\n<p>電子版は直近6か月分を掲載しています。それ以前の号は町立図書館でご覧いただけます。</p>",
+      "searchKeywords": [
+        "広報",
+        "アーカイブ",
+        "バックナンバー",
+        "過去の号"
+      ]
     },
     {
       "path": "shisei/chijitsu.html",
       "route": "/shisei/chijitsu/",
       "layout": "city",
-      "title": "町長｜霞ノ杜町",
-      "description": "町長の部屋 — 霞ノ杜町公式。【フィクション】",
+      "title": "町長の部屋｜霞ノ杜町",
+      "description": "霞ノ杜町長 藤原誠一のあいさつ、町政運営の方針、歴代町長の一覧です。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -1965,49 +2423,164 @@
       ],
       "related": [
         {
-          "href": "shozoku.html",
-          "label": "組織",
+          "href": "/shisei/gaiyo/",
+          "label": "町の概要",
           "storyClue": false
         },
         {
-          "href": "koho.html",
-          "label": "お知らせ",
+          "href": "/shisei/gikai/",
+          "label": "町議会",
           "storyClue": false
         },
         {
-          "href": "senkyo.html",
+          "href": "/shisei/shozoku/",
+          "label": "組織・開庁時間",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/senkyo/",
           "label": "選挙",
-          "storyClue": false
-        },
-        {
-          "href": "index.html",
-          "label": "市政",
           "storyClue": false
         }
       ],
       "h1": "町長の部屋",
       "paragraphs": [
-        "町長 藤原 誠一（ふじわら せいいち）。前町長は渡辺（2011年〜2023年）。"
+        "町長のあいさつと町政運営の方針、歴代の町長をご紹介します。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"sho"
+      "bodyHtml": "<h2>ごあいさつ</h2>\n<p>町民の皆さま、こんにちは。霞ノ杜町長の藤原誠一です。</p>\n<p>令和5年5月に町長に就任してから、3年余りが過ぎました。この間、町内の4つの地区で「まちづくり懇談会」を開き、子育て中の方から高齢の方まで、多くの皆さまのお話を直接伺ってまいりました。いただいたご意見は、毎年度の予算と事業に生かしています。</p>\n<p>令和8年度は、「安心して暮らせるまち」と「訪れた人がまた来たくなるまち」の二つを柱に、町政を進めています。9月には、洪水と土砂災害の想定を新しくしたハザードマップを全戸にお届けしました。ご家庭で避難の場所と道筋を確かめていただければ幸いです。</p>\n<p>霧の深い朝も、湖の上に晴れ間がのぞく午後も、霞ノ杜の暮らしは町民の皆さま一人ひとりに支えられています。これからも皆さまの声に耳を傾け、町政に生かしてまいります。</p>\n<p>霞ノ杜町長　藤原 誠一</p>\n<h2>町長のプロフィール</h2>\n<table class=\"data-table\"><tbody><tr><th>氏名</th><td>藤原 誠一（ふじわら せいいち）</td></tr><tr><th>就任</th><td>令和5年5月1日（1期目）</td></tr><tr><th>任期</th><td>令和9年4月30日まで</td></tr><tr><th>経歴</th><td>霞ノ杜町生まれ。長野県職員を経て、令和5年4月の霞ノ杜町長選挙で初当選</td></tr></tbody></table>\n<h2>令和8年度の町政運営の方針</h2>\n<ul>\n<li>暮らしの安全：ハザードマップの改訂と全戸配布、地区ごとの自主防災組織の訓練の支援、町道と橋の点検と補修</li>\n<li>子育てと教育：子育て支援センターの相談体制の充実、町立第一小学校と箕浦中学校の学習環境の整備</li>\n<li>産業と観光：霞湖花火大会をはじめとする催しと湖畔の観光の振興、町内産の農産物と木工品の販路づくり</li>\n<li>移住と定住：空き家バンクの登録の拡大、移住を考える方への相談と体験の受け入れ</li>\n</ul>\n<h2>町長へのご意見・ご要望</h2>\n<p>町長へのご意見・ご要望は、役場1階の「町長への手紙」の箱か、郵送（役場 総務課 総務係あて）で受け付けています。お名前とご連絡先を書いていただいたものには、担当の課からお返事します。</p>\n<h2>歴代町長</h2>\n<p>昭和23年4月の町制施行からの歴代の町長です。</p>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>代</th><th>氏名</th><th>在任期間</th></tr></thead><tbody><tr><td>初代</td><td>北原 徳治</td><td>昭和23年4月〜昭和30年4月</td></tr><tr><td>第2代</td><td>宮下 清司</td><td>昭和30年5月〜昭和42年4月</td></tr><tr><td>第3代</td><td>丸山 正雄</td><td>昭和42年5月〜昭和50年4月</td></tr><tr><td>第4代</td><td>小松 寛</td><td>昭和50年5月〜昭和62年4月</td></tr><tr><td>第5代</td><td>高見沢 治郎</td><td>昭和62年5月〜平成7年4月</td></tr><tr><td>第6代</td><td>清水 勇一</td><td>平成7年5月〜平成15年4月</td></tr><tr><td>第7代</td><td>武井 和夫</td><td>平成15年5月〜平成19年4月</td></tr><tr><td>第8代</td><td>中村 恒夫</td><td>平成19年5月〜平成23年4月</td></tr><tr><td>第9代</td><td>渡辺 康男</td><td>平成23年5月〜令和5年4月</td></tr><tr><td>第10代</td><td>藤原 誠一</td><td>令和5年5月〜（現職）</td></tr></tbody></table></div>",
+      "searchKeywords": [
+        "町長",
+        "あいさつ",
+        "歴代町長",
+        "施政方針"
+      ],
+      "owner": "総務課 総務係",
+      "updated": "2026-04-01"
+    },
+    {
+      "path": "shisei/gaiyo/index.html",
+      "route": "/shisei/gaiyo/",
+      "layout": "city",
+      "title": "町の概要｜霞ノ杜町",
+      "description": "霞ノ杜町の位置・面積・人口と世帯数・地勢と気候・地区と町名・町のあゆみの概要です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "町の概要"
+        }
+      ],
+      "related": [
+        {
+          "href": "/guide/",
+          "label": "町のご案内",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/chijitsu/",
+          "label": "町長の部屋",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/open-data/",
+          "label": "オープンデータ",
+          "storyClue": false
+        }
+      ],
+      "h1": "町の概要",
+      "paragraphs": [
+        "霞ノ杜町の位置・面積・人口などの基本的な情報と、町のあゆみをまとめています。"
+      ],
+      "bodyHtml": "<h2>町のすがた</h2>\n<table class=\"data-table\"><tbody><tr><th>位置</th><td>長野県のほぼ中央、霞湖の東岸</td></tr><tr><th>面積</th><td>64.12平方キロメートル</td></tr><tr><th>人口</th><td>5,812人（男 2,826人・女 2,986人）</td></tr><tr><th>世帯数</th><td>2,431世帯</td></tr><tr><th>役場の標高</th><td>約760メートル</td></tr><tr><th>町制施行</th><td>昭和23年4月1日</td></tr></tbody></table>\n<p>人口と世帯数は、令和8年10月1日現在の住民基本台帳の数です。毎月の人口は、広報かすみのもりの「まちの人口」でもお知らせしています。</p>\n<h2>地勢と気候</h2>\n<p>町の西側は霞湖に面し、東側には標高1,000メートルを超える山並みが続いています。東の山あいから流れ出る杜川が町の中を通り、霞湖に注いでいます。湖岸の平地に住宅と商店が集まり、東の山すその杜ケ丘には、霞ノ杜神社や町立第一小学校があります。</p>\n<p>内陸の高原らしい気候で、夏は涼しく、冬の冷え込みは厳しくなります。年間の平均気温は約11度です。春と秋の朝には湖と川から霧が立ちやすく、霧の出る日は年に110日前後あります。</p>\n<h2>地区と町名</h2>\n<p>町内は4つの地区に分かれています。ごみの収集、避難所、投票所などは、この地区ごとにご案内しています。</p>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>地区</th><th>町名</th></tr></thead><tbody><tr><td>三日月地区</td><td>三日月中央、三日月北、成沢</td></tr><tr><td>湖畔地区</td><td>湖畔、西木戸、大萩、狐塚</td></tr><tr><td>駅前地区</td><td>駅前、木戸、筒川、柳川、箕浦</td></tr><tr><td>杜ケ丘地区</td><td>大字杜ケ丘、烏啼</td></tr></tbody></table></div>\n<h2>人口の移り変わり</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>年</th><th>人口</th><th>世帯数</th></tr></thead><tbody><tr><td>平成12年</td><td>7,413人</td><td>2,398世帯</td></tr><tr><td>平成17年</td><td>7,086人</td><td>2,436世帯</td></tr><tr><td>平成22年</td><td>6,758人</td><td>2,470世帯</td></tr><tr><td>平成27年</td><td>6,452人</td><td>2,463世帯</td></tr><tr><td>令和2年</td><td>6,141人</td><td>2,452世帯</td></tr></tbody></table></div>\n<p>各年10月1日の国勢調査の数です。</p>\n<h2>町のあゆみ</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>年</th><th>できごと</th></tr></thead><tbody><tr><td>明治22年</td><td>町村制の施行により、霞ノ杜村ができる</td></tr><tr><td>昭和23年</td><td>4月1日、町制を施行して霞ノ杜町となる</td></tr><tr><td>昭和28年</td><td>霞ノ杜町立第一小学校が開校する</td></tr><tr><td>平成22年</td><td>三日月中央小学校を閉校し、第一小学校に統合する</td></tr><tr><td>令和5年</td><td>藤原誠一 町長が就任する</td></tr></tbody></table></div>\n<p>町の成り立ちや昔の暮らしは、<a href=\"/history/\">町の歴史</a>のページでご紹介しています。</p>\n<h2>交通</h2>\n<p>町の西部の駅前地区に霞ノ杜駅があります。町内は町営バスが結んでいます。くわしくは<a href=\"/access/\">アクセス・地図</a>のページをご覧ください。</p>",
+      "searchKeywords": [
+        "町の概要",
+        "人口",
+        "世帯数",
+        "面積",
+        "位置",
+        "地区",
+        "町名",
+        "統計"
+      ],
+      "owner": "政策推進課 企画財政係",
+      "updated": "2026-10-01"
+    },
+    {
+      "path": "shisei/gikai/index.html",
+      "route": "/shisei/gikai/",
+      "layout": "city",
+      "title": "町議会｜霞ノ杜町",
+      "description": "霞ノ杜町議会の構成と議員名簿、定例会の日程、傍聴の案内、議会だよりについてお知らせします。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "町議会"
+        }
+      ],
+      "related": [
+        {
+          "href": "/shisei/senkyo/",
+          "label": "選挙",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/chijitsu/",
+          "label": "町長の部屋",
+          "storyClue": false
+        },
+        {
+          "href": "/shisei/shozoku/",
+          "label": "組織・開庁時間",
+          "storyClue": false
+        }
+      ],
+      "h1": "町議会",
+      "paragraphs": [
+        "霞ノ杜町議会は、町民の皆さんの選挙で選ばれた10人の議員で構成しています。町の予算や条例を決めるほか、町の仕事が適切に行われているかを調べます。"
+      ],
+      "bodyHtml": "<h2>議会の構成</h2>\n<table class=\"data-table\"><tbody><tr><th>議員の定数</th><td>10人</td></tr><tr><th>任期</th><td>令和5年5月1日から令和9年4月30日まで</td></tr><tr><th>議長</th><td>竹内 弘幸</td></tr><tr><th>副議長</th><td>赤羽 由美子</td></tr><tr><th>常任委員会</th><td>総務文教常任委員会（総務・税・教育・保健福祉）、経済建設常任委員会（産業・観光・建設・上下水道）</td></tr><tr><th>そのほかの委員会</th><td>議会運営委員会、議会広報編集委員会</td></tr></tbody></table>\n<h2>議員名簿</h2>\n<p>令和8年10月1日現在。議席番号の順です。</p>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>議席</th><th>氏名</th><th>役職</th><th>所属する委員会</th></tr></thead><tbody><tr><td>1</td><td>松本 健一</td><td></td><td>経済建設常任委員会</td></tr><tr><td>2</td><td>百瀬 美和</td><td></td><td>総務文教常任委員会、議会広報編集委員会（委員長）</td></tr><tr><td>3</td><td>林 孝之</td><td></td><td>経済建設常任委員会（委員長）、議会運営委員会</td></tr><tr><td>4</td><td>上条 さち子</td><td></td><td>総務文教常任委員会、議会広報編集委員会</td></tr><tr><td>5</td><td>有賀 卓也</td><td></td><td>経済建設常任委員会、議会広報編集委員会</td></tr><tr><td>6</td><td>塩原 茂</td><td></td><td>総務文教常任委員会（委員長）、議会運営委員会</td></tr><tr><td>7</td><td>堀内 一郎</td><td></td><td>経済建設常任委員会、議会運営委員会（委員長）</td></tr><tr><td>8</td><td>酒井 隆</td><td></td><td>総務文教常任委員会、議会広報編集委員会</td></tr><tr><td>9</td><td>赤羽 由美子</td><td>副議長</td><td>経済建設常任委員会、議会運営委員会</td></tr><tr><td>10</td><td>竹内 弘幸</td><td>議長</td><td>総務文教常任委員会</td></tr></tbody></table></div>\n<h2>会議の日程</h2>\n<p>定例会は、毎年3月・6月・9月・12月の4回開きます。そのほか、必要に応じて臨時会を開きます。</p>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>会議</th><th>会期</th><th>状況</th></tr></thead><tbody><tr><td>令和8年9月定例会</td><td>9月2日（水）から9月15日（火）まで</td><td>終了しました</td></tr><tr><td>令和8年12月定例会</td><td>12月1日（火）から12月11日（金）まで</td><td>予定</td></tr></tbody></table></div>\n<p>一般質問の日程と順番は、定例会の初日の1週間前ごろに、役場1階の掲示板でお知らせします。</p>\n<h2>傍聴のご案内</h2>\n<p>本会議と常任委員会は、どなたでも傍聴できます。議場は役場3階です。当日、議場入口の受付で住所とお名前を記入してください。傍聴席は30席で、車いすのままご覧いただける場所もあります。</p>\n<h2>会議録</h2>\n<p>本会議の会議録は、議会事務局（役場3階）と町立図書館で閲覧できます。</p>\n<h2>議会だより</h2>\n<p>「かすみのもり 議会だより」は、定例会の審議の内容と一般質問をお知らせする広報紙です。年4回（2月・5月・8月・11月の1日）発行し、町内の全世帯にお届けしています。最新号は第125号（令和8年6月定例会号、令和8年8月1日発行）です。</p>\n<p><a href=\"/documents/gikai-dayori/\">議会だより（資料室）</a></p>\n<h2>請願・陳情</h2>\n<p>請願と陳情は、議会事務局で受け付けています。請願には、紹介する議員1人以上の署名が必要です。定例会で審査するものは、定例会の初日の2週間前までに提出してください。</p>",
+      "searchKeywords": [
+        "議会",
+        "町議会",
+        "議員",
+        "定例会",
+        "傍聴",
+        "会議録",
+        "請願"
+      ],
+      "owner": "議会事務局",
+      "updated": "2026-09-16"
     },
     {
       "path": "shisei/koho-kasumi.html",
       "route": "/shisei/koho-kasumi/",
       "layout": "city",
-      "title": "広報誌「霞ノ杜」｜霞ノ杜町",
-      "description": "町民向け広報誌「霞ノ杜」の電子版。【フィクション】",
+      "title": "広報かすみのもり｜霞ノ杜町",
+      "description": "広報紙「かすみのもり」の電子版です。直近6か月分を掲載しています。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
-          "label": "広報誌「霞ノ杜」"
+          "label": "広報かすみのもり"
         }
       ],
       "related": [
@@ -2032,25 +2605,31 @@
           "storyClue": false
         }
       ],
-      "h1": "広報誌「霞ノ杜」",
+      "h1": "広報かすみのもり",
       "paragraphs": [
-        "町民の皆さまへお届けする広報誌です。毎月10日に配布しています。"
+        "広報紙「かすみのもり」は、毎月10日に町内の各世帯へお届けしています。",
+        "電子版は直近6か月分を掲載しています。それ以前の号は町立図書館でご覧いただけます。"
       ],
-      "extraHtml": "<h2>最新号・バックナンバー</h2>\r\n        <p>号名を押すと、その号のPDFが開きます。</p>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <thead><tr><th>発行</th><th>号</th><th>主な内容</th><th>PDF</th></tr></thead>\r\n          <tbody>\r\n            <tr><td>令和7年4月</td><td><a href=\"/pdf/koho-r7-04.pdf\" target=\"_blank\" rel=\"noopener\">4月号</a></td><td>春の杜まつり・ごみ分別特集</td><td><a href=\"/pdf/koho-r7-04.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年3月</td><td><a href=\"/pdf/koho-r7-03.pdf\" target=\"_blank\" rel=\"noopener\">3月号</a></td><td>入学・進学・町営バスダイヤ</td><td><a href=\"/pdf/koho-r7-03.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年2月</td><td><a href=\"/pdf/koho-r7-02.pdf\" target=\"_blank\" rel=\"noopener\">2月号</a></td><td>除雪・冬季道路・健康診断</td><td><a href=\"/pdf/koho-r7-02.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和7年1月</td><td><a href=\"/pdf/koho-r7-01.pdf\" target=\"_blank\" rel=\"noopener\">1月号</a></td><td>年頭挨拶・初詣・防災のしおり</td><td><a href=\"/pdf/koho-r7-01.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n            <tr><td>令和6年12月</td><td><a href=\"/pdf/koho-r6-12.pdf\" target=\"_blank\" rel=\"noopener\">12月号</a></td><td>年末年始窓口・イルミネーション</td><td><a href=\"/pdf/koho-r6-12.pdf\" target=\"_blank\" rel=\"noopener\">表示</a></td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n        <p><a href=\"archive.html\">既刊の一覧（バックナンバー）</a></p>"
+      "extraHtml": "<h2>令和8年度</h2>\n<ul>\n<li><a data-pdf=\"koho-r8-10.pdf\">10月号（No.846）　秋の健康づくり</a></li>\n<li><a data-pdf=\"koho-r8-09.pdf\">9月号（No.845）　新しいハザードマップ</a></li>\n<li><a data-pdf=\"koho-r8-08.pdf\">8月号（No.844）　霞湖花火大会</a></li>\n<li><a data-pdf=\"koho-r8-07.pdf\">7月号（No.843）　夏の地域安全運動</a></li>\n<li><a data-pdf=\"koho-r8-06.pdf\">6月号（No.842）　町の子育て支援</a></li>\n<li><a data-pdf=\"koho-r8-05.pdf\">5月号（No.841）　当初予算と主な事業</a></li>\n</ul>\n<p>電子版は直近6か月分を掲載しています。それ以前の号は町立図書館でご覧いただけます。</p>",
+      "searchKeywords": [
+        "広報紙",
+        "かすみのもり",
+        "バックナンバー"
+      ]
     },
     {
       "path": "shisei/koho.html",
       "route": "/shisei/koho/",
       "layout": "city",
       "title": "お知らせ｜霞ノ杜町",
-      "description": "お知らせ — 霞ノ杜町公式。【フィクション】",
+      "description": "霞ノ杜町からのお知らせ（工事・催し・募集・制度の改正など）の一覧です。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -2065,7 +2644,7 @@
         },
         {
           "href": "koho-kasumi.html",
-          "label": "広報誌「霞ノ杜」",
+          "label": "広報かすみのもり",
           "storyClue": false
         },
         {
@@ -2086,23 +2665,537 @@
       ],
       "h1": "お知らせ",
       "paragraphs": [
-        "町からの最新情報です。"
+        "工事のお知らせ、催しや募集、制度の改正など、町民の皆さんの暮らしに関わる情報をお知らせしています。",
+        "<div data-kn-tool=\"news-list\"></div>",
+        "<p>広報かすみのもりは、毎月10日に町内の全世帯へお届けしています。電子版は<a href=\"/shisei/koho-kasumi/\">広報かすみのもり</a>のページからご覧いただけます。</p>"
       ],
-      "extraHtml": "<ul><li><strong>R8.4.1</strong> 公式サイトをリニューアル</li><li><strong>R8.3.15</strong> 杜の吊り橋 — 雨天注意</li><li><strong>R8.2.1</strong> 冬季閉鎖区間の案内更新</li></ul>\r\n      <aside class=\"city-related\"><h2"
+      "searchKeywords": [
+        "お知らせ",
+        "プレスリリース",
+        "最新"
+      ],
+      "owner": "政策推進課 広報情報係"
+    },
+    {
+      "path": "shisei/koho/2026-02-02-tokiheisa/index.html",
+      "route": "/shisei/koho/2026-02-02-tokiheisa/",
+      "layout": "city",
+      "title": "冬季閉鎖区間の案内を更新しました｜霞ノ杜町",
+      "description": "冬の間に通行止めにしている林道の案内です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "冬季閉鎖区間の案内を更新しました"
+        }
+      ],
+      "related": [],
+      "h1": "冬季閉鎖区間の案内を更新しました",
+      "news": {
+        "date": "2026-02-02"
+      },
+      "owner": "建設水道課 建設係",
+      "paragraphs": [
+        "積雪と路面の凍結のため、冬の間は山あいの林道の一部を通行止めにしています。",
+        "<p>通行止めは例年12月から3月下旬までです。区間は現地の看板でもご確認ください。春の通行再開は、このホームページのお知らせでお伝えします。</p>\n<p>冬の道路の注意は、<a href=\"/anzen/koutsuu/\">交通安全</a>のページもあわせてご覧ください。</p>"
+      ],
+      "searchKeywords": [
+        "通行止め",
+        "林道",
+        "冬"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-03-16-tsuribashi/index.html",
+      "route": "/shisei/koho/2026-03-16-tsuribashi/",
+      "layout": "city",
+      "title": "杜の吊り橋 — 雨天時は通行にご注意ください｜霞ノ杜町",
+      "description": "雨の日の杜の吊り橋の通行についてのお願いです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "杜の吊り橋 — 雨天時は通行にご注意ください"
+        }
+      ],
+      "related": [],
+      "h1": "杜の吊り橋 — 雨天時は通行にご注意ください",
+      "news": {
+        "date": "2026-03-16"
+      },
+      "owner": "建設水道課 建設係",
+      "paragraphs": [
+        "杜の吊り橋は、雨の日や雨上がりには踏み板が滑りやすくなります。",
+        "<p>通行するときは手すりを持ち、ゆっくり渡ってください。川が増水しているときや風の強い日は、通行を控えてください。</p>\n<p>吊り橋の場所や見どころは、<a href=\"/spot/2/\">杜の吊り橋</a>のページをご覧ください。</p>"
+      ],
+      "searchKeywords": [
+        "吊り橋",
+        "雨"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-04-01-renewal/index.html",
+      "route": "/shisei/koho/2026-04-01-renewal/",
+      "layout": "city",
+      "title": "ホームページをリニューアルしました｜霞ノ杜町",
+      "description": "霞ノ杜町公式ホームページのリニューアルと、旧ホームページの記事の扱いについてのお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "ホームページをリニューアルしました"
+        }
+      ],
+      "related": [],
+      "h1": "ホームページをリニューアルしました",
+      "news": {
+        "date": "2026-04-01"
+      },
+      "owner": "政策推進課 広報情報係",
+      "paragraphs": [
+        "令和8年4月1日に、霞ノ杜町公式ホームページをリニューアルしました。",
+        "<p>目的のページを探しやすくするため、ページの分類と検索を見直しました。</p>\n<p>旧ホームページの記事のうち、平成31年度（令和元年度）以前のものは、一部を「まちの話題（過去の記事）」に移し、そのほかは掲載を終了しました。お問い合わせの多い過去の資料は資料室に掲載しています。</p>\n<ul><li><a href=\"/blog/\">まちの話題（過去の記事）</a></li><li><a href=\"/documents/\">資料室</a></li></ul>\n<p>リニューアルに伴い、ページのアドレス（URL）が変わりました。ブックマーク（お気に入り）に登録しているかたは、お手数ですが登録し直してください。</p>"
+      ],
+      "searchKeywords": [
+        "リニューアル",
+        "過去の記事",
+        "掲載終了"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-08-03-saiyo/index.html",
+      "route": "/shisei/koho/2026-08-03-saiyo/",
+      "layout": "city",
+      "title": "令和9年4月採用 霞ノ杜町職員（一般事務・保健師）を募集します（締切 9月4日（金））｜霞ノ杜町",
+      "description": "令和9年4月1日採用の霞ノ杜町職員（一般事務・保健師）の募集です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "令和9年4月採用 霞ノ杜町職員（一般事務・保健師）を募集します（締切 9月4日（金））"
+        }
+      ],
+      "related": [],
+      "h1": "令和9年4月採用 霞ノ杜町職員（一般事務・保健師）を募集します（締切 9月4日（金））",
+      "news": {
+        "date": "2026-08-03"
+      },
+      "owner": "総務課 総務係",
+      "paragraphs": [
+        "令和9年4月1日に採用する町職員を募集します。",
+        "<h2>募集する職種と人数</h2>\n<ul><li>一般事務　2名程度</li><li>保健師　1名程度</li></ul>\n<h2>申し込みの締切</h2>\n<p>令和8年9月4日（金）午後5時15分まで（必着）</p>\n<h2>第1次試験</h2>\n<p>令和8年9月27日（日）　会場 霞ノ杜町役場</p>\n<p>受験の資格・申込書は、総務課 総務係（役場2階）で配布している募集案内をご覧ください。</p>"
+      ],
+      "searchKeywords": [
+        "職員採用",
+        "採用試験",
+        "求人"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-08-05-hanabi/index.html",
+      "route": "/shisei/koho/2026-08-05-hanabi/",
+      "layout": "city",
+      "title": "霞湖花火大会（8月15日（土））に伴う交通規制と臨時駐車場｜霞ノ杜町",
+      "description": "霞湖花火大会の開催に伴う交通規制と臨時駐車場のお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "霞湖花火大会（8月15日（土））に伴う交通規制と臨時駐車場"
+        }
+      ],
+      "related": [],
+      "h1": "霞湖花火大会（8月15日（土））に伴う交通規制と臨時駐車場",
+      "news": {
+        "date": "2026-08-05"
+      },
+      "owner": "産業観光課 商工観光係",
+      "paragraphs": [
+        "8月15日（土）の霞湖花火大会の開催に伴い、湖畔の道路で交通規制を行います。",
+        "<h2>交通規制</h2>\n<p>令和8年8月15日（土）午後5時から午後10時30分まで、湖畔公園の周辺の道路は車両通行止めになります。</p>\n<h2>臨時駐車場</h2>\n<p>町民総合体育館の駐車場を臨時駐車場にします（午後3時から）。会場まで徒歩約15分です。</p>\n<p>荒天の場合は8月16日（日）に順延します。順延するかどうかは、当日の正午までに防災行政無線でお知らせします。</p>"
+      ],
+      "searchKeywords": [
+        "花火",
+        "交通規制",
+        "駐車場"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-08-21-bosaikunren/index.html",
+      "route": "/shisei/koho/2026-08-21-bosaikunren/",
+      "layout": "city",
+      "title": "霞ノ杜町総合防災訓練（9月6日（日））のお知らせ｜霞ノ杜町",
+      "description": "大きな地震を想定した霞ノ杜町総合防災訓練のお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "霞ノ杜町総合防災訓練（9月6日（日））のお知らせ"
+        }
+      ],
+      "related": [],
+      "h1": "霞ノ杜町総合防災訓練（9月6日（日））のお知らせ",
+      "news": {
+        "date": "2026-08-21"
+      },
+      "owner": "総務課 地域安全係",
+      "paragraphs": [
+        "大きな地震を想定した、町の総合防災訓練を行います。",
+        "<h2>日時</h2>\n<p>令和8年9月6日（日）午前8時から正午まで（小雨決行）</p>\n<h2>内容</h2>\n<ul><li>午前8時　防災行政無線で訓練の放送、地区ごとの避難訓練</li><li>午前9時から　町民センターで初期消火・応急手当・炊き出しの訓練</li></ul>\n<p>当日は、ご家族で各地区の指定避難所までの道のりを確かめてください。</p>"
+      ],
+      "searchKeywords": [
+        "防災訓練",
+        "避難訓練",
+        "地震"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-09-01-hazardmap/index.html",
+      "route": "/shisei/koho/2026-09-01-hazardmap/",
+      "layout": "city",
+      "title": "ハザードマップを改訂し、全戸に配布します｜霞ノ杜町",
+      "description": "改訂したハザードマップ（令和8年8月作成）の全戸配布のお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "ハザードマップを改訂し、全戸に配布します"
+        }
+      ],
+      "related": [],
+      "h1": "ハザードマップを改訂し、全戸に配布します",
+      "news": {
+        "date": "2026-09-01"
+      },
+      "owner": "総務課 地域安全係",
+      "paragraphs": [
+        "洪水と土砂災害の想定区域を新しくしたハザードマップ（令和8年8月作成）を、9月中に町内の全戸へ配布します。",
+        "<p>浸水の深さや土砂災害の警戒区域、避難所の場所を確かめ、ご家庭の避難の計画にお役立てください。</p>\n<p>ハザードマップは<a href=\"/anzen/hazard/\">ハザードマップ</a>のページでもご覧いただけます。配布物が届かないとき、追加で必要なときは、総務課 地域安全係（役場2階）へお申し出ください。</p>"
+      ],
+      "searchKeywords": [
+        "防災",
+        "避難所",
+        "洪水",
+        "土砂災害"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-09-16-bunkasai/index.html",
+      "route": "/shisei/koho/2026-09-16-bunkasai/",
+      "layout": "city",
+      "title": "霞ノ杜町文化祭の出品・出演者を募集します（締切 10月16日（金））｜霞ノ杜町",
+      "description": "霞ノ杜町文化祭の作品展示の出品者と舞台発表の出演者の募集です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "霞ノ杜町文化祭の出品・出演者を募集します（締切 10月16日（金））"
+        }
+      ],
+      "related": [],
+      "h1": "霞ノ杜町文化祭の出品・出演者を募集します（締切 10月16日（金））",
+      "news": {
+        "date": "2026-09-16"
+      },
+      "owner": "教育委員会 教育課 生涯学習係",
+      "paragraphs": [
+        "11月に開く霞ノ杜町文化祭の、作品展示の出品者と舞台発表の出演者を募集します。",
+        "<h2>文化祭の日程</h2>\n<p>令和8年11月14日（土）・11月15日（日）　会場 町民ホール</p>\n<h2>募集の内容</h2>\n<ul><li>作品展示：絵画・書・写真・手工芸など（1人2点まで）</li><li>舞台発表：合唱・器楽・踊りなど（1団体15分以内）</li></ul>\n<h2>対象</h2>\n<p>町内に住んでいるかた、町内に通勤・通学しているかた、町内で活動している団体</p>\n<h2>申し込み</h2>\n<p>令和8年10月16日（金）までに、各公民館または教育課 生涯学習係（役場3階）へ申込書を出してください。申込書は窓口にあります。</p>"
+      ],
+      "searchKeywords": [
+        "文化祭",
+        "募集",
+        "作品展示"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-09-28-kohansen/index.html",
+      "route": "/shisei/koho/2026-09-28-kohansen/",
+      "layout": "city",
+      "title": "町道湖畔線の舗装工事に伴う片側交互通行（10月13日〜11月20日）｜霞ノ杜町",
+      "description": "町道湖畔線の舗装工事に伴う片側交互通行のお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "町道湖畔線の舗装工事に伴う片側交互通行（10月13日〜11月20日）"
+        }
+      ],
+      "related": [],
+      "h1": "町道湖畔線の舗装工事に伴う片側交互通行（10月13日〜11月20日）",
+      "news": {
+        "date": "2026-09-28"
+      },
+      "owner": "建設水道課 建設係",
+      "paragraphs": [
+        "町道湖畔線の舗装の打ち換え工事を行います。工事の間、片側交互通行となります。",
+        "<h2>期間</h2>\n<p>令和8年10月13日（火）から11月20日（金）まで（土曜・日曜・祝日は休み）。時間は午前8時30分から午後5時までです。天候により期間が延びることがあります。</p>\n<h2>場所</h2>\n<p>町道湖畔線（湖畔公園の入口付近から北へ約400メートルの区間）</p>\n<h2>お願い</h2>\n<p>工事の間は、誘導員の指示に従って通行してください。ご迷惑をおかけしますが、ご理解とご協力をお願いします。</p>"
+      ],
+      "searchKeywords": [
+        "工事",
+        "通行止め",
+        "道路"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-10-01-juminzei/index.html",
+      "route": "/shisei/koho/2026-10-01-juminzei/",
+      "layout": "city",
+      "title": "町県民税 第3期の納期限は11月2日（月）です｜霞ノ杜町",
+      "description": "令和8年度 町県民税（普通徴収）第3期の納期限のお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "町県民税 第3期の納期限は11月2日（月）です"
+        }
+      ],
+      "related": [],
+      "h1": "町県民税 第3期の納期限は11月2日（月）です",
+      "news": {
+        "date": "2026-10-01"
+      },
+      "owner": "住民税務課 税務係",
+      "paragraphs": [
+        "令和8年度 町県民税（普通徴収）第3期の納期限は、令和8年11月2日（月）です。",
+        "<p>本来の納期限は10月31日ですが、土曜日にあたるため11月2日（月）となります。お手元の納付書で、役場の会計室・金融機関・コンビニエンスストアでお納めください。</p>\n<p>口座振替をご利用のかたは、納期限の日に指定の口座から引き落とします。前日までに残高をご確認ください。</p>\n<p>納付が難しいときは、お早めに住民税務課 税務係へご相談ください。</p>"
+      ],
+      "searchKeywords": [
+        "住民税",
+        "町民税",
+        "納税",
+        "税金"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-10-05-kuma/index.html",
+      "route": "/shisei/koho/2026-10-05-kuma/",
+      "layout": "city",
+      "title": "ツキノワグマの目撃が増えています（山すそ・河川敷での注意）｜霞ノ杜町",
+      "description": "町内でツキノワグマの目撃が増えています。出会わないための注意と、見かけたときの連絡先です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "ツキノワグマの目撃が増えています（山すそ・河川敷での注意）"
+        }
+      ],
+      "related": [],
+      "h1": "ツキノワグマの目撃が増えています（山すそ・河川敷での注意）",
+      "news": {
+        "date": "2026-10-05"
+      },
+      "owner": "産業観光課 農林係",
+      "paragraphs": [
+        "9月から10月にかけて、町内の山すそや杜川の河川敷で、ツキノワグマの目撃の連絡が増えています。",
+        "<h2>出会わないために</h2>\n<ul><li>山すそや林の近くを歩くときは、鈴やラジオなど音の出るものを身につけてください。</li><li>早朝や夕方の外出は、できるだけ控えてください。</li><li>生ごみや、収穫しない柿・栗の実は、早めに片付けてください。</li></ul>\n<h2>見かけたときは</h2>\n<p>近づかずに、静かにその場を離れてください。産業観光課 農林係または駐在所へお知らせください。夜間・休日は役場の代表電話（0266-12-2111）へおかけください。</p>"
+      ],
+      "searchKeywords": [
+        "クマ",
+        "熊",
+        "鳥獣"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-10-07-vaccine/index.html",
+      "route": "/shisei/koho/2026-10-07-vaccine/",
+      "layout": "city",
+      "title": "高齢者のインフルエンザ・新型コロナワクチン定期接種の費用助成について｜霞ノ杜町",
+      "description": "65歳以上のかたなどのインフルエンザ・新型コロナワクチン定期接種の費用助成のご案内です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "高齢者のインフルエンザ・新型コロナワクチン定期接種の費用助成について"
+        }
+      ],
+      "related": [],
+      "h1": "高齢者のインフルエンザ・新型コロナワクチン定期接種の費用助成について",
+      "news": {
+        "date": "2026-10-07"
+      },
+      "owner": "保健福祉課 保健係",
+      "paragraphs": [
+        "65歳以上のかたなどを対象に、インフルエンザと新型コロナウイルス感染症の定期予防接種の費用の一部を助成します。",
+        "<h2>対象</h2>\n<ul><li>接種日に65歳以上のかた</li><li>60歳から64歳のかたで、心臓・腎臓・呼吸器の機能などに障がいがあるかた（身体障害者手帳1級程度）</li></ul>\n<h2>期間</h2>\n<p>令和8年10月15日（木）から令和9年1月31日（日）まで</p>\n<h2>自己負担額</h2>\n<ul><li>インフルエンザ　1,500円</li><li>新型コロナウイルス感染症　3,000円</li></ul>\n<p>生活保護を受けているかたは、自己負担はありません。</p>\n<h2>接種の場所</h2>\n<p>町立診療所ほか、町内の指定医療機関で接種できます。事前に医療機関へ予約してください。</p>"
+      ],
+      "searchKeywords": [
+        "予防接種",
+        "インフルエンザ",
+        "ワクチン"
+      ]
+    },
+    {
+      "path": "shisei/koho/2026-10-09-koho846/index.html",
+      "route": "/shisei/koho/2026-10-09-koho846/",
+      "layout": "city",
+      "title": "広報かすみのもり 10月号（No.846）を掲載しました｜霞ノ杜町",
+      "description": "広報かすみのもり 令和8年10月号（No.846）の掲載のお知らせです。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "町政情報",
+          "href": "/shisei/"
+        },
+        {
+          "label": "お知らせ",
+          "href": "/shisei/koho/"
+        },
+        {
+          "label": "広報かすみのもり 10月号（No.846）を掲載しました"
+        }
+      ],
+      "related": [],
+      "h1": "広報かすみのもり 10月号（No.846）を掲載しました",
+      "news": {
+        "date": "2026-10-09"
+      },
+      "owner": "政策推進課 広報情報係",
+      "paragraphs": [
+        "広報かすみのもり 令和8年10月号（No.846、令和8年10月10日（土）発行）を掲載しました。",
+        "<p>今月号の主な内容は次のとおりです。</p>\n<ul><li>特集　秋の健康づくり（健診・予防接種）</li><li>高齢者のインフルエンザ・新型コロナワクチン定期接種の費用助成</li><li>霞ノ杜町文化祭の出品・出演者の募集</li><li>町道湖畔線の舗装工事のお知らせ</li><li>町県民税 第3期の納期限</li><li>総合防災訓練の報告</li></ul>\n<p>各号は<a href=\"/shisei/koho-kasumi/\">広報かすみのもり</a>のページからご覧いただけます。広報紙は毎月10日に町内の全世帯へお届けしています。</p>"
+      ],
+      "searchKeywords": [
+        "広報紙",
+        "10月号"
+      ]
     },
     {
       "path": "shisei/open-data.html",
       "route": "/shisei/open-data/",
       "layout": "city",
       "title": "オープンデータ｜霞ノ杜町",
-      "description": "オープンデータ — 霞ノ杜町公式。【フィクション】",
+      "description": "停留所と観光施設のCSVを公開しています。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -2122,7 +3215,7 @@
         },
         {
           "href": "index.html",
-          "label": "市政",
+          "label": "町政",
           "storyClue": false
         },
         {
@@ -2133,24 +3226,26 @@
       ],
       "h1": "オープンデータ",
       "paragraphs": [
-        "町営バス停留所、ごみ収集区、観光施設の位置データをCSV形式で公開（架空）。"
+        "いま公開しているのは、下の2つのCSVだけです。人口や財政の表、APIはありません。",
+        "使うときは「霞ノ杜町」と出した日付を書いてください。個人が分かる形にはしないでください。追加の希望は政策推進課広報情報係へ。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th><a href=\"/data/bus_stops.csv\">bus_stops.csv</a></th><td>停留所</td></tr><tr><th><a href=\"/data/tourism_spots.csv\">tourism_spots.csv</a></th><td>観光スポット</td></tr></table>",
-      "extraHtml": "<ul><li><a href=\"/data/bus_stops.csv\">停留所のCSVをダウンロード</a></li><li><a href=\"/data/tourism_spots.csv\">観光スポットのCSVをダウンロード</a></li></ul>"
+      "extraHtml": "<ul><li><a href=\"/data/bus_stops.csv\">停留所（CSV）</a></li><li><a href=\"/data/tourism_spots.csv\">観光施設（CSV）</a></li></ul>",
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-10-01"
     },
     {
       "path": "shisei/senkyo.html",
       "route": "/shisei/senkyo/",
       "layout": "city",
       "title": "選挙｜霞ノ杜町",
-      "description": "選挙 — 霞ノ杜町公式。【フィクション】",
+      "description": "選挙の日程、投票所、候補者届出に関する情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -2175,29 +3270,31 @@
         },
         {
           "href": "index.html",
-          "label": "市政",
+          "label": "町政",
           "storyClue": false
         }
       ],
       "h1": "選挙",
       "paragraphs": [
-        "投票所は三日月公民館・霞ノ杜集会所。期日前投票は庁舎1階ロビー（選挙期間中のみ）。"
+        "選挙の事務は、総務課総務係（選挙管理委員会事務局、内線211）です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href"
+      "owner": "総務課 総務係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>次の選挙</h2><p>町長と町議会議員の任期は、令和9年4月30日までです。次の選挙は令和9年4月の予定で、告示は投票日のおおよそ1週間前です。日程が決まり次第、広報紙とこのページに出します。</p><h2>投票所</h2><table class=\"data-table\"><thead><tr><th>地区</th><th>投票所</th></tr></thead><tbody><tr><td>三日月</td><td>町民センター</td></tr><tr><td>湖畔</td><td>湖畔公園の隣の集会所</td></tr><tr><td>駅前</td><td>町立図書館の集会室</td></tr><tr><td>杜ケ丘</td><td>第一小学校の体育館</td></tr></tbody></table><p>期日前投票は、告示の翌日から投票日前日まで、役場1階で8:30〜20:00です。</p>"
     },
     {
       "path": "shisei/shozoku.html",
       "route": "/shisei/shozoku/",
       "layout": "city",
-      "title": "組織｜霞ノ杜町",
-      "description": "組織・開庁時間 — 霞ノ杜町公式。【フィクション】",
+      "title": "組織・開庁時間｜霞ノ杜町",
+      "description": "町の組織図、各課の業務分担と連絡先です。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -2228,24 +3325,26 @@
       ],
       "h1": "組織・開庁時間",
       "paragraphs": [
-        "三日月庁舎は平日8:30〜17:15。住民課・福祉課は1階、建設・産業観光は2階。"
+        "役場は7つの課と、会計室、議会事務局です。代表電話は0266-12-2111、開庁は平日8:30〜17:15です。"
       ],
-      "tableHtml": "<table class=\"city-data\"><tr><th>代表</th><td>0123-45-6700</td></tr><tr><th>観光・産業</th><td>内線 220</td></tr></table>",
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"yakuba.html\">庁舎</a></li><li><a href=\"../kurashi/tetsuzuki-search.html\">手続検索</a></li><li><a href=\"chijitsu.html\">町長<"
+      "tableHtml": "",
+      "owner": "総務課 総務係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>課の一覧</h2><div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>課</th><th>階</th><th>主な仕事</th></tr></thead><tbody><tr><td>総務課</td><td>2階</td><td>秘書、情報公開、選挙、バス、防災</td></tr><tr><td>政策推進課</td><td>2階</td><td>予算、広報、ホームページ</td></tr><tr><td>住民税務課</td><td>1階</td><td>住民票、税、国民健康保険、ごみ</td></tr><tr><td>保健福祉課</td><td>1階</td><td>手当、介護、健診</td></tr><tr><td>産業観光課</td><td>2階</td><td>農林、商店、観光</td></tr><tr><td>建設水道課</td><td>2階</td><td>道路、建築、上下水道</td></tr><tr><td>教育委員会 教育課</td><td>3階</td><td>学校、保育、図書館</td></tr><tr><td>会計室</td><td>1階</td><td>出納</td></tr><tr><td>議会事務局</td><td>3階</td><td>議会、傍聴</td></tr></tbody></table></div><p>内線の番号は、お問い合わせのページにまとめています。組織が変わったときは、このページと広報紙で知らせます。</p>"
     },
     {
       "path": "shisei/yakuba.html",
       "route": "/shisei/yakuba/",
       "layout": "city",
       "title": "庁舎案内｜霞ノ杜町",
-      "description": "庁舎案内 — 霞ノ杜町公式。【フィクション】",
+      "description": "庁舎の案内、開庁時間、来庁の予約とバリアフリー情報です。",
       "breadcrumbs": [
         {
           "label": "トップ",
           "href": "../"
         },
         {
-          "label": "市政情報",
+          "label": "町政情報",
           "href": "index.html"
         },
         {
@@ -2270,23 +3369,147 @@
         },
         {
           "href": "index.html",
-          "label": "市政",
+          "label": "町政",
           "storyClue": false
         }
       ],
       "h1": "庁舎案内",
       "paragraphs": [
-        "〒029-17XX 吾妻郡霞ノ杜町三日月中央2-8-1。JR最寄「三日月町」駅から町営バス20分。"
+        "役場は三日月中央2丁目8番1号です。霞ノ杜駅から町営バスで約8分、徒歩で約20分です。"
       ],
-      "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../acces"
+      "owner": "総務課 総務係",
+      "updated": "2026-10-01",
+      "bodyHtml": "<h2>開庁</h2><p>平日8:30〜17:15。土日祝と、12月29日から1月3日は閉庁します。</p><h2>階</h2><table class=\"data-table\"><tbody><tr><th>1階</th><td>住民税務課、保健福祉課、会計室、観光案内</td></tr><tr><th>2階</th><td>総務課、政策推進課、産業観光課、建設水道課</td></tr><tr><th>3階</th><td>教育委員会、議会事務局、議場</td></tr></tbody></table><p>来庁者駐車場は約40台です。車いすのまま入れる入口は、正面の自動ドアです。</p>"
+    },
+    {
+      "path": "site/index.html",
+      "route": "/site/",
+      "layout": "city",
+      "title": "サイトのご利用について｜霞ノ杜町",
+      "description": "霞ノ杜町公式ホームページの著作権、リンク、免責事項、閲覧環境、バナー広告についてのご案内です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "サイトのご利用について"
+        }
+      ],
+      "related": [],
+      "h1": "サイトのご利用について",
+      "paragraphs": [
+        "霞ノ杜町公式ホームページをご利用いただく際の注意事項です。"
+      ],
+      "bodyHtml": "<h2>著作権</h2>\n<p>このホームページに掲載している文章・写真・イラストなどの著作権は、霞ノ杜町に帰属します。私的な使用や引用など、著作権法で認められた範囲を超えて利用する場合は、事前に政策推進課 広報情報係へご相談ください。</p>\n<h2>リンク</h2>\n<p>このホームページへのリンクは原則として自由です。リンクの際のご連絡は不要ですが、町のページであることが分かるようにしてください。ほかのサイトの枠（フレーム）の中に表示する形のリンクはご遠慮ください。</p>\n<h2>免責事項</h2>\n<p>掲載している情報の正確さには万全を期していますが、このホームページの情報を用いて行う一切の行為について、町は責任を負いません。掲載している内容は、予告なく変更・削除することがあります。</p>\n<h2>推奨する閲覧環境</h2>\n<p>Microsoft Edge、Google Chrome、Mozilla Firefox、Safari の最新版でご覧ください。PDFファイルをご覧いただくには、PDFの閲覧ソフトが必要です。文字の大きさは、ブラウザの拡大機能（Ctrl キーと＋キー、スマートフォンでは指で広げる操作）で変えられます。</p>\n<h2 id=\"ads\">バナー広告の掲載について</h2>\n<p>トップページに、町内の事業者の有料バナー広告を掲載しています。掲載している広告の内容について、町が推奨するものではありません。</p>\n<p>広告の掲載をご希望の事業者のかたは、政策推進課 広報情報係（電話 0266-12-2111 内線 244）へお問い合わせください。</p>",
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01",
+      "searchKeywords": [
+        "著作権",
+        "リンク",
+        "免責",
+        "広告"
+      ]
+    },
+    {
+      "path": "site/accessibility.html",
+      "route": "/site/accessibility/",
+      "layout": "city",
+      "title": "ウェブアクセシビリティ方針｜霞ノ杜町",
+      "description": "霞ノ杜町公式ホームページのウェブアクセシビリティ方針です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "サイトのご利用について",
+          "href": "/site/"
+        },
+        {
+          "label": "ウェブアクセシビリティ方針"
+        }
+      ],
+      "related": [],
+      "h1": "ウェブアクセシビリティ方針",
+      "paragraphs": [
+        "霞ノ杜町は、高齢のかたや障がいのあるかたを含め、誰もがホームページの情報を利用できるよう、ウェブアクセシビリティの確保と向上に取り組んでいます。"
+      ],
+      "bodyHtml": "<h2>対象範囲</h2>\n<p>霞ノ杜町公式ホームページの全ページ。ただし、外部サービスを利用した地図の埋め込みは除きます。</p>\n<h2>目標とする適合レベル</h2>\n<p>日本産業規格 JIS X 8341-3:2016「高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ」の適合レベル AA に準拠することを目標とします。</p>\n<p>令和8年4月のホームページのリニューアルにあわせて点検を行い、適合レベル AA に一部準拠しています（試験の結果は、まとまり次第このページでお知らせします）。</p>\n<h2>主な取り組み</h2>\n<ul><li>各ページの先頭に「本文へ移動」のリンクを置き、キーボードだけでも操作できるようにしています。</li><li>文字と背景の色の差（コントラスト）を確保し、色だけで情報を伝えないようにしています。</li><li>画像には内容が分かる代替テキストを付けています。</li><li>PDFファイルへのリンクには、ファイルの形式・ページ数・容量を表示しています。</li></ul>\n<h2>お問い合わせ</h2>\n<p>このホームページのアクセシビリティについてお気づきの点は、政策推進課 広報情報係（電話 0266-12-2111 内線 244）へお知らせください。</p>",
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01",
+      "searchKeywords": [
+        "アクセシビリティ",
+        "JIS X 8341-3",
+        "読み上げ"
+      ]
+    },
+    {
+      "path": "site/privacy.html",
+      "route": "/site/privacy/",
+      "layout": "city",
+      "title": "個人情報の取扱い｜霞ノ杜町",
+      "description": "霞ノ杜町公式ホームページにおける個人情報の取扱いについてのご案内です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "サイトのご利用について",
+          "href": "/site/"
+        },
+        {
+          "label": "個人情報の取扱い"
+        }
+      ],
+      "related": [],
+      "h1": "個人情報の取扱い",
+      "paragraphs": [
+        "霞ノ杜町は、個人情報の保護に関する法律に基づき、ホームページの運営で取り扱う個人情報を適切に管理します。"
+      ],
+      "bodyHtml": "<h2>個人情報の収集について</h2>\n<p>このホームページには、氏名・住所・電話番号・メールアドレスなどの個人情報を入力していただく仕組み（入力フォームなど）はありません。お問い合わせは、各担当課へ電話または窓口でお願いします。</p>\n<h2>アクセスの記録について</h2>\n<p>サーバーの運用のため、閲覧した日時・ページ・ブラウザの種類などが記録されることがあります。これらの記録を、個人を特定する目的で利用することはありません。</p>\n<h2>町が保有する個人情報の開示などの請求</h2>\n<p>町が保有する個人情報の開示・訂正・利用停止の請求は、総務課 総務係（電話 0266-12-2111 内線 211）で受け付けています。</p>",
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01",
+      "searchKeywords": [
+        "プライバシー",
+        "個人情報保護"
+      ]
+    },
+    {
+      "path": "sitemap/index.html",
+      "route": "/sitemap/",
+      "layout": "city",
+      "title": "サイトマップ｜霞ノ杜町",
+      "description": "霞ノ杜町公式ホームページのページの一覧です。",
+      "breadcrumbs": [
+        {
+          "label": "トップ",
+          "href": "/"
+        },
+        {
+          "label": "サイトマップ"
+        }
+      ],
+      "related": [],
+      "h1": "サイトマップ",
+      "paragraphs": [
+        "このホームページの主なページを、分類ごとに並べています。",
+        "<div data-kn-tool=\"sitemap\"></div>"
+      ],
+      "owner": "政策推進課 広報情報係",
+      "updated": "2026-04-01",
+      "searchKeywords": [
+        "ページ一覧",
+        "目次"
+      ]
     },
     {
       "path": "spot/1/index.html",
       "route": "/spot/1/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "霞ノ杜神社｜霞ノ杜町",
       "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/spot/1/",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -2301,15 +3524,20 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>霞ノ杜神社</h2>\r\n        <p>\r\n          町の北東部、小高い丘陵の一角に鎮座する <strong>霞ノ杜神社</strong>。\r\n          創建年代ははっきりしませんが、古くから「霧を払う」信仰として親しまれてきました。\r\n          境内に立ち並ぶ樹齢数百年といわれるスギは、冬の朝には霧氷をまとい、初夏には深い緑の天蓋をつくります。\r\n        </p>\r\n        <p>\r\n          石段は長年の浸食と修復の歴史を物語っており、途中で角度が変わる箇所があります。\r\n          現在は安全のため、迂回ルートに誘導しています。\r\n        </p>\r\n\r\n        <h3>祭事</h3>\r\n        <ul>\r\n          <li>1月3日 〜 5日：初詣・霧払いの神事</li>\r\n          <li>春彼岸：杜開きの集い（春の祭事の出発点）</li>\r\n          <li>11月23日：新嘗の小祭</li>\r\n        </ul>\r\n\r\n        <h3>境内のみどころ</h3>\r\n        <ul>\r\n          <li><strong>霧払いの大杉</strong>：参道脇にそびえる神木。樹皮に手を当てて願をかける作法。</li>\r\n          <li><strong>水鏡の手水舎（てみずや）</strong>：丘の湧水を引いた手水。雨の少ない年は止まる日もあります。</li>\r\n          <li><strong>絵馬掛け</strong>：絵馬には町立第一小学校の児童が描いた絵を奉納する習わしがあります。</li>\r\n        </ul>\r\n\r\n        <h3>参拝・観光情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘（示意）</td></tr>\r\n            <tr><th>参拝時間</th><td>終日（境内自由／社務所は別途）</td></tr>\r\n            <tr><th>注意</th><td>急な段差・苔で滑りやすい箇所があります。雨天・霧天は足元にご注意。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../2/\">次の観光地へ：杜の吊り橋 »</a></div>"
+      "bodyHtml": "<p>\r\n          東の山すそ、杜ケ丘に鎮座する <strong>霞ノ杜神社</strong>。\r\n          創建年代ははっきりしませんが、古くから「霧を払う」信仰として親しまれてきました。\r\n          境内に立ち並ぶ樹齢数百年といわれるスギは、冬の朝には霧氷をまとい、初夏には深い緑の天蓋をつくります。\r\n        </p>\r\n        <p>\r\n          石段は長年の浸食と修復の歴史を物語っており、途中で角度が変わる箇所があります。\r\n          現在は安全のため、迂回ルートに誘導しています。\r\n        </p>\r\n\r\n        <h3>祭事</h3>\r\n        <ul>\r\n          <li>1月3日 〜 5日：初詣・霧払いの神事</li>\r\n          <li>春彼岸：杜開きの集い（春の祭事の出発点）</li>\r\n          <li>8月15日：霞湖花火大会（湖上。神社では行いません）</li>\n          <li>10月11日：例大祭</li>\n          <li>11月23日：新嘗の小祭</li>\r\n        </ul>\r\n\r\n        <h3>境内のみどころ</h3>\r\n        <ul>\r\n          <li><strong>霧払いの大杉</strong>：参道脇にそびえる神木。樹皮に手を当てて願をかける作法。</li>\r\n          <li><strong>水鏡の手水舎（てみずや）</strong>：丘の湧水を引いた手水。雨の少ない年は止まる日もあります。</li>\r\n          <li><strong>絵馬掛け</strong>：絵馬には町立第一小学校の児童が描いた絵を奉納する習わしがあります。</li>\r\n        </ul>\r\n\r\n        <h3>参拝・観光情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘</td></tr>\r\n            <tr><th>参拝時間</th><td>終日（境内自由／社務所は別途）</td></tr>\r\n            <tr><th>注意</th><td>急な段差・苔で滑りやすい箇所があります。雨天・霧天は足元にご注意。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        ",
+      "searchKeywords": [
+        "神社",
+        "参道",
+        "例大祭"
+      ],
+      "h1": "霞ノ杜神社"
     },
     {
       "path": "spot/2/index.html",
       "route": "/spot/2/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "杜の吊り橋｜霞ノ杜町",
       "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/spot/2/",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -2324,15 +3552,20 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>杜の吊り橋</h2>\r\n        <p>\r\n          杜川の上流、深い渓を渡す木造の小さな吊り橋。\r\n          全長 38 メートル、足元には所々に細い隙間があり、踏み板の継ぎ目から下を流れる水の音と霧が立ちのぼります。\r\n          地元では「杜橋（もりばし）」と呼ばれることもあります。\r\n        </p>\r\n        <p>\r\n          現在の橋は昭和 40 年代の改修によるもので、それ以前は石を敷いた渡し場でした。\r\n          欄干に結びつけられた、小さな布や紙の束は、地元の子どもたちが書く願掛けの「結び文」です。\r\n        </p>\r\n\r\n        <h3>橋の周辺で見られるもの</h3>\r\n        <ul>\r\n          <li><strong>水の音の合流点</strong>：橋の真下で支流が合流し、低い水音が常に響いています。</li>\r\n          <li><strong>苔の樹皮</strong>：北側の橋柱は、北からの湿気を受けて苔が育っています。</li>\r\n          <li><strong>古い案内板の柱</strong>：橋を渡った先、北西側の小道のたもとに、案内板の支柱だけが残されています。看板そのものは長年の間に失われたと伝えられています。</li>\r\n        </ul>\r\n\r\n        <h3>歴史と伝承</h3>\r\n        <p>\r\n          昭和初期の写真には、橋を渡った先に <strong>小さな案内板の列</strong> が写っているものがあります。\r\n          これらは、川の北側にかつて整備されていた散策路の入口を示すものでした。\r\n          散策路自体は長らく一般の利用から外れており、現在は通行できません。\r\n        </p>\r\n\r\n        <h3>観光情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川中流（示意）</td></tr>\r\n            <tr><th>通行時間</th><td>日中（夜間は照明なし。視界の悪い日は通行を控えてください）</td></tr>\r\n            <tr><th>注意</th><td>雨の日は踏み板が滑りやすくなります。最大荷重・通行人数の制限あり。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../3/\">次の観光地へ：霞ノ杜資料館 »</a></div>"
+      "bodyHtml": "<p>\r\n          杜川の上流、深い渓を渡す木造の小さな吊り橋。\r\n          全長 38 メートル、足元には所々に細い隙間があり、踏み板の継ぎ目から下を流れる水の音と霧が立ちのぼります。\r\n          地元では「杜橋（もりばし）」と呼ばれることもあります。\r\n        </p>\r\n        <p>\r\n          現在の橋は昭和 40 年代の改修によるもので、それ以前は石を敷いた渡し場でした。\r\n          欄干に結びつけられた、小さな布や紙の束は、地元の子どもたちが書く願掛けの「結び文」です。\r\n        </p>\r\n\r\n        <h3>橋の周辺で見られるもの</h3>\r\n        <ul>\r\n          <li><strong>水の音の合流点</strong>：橋の真下で支流が合流し、低い水音が常に響いています。</li>\r\n          <li><strong>苔の樹皮</strong>：北側の橋柱は、北からの湿気を受けて苔が育っています。</li>\r\n          <li><strong>古い案内板の柱</strong>：橋を渡った先、北西側の小道のたもとに、案内板の支柱だけが残されています。看板そのものは長年の間に失われたと伝えられています。</li>\r\n        </ul>\r\n\r\n        <h3>歴史と伝承</h3>\r\n        <p>\r\n          昭和初期の写真には、橋を渡った先に <strong>小さな案内板の列</strong> が写っているものがあります。\r\n          これらは、川の北側にかつて整備されていた散策路の入口を示すものでした。\r\n          散策路自体は長らく一般の利用から外れており、現在は通行できません。\r\n        </p>\r\n\r\n        <h3>観光情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川中流</td></tr>\r\n            <tr><th>通行時間</th><td>日中（夜間は照明なし。視界の悪い日は通行を控えてください）</td></tr>\r\n            <tr><th>注意</th><td>雨の日は踏み板が滑りやすくなります。最大荷重・通行人数の制限あり。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        ",
+      "searchKeywords": [
+        "吊り橋",
+        "杜橋",
+        "川"
+      ],
+      "h1": "杜の吊り橋"
     },
     {
       "path": "spot/3/index.html",
       "route": "/spot/3/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "霞ノ杜資料館｜霞ノ杜町",
       "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/spot/3/",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -2347,15 +3580,20 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>霞ノ杜資料館</h2>\r\n        <p>\r\n          町の北西寄り、町役場の隣接地に建つ <strong>霞ノ杜資料館</strong>。\r\n          町域から出土した土器、明治以降の写真、町の地誌、町民の寄贈品など、霞ノ杜の歩みを伝える資料を展示しています。\r\n        </p>\r\n        <p>\r\n          1 階は常設展、2 階は企画展のフロア。地下には町史編纂室があり、町の古文書・地図・写真の整理が今も続けられています。\r\n          訪問前にお電話でご予約いただくと、研究員による解説をご案内できる場合があります。\r\n        </p>\r\n\r\n        <h3>常設展示の見どころ</h3>\r\n        <ul>\r\n          <li><strong>霞ノ杜の地形模型</strong>：盆地・川・山系の関係が一目でわかる立体模型。</li>\r\n          <li><strong>明治・大正期の写真パネル</strong>：道、橋、神社の風景を、町民の生活とともに紹介。</li>\r\n          <li><strong>木工と山仕事の道具</strong>：林業が盛んだった頃の道具類を展示。</li>\r\n        </ul>\r\n\r\n        <h3>町史編纂室・所蔵資料（一部）</h3>\r\n        <div class=\"archive-list\">\r\n          <ul>\r\n            <li><strong>1953 年</strong>　町立小学校 開校時の校門前 集合写真</li>\r\n            <li><strong>1962 年</strong>　杜の吊り橋（旧）の写真</li>\r\n            <li><strong>1971 年</strong>　町内全域 簡易測量図 写し</li>\r\n            <li><strong>1978 年</strong>　町北西部 自然散策路 整備記念写真（案内板を含む）</li>\r\n            <li><strong>1985 年</strong>　町民体育祭 旗手の記録</li>\r\n            <li><strong>2001 年</strong>　町合併協議資料（参考）</li>\r\n            <li><strong>2024 年</strong>　町立霞ノ杜小学校 絵画クラブ 作品集</li>\r\n          </ul>\r\n          <p class=\"archive-note\">※ デジタル化済みの資料は <a href=\"../../history/\">町の歴史</a> ページから一部閲覧できます。</p>\r\n        </div>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 2 番地（町役場 隣）</td></tr>\r\n            <tr><th>開館時間</th><td>9:30 〜 16:30（入館は 16:00 まで）</td></tr>\r\n            <tr><th>休館日</th><td>火曜・水曜、年末年始</td></tr>\r\n            <tr><th>観覧料</th><td>無料（特別展は別途）</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../4/\">次の観光地へ：霧見展望休憩所 »</a></div>"
+      "bodyHtml": "<p>\r\n          三日月中央にあり、役場から徒歩5分の <strong>霞ノ杜資料館</strong>。\r\n          町域から出土した土器、明治以降の写真、町の地誌、町民の寄贈品など、霞ノ杜の歩みを伝える資料を展示しています。\r\n        </p>\r\n        <p>\r\n          1 階は常設展、2 階は企画展のフロア。地下には町史編纂室があり、町の古文書・地図・写真の整理が今も続けられています。\r\n          訪問前にお電話でご予約いただくと、研究員による解説をご案内できる場合があります。\r\n        </p>\r\n\r\n        <h3>常設展示の見どころ</h3>\r\n        <ul>\r\n          <li><strong>霞ノ杜の地形模型</strong>：盆地・川・山系の関係が一目でわかる立体模型。</li>\r\n          <li><strong>明治・大正期の写真パネル</strong>：道、橋、神社の風景を、町民の生活とともに紹介。</li>\r\n          <li><strong>木工と山仕事の道具</strong>：林業が盛んだった頃の道具類を展示。</li>\r\n        </ul>\r\n\r\n        <h3>町史編纂室・所蔵資料（一部）</h3>\r\n        <div class=\"archive-list\">\r\n          <ul>\r\n            <li><strong>1953 年</strong>　町立小学校 開校時の校門前 集合写真</li>\r\n            <li><strong>1962 年</strong>　杜の吊り橋（旧）の写真</li>\r\n            <li><strong>1971 年</strong>　町内全域 簡易測量図 写し</li>\r\n            <li><strong>1978 年</strong>　町北西部 自然散策路 整備記念写真（案内板を含む）</li>\r\n            <li><strong>1985 年</strong>　町民体育祭 旗手の記録</li>\r\n            <li><strong>2001 年</strong>　町合併協議資料（参考）</li>\r\n            <li><strong>2024 年</strong>　霞ノ杜町立第一小学校の作品集</li>\r\n          </ul>\r\n          <p class=\"archive-note\">※ デジタル化済みの資料は <a href=\"../../history/\">町の歴史</a> ページから一部閲覧できます。</p>\r\n        </div>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 2 番地（町役場 隣）</td></tr>\r\n            <tr><th>開館時間</th><td>9:30 〜 16:30（入館は 16:00 まで）</td></tr>\r\n            <tr><th>休館日</th><td>火曜・水曜、年末年始</td></tr>\r\n            <tr><th>観覧料</th><td>無料（特別展は別途）</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        ",
+      "searchKeywords": [
+        "資料館",
+        "町史",
+        "展示"
+      ],
+      "h1": "霞ノ杜資料館"
     },
     {
       "path": "spot/4/index.html",
       "route": "/spot/4/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "霧見展望休憩所｜霞ノ杜町",
       "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/spot/4/",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -2370,15 +3608,15 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>霧見展望休憩所</h2>\r\n        <p>\r\n          霞ノ杜山系の中腹、町の北側に位置する小さな展望休憩所。\r\n          標高 540 m。天気の良い日には、町の中心部から南の三日月町、東の杉並ヶ岡まで見渡せます。\r\n          そして霧の濃い朝は、足元から谷をひたすように白い海が広がります。\r\n        </p>\r\n        <p>\r\n          木造の屋根とベンチがあるだけの素朴な休憩所ですが、地元では「霧見（きりみ）」と呼ばれ、\r\n          季節の変わり目には町民が一人静かに腰掛けている姿が見られます。\r\n        </p>\r\n\r\n        <h3>霧の見えかた（季節別）</h3>\r\n        <ul>\r\n          <li><strong>春</strong>：朝方、町中心部から沸き上がる薄い霧。</li>\r\n          <li><strong>夏</strong>：夕立の前、湿った霧が一気に山肌をなめる。</li>\r\n          <li><strong>秋</strong>：もっとも霧が深い季節。盆地全体が白く満ち、町の屋根だけが島のように浮かぶ。</li>\r\n          <li><strong>冬</strong>：日が出る前の数十分だけ、霧氷の朝。樹氷越しに町を見下ろせる。</li>\r\n        </ul>\r\n\r\n        <h3>展望休憩所からの眺め</h3>\r\n        <p>\r\n          休憩所から南を見ると、町中心部の屋根、杜川の流れ、その先の三日月町まで一望できます。\r\n          一方、<strong>北西方向</strong> には霞ノ杜の山並みの折れ重なる稜線と、その合間に小さくのぞく <strong>水辺の景色</strong> が見えます。\r\n          こちらは町の旧整備区域に当たるため、現在は一般の立ち入りを制限している地域です。\r\n          展望休憩所から眺めるだけにとどめてください。\r\n        </p>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜山林道 中腹（示意）</td></tr>\r\n            <tr><th>到達時間</th><td>町中心部から徒歩で約 50 分（林道経由 / 上駐車場まで車で 15 分）</td></tr>\r\n            <tr><th>注意</th><td>林道は野生動物の活動範囲です。鈴・笛などの携行を推奨。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"../5/\">次の観光地へ：杜の湯（足湯） »</a></div>"
+      "bodyHtml": "<p>\r\n          霞ノ杜山系の中腹、町の北側に位置する小さな展望休憩所。\r\n          標高は約900メートルです。晴れた日には、霞湖と三日月中央の屋根が見えます。\r\n          そして霧の濃い朝は、足元から谷をひたすように白い海が広がります。\r\n        </p>\r\n        <p>\r\n          木造の屋根とベンチがあるだけの素朴な休憩所ですが、地元では「霧見（きりみ）」と呼ばれ、\r\n          季節の変わり目には町民が一人静かに腰掛けている姿が見られます。\r\n        </p>\r\n\r\n        <h3>霧の見えかた（季節別）</h3>\r\n        <ul>\r\n          <li><strong>春</strong>：朝方、町中心部から沸き上がる薄い霧。</li>\r\n          <li><strong>夏</strong>：夕立の前、湿った霧が一気に山肌をなめる。</li>\r\n          <li><strong>秋</strong>：もっとも霧が深い季節。盆地全体が白く満ち、町の屋根だけが島のように浮かぶ。</li>\r\n          <li><strong>冬</strong>：日が出る前の数十分だけ、霧氷の朝。樹氷越しに町を見下ろせる。</li>\r\n        </ul>\r\n\r\n        <h3>展望休憩所からの眺め</h3>\r\n        <p>\r\n          休憩所から南を見ると、杜川と霞湖が見えます。\r\n          \r\n          烏啼山道の周辺は立入禁止です。\r\n          展望休憩所の敷地から出ないでください。\r\n        </p>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>杜ケ丘の山すそ、標高約900メートル</td></tr>\r\n            <tr><th>到達時間</th><td>町中心部から徒歩で約 50 分（林道経由 / 上駐車場まで車で 15 分）</td></tr>\r\n            <tr><th>注意</th><td>林道は野生動物の活動範囲です。鈴・笛などの携行を推奨。</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        ",
+      "h1": "霧見展望休憩所"
     },
     {
       "path": "spot/5/index.html",
       "route": "/spot/5/",
-      "layout": "legacy",
+      "layout": "city",
       "title": "杜の湯｜霞ノ杜町",
       "description": "",
-      "canonical": "https://roku253.github.io/kasuminomori/spot/5/",
       "breadcrumbs": [
         {
           "label": "トップ",
@@ -2393,7 +3631,8 @@
         }
       ],
       "related": [],
-      "bodyHtml": "<h2>杜の湯（足湯）</h2>\r\n        <p>\r\n          杜川の中流、町中心部から徒歩 12 分ほどのところにある、無料の足湯施設。\r\n          かつてはこの一帯に温泉旅館が並んでいましたが、現在は町営の小さな足湯だけが残されています。\r\n          湯量は控えめ、温度は冬で 41 度、夏は 38 度ほど。\r\n        </p>\r\n\r\n        <h3>使い方</h3>\r\n        <ul>\r\n          <li>備え付けのバケツに足を入れる前に、横の流し場でかかとを軽くすすいでください。</li>\r\n          <li>タオルの貸し出しはありません。お手回りに 1 枚お持ちください。</li>\r\n          <li>夜間（17:30 以降）は照明なしです。早めの利用がおすすめ。</li>\r\n        </ul>\r\n\r\n        <h3>周辺のお店</h3>\r\n        <ul>\r\n          <li><strong>霧の最中（もなか）</strong> 売り場（湯の隣、地元商店組合の屋台）</li>\r\n          <li><strong>月待ちプリン 霞ノ杜店</strong>（週末のみ営業の小さな店）</li>\r\n          <li><strong>ファイブイレブン 霞ノ杜橋詰店</strong>（22時閉店）</li>\r\n        </ul>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>霞ノ杜町大字杜ケ丘 杜川 中流（示意）</td></tr>\r\n            <tr><th>利用時間</th><td>6:00 〜 17:30（冬期は短縮）</td></tr>\r\n            <tr><th>料金</th><td>無料</td></tr>\r\n            <tr><th>休業日</th><td>毎月第 3 水曜</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        <div class=\"next-spot\"><a href=\"/bunka/\">観光協会トップへ戻る »</a></div>"
+      "bodyHtml": "<p>\r\n          杜川の中流、町中心部から徒歩 12 分ほどのところにある、無料の足湯施設。\r\n          湖畔の商店街に近い、町営の足湯です。\r\n          湯量は控えめ、温度は冬で 41 度、夏は 38 度ほど。\r\n        </p>\r\n\r\n        <h3>使い方</h3>\r\n        <ul>\r\n          <li>備え付けのバケツに足を入れる前に、横の流し場でかかとを軽くすすいでください。</li>\r\n          <li>タオルの貸し出しはありません。お手回りに 1 枚お持ちください。</li>\r\n          <li>夜間（17:30 以降）は照明なしです。早めの利用がおすすめ。</li>\r\n        </ul>\r\n\r\n        <h3>周辺のお店</h3>\r\n        <ul>\r\n          <li><strong>霧の最中（もなか）</strong> 売り場（湯の隣、地元商店組合の屋台）</li>\r\n          <li><strong>月待ちプリン 霞ノ杜店</strong>（週末のみ営業の小さな店）</li>\r\n          <li><strong>ファイブイレブン 霞ノ杜橋詰店</strong>（22時閉店）</li>\r\n        </ul>\r\n\r\n        <h3>利用情報</h3>\r\n        <div class=\"table-scroll\">\r\n        <table class=\"data-table\">\r\n          <tbody>\r\n            <tr><th>所在地</th><td>湖畔（杜川が霞湖に注ぐ近く）</td></tr>\r\n            <tr><th>利用時間</th><td>6:00 〜 17:30（冬期は短縮）</td></tr>\r\n            <tr><th>料金</th><td>無料</td></tr>\r\n            <tr><th>休業日</th><td>毎月第 3 水曜</td></tr>\r\n          </tbody>\r\n        </table>\r\n        </div>\r\n\r\n        ",
+      "h1": "杜の湯"
     }
   ],
   "categories": {
@@ -2437,7 +3676,8 @@
       "suido",
       "sumai",
       "tetsuzuki-navi",
-      "tetsuzuki-search"
+      "tetsuzuki-search",
+      "zei"
     ],
     "sangyo": [
       "index",
@@ -2450,8 +3690,23 @@
       "index",
       "archive",
       "chijitsu",
+      "gaiyo",
+      "gikai",
       "koho-kasumi",
       "koho",
+      "koho/2026-02-02-tokiheisa",
+      "koho/2026-03-16-tsuribashi",
+      "koho/2026-04-01-renewal",
+      "koho/2026-08-03-saiyo",
+      "koho/2026-08-05-hanabi",
+      "koho/2026-08-21-bosaikunren",
+      "koho/2026-09-01-hazardmap",
+      "koho/2026-09-16-bunkasai",
+      "koho/2026-09-28-kohansen",
+      "koho/2026-10-01-juminzei",
+      "koho/2026-10-05-kuma",
+      "koho/2026-10-07-vaccine",
+      "koho/2026-10-09-koho846",
       "open-data",
       "senkyo",
       "shozoku",
@@ -2464,22 +3719,5 @@
     "3",
     "4",
     "5"
-  ],
-  "legacyRoutes": [
-    "/access/",
-    "/blog/2019/",
-    "/blog/2021/",
-    "/contact/",
-    "/documents/",
-    "/documents/chiiki-anzen/",
-    "/documents/gikai-dayori/",
-    "/events/",
-    "/guide/",
-    "/history/",
-    "/spot/1/",
-    "/spot/2/",
-    "/spot/3/",
-    "/spot/4/",
-    "/spot/5/"
   ]
 }

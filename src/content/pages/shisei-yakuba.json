@@ -3,14 +3,14 @@
   "route": "/shisei/yakuba/",
   "layout": "city",
   "title": "庁舎案内｜霞ノ杜町",
-  "description": "庁舎案内 — 霞ノ杜町公式。【フィクション】",
+  "description": "庁舎の案内、開庁時間、来庁の予約とバリアフリー情報です。",
   "breadcrumbs": [
     {
       "label": "トップ",
       "href": "../"
     },
     {
-      "label": "市政情報",
+      "label": "町政情報",
       "href": "index.html"
     },
     {
@@ -35,13 +35,15 @@
     },
     {
       "href": "index.html",
-      "label": "市政",
+      "label": "町政",
       "storyClue": false
     }
   ],
   "h1": "庁舎案内",
   "paragraphs": [
-    "〒029-17XX 吾妻郡霞ノ杜町三日月中央2-8-1。JR最寄「三日月町」駅から町営バス20分。"
+    "役場は三日月中央2丁目8番1号です。霞ノ杜駅から町営バスで約8分、徒歩で約20分です。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"../acces"
+  "owner": "総務課 総務係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>開庁</h2><p>平日8:30〜17:15。土日祝と、12月29日から1月3日は閉庁します。</p><h2>階</h2><table class=\"data-table\"><tbody><tr><th>1階</th><td>住民税務課、保健福祉課、会計室、観光案内</td></tr><tr><th>2階</th><td>総務課、政策推進課、産業観光課、建設水道課</td></tr><tr><th>3階</th><td>教育委員会、議会事務局、議場</td></tr></tbody></table><p>来庁者駐車場は約40台です。車いすのまま入れる入口は、正面の自動ドアです。</p>"
 }

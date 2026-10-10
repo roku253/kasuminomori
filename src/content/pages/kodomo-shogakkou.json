@@ -2,8 +2,8 @@
   "path": "kodomo/shogakkou.html",
   "route": "/kodomo/shogakkou/",
   "layout": "city",
-  "title": "小学校｜霞ノ杜町",
-  "description": "町立第一小学校 — 霞ノ杜町公式。【フィクション】",
+  "title": "霞ノ杜町立第一小学校｜霞ノ杜町",
+  "description": "町立小学校の教育方針、校区、学校だよりへのリンクです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -14,7 +14,7 @@
       "href": "index.html"
     },
     {
-      "label": "町立第一小学校"
+      "label": "霞ノ杜町立第一小学校"
     }
   ],
   "related": [
@@ -39,10 +39,16 @@
       "storyClue": false
     }
   ],
-  "h1": "町立第一小学校",
+  "h1": "霞ノ杜町立第一小学校",
   "paragraphs": [
-    "霞ノ杜町立第一小学校の公式サイトは別ページでご覧いただけます。",
-    "<a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">霞ノ杜町立第一小学校 公式サイト</a>"
+    "霞ノ杜町立第一小学校（通称 霞ノ杜小）は、町内でただ一つの小学校です。旧三日月中央小学校は統合して閉校しました。中学校は霞ノ杜町立箕浦中学校です。",
+    "転入・転出、学校給食、アレルギー対応については、教育委員会教育課学校教育係へお問い合わせください。",
+    "学校の日々の連絡や学校だよりは、学校のホームページ（外部サイト）でご覧ください。"
   ],
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"hoiku.html\">保育</a></li><li><a href=\"toshokan.html\">図書館</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a hr"
+  "bodyHtml": "<p><a href=\"https://roku253.github.io/kasuminomori-shougakkou/\" target=\"_blank\" rel=\"noopener\">学校のホームページ（外部サイト）</a></p>",
+  "searchKeywords": [
+    "小学校",
+    "教育",
+    "学校"
+  ]
 }

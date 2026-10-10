@@ -1,0 +1,54 @@
+{
+  "path": "shisei/gaiyo/index.html",
+  "route": "/shisei/gaiyo/",
+  "layout": "city",
+  "title": "町の概要｜霞ノ杜町",
+  "description": "霞ノ杜町の位置・面積・人口と世帯数・地勢と気候・地区と町名・町のあゆみの概要です。",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "/"
+    },
+    {
+      "label": "町政情報",
+      "href": "/shisei/"
+    },
+    {
+      "label": "町の概要"
+    }
+  ],
+  "related": [
+    {
+      "href": "/guide/",
+      "label": "町のご案内",
+      "storyClue": false
+    },
+    {
+      "href": "/shisei/chijitsu/",
+      "label": "町長の部屋",
+      "storyClue": false
+    },
+    {
+      "href": "/shisei/open-data/",
+      "label": "オープンデータ",
+      "storyClue": false
+    }
+  ],
+  "h1": "町の概要",
+  "paragraphs": [
+    "霞ノ杜町の位置・面積・人口などの基本的な情報と、町のあゆみをまとめています。"
+  ],
+  "bodyHtml": "<h2>町のすがた</h2>\n<table class=\"data-table\"><tbody><tr><th>位置</th><td>長野県のほぼ中央、霞湖の東岸</td></tr><tr><th>面積</th><td>64.12平方キロメートル</td></tr><tr><th>人口</th><td>5,812人（男 2,826人・女 2,986人）</td></tr><tr><th>世帯数</th><td>2,431世帯</td></tr><tr><th>役場の標高</th><td>約760メートル</td></tr><tr><th>町制施行</th><td>昭和23年4月1日</td></tr></tbody></table>\n<p>人口と世帯数は、令和8年10月1日現在の住民基本台帳の数です。毎月の人口は、広報かすみのもりの「まちの人口」でもお知らせしています。</p>\n<h2>地勢と気候</h2>\n<p>町の西側は霞湖に面し、東側には標高1,000メートルを超える山並みが続いています。東の山あいから流れ出る杜川が町の中を通り、霞湖に注いでいます。湖岸の平地に住宅と商店が集まり、東の山すその杜ケ丘には、霞ノ杜神社や町立第一小学校があります。</p>\n<p>内陸の高原らしい気候で、夏は涼しく、冬の冷え込みは厳しくなります。年間の平均気温は約11度です。春と秋の朝には湖と川から霧が立ちやすく、霧の出る日は年に110日前後あります。</p>\n<h2>地区と町名</h2>\n<p>町内は4つの地区に分かれています。ごみの収集、避難所、投票所などは、この地区ごとにご案内しています。</p>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>地区</th><th>町名</th></tr></thead><tbody><tr><td>三日月地区</td><td>三日月中央、三日月北、成沢</td></tr><tr><td>湖畔地区</td><td>湖畔、西木戸、大萩、狐塚</td></tr><tr><td>駅前地区</td><td>駅前、木戸、筒川、柳川、箕浦</td></tr><tr><td>杜ケ丘地区</td><td>大字杜ケ丘、烏啼</td></tr></tbody></table></div>\n<h2>人口の移り変わり</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>年</th><th>人口</th><th>世帯数</th></tr></thead><tbody><tr><td>平成12年</td><td>7,413人</td><td>2,398世帯</td></tr><tr><td>平成17年</td><td>7,086人</td><td>2,436世帯</td></tr><tr><td>平成22年</td><td>6,758人</td><td>2,470世帯</td></tr><tr><td>平成27年</td><td>6,452人</td><td>2,463世帯</td></tr><tr><td>令和2年</td><td>6,141人</td><td>2,452世帯</td></tr></tbody></table></div>\n<p>各年10月1日の国勢調査の数です。</p>\n<h2>町のあゆみ</h2>\n<div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>年</th><th>できごと</th></tr></thead><tbody><tr><td>明治22年</td><td>町村制の施行により、霞ノ杜村ができる</td></tr><tr><td>昭和23年</td><td>4月1日、町制を施行して霞ノ杜町となる</td></tr><tr><td>昭和28年</td><td>霞ノ杜町立第一小学校が開校する</td></tr><tr><td>平成22年</td><td>三日月中央小学校を閉校し、第一小学校に統合する</td></tr><tr><td>令和5年</td><td>藤原誠一 町長が就任する</td></tr></tbody></table></div>\n<p>町の成り立ちや昔の暮らしは、<a href=\"/history/\">町の歴史</a>のページでご紹介しています。</p>\n<h2>交通</h2>\n<p>町の西部の駅前地区に霞ノ杜駅があります。町内は町営バスが結んでいます。くわしくは<a href=\"/access/\">アクセス・地図</a>のページをご覧ください。</p>",
+  "searchKeywords": [
+    "町の概要",
+    "人口",
+    "世帯数",
+    "面積",
+    "位置",
+    "地区",
+    "町名",
+    "統計"
+  ],
+  "owner": "政策推進課 企画財政係",
+  "updated": "2026-10-01"
+}

@@ -1,0 +1,24 @@
+{
+  "path": "search/index.html",
+  "route": "/search/",
+  "layout": "city",
+  "title": "サイト内検索｜霞ノ杜町",
+  "description": "霞ノ杜町公式ホームページのサイト内検索です。",
+  "breadcrumbs": [
+    {
+      "label": "トップ",
+      "href": "/"
+    },
+    {
+      "label": "サイト内検索"
+    }
+  ],
+  "related": [],
+  "h1": "サイト内検索",
+  "paragraphs": [
+    "キーワードを入力して、このホームページの中を探せます。",
+    "<div data-kn-tool=\"site-search\"></div>",
+    "<p>PDFの中身は検索の対象外です。資料は<a href=\"/documents/\">資料室</a>をご覧ください。</p>"
+  ],
+  "searchExclude": true
+}

@@ -1,16 +1,25 @@
+import { PrintError } from "./PrintError";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
+import { SkipLink } from "./SkipLink";
 
 type Props = {
   children: React.ReactNode;
+  /** ページ JSON の printError。true なら印刷時にエラー文だけが出る（PrintError.tsx） */
+  printError?: boolean;
 };
 
-export function SiteShell({ children }: Props) {
+/** 下層ページの枠: 本文へ移動 → ヘッダー → <main id="main">（1つだけ）→ フッター */
+export function SiteShell({ children, printError = false }: Props) {
   return (
     <>
+      {printError && <PrintError />}
+      <SkipLink />
       <SiteHeader />
-      <div className="min-h-[50vh] bg-[var(--color-page-bg)]">{children}</div>
-      <SiteFooter variant="inner" enableScrollMotion />
+      <main id="main" tabIndex={-1} className="kn-main min-h-[50vh] bg-[var(--color-page-bg)]">
+        {children}
+      </main>
+      <SiteFooter />
     </>
   );
 }

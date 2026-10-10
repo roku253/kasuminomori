@@ -3,7 +3,7 @@
   "route": "/kurashi/chizu/",
   "layout": "city",
   "title": "地図から探す｜霞ノ杜町",
-  "description": "地図から探す — 霞ノ杜町公式。【フィクション】",
+  "description": "地図から施設・窓口・観光スポットを探せます。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,8 @@
   ],
   "h1": "地図から探す",
   "paragraphs": [
-    "町内の主要施設・観光スポットの位置は、アクセス・地図ページの簡易図をご利用ください。",
-    "<a href=\"../access/\">アクセス・地図ページを開く</a>"
+    "町内の主な施設は、下のマップと一覧から探せます。施設名で一覧を絞り込めます。",
+    "印刷用の別地図はありません。載っていない施設は、産業観光課商工観光係までご連絡ください。"
   ],
-  "extraHtml": "<div class=\"town-map\"><iframe src=\"https://roku253.github.io/gougle-map/?embed=kasumi\" title=\"霞ノ杜町内マップ\" style=\"width:100%;height:420px;border:1px solid #d5dbe3\"></iframe></div>\n<form class=\"hazard-search\" action=\"#\" onsubmit=\"return false\">\n  <label>施設名 <input id=\"facility-q\" type=\"text\" placeholder=\"例：神社\"></label>\n  <button type=\"button\" id=\"facility-go\">絞り込む</button>\n</form>\n<ul id=\"facility-list\">\n  <li>霞ノ杜神社（霞ノ杜）</li>\n  <li>杜の吊り橋（霞ノ杜）</li>\n  <li>霞ノ杜資料館（霞ノ杜）</li>\n  <li>霧見展望休憩所（霞ノ杜）</li>\n  <li>杜の湯（霞ノ杜）</li>\n  <li>三日月庁舎（三日月）</li>\n  <li>町立第一小学校（霞ノ杜）</li>\n</ul>"
+  "extraHtml": "<div class=\"town-map\"><iframe src=\"https://roku253.github.io/gougle-map/?embed=kasumi\" title=\"霞ノ杜町内マップ\" style=\"width:100%;height:420px;border:1px solid #d5dbe3\"></iframe></div>\n<div data-kn-tool=\"facility-finder\"></div>"
 }

@@ -3,7 +3,7 @@
   "route": "/kodomo/hoiku/",
   "layout": "city",
   "title": "保育・幼稚園｜霞ノ杜町",
-  "description": "保育・幼稚園 — 霞ノ杜町公式。【フィクション】",
+  "description": "杜保育園と湖畔こども園の定員、開園時間、入所の申し込みです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,9 @@
   ],
   "h1": "保育・幼稚園",
   "paragraphs": [
-    "町内に認定こども園1、保育所2、幼稚園（連携型）1があります。空き状況は子育て支援課へ。"
+    "入所の相談は、教育委員会教育課こども係（役場3階、内線314）です。新年度の申し込みは、前年の10月1日から10月31日までです。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>杜保育園</th><td>定員60 / 三日月町</td></tr><tr><th>霞ヶ丘こども園</th><td>定員45 / 霞ノ杜</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"shogakkou.html\">小学校</a></li><li><a href=\"kosodate.html\">子育て</a></li><li><a href=\"../kurashi/tetsuzuki-navi.html\">手続ナビ</a></l"
+  "bodyHtml": "<h2>施設</h2><table class=\"data-table\"><thead><tr><th>施設</th><th>場所</th><th>定員</th><th>開園</th></tr></thead><tbody><tr><td>杜保育園</td><td>三日月中央</td><td>60人</td><td>平日 7:30〜18:30</td></tr><tr><td>湖畔こども園</td><td>湖畔</td><td>45人</td><td>平日 7:30〜18:30</td></tr></tbody></table><p>延長は18:30〜19:00で、一日300円です。空きがない月は、杜保育園の一時預かり（平日9:00〜15:00、一日6人）を案内します。</p>",
+  "owner": "教育委員会 教育課 こども係",
+  "updated": "2026-10-01"
 }

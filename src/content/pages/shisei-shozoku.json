@@ -2,15 +2,15 @@
   "path": "shisei/shozoku.html",
   "route": "/shisei/shozoku/",
   "layout": "city",
-  "title": "組織｜霞ノ杜町",
-  "description": "組織・開庁時間 — 霞ノ杜町公式。【フィクション】",
+  "title": "組織・開庁時間｜霞ノ杜町",
+  "description": "町の組織図、各課の業務分担と連絡先です。",
   "breadcrumbs": [
     {
       "label": "トップ",
       "href": "../"
     },
     {
-      "label": "市政情報",
+      "label": "町政情報",
       "href": "index.html"
     },
     {
@@ -41,8 +41,10 @@
   ],
   "h1": "組織・開庁時間",
   "paragraphs": [
-    "三日月庁舎は平日8:30〜17:15。住民課・福祉課は1階、建設・産業観光は2階。"
+    "役場は7つの課と、会計室、議会事務局です。代表電話は0266-12-2111、開庁は平日8:30〜17:15です。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>代表</th><td>0123-45-6700</td></tr><tr><th>観光・産業</th><td>内線 220</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"yakuba.html\">庁舎</a></li><li><a href=\"../kurashi/tetsuzuki-search.html\">手続検索</a></li><li><a href=\"chijitsu.html\">町長<"
+  "tableHtml": "",
+  "owner": "総務課 総務係",
+  "updated": "2026-10-01",
+  "bodyHtml": "<h2>課の一覧</h2><div class=\"table-scroll\"><table class=\"data-table\"><thead><tr><th>課</th><th>階</th><th>主な仕事</th></tr></thead><tbody><tr><td>総務課</td><td>2階</td><td>秘書、情報公開、選挙、バス、防災</td></tr><tr><td>政策推進課</td><td>2階</td><td>予算、広報、ホームページ</td></tr><tr><td>住民税務課</td><td>1階</td><td>住民票、税、国民健康保険、ごみ</td></tr><tr><td>保健福祉課</td><td>1階</td><td>手当、介護、健診</td></tr><tr><td>産業観光課</td><td>2階</td><td>農林、商店、観光</td></tr><tr><td>建設水道課</td><td>2階</td><td>道路、建築、上下水道</td></tr><tr><td>教育委員会 教育課</td><td>3階</td><td>学校、保育、図書館</td></tr><tr><td>会計室</td><td>1階</td><td>出納</td></tr><tr><td>議会事務局</td><td>3階</td><td>議会、傍聴</td></tr></tbody></table></div><p>内線の番号は、お問い合わせのページにまとめています。組織が変わったときは、このページと広報紙で知らせます。</p>"
 }

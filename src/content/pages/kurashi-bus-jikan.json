@@ -2,8 +2,8 @@
   "path": "kurashi/bus-jikan.html",
   "route": "/kurashi/bus-jikan/",
   "layout": "city",
-  "title": "バス時刻表｜霞ノ杜町",
-  "description": "町営バス時刻表 — 霞ノ杜町公式。【フィクション】",
+  "title": "町営バス時刻表｜霞ノ杜町",
+  "description": "町営バス各系統の時刻表と運行のお知らせです。",
   "breadcrumbs": [
     {
       "label": "トップ",
@@ -41,8 +41,14 @@
   ],
   "h1": "町営バス時刻表",
   "paragraphs": [
-    "三日月町中心部と霞ノ杜地区を結ぶ町営バスは、平日・土曜に1日6往復です。詳細な停留所位置はアクセス・地図をご覧ください。"
+    "町営バスは、駅前、役場（三日月中央）、杜ケ丘、成沢を回ります。時刻は下の表です。",
+    "大雪や道路工事で運休するときは、お知らせと庁舎前の掲示で案内します。位置情報の配信はしていません。",
+    "定期券・回数券の購入場所、障害者・高齢者の運賃割引については、町民センターでご案内しています。"
   ],
-  "tableHtml": "<table class=\"city-data\"><tr><th>三日月発</th><td>7:10 / 9:30 / 11:40 / 14:00 / 16:20 / 18:10</td></tr><tr><th>霞ノ杜発</th><td>7:45 / 10:05 / 12:15 / 14:35 / 16:55 / 18:45</td></tr><tr><th>運賃</th><td>大人200円・小児100円（IC未対応）</td></tr></table>",
-  "extraHtml": "<aside class=\"city-related\"><h2>関連するページ</h2><ul><li><a href=\"bus-roke.html\">バスロケ</a></li><li><a href=\"chizu.html\">地図</a></li><li><a href=\"../access/\">アクセス詳細</a></li><li><a href=\"../bunka/\">観光</a></li></ul></aside>"
+  "tableHtml": "<div data-kn-tool=\"bus-timetable\"></div>",
+  "searchKeywords": [
+    "バス",
+    "時刻表",
+    "町営バス"
+  ]
 }

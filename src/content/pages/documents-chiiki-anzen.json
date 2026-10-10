@@ -1,16 +1,22 @@
 {
   "path": "documents/chiiki-anzen/index.html",
   "route": "/documents/chiiki-anzen/",
-  "layout": "legacy",
+  "layout": "city",
   "title": "地域安全通信｜霞ノ杜町",
-  "description": "地域安全通信の公開抜粋。【フィクション】",
-  "canonical": "https://roku253.github.io/kasuminomori/documents/chiiki-anzen/",
+  "description": "令和3年3月で発行を終了した地域安全通信のうち、お問い合わせの多い号を掲載しています。",
+  "h1": "地域安全通信",
   "breadcrumbs": [
-    { "label": "トップ", "href": "../../" },
-    { "label": "市政情報", "href": "../../shisei/" },
-    { "label": "資料室", "href": "../" },
+    { "label": "トップ", "href": "/" },
+    { "label": "町政情報", "href": "/shisei/" },
+    { "label": "資料室", "href": "/documents/" },
     { "label": "地域安全通信" }
   ],
   "related": [],
-  "bodyHtml": "<h2>地域安全通信</h2>\r\n        <p>地域の安全・防災に関する広報の抜粋です。</p>\r\n\r\n        <article class=\"doc-block\">\r\n          <p class=\"doc-meta\">地域安全通信（2019.8.20）</p>\r\n          <h3>烏啼山道周辺の立入禁止区域について</h3>\r\n          <p>\r\n            立入禁止区域に児童3名が入り、うち1名が負傷・搬送されました。烏啼山道付近における立入禁止区域について、関係各位のご協力により周知を進めた。\r\n            今後も気象・地盤の状況に留意し、立入禁止の徹底に努める。\r\n          </p>\r\n          <p style=\"font-size:11px;color:#666;\">※ 脚注：当該区域は旧来「烏啼」と呼ばれた山道に近い。</p>\r\n        </article>\r\n\r\n        <p style=\"font-size:12px;\"><a href=\"../\">← 資料室へ戻る</a> ／ <a href=\"../../anzen/bosai/\">防災情報</a></p>"
+  "paragraphs": [
+    "地域安全通信は、総務課地域安全係と霞ノ杜町防犯協会が発行していた回覧です。令和3年3月で発行を終了し、現在は広報紙の『安全・安心のページ』に引き継いでいます。"
+  ],
+  "bodyHtml": "<h2>掲載している号</h2>\n<ul>\n<li data-kn-story-clue=\"1\">第112号（令和元年9月号、8月20日発行）　烏啼山道付近の立入禁止区域について／夏の地域安全運動の報告／秋の全国交通安全運動　<a data-pdf=\"anzen-r1-09.pdf\">地域安全通信 第112号</a></li>\n<li>第114号（令和元年11月号、10月21日発行）　台風第19号の被害と備え／避難所の開設の記録／秋の交通安全運動の結果　<a data-pdf=\"anzen-r1-11.pdf\">地域安全通信 第114号</a></li>\n</ul>\n<p>紙の通信は、発行当時に町内を回覧しました。いまは役場1階の行政資料コーナーでもご覧いただけます。</p>",
+  "searchKeywords": ["地域安全通信", "防災", "回覧"],
+  "owner": "総務課 地域安全係",
+  "updated": "2026-10-09"
 }

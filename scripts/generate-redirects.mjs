@@ -20,22 +20,6 @@ const REDIRECT_HTML = (target) => `<!DOCTYPE html>
 </html>
 `;
 
-function walkHtml(dir, base = "") {
-  const results = [];
-  for (const name of fs.readdirSync(dir)) {
-    const full = path.join(dir, name);
-    const rel = base ? `${base}/${name}` : name;
-    if (fs.statSync(full).isDirectory()) {
-      if (["node_modules", ".next", "out", "public", "src", "partials", "legacy", "scripts", "archive"].includes(name))
-        continue;
-      results.push(...walkHtml(full, rel));
-    } else if (name.endsWith(".html") && name !== "index.html") {
-      results.push(rel.replace(/\\/g, "/"));
-    }
-  }
-  return results;
-}
-
 function redirectPathsFromManifest() {
   const manifestPath = path.join(ROOT, "src", "content", "manifest.json");
   if (!fs.existsSync(manifestPath)) return [];
@@ -48,8 +32,9 @@ function redirectPathsFromManifest() {
 function main() {
   const base = "/kasuminomori";
   let count = 0;
-  const htmlPaths = walkHtml(ROOT);
-  const relPaths = htmlPaths.length ? htmlPaths : redirectPathsFromManifest();
+  // 旧 .html の URL は manifest（正本 pages/*.json の path）から作る。
+  // 以前はリポ直下の .html を探していたが、playwright-report 等の .html を拾って誤ったスタブを作るので廃止。
+  const relPaths = redirectPathsFromManifest();
   for (const rel of relPaths) {
     const withoutExt = rel.replace(/\.html$/, "");
     const target = `${base}/${withoutExt}/`;

@@ -3,11 +3,13 @@
  * 主な内容・本文に、児童・事故・立入禁止・絵画展・個人名は置かない。
  */
 import { md } from "../lib/dates.mjs";
+import { enrichSheet } from "./_koho-enrich.mjs";
 
 const ban = ["児童", "事故", "立入禁止", "絵画展", "年生"];
 
 function issue(partial) {
-  if (partial.sheets.length !== 11) throw new Error(`${partial.id}: 中ページは11枚（表紙と合わせて12）`);
+  const sheets = partial.sheets.map((s) => enrichSheet(partial.month, s));
+  if (sheets.length !== 11) throw new Error(`${partial.id}: 中ページは11枚（表紙と合わせて12）`);
   return {
     template: "koho",
     pages: 12,
@@ -16,6 +18,7 @@ function issue(partial) {
       mustNotContain: ban,
     },
     ...partial,
+    sheets,
   };
 }
 
@@ -848,6 +851,7 @@ export const oct = issue({
                 widths: ["32%", "68%"],
                 rows: [
                   [md("2026-10-10"), "広報紙を配布"],
+                  [md("2026-10-11"), "霞ノ杜神社の例大祭"],
                   [md("2026-10-13"), "町道湖畔線の工事が始まる"],
                   [md("2026-10-16"), "文化祭の募集締切"],
                   [md("2026-11-02"), "町県民税 第3期"],

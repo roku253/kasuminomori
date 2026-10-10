@@ -15,7 +15,7 @@ const notoSans = Noto_Sans_JP({
 });
 
 
-/** トップページ（と下層の既定）の説明文。検索結果に出るので、架空の注記は付けない（注記はフッター） */
+/** トップページ（と下層の既定）の説明文。検索結果にそのまま出る。 */
 const SITE_DESCRIPTION = "霞ノ杜町公式ホームページ。くらし・防災・子育て・観光・町政情報をご案内します。";
 
 export const metadata: Metadata = {

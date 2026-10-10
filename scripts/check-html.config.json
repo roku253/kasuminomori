@@ -28,13 +28,7 @@
         "029-", "0123-", "一覧・詳細", "観光協会トップ", "三日月庁舎", "広報誌"
       ],
       "wordsIgnoreCase": ["◯◯", "○○", "△△", "××", "XX", "TODO", "ダミー", "lorem"],
-      "allow": [
-        {
-          "route": "*",
-          "word": "架空",
-          "reason": "フッター末尾の「このサイトは架空の町のものです。」だけ（K-12-note が1ページ1回を見る）。検索用の説明文には出さない"
-        }
-      ]
+      "allow": []
     },
     {
       "id": "K-12-meta",
@@ -77,12 +71,12 @@
 
   "metaNote": {
     "id": "K-12-note",
-    "label": "架空の注記は各ページの画面に1回。description・og:description・twitter:description には出さない",
+    "label": "「このサイトは架空の町のものです。」は画面にも description・og:description・twitter:description にも出さない",
     "enforce": true,
     "text": "このサイトは架空の町のものです。",
     "fields": ["description", "og:description", "twitter:description"],
     "count": 0,
-    "visible": 1
+    "visible": 0
   },
 
   "counts": [

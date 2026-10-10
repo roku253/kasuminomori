@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FICTION_NOTE } from "@/lib/site";
 
 export default function NotFound() {
   return (
@@ -10,9 +9,6 @@ export default function NotFound() {
         <Link href="/" className="text-sm text-[#1a4d80]">
           トップへ戻る
         </Link>
-      </p>
-      <p className="mt-10 text-sm text-[#333]" data-nosnippet>
-        {FICTION_NOTE}
       </p>
     </main>
   );

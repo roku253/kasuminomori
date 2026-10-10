@@ -15,7 +15,7 @@ type Props = {
 /**
  * 全ページ共通のヘッダー（トップも同じ。DR-22）。
  * 上段の帯（サイト名・サイトマップ・代表電話）→ ロゴ・検索窓・メニュー（スクロールしても上に残る）→ 主要カテゴリ（lg 以上）。
- * 電話はリンクにしない（B-2）。架空の注記はフッター（SiteFooter）。
+ * 電話はリンクにしない（B-2）。
  */
 export function SiteHeader({ showSearch = true, menuMode = "split" }: Props) {
   return (

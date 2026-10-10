@@ -6,11 +6,9 @@ export const SITE_NAME = "霞ノ杜町";
 export const TITLE_SUFFIX = "｜霞ノ杜町";
 
 /**
- * 架空の町である旨の注記。全ページのフッター末尾に出す（SiteFooter）。
- * 検索結果のスニペットになる description・og:description・twitter:description には付けない。
- * 各ページ JSON の description にも書かない（build-manifest.mjs が止める）。
+ * 検索結果も、開いたページの本文・フッターも、「架空」「フィクション」とは書かない。
+ * ページ JSON の description にそれらの語があれば build-manifest.mjs が止める。
  */
-export const FICTION_NOTE = "このサイトは架空の町のものです。";
 
 /** SNS などで共有されたときの画像（1200×630、町章入り） */
 export const OG_IMAGE = { url: "img/og.png", width: 1200, height: 630, alt: "霞ノ杜町公式ホームページ" } as const;

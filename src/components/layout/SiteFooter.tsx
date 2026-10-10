@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FICTION_NOTE, TOWN } from "@/lib/site";
+import { TOWN } from "@/lib/site";
 import { SiteLogo } from "./SiteLogo";
 
 /** フッターの案内（自治体サイトの定番。DR-04）。方針ページは src/content/pages/site*.json・sitemap.json */
@@ -14,7 +14,7 @@ const FOOTER_LINKS = [
 
 /**
  * 全ページ共通のフッター。役場の住所・電話・FAX・開庁時間は src/lib/site.ts の TOWN から（B-1・B-2）。
- * 電話はリンクにしない。メールアドレスは載せない。架空の注記はフッターの末尾に出す（検索用の description には付けない）。
+ * 電話はリンクにしない。メールアドレスは載せない。
  * フォトギャラリーと広告は 1b で外した（広告はトップだけ。src/components/home/TopAds.tsx）。
  */
 export function SiteFooter() {
@@ -43,9 +43,6 @@ export function SiteFooter() {
         </address>
       </div>
       <p className="kn-footer__copy">{TOWN.copyright}</p>
-      <p className="kn-footer__note" data-nosnippet>
-        {FICTION_NOTE}
-      </p>
     </footer>
   );
 }

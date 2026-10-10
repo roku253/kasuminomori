@@ -15,7 +15,7 @@ function defaultDescription(label: string): string {
 /**
  * 下層ページの meta（ページ JSON から一か所で作る）。
  * - `<title>` と og:title は「h1｜霞ノ杜町」（layout.tsx の title.template）。
- * - description・og:description・twitter:description はページの説明だけ（架空の注記はフッター。site.ts の FICTION_NOTE）。
+ * - description・og:description・twitter:description はページの説明だけ。
  * - canonical・og:url は route から自動（metadataBase＝SITE_URL と結合。JSON の canonical があればそれを優先）。
  */
 export function pageMetadata(page: CityPageContent): Metadata {

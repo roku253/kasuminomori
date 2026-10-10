@@ -210,9 +210,9 @@ export function loadPages() {
     if (typeof page.h1 === "string" && page.h1 && page.title !== `${page.h1}${TITLE_SUFFIX}`) {
       warnings.push(`${where}: title を「${page.h1}${TITLE_SUFFIX}」にしてください（今: ${page.title}。画面の <title> は h1 から作ります）`);
     }
-    // 架空の注記は meta に一か所から自動で付く（src/lib/site.ts の FICTION_NOTE）。JSON の description には書かない
+    // 架空の注記はフッター（FICTION_NOTE）。検索に出る description には書かない
     if (typeof page.description === "string" && /架空|フィクション|デモ表示/.test(page.description)) {
-      errors.push(`${where}: description に「架空」「フィクション」「デモ表示」を書かないでください（注記は meta に自動で付きます）`);
+      errors.push(`${where}: description に「架空」「フィクション」「デモ表示」を書かないでください（注記はフッターに出します）`);
     }
     if (page.canonical !== undefined && !(typeof page.canonical === "string" && /^\/(.+\/)?$/.test(page.canonical))) {
       errors.push(`${where}: canonical は route の形（例 "/blog/2019/"）で書いてください。ふつうは書かない（route から自動）`);

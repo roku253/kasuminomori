@@ -5,7 +5,7 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { getPageByRoute } from "@/lib/content/loader";
 import { pageLabel } from "@/lib/content/page-label";
 import type { CityPageContent } from "@/lib/content/types";
-import { OG_IMAGE, SITE_NAME, TITLE_SUFFIX, withFictionNote } from "@/lib/site";
+import { OG_IMAGE, SITE_NAME, TITLE_SUFFIX } from "@/lib/site";
 
 /** description が空のページの既定（JSON の description は WP3 が埋める） */
 function defaultDescription(label: string): string {
@@ -15,13 +15,13 @@ function defaultDescription(label: string): string {
 /**
  * 下層ページの meta（ページ JSON から一か所で作る）。
  * - `<title>` と og:title は「h1｜霞ノ杜町」（layout.tsx の title.template）。
- * - description・og:description・twitter:description の末尾に架空の注記（site.ts の FICTION_NOTE）。
+ * - description・og:description・twitter:description はページの説明だけ（架空の注記はフッター。site.ts の FICTION_NOTE）。
  * - canonical・og:url は route から自動（metadataBase＝SITE_URL と結合。JSON の canonical があればそれを優先）。
  */
 export function pageMetadata(page: CityPageContent): Metadata {
   const label = pageLabel(page);
   const fullTitle = `${label}${TITLE_SUFFIX}`;
-  const description = withFictionNote(page.description?.trim() || defaultDescription(label));
+  const description = page.description?.trim() || defaultDescription(label);
   const url = page.canonical ?? page.route;
   return {
     title: label,

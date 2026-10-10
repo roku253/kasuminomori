@@ -4,8 +4,8 @@
  *
  * 検査（規則 ID は config と同じ）:
  *   - 禁止語（K-12・K-07・K-08 ほか）: 画面の文字・alt/title/aria-label・<title>・meta・RSC ペイロード・検索索引・sitemap.xml を
- *     規則ごとの範囲（scopes）で照合する。meta/OGP は「架空の注記」を置く場所なので K-12 の範囲から外す。
- *   - tel:・mailto: のリンク（K-12-tel）、meta の架空の注記が1回（K-12-note）。
+ *     規則ごとの範囲（scopes）で照合する。検索用の meta には架空の注記を置かない。
+ *   - tel:・mailto: のリンク（K-12-tel）、架空の注記は画面に1回・meta には0回（K-12-note）。
  *   - 件数（K-09「さとう ゆう」1回・K-10「渡辺」2か所）と、そのページ（where）。必須の文（K-10-mayor）。
  *   - 物語ページ同士の相互リンク（K-11。v3 ★）: <main> の中（本文・関連するページ・ローカルナビ）のリンクを数え、
  *     パンくずと共通部（<main> の外＝ヘッダー・メガメニュー・フッター）は除く。共通部とサイトマップが物語ページへ
@@ -496,12 +496,20 @@ function checkMetaNote(rule, pages) {
   for (const page of pages) {
     for (const field of rule.fields) {
       const metas = page.metas.filter((m) => m.key === field);
-      if (!metas.length) {
-        findings.push({ route: page.route, where: `meta ${field}`, word: "（無し）", excerpt: "meta が無い" });
-        continue;
-      }
       const n = metas.reduce((sum, m) => sum + (m.content.match(re) || []).length, 0);
-      if (n !== rule.count) findings.push({ route: page.route, where: `meta ${field}`, word: `${rule.text}×${n}`, excerpt: metas.map((m) => m.content).join(" / ") });
+      if (n !== rule.count) {
+        findings.push({
+          route: page.route,
+          where: `meta ${field}`,
+          word: `${rule.text}×${n}`,
+          excerpt: metas.map((m) => m.content).join(" / ") || "meta が無い",
+        });
+      }
+    }
+    if (typeof rule.visible === "number") {
+      const hay = `${page.text.main}\n${page.text.breadcrumb}\n${page.text.common}`;
+      const n = (hay.match(re) || []).length;
+      if (n !== rule.visible) findings.push({ route: page.route, where: "画面", word: `${rule.text}×${n}`, excerpt: "" });
     }
   }
   return { findings };

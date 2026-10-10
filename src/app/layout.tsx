@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Footprint } from "@/components/layout/Footprint";
 import { TokenGateInit } from "@/components/layout/TokenGate";
-import { BASE_PATH, OG_IMAGE, SITE_URL, withFictionNote } from "@/lib/site";
+import { BASE_PATH, OG_IMAGE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const notoSans = Noto_Sans_JP({
@@ -15,10 +15,8 @@ const notoSans = Noto_Sans_JP({
 });
 
 
-/** トップページ（と下層の既定）の説明文。架空の注記は withFictionNote で一か所から付ける（画面には出さない） */
-const SITE_DESCRIPTION = withFictionNote(
-  "霞ノ杜町公式ホームページ。くらし・防災・子育て・観光・町政情報をご案内します。"
-);
+/** トップページ（と下層の既定）の説明文。検索結果に出るので、架空の注記は付けない（注記はフッター） */
+const SITE_DESCRIPTION = "霞ノ杜町公式ホームページ。くらし・防災・子育て・観光・町政情報をご案内します。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

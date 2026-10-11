@@ -223,23 +223,25 @@
 #page(paper: "a4", margin: (top: 10mm, bottom: 15mm, x: 12mm))[
   #grid(
     columns: (1fr, 58mm),
+    rows: (34mm,),
     column-gutter: 4mm,
-    block(width: 100%, fill: navy, inset: (x: 5mm, y: 3.2mm), radius: 1.2mm)[
-      #set par(leading: 0.2em, spacing: 0pt)
-      #text(fill: white, size: 8.6pt, tracking: 0.08em)[#data.tagline]
-      #v(0.6mm)
-      #text(fill: white, size: 30pt, weight: "bold", tracking: 0.14em)[地域安全通信]
-      #v(0.4mm)
-      #grid(
-        columns: (auto, auto, 1fr),
-        column-gutter: 3.2mm,
-        align: horizon,
-        text(fill: white, size: 13pt, weight: "bold")[第#data.no\号],
-        text(fill: white, size: 9.2pt, weight: "bold")[#data.month],
-        text(fill: white, size: 9.2pt, weight: "bold")[#data.date\発行],
-      )
+    block(width: 100%, height: 100%, fill: navy, inset: (x: 5mm, y: 2.8mm), radius: 1.2mm)[
+      #set par(spacing: 0pt, leading: 0.65em)
+      #block(spacing: 2.2mm)[
+        #text(fill: white, size: 8.6pt, tracking: 0.06em)[#data.tagline]
+      ]
+      #block(spacing: 2.8mm)[
+        #text(fill: white, size: 26pt, weight: "bold", tracking: 0.06em)[地域安全通信]
+      ]
+      #text(fill: white, size: 9.2pt, weight: "bold")[
+        #text(size: 12.5pt)[第#data.no\号]
+        #h(3mm)
+        #data.month
+        #h(3mm)
+        #data.date\発行
+      ]
     ],
-    block(width: 100%, stroke: 0.5mm + black, inset: (x: 2mm, y: 1.6mm), radius: 1mm)[
+    block(width: 100%, height: 100%, stroke: 0.5mm + black, inset: (x: 2mm, y: 1.6mm), radius: 1mm)[
       #grid(
         columns: (1fr, auto),
         align: horizon,

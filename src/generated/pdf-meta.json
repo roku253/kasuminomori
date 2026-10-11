@@ -1,8 +1,8 @@
 {
   "files": {
     "anzen-r1-09.pdf": {
-      "bytes": 177947,
-      "sha256": "94f107889004426856cc3be4751c34daaaae24cf879e1baa39a99b8948a9159f",
+      "bytes": 177168,
+      "sha256": "1b7e423d443a23b7b7bd943ed278c4b6ded2efb260ddd14744ba4a76545244b7",
       "pages": 2,
       "paper": "A4",
       "pageSizes": [
@@ -12,8 +12,8 @@
       "title": "地域安全通信 第112号（令和元年9月号）"
     },
     "anzen-r1-11.pdf": {
-      "bytes": 131337,
-      "sha256": "fe7a1610f10aca390700fa0a740800c9e2fe74134cc5d75a4bff22e6daed767d",
+      "bytes": 130559,
+      "sha256": "85e1aadd50ee36c90006f38bcccc9623017739835bc76906c4b75aeae85fe988",
       "pages": 2,
       "paper": "A4",
       "pageSizes": [

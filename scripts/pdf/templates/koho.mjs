@@ -179,7 +179,8 @@ function colophon(doc, date) {
   return h`<div class="colo">
     <p><b>広報かすみのもり</b>　No.${doc.no}　${doc.month}月号　${date}発行</p>
     <p>編集・発行　霞ノ杜町 政策推進課 広報情報係　電話 ${TOWN.tel}（代表・内線244）　FAX ${TOWN.fax}</p>
-    <p>${TOWN.postalCode}　${TOWN.address}　この広報紙は、毎月10日に町内の各世帯へお届けしています。</p>
+    <p>${TOWN.postalCode}　${TOWN.address}　印刷　霞ノ杜印刷　再生紙を使用しています</p>
+    <p>この広報紙は、毎月10日に町内の全世帯へお届けしています。</p>
   </div>`;
 }
 
@@ -220,31 +221,25 @@ export default {
           <p>${date}</p>
         </div>
       </header>
-      <figure class="hero"><img src="${publicFile(doc.cover.photo)}" alt=""><figcaption>${t(doc.cover.caption)}</figcaption></figure>
+      <figure class="hero"><img src="${publicFile(doc.cover.photo)}" alt="" style="${doc.cover.photo.includes("terraces") ? "object-position:50% 85%" : ""}"><figcaption>写真　${t(doc.cover.caption)}</figcaption></figure>
       <div class="cover-mid">
         <div>
           <h2 class="toc-h">今号のもくじ</h2>
           <ul class="toc">${doc.cover.toc.map(([label, pg]) => h`<li><span class="label">${t(label)}</span><span class="pg">${pg}</span><span class="blurb">${t(blurb(doc, pg))}</span></li>`)}</ul>
         </div>
         <div class="read">
-          <h2 class="toc-h">この号の読み方</h2>
-          <p>記事の末尾の「問」は、役場の担当係です。代表電話 ${TOWN.tel} のあと、内線を伝えてください。</p>
-          <p>電子版は町のホームページに、直近6か月分を載せています。それより前の号は、町立図書館です。</p>
+          <h2 class="toc-h">${doc.month}月の閉庁</h2>
           <p>${holidayLine(doc.issued)}</p>
+          <p>役場の窓口は、平日8時30分から17時15分です。代表電話は ${TOWN.tel} です。</p>
+          ${doc.cover.note ? h`<p>${t(doc.cover.note)}</p>` : ""}
         </div>
       </div>
       <div class="cal-wrap">
         <h2>${doc.month}月</h2>
         ${calendar(doc.issued, events, true)}
-        ${
-          events.length
-            ? h`<table class="data evlist"><tbody>${events.map((e) => h`<tr><th>${doc.month}月${e.d}日</th><td>${t(e.label)}</td></tr>`)}</tbody></table>`
-            : ""
-        }
       </div>
       <div class="boxes">
         <div class="box"><b>配布</b><p>毎月10日、町内の全世帯へ。集会所と役場1階にも置きます。</p></div>
-        <div class="box"><b>訂正</b><p>間違いは次の号と、ホームページのお知らせに出します。</p></div>
         <div class="box"><b>窓口</b><p>平日 8:30〜17:15。代表 ${TOWN.tel}</p></div>
       </div>
     </div><p class="nombre right">1</p></section>`;
@@ -275,16 +270,17 @@ export default {
         )}<div class="below">${art({
           h: "窓口とバス",
           body: [
-            "役場は平日 8:30〜17:15です。診療所は平日 9:00〜17:00、土曜 9:00〜12:00。図書館は火〜金 9:00〜18:00、土曜 9:00〜17:00で、日曜・月曜と祝日は休館です。",
+            "役場は平日 8:30〜17:15です。診療所は平日 9:00〜17:00、土曜 9:00〜12:00。図書館は火〜金 9:30〜18:00、土曜 9:30〜17:00で、日曜・月曜と祝日は休館です。",
             Tbus(),
           ],
         })}</div>${colophon(doc, date)}`;
       } else if (isCal) {
-        body = h`<div class="cal-wrap"><h2>${sheet.articles[0].h}</h2>${calendar(doc.issued, events, false)}<p class="hol-note">${t(holidayLine(doc.issued))} 色の付いた日は、この号で案内している日です。</p></div>${art({ ...sheet.articles[0], h: "この月の主な日" })}${sheet.below ? h`<div class="below">${art(sheet.below)}</div>` : ""}${contactBar()}`;
+        body = h`<div class="cal-wrap"><h2>${sheet.articles[0].h}</h2>${calendar(doc.issued, events, false)}<p class="hol-note">${t(holidayLine(doc.issued))} 色の付いた日は、この号で案内している日です。</p></div>${art({ ...sheet.articles[0], h: "この月の主な日" })}`;
       } else {
         const left = sheet.two ? sheet.two[0] : sheet.articles || [];
         const right = sheet.two ? sheet.two[1] : [...(sheet.side ? [sheet.side] : []), ...(sheet.moreRight || [])];
-        body = h`${photo(sheet)}${columns(left, right)}${sheet.below ? h`<div class="below">${art(sheet.below)}</div>` : ""}${contactBar()}`;
+        const cols = right.length ? columns(left, right) : h`<div class="flow">${left.map(art)}</div>`;
+        body = h`${cols}${sheet.below ? h`<div class="below">${art(sheet.below)}</div>` : ""}`;
       }
       return h`<section class="page"><div class="sheet">
         <p class="running"><span><b>広報かすみのもり</b>　No.${doc.no}　${doc.month}月号</span><span>${date}</span></p>

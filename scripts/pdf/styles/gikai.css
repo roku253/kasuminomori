@@ -20,7 +20,7 @@ table.data th { background: #e8f0fa; color: #1a4d80; text-align: left; }
 .qa p { margin: 0.6mm 0; }
 .note { font-size: 8pt; border: 0.3mm solid #1a4d80; padding: 1.6mm 2mm; margin-top: 2mm; }
 .pie-row { display: flex; gap: 6mm; align-items: center; margin: 2mm 0; }
-.pie { width: 36mm; height: 36mm; border-radius: 50%; flex: none; }
+.pie { width: 36mm; height: 36mm; flex: none; }
 .legend { font-size: 8.5pt; }
 .legend div { display: flex; gap: 2mm; align-items: center; margin: 0.8mm 0; }
 .sw { width: 4mm; height: 3mm; flex: none; }

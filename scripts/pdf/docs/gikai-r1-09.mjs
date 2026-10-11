@@ -43,7 +43,7 @@ const cover = h`${""}
 
 const p2 = h`${run("定例会の概要")}
 <h2 class="sec">9月定例会の概要</h2>
-<p>議長は吉田進、副議長は小松真理です。提出された議案は、次のとおり決しました。</p>
+<p>9月定例会は、${md("2019-09-03")}に開き、${md("2019-09-13")}に閉会しました。議長は吉田進、副議長は小松真理です。本会議の傍聴者は、会期を通じて延べ46人でした。提出された議案は、次のとおり決しました。</p>
 <table class="data">
 <thead><tr><th>議案番号</th><th>件名</th><th>結果</th></tr></thead>
 <tbody>
@@ -55,7 +55,7 @@ const p2 = h`${run("定例会の概要")}
 </tbody>
 </table>
 <h2 class="sec">補正予算（第3号）の主な内容</h2>
-<p>財源は、前年度繰越金です。</p>
+<p>補正の総額は4,860万円で、財源は前年度繰越金です。立入防止柵と注意看板の設置は、1行の議案として計上し、場所や理由の説明は付けていません。</p>
 <table class="data">
 <thead><tr><th>項目</th><th>内容</th></tr></thead>
 <tbody>
@@ -70,14 +70,20 @@ const p3 = h`${run("決算")}
 <h2 class="sec">平成30年度決算の認定</h2>
 <p>一般会計の歳入歳出決算を認定しました。歳入総額は48億2,600万円、歳出総額は46億1,400万円です。</p>
 <div class="pie-row">
-  <div class="pie" style="background:conic-gradient(#1a4d80 0 46%, #2d8a3e 46% 68%, #c4a35a 68% 84%, #8b98a8 84% 100%)"></div>
+  <svg class="pie" viewBox="0 0 36 36" aria-hidden="true">
+    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#8b98a8" stroke-width="6" pathLength="100"></circle>
+    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#c4a35a" stroke-width="6" pathLength="100" stroke-dasharray="16 84" stroke-dashoffset="25"></circle>
+    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#2d8a3e" stroke-width="6" pathLength="100" stroke-dasharray="22 78" stroke-dashoffset="9"></circle>
+    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1a4d80" stroke-width="6" pathLength="100" stroke-dasharray="46 54" stroke-dashoffset="25"></circle>
+  </svg>
   <div class="legend">
-    <div><span class="sw" style="background:#1a4d80"></span>民生費 46%</div>
-    <div><span class="sw" style="background:#2d8a3e"></span>教育費 22%</div>
-    <div><span class="sw" style="background:#c4a35a"></span>土木費 16%</div>
-    <div><span class="sw" style="background:#8b98a8"></span>その他 16%</div>
+    <div><span class="sw" style="background:#1a4d80"></span>民生費 21億2,200万円（46%）</div>
+    <div><span class="sw" style="background:#2d8a3e"></span>教育費 10億1,500万円（22%）</div>
+    <div><span class="sw" style="background:#c4a35a"></span>土木費 7億3,800万円（16%）</div>
+    <div><span class="sw" style="background:#8b98a8"></span>その他 7億3,900万円（16%）</div>
   </div>
 </div>
+<p>歳入総額48億2,600万円のうち、町税は12億4,000万円、地方交付税は18億6,000万円でした。歳入から歳出を引いた差は、翌年度へ繰り越しています。円グラフの割合は、歳出46億1,400万円に対する費目の比で、合計は100％です。</p>
 <h2 class="sec">監査委員の意見の要旨</h2>
 <p>決算書などの計数は関係諸帳簿と符合し、予算の執行は概ね適正と認めます。繰越事業は、年度内の完了に向けて進行を管理されたい。基金の取り崩しは、目的を議会へ説明されたい。</p>`;
 
@@ -160,7 +166,8 @@ const p8 = h`${run("ご案内")}
     <p>発行　霞ノ杜町議会</p>
     <p>${TOWN.postalCode}　${TOWN.address}</p>
     <p>電話 ${TOWN.tel}（代表）　FAX ${TOWN.fax}</p>
-    <p>印刷　町内の印刷所</p>
+    <p>印刷　霞ノ杜印刷</p>
+    <p>再生紙を使用しています</p>
   </div>
 </div>`;
 

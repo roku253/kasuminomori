@@ -13,28 +13,38 @@ const bar = safe(`<span class="bar"></span>`);
 const copy1 = h`<section class="page"><div class="sheet">
   <div class="memo-head">
     <p class="org">霞ノ杜町教育委員会</p>
-    <p class="line">霞教第</p>${bar}<p class="line">号</p>
+    <p class="line">霞教第${bar}号</p>
   </div>
-  <p class="line">令和元年8月</p>${bar}<p class="line">日</p>
+  <p class="line">令和元年8月${bar}日</p>
   <p class="line" style="margin-top:4mm">霞ノ杜町長　様</p>
   <p class="stamp">印</p>
   <p class="line">霞ノ杜町教育委員会教育長</p>
   <p class="line" style="margin-top:5mm"><b>件名</b>　烏啼山道付近立入禁止区域における事案について（報告）</p>
   <p class="line" style="margin-top:4mm"><b>1　日時</b></p>
-  <p class="line">令和元年8月</p>${bar}<p class="line">日</p>${bar}
+  <p class="line">令和元年8月${bar}日</p>
   <p class="line"><b>2　場所</b>　烏啼山道付近（立入禁止区域内）</p>
-  <p class="line"><b>3　関係者</b></p>${bar}${bar}${bar}
-  <p class="line"><b>4　概要</b></p>${bar}${bar}${bar}
+  <p class="line"><b>3　関係者</b></p>
+  <p class="line">${bar}</p>
+  <p class="line">${bar}</p>
+  <p class="line">${bar}</p>
+  <p class="line"><b>4　概要</b></p>
+  <p class="line">${bar}</p>
+  <p class="line">${bar}</p>
+  <p class="line">${bar}</p>
   <p class="line">…搬送された。</p>
 </div></section>`;
 
 const copy2 = h`<section class="page"><div class="sheet">
   <p class="line"><b>5　経過</b></p>
-  <p class="line">8月</p>${bar}<p class="line">日</p>${bar}
-  <p class="line">8月</p>${bar}<p class="line">日</p>
+  <p class="line">8月${bar}日</p>
+  <p class="line">${bar}</p>
+  <p class="line">8月${bar}日</p>
   <p class="line">保護者より事実確認の申し入れがあった。</p>
-  <p class="line">（以下）</p>${bar}${bar}
-  <p class="line" style="margin-top:4mm"><b>6　対応</b></p>${bar}
+  <p class="line">（以下）</p>
+  <p class="line">${bar}</p>
+  <p class="line">${bar}</p>
+  <p class="line" style="margin-top:4mm"><b>6　対応</b></p>
+  <p class="line">${bar}</p>
   <p class="line">立入禁止区域の柵及び看板を増設する</p>
   <p class="line" style="margin-top:4mm"><b>7</b></p>
   <p class="line">本件は事故として処理し、終了とする。</p>
@@ -46,6 +56,9 @@ const cover = h`<section class="page"><div class="sheet">
   <p style="font-size:9pt;color:#1a4d80">霞ノ杜町　総務課　情報公開担当</p>
   <h1>情報提供資料</h1>
   <p>霞ノ杜町情報公開条例に基づき開示した公文書を、開示した内容のまま掲載しています。個人に関する情報など、条例で不開示とした部分は、写しのとおり一部を不開示としています。</p>
+  <p>この資料は、同じ公文書について開示請求が繰り返されたため、請求のたびに写しを渡すのではなく、開示した内容をそのまま町のホームページに置くものです。新しい事実を書き足したり、不開示の部分を推測で埋めたりはしていません。</p>
+  <p>次のページからが、開示した写しです。黒い帯は、行ごとに同じ長さで、不開示の部分を示します。帯の下に文字は残していません。見える行は、開示した部分だけです。</p>
+  <p>写しの閲覧で不明な点は、総務課総務係（情報公開、内線211）へ、平日8時30分から17時15分のあいだに電話してください。開示請求そのものの用紙も、同係の窓口にあります。</p>
   <h2>書誌</h2>
   <table class="data">
     <tbody>

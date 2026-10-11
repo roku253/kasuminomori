@@ -3,12 +3,12 @@
  * 主な内容・本文に、児童・事故・立入禁止・絵画展・個人名は置かない。
  */
 import { md } from "../lib/dates.mjs";
-import { enrichSheet } from "./_koho-enrich.mjs";
+import { withExtra } from "./_koho-extra.mjs";
 
 const ban = ["児童", "事故", "立入禁止", "絵画展", "年生"];
 
 function issue(partial) {
-  const sheets = partial.sheets.map((s) => enrichSheet(partial.month, s));
+  const sheets = partial.sheets.map((s) => withExtra(partial.month, s));
   if (sheets.length !== 11) throw new Error(`${partial.id}: 中ページは11枚（表紙と合わせて12）`);
   return {
     template: "koho",
@@ -211,7 +211,7 @@ export const jun = issue({
   },
   cover: {
     photo: "img/photos/photo-mist.jpg",
-    caption: "朝霧の霞湖。",
+    caption: "山あいに立つ朝霧。集落の屋根がのぞいています。",
     toc: [
       ["町の子育て支援", "2"],
       ["梅雨と土砂への備え", "5"],
@@ -497,7 +497,7 @@ export const aug = issue({
   },
   cover: {
     photo: "img/photos/photo-festival.jpg",
-    caption: "前年の霞湖花火大会。",
+    caption: "杜ケ丘の参道。提灯がともっています。",
     toc: [
       ["霞湖花火大会の交通規制", "2"],
       ["職員募集", "6"],
@@ -623,7 +623,7 @@ export const sep = issue({
   },
   cover: {
     photo: "img/photos/photo-town.jpg",
-    caption: "実りの季節の町。",
+    caption: "夕方の三日月中央です。",
     toc: [
       ["新しいハザードマップ", "2"],
       ["敬老の日", "6"],
@@ -747,8 +747,9 @@ export const oct = issue({
     created: "2026-10-10T09:00:00+09:00",
   },
   cover: {
-    photo: "img/photos/photo-terraces.jpg",
-    caption: "稲刈りのあとの田。",
+    photo: "img/photos/photo-clinic.jpg",
+    caption: "三日月中央の町立霞ノ杜診療所です。",
+    note: "杜ケ丘では、早生の稲刈りが終わりました。",
     toc: [
       ["秋の健康づくり", "2"],
       ["文化祭の募集", "5"],

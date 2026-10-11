@@ -39,6 +39,7 @@ npm run check:pdf
 - `typst/flow.typ` … 議会だより
 - `typst/joho.typ` … 情報提供資料の1ページ（通知）
 - `typst/joho-copy.typ` … 写しの下絵。紙の地の上に枠と帯と印を組む
-- `joho_raster.py` … その下絵をスキャンし、帯だけ純黒に戻して2〜3ページの画像にする
+- `to_scan_pdf.py` … 下絵ににじみ、紙への乗算、ざらつき、0.2〜0.5度の傾きを足す。帯は純黒に戻す
+- `joho_raster.py` … 写しの下絵を `to_scan_pdf.py` に通して2〜3ページの画像にする
 - `typst/prepare.mjs` … `docs/*.mjs` を JSON にする
 - `post.py` … 作中の文書情報に直し、許可した字体だけが埋まっていることを確かめる

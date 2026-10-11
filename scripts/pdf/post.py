@@ -98,7 +98,7 @@ def finalize(spec: dict) -> None:
             if ext == "n/a":
                 problems.append(f"p{i}: 埋め込まれていないフォント {basefont}")
             if not font_re.match(basefont):
-                problems.append(f"p{i}: 想定外のフォント {basefont}（OFL の BIZ UDP 以外。字形が無く代わりのフォントで描かれた字がある）")
+                problems.append(f"p{i}: 想定外のフォント {basefont}（許可は BIZ UDP と Zen Kaku Gothic New。字形が無く代わりのフォントで描かれた字がある）")
         text = page.get_text("text")
         texts.append(text)
         for ph in spec.get("placeholders", []):

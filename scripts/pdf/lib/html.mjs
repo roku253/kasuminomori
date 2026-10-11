@@ -59,7 +59,7 @@ export const FONTS = [
   { family: "KN Mincho", weight: 400, file: "fonts/bizudpmincho/BIZUDPMincho-Regular.ttf" },
 ];
 /** PDF に埋め込まれてよいフォント（PostScript 名） */
-export const FONT_NAME_PATTERN = "^(?:[A-Z]{6}\\+)?BIZUDP(?:Gothic|Mincho)-(?:Regular|Bold)$";
+export const FONT_NAME_PATTERN = "^(?:[A-Z]{6}\\+)?(?:BIZUDP(?:Gothic|Mincho)-(?:Regular|Bold)|ZenKakuGothicNew-(?:Bold|Black))$";
 
 function fontFaceCss() {
   return FONTS.map(

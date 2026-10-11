@@ -1,95 +1,128 @@
-// 情報提供資料の写し（2〜3ページの下絵）。紙の地の上に公文書を組む。
-// この PDF は文字が残る。公開用は joho_raster.py がスキャンして、帯だけ純黒に戻す。
-#let ink = rgb("#333333")
-#let rule = rgb("#444444")
+// 開示した写し。実在の開示決定通知書と同じ並び（右上に番号と日付、宛名、右に職名と印、枠の表、下の注）。
+#let ink = rgb("#222222")
 #let paper = image("/scripts/pdf/assets/paper_texture.jpg", width: 210mm, height: 297mm, fit: "cover")
-#let seal = image("/scripts/pdf/assets/miyasaka-seal.png", width: 17mm)
+#let seal = image("/scripts/pdf/assets/miyasaka-seal.png", width: 16mm)
 
-#set text(font: "BIZ UDPMincho", fill: ink, size: 10.5pt, lang: "ja")
-#set par(leading: 0.75em, spacing: 0.65em, first-line-indent: 0pt, justify: false)
+#set text(font: "BIZ UDPMincho", fill: ink, size: 9pt, lang: "ja")
+#set par(leading: 0.65em, spacing: 0.45em, first-line-indent: 0pt, justify: false)
 
-#let bar(w) = box(width: w, height: 3.15mm, fill: black, baseline: 0.55mm)
-#let long = bar(112mm)
-#let mid = bar(72mm)
+#let bar(w) = box(width: w, height: 2.8mm, fill: black, baseline: 0.45mm)
+#let hair = 0.45pt + black
 
 #let sheet(body) = page(paper: "a4", margin: 0pt)[
   #place(top + left, paper)
-  #pad(x: 16mm, y: 15mm)[
-    #body
-  ]
+  #pad(x: 14mm, y: 12mm)[#body]
 ]
 
+#let row-label(body) = align(center + horizon, text(size: 9pt)[#body])
+
 #sheet[
-  #align(center, text(size: 13pt, tracking: 0.42em)[霞ノ杜町教育委員会])
-  #v(5mm)
-  #align(right)[
-    霞教第 #bar(26mm) 号 \
-    令和元年8月 #bar(24mm) 日
-  ]
-  #v(7mm)
   #grid(
-    columns: (1fr, auto, 18mm),
-    column-gutter: 3mm,
+    columns: (1fr, auto),
+    align: top,
+    text(size: 9pt)[霞ノ杜町教育委員会],
+    align(right)[
+      #set par(leading: 0.55em, spacing: 0.2em)
+      霞教第 #bar(22mm) 号 \
+      令和元年8月 #bar(18mm) 日
+    ],
+  )
+  #v(5mm)
+  #align(center, text(size: 13pt)[烏啼山道付近立入禁止区域における事案について（報告）])
+  #v(5mm)
+  #grid(
+    columns: (1fr, auto),
     align: horizon,
     [霞ノ杜町長　様],
-    align(right)[霞ノ杜町教育委員会教育長],
-    seal,
+    box(inset: (right: 2mm))[
+      霞ノ杜町教育委員会教育長
+      #h(1mm)
+      #box(seal)
+    ],
   )
-  #v(7mm)
-  #align(center)[烏啼山道付近立入禁止区域における事案について（報告）]
-  #v(2mm)
-  #line(length: 100%, stroke: 0.4pt + rule)
   #v(4mm)
-  1　日時 \
-  #h(5mm) 令和元年8月 #bar(32mm) 日（ #bar(22mm) ）
-  #v(3.5mm)
-  2　場所 \
-  #h(5mm) 烏啼山道付近（立入禁止区域内）
-  #v(3.5mm)
-  3　関係者 \
-  #v(1.5mm)
-  #pad(left: 5mm)[#long #v(1.6mm) #long #v(1.6mm) #long]
-  #v(4mm)
-  4　概要 \
-  #v(1.5mm)
-  #pad(left: 5mm)[
-    #mid #v(1.6mm)
-    #mid #v(1.6mm)
-    #mid #h(3mm) …搬送された。
-  ]
+  #set par(justify: true, leading: 0.7em)
+  烏啼山道付近の立入禁止区域における事案について、教育委員会から町長へ次のとおり報告した文書の写しです。不開示の部分は帯で示しています。
+  #v(3mm)
+  #table(
+    columns: (28mm, 1fr),
+    rows: (16mm, 18mm, 58mm, 62mm),
+    stroke: hair,
+    inset: (x: 2.2mm, y: 2mm),
+    align: top + left,
+    row-label[1　日時],
+    [令和元年8月 #bar(28mm) 日（ #bar(16mm) ）],
+    row-label[2　場所],
+    [烏啼山道付近（立入禁止区域内）],
+    row-label[3　関係者],
+    [
+      #bar(118mm)
+      #v(2.2mm)
+      #bar(118mm)
+      #v(2.2mm)
+      #bar(118mm)
+    ],
+    row-label[4　概要],
+    [
+      #bar(118mm)
+      #v(2.2mm)
+      #bar(118mm)
+      #v(2.2mm)
+      #bar(78mm) #h(2.5mm) …搬送された。
+    ],
+  )
 ]
 
 #sheet[
-  #text(size: 9.5pt)[霞ノ杜町教育委員会] \
-  #text(size: 9.5pt)[烏啼山道付近立入禁止区域における事案について（報告）（続き）]
+  #text(size: 8.5pt)[霞ノ杜町教育委員会　烏啼山道付近立入禁止区域における事案について（報告）（続き）]
   #v(2mm)
-  #line(length: 100%, stroke: 0.5pt + rule)
-  #v(2mm)
-  （写）
+  #table(
+    columns: (28mm, 1fr),
+    rows: (78mm, 36mm, 28mm),
+    stroke: hair,
+    inset: (x: 2.2mm, y: 2mm),
+    align: top + left,
+    row-label[5　経過],
+    [
+      8月 #bar(18mm) 日
+      #v(2mm)
+      #bar(118mm)
+      #v(2.4mm)
+      8月 #bar(18mm) 日
+      #v(1.2mm)
+      保護者より事実確認の申し入れがあった。 \
+      （以下）
+      #v(2mm)
+      #bar(118mm)
+      #v(2mm)
+      #bar(118mm)
+    ],
+    row-label[6　対応],
+    [
+      #bar(118mm)
+      #v(2.4mm)
+      立入禁止区域の柵及び看板を増設する
+    ],
+    row-label[7],
+    [本件は事故として処理し、終了とする。],
+  )
+  #v(1fr)
+  #table(
+    columns: (28mm, 1fr),
+    stroke: hair,
+    inset: (x: 2.2mm, y: 1.8mm),
+    align: top + left,
+    row-label[担当],
+    [
+      霞ノ杜町教育委員会（役場3階） \
+      写しについての問い合わせは、総務課総務係（情報公開、内線211）
+    ],
+  )
   #v(3mm)
-  5　経過 \
-  #v(1.5mm)
-  #h(5mm) 8月 #bar(22mm) 日
-  #v(2mm)
-  #pad(left: 5mm, long)
-  #v(2.2mm)
-  #h(5mm) 8月 #bar(22mm) 日 \
-  #h(5mm) 保護者より事実確認の申し入れがあった。 \
-  #h(5mm) （以下）
-  #v(2mm)
-  #pad(left: 5mm)[#long #v(1.6mm) #long]
-  #v(4mm)
-  6　対応 \
-  #v(1.5mm)
-  #pad(left: 5mm, long)
-  #v(3mm)
-  #h(5mm) 立入禁止区域の柵及び看板を増設する
-  #v(4mm)
-  7 \
-  #v(2mm)
-  #h(5mm) 本件は事故として処理し、終了とする。
-  #v(8mm)
-  #line(length: 100%, stroke: 0.4pt + rule)
-  #v(2mm)
-  #text(size: 9.5pt)[【7条1号】　　【7条5号】]
+  #block(width: 100%, inset: (x: 2mm, y: 1.6mm), stroke: hair)[
+    #set text(size: 8pt)
+    #set par(leading: 0.55em, spacing: 0.35em)
+    ※　不開示の部分は、霞ノ杜町情報公開条例第7条第1号（個人に関する情報）および第5号（事務事業に関する情報）に該当するため、開示していません。帯の下に文字は残していません。 \
+    【7条1号】　　【7条5号】
+  ]
 ]

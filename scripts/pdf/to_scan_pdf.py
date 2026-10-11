@@ -1,8 +1,7 @@
 """Typst で組んだ公文書を、コピー機を通したスキャンに近づける。
 
-文字はぼかしてから紙の繊維と乗算し、インクが染みたようにする。
-全体に粒状のノイズと、四隅が暗い周辺減光を足す。傾きは 0.1〜0.2 度。
-不開示の帯は、縁だけトナーのスレにし、内側は検査が通るほぼ一様な黒にする。
+紙は白のままにする。変えるのは文字で、縁をぼかし、輪郭を少し欠いて、インクの濃さにムラを付ける。
+傾きは 0.1〜0.2 度。不開示の帯は、縁だけトナーのスレにし、内側は検査が通るほぼ一様な黒にする。
 
   python scripts/pdf/to_scan_pdf.py 入力.pdf 出力ディレクトリ
 """
@@ -16,8 +15,6 @@ import fitz
 import numpy as np
 from PIL import Image
 
-HERE = Path(__file__).resolve().parent
-PAPER = HERE / "assets" / "paper_texture.jpg"
 A4 = (1985, 2808)  # 240dpi
 
 
@@ -62,47 +59,32 @@ def _bars(gray: np.ndarray) -> np.ndarray:
     return mask
 
 
-def _paper(h: int, w: int) -> np.ndarray:
-    tex = np.asarray(Image.open(PAPER).convert("RGB").resize((w, h), Image.Resampling.LANCZOS), dtype=np.float32)
-    # 繊維の凹凸を文字より細かくする
-    hp = tex - cv2.GaussianBlur(tex, (0, 0), 2.2)
-    return np.clip(tex + hp * 1.8, 0, 255)
-
-
-def _soak(rgb: np.ndarray, tex: np.ndarray, bars: np.ndarray) -> np.ndarray:
-    """文字をぼかしてから紙と乗算し、繊維に染みたインクにする。"""
+def _scanned_type(rgb: np.ndarray, bars: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+    """紙は白。文字と罫線の輪郭だけ、スキャンのようにぼかし、欠き、濃さのムラを付ける。"""
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY).astype(np.float32)
-    paper_level = float(np.median(gray[gray > 170])) if np.any(gray > 170) else 230.0
-    density = np.clip((paper_level - gray) / max(paper_level, 1.0), 0, 1)
+    red = (rgb[:, :, 0] > rgb[:, :, 1] + 28) & (rgb[:, :, 0] > 110)
+    density = np.clip((236.0 - gray) / 236.0, 0, 1)
     density[bars > 0] = 0
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
-    thick = cv2.dilate((density > 0.18).astype(np.uint8), kernel, iterations=1)
-    density = np.maximum(density, thick.astype(np.float32) * 0.22)
-    density = cv2.GaussianBlur(density, (0, 0), 0.9)
+    density[red] = 0
+    # 縁（濃さが中間のところ）に粒を足して、輪郭をギザつかせる
+    edge = cv2.Laplacian((density * 255).astype(np.uint8), cv2.CV_32F)
+    edge = np.clip(np.abs(edge) / 80.0, 0, 1)
+    speckle = rng.normal(0, 1, density.shape).astype(np.float32)
+    speckle = cv2.GaussianBlur(speckle, (0, 0), 0.45)
+    density = np.clip(density + speckle * (0.05 + 0.22 * edge), 0, 1)
+    density = cv2.GaussianBlur(density, (0, 0), 1.25)
     density[bars > 0] = 0
-    fiber = tex / np.maximum(tex.mean(axis=(0, 1), keepdims=True), 1.0)
-    base = rgb.astype(np.float32)
-    # 濃いところほど紙の色が残り、ベタ黒で浮かない
-    ink = base * (1.0 - density[..., None] * 0.93) * (0.78 + 0.22 * fiber)
-    out = np.where(density[..., None] > 0.02, ink, base * (0.9 + 0.1 * fiber))
+    density[red] = 0
+    # 画の中でも濃さを揺らす
+    mottling = cv2.GaussianBlur(rng.normal(0, 1, density.shape).astype(np.float32), (0, 0), 1.4)
+    darkness = np.clip(density * (0.86 + 0.08 * mottling), 0, 0.93)
+    paper = np.full(rgb.shape, 252, np.float32)
+    paper += rng.normal(0, 1.6, paper.shape)
+    out = paper * (1.0 - darkness[..., None])
+    # 朱印はそのまま、縁だけ少しぼかす
+    seal = cv2.GaussianBlur(rgb, (0, 0), 0.6)
+    out[red] = seal[red]
     return np.clip(out, 0, 255).astype(np.uint8)
-
-
-def _noise_and_vignette(rgb: np.ndarray, rng: np.random.Generator) -> np.ndarray:
-    h, w = rgb.shape[:2]
-    acc = rgb.astype(np.float32)
-    acc += rng.normal(0, 4.2, acc.shape)
-    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
-    nx = (xx - w / 2) / (w / 2)
-    ny = (yy - h / 2) / (h / 2)
-    radius = nx * nx * 0.85 + ny * ny
-    vignette = 1.04 - 0.18 * np.power(np.clip(radius, 0, 1.6), 1.05)
-    # 左上をわずかに明るく、右下と四隅を落とす
-    light = 1.0 + 0.045 * (-0.6 * nx - 0.8 * ny)
-    edge = np.minimum(np.minimum(xx, w - 1 - xx) / (w * 0.045), np.minimum(yy, h - 1 - yy) / (h * 0.035))
-    corners = 0.86 + 0.14 * np.clip(edge, 0, 1)
-    acc *= (vignette * light * corners)[..., None]
-    return np.clip(acc, 0, 255).astype(np.uint8)
 
 
 def _toner(mask: np.ndarray, rng: np.random.Generator) -> np.ndarray:
@@ -132,9 +114,8 @@ def scan_page(rgb: np.ndarray, seed: int = 1) -> np.ndarray:
     angle = float(rng.uniform(0.1, 0.2) * rng.choice(np.array([-1.0, 1.0])))
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
     bars = _bars(gray)
-    soaked = _soak(rgb, _paper(*rgb.shape[:2]), bars)
-    noisy = _noise_and_vignette(soaked, rng)
-    turned, mask = _skew(noisy, bars, angle)
+    typed = _scanned_type(rgb, bars, rng)
+    turned, mask = _skew(typed, bars, angle)
     tone = _toner(mask, rng)
     turned[mask > 0] = tone[mask > 0, None]
     return turned

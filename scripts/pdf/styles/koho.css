@@ -1,5 +1,6 @@
-:root { --ac: #1a4d80; --tint: #e8f0fa; --tint2: #f4f7fb; --rule: #8b98a8; }
+:root { --ac: #2f9e44; --ac-d: #1f7a34; --pink: #e23b78; --tint: #e7f6ea; --tint2: #f4fbf5; --rule: #b7d7be; --sun: #fff4c2; }
 .sheet { position: absolute; left: 11mm; right: 11mm; top: 8mm; bottom: 12mm; display: flex; flex-direction: column; }
+.sheet::after { content: ""; margin-top: auto; height: 3.2mm; background: radial-gradient(circle, var(--ac) 0.55mm, transparent 0.7mm) left center / 4.2mm 3.2mm repeat-x; }
 .running { display: flex; justify-content: space-between; align-items: baseline; font-size: 8pt; border-bottom: 0.45mm solid var(--ac); padding-bottom: 1mm; }
 .running b { font-size: 9.5pt; color: var(--ac); }
 
@@ -74,3 +75,39 @@ table.cal .mark { display: block; font-weight: 400; font-size: 6.7pt; line-heigh
 table.cal.compact td { height: 8.2mm; font-size: 7.4pt; }
 table.cal.compact .mark { font-size: 6pt; }
 .hol-note { margin-top: 1.2mm; font-size: 7.6pt; line-height: 1.45; }
+
+/* 習志野市広報に寄せた紙面 */
+.brandline { display: flex; justify-content: space-between; align-items: flex-end; gap: 4mm; }
+.brandline .town { font-size: 8pt; font-weight: 700; color: var(--ac-d); letter-spacing: 0.12em; }
+.brandline .kana { font-size: 9pt; color: var(--ac); letter-spacing: 0.28em; }
+.brandline h1 { font-size: 26pt; letter-spacing: 0.04em; line-height: 1; margin-top: 0.4mm; }
+.brandline h1 span { font-size: 13pt; letter-spacing: 0.18em; margin-right: 1.5mm; vertical-align: 2mm; }
+.badge { width: 24mm; height: 24mm; border-radius: 50%; background: var(--ac); color: #fff; text-align: center; display: flex; flex-direction: column; justify-content: center; line-height: 1.05; }
+.badge b { font-size: 8pt; font-weight: 700; }
+.badge strong { font-size: 13pt; font-weight: 700; }
+.badge span { font-size: 7pt; }
+.contents { margin-top: 2mm; font-size: 8pt; font-weight: 700; letter-spacing: 0.14em; color: var(--ac-d); }
+.toc li { display: flex; align-items: baseline; gap: 1.4mm; padding: 0.7mm 0; border-bottom: none; }
+.toc li i { width: 2.2mm; height: 2.2mm; background: var(--ac); flex: none; }
+.toc .dots { flex: 1; border-bottom: 0.35mm dotted #9aa; transform: translateY(-0.6mm); }
+.toc .pg { font-weight: 700; color: var(--ac-d); }
+.cover::after { display: none; }
+.hero { position: relative; margin-top: 1.6mm; }
+.hero img { width: 100%; height: 108mm; object-fit: cover; display: block; }
+.overlay small { display: block; margin-top: 1.4mm; font-size: 7.6pt; font-weight: 400; }
+.overlay { position: absolute; left: 0; right: 0; bottom: 0; color: #fff; background: rgba(20, 70, 30, 0.72); padding: 3mm 4mm 3.5mm; }
+.overlay span { display: block; font-size: 11pt; font-weight: 700; }
+.overlay b { display: block; font-size: 20pt; line-height: 1.25; margin-top: 1mm; }
+.photocap { margin-top: 1.2mm; font-size: 8pt; background: #f3f3f3; padding: 1.2mm 2mm; }
+.runbar { display: flex; justify-content: space-between; font-size: 8pt; border-bottom: 0.7mm solid var(--ac); padding-bottom: 1mm; margin-bottom: 2mm; }
+.runbar .rb-l, .runbar span:first-child { font-weight: 700; color: var(--ac-d); }
+.grid2.tight { column-gap: 4.5mm; margin-top: 0; }
+.dept { display: inline-block; margin: 0 0 1mm auto; float: right; background: var(--ac); color: #fff; font-size: 7.6pt; font-weight: 700; padding: 0.5mm 1.6mm; }
+.feat { margin: 0 0 3.2mm; }
+.feat-h { font-size: 13.5pt; line-height: 1.25; color: var(--ac-d); border-left: none; background: none; padding: 0; margin: 0 0 1.4mm; clear: both; }
+.feat-h .num { display: inline-block; min-width: 5.5mm; height: 5.5mm; margin-right: 1.4mm; background: var(--ac); color: #fff; border-radius: 50%; text-align: center; line-height: 5.5mm; font-size: 8pt; vertical-align: 0.4mm; }
+.feat-body p { font-size: 8.4pt; line-height: 1.55; text-align: justify; }
+.toi { display: flex; gap: 1.2mm; align-items: center; margin-top: 1.4mm; font-size: 7.8pt; }
+.toi-mark { background: #111; color: #fff; font-weight: 700; font-size: 7.4pt; padding: 0.3mm 1mm; }
+.nombre { width: 6.5mm; height: 6.5mm; border-radius: 50%; background: var(--ac); color: #fff; text-align: center; line-height: 6.5mm; font-size: 8pt; }
+table.cal th { background: var(--ac); }

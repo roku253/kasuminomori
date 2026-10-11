@@ -12,7 +12,7 @@ function issue(partial) {
   if (sheets.length !== 11) throw new Error(`${partial.id}: 中ページは11枚（表紙と合わせて12）`);
   return {
     template: "koho",
-    pages: 12,
+    pages: 8,
     checks: {
       mustContain: [{ page: 1, text: `No.${partial.no}` }, { page: 1, text: partial.mark }],
       mustNotContain: ban,

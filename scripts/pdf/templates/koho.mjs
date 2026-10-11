@@ -205,88 +205,130 @@ function columns(left, right) {
   return h`<div class="grid2"><div class="col">${left.map(art)}</div><div class="col">${right.map(art)}</div></div>`;
 }
 
+function flattenArts(doc) {
+  const arts = [];
+  let cal = null;
+  let pop = null;
+  for (const sheet of doc.sheets) {
+    const all = [
+      ...(sheet.articles || []),
+      ...((sheet.two || []).flat()),
+      ...(sheet.side ? [sheet.side] : []),
+      ...(sheet.moreRight || []),
+      ...(sheet.moreLeft || []),
+      ...(sheet.below ? [sheet.below] : []),
+    ];
+    for (const a of all) {
+      if (!a?.h) continue;
+      if (String(a.h).includes("カレンダー")) cal = a;
+      else if (a.h === "人口") pop = a;
+      else arts.push(a);
+    }
+  }
+  return { arts, cal, pop };
+}
+
+function deptOf(a) {
+  const hit = (a.body || []).find((b) => b && b.toi);
+  return hit ? String(hit.toi).split(/\s+/)[0] : "広報情報係";
+}
+
+function feature(a, n) {
+  return h`<section class="feat">
+    <p class="dept">${t(deptOf(a))}</p>
+    <h2 class="feat-h"><span class="num">${n}</span>${t(a.h)}</h2>
+    <div class="feat-body">${blocks(a.body || [])}</div>
+  </section>`;
+}
+
+function runbar(doc) {
+  return h`<p class="runbar"><span>広報かすみのもり　${doc.month}月10日発行</span><span>霞ノ杜町役場　${TOWN.tel}</span></p>`;
+}
+
+function chunks(arr, n) {
+  const size = Math.max(1, Math.ceil(arr.length / n));
+  const pages = [];
+  for (let i = 0; i < arr.length; i += size) pages.push(arr.slice(i, i + size));
+  return pages;
+}
+
 export default {
   render(doc) {
     const date = full(doc.issued);
     const events = collectEvents(doc);
+    const { arts, pop } = flattenArts(doc);
+    const issued = parseIsoDate(doc.issued);
+    const groups = chunks(arts, 4);
+    const calNo = groups.length + 2;
+    const backNo = calNo + 1;
+    const toc = groups.map((g, i) => [g[0]?.h || "くらしの情報", String(i + 2)]);
+    toc.push(["くらしのカレンダー", String(calNo)], ["人口・奥付", String(backNo)]);
+    const pos = doc.cover.photo.includes("terraces") ? "object-position:50% 85%" : "object-position:center";
     const cover = h`<section class="page"><div class="sheet cover">
-      <header class="mastbar">
+      <header class="brandline">
         <div>
-          <p class="brand">霞ノ杜町　毎月10日発行</p>
-          <h1>広報かすみのもり</h1>
+          <p class="town">霞ノ杜町</p>
+          <p class="kana">かすみのもり</p>
+          <h1><span>広報</span>かすみのもり</h1>
         </div>
-        <div class="issuemeta">
-          <p class="no">No.${doc.no}</p>
-          <p>${doc.month}月号</p>
-          <p>${date}</p>
+        <div class="badge">
+          <b>${issued.y}</b>
+          <strong>${issued.m}.${issued.d}</strong>
+          <span>No.${doc.no}</span>
         </div>
       </header>
-      <figure class="hero"><img src="${publicFile(doc.cover.photo)}" alt="" style="${doc.cover.photo.includes("terraces") ? "object-position:50% 85%" : ""}"><figcaption>写真　${t(doc.cover.caption)}</figcaption></figure>
-      <div class="cover-mid">
-        <div>
-          <h2 class="toc-h">今号のもくじ</h2>
-          <ul class="toc">${doc.cover.toc.map(([label, pg]) => h`<li><span class="label">${t(label)}</span><span class="pg">${pg}</span><span class="blurb">${t(blurb(doc, pg))}</span></li>`)}</ul>
-        </div>
-        <div class="read">
-          <h2 class="toc-h">${doc.month}月の閉庁</h2>
-          <p>${holidayLine(doc.issued)}</p>
-          <p>役場の窓口は、平日8時30分から17時15分です。代表電話は ${TOWN.tel} です。</p>
-          ${doc.cover.note ? h`<p>${t(doc.cover.note)}</p>` : ""}
-        </div>
-      </div>
-      <div class="cal-wrap">
-        <h2>${doc.month}月</h2>
-        ${calendar(doc.issued, events, true)}
-      </div>
-      <div class="boxes">
-        <div class="box"><b>配布</b><p>毎月10日、町内の全世帯へ。集会所と役場1階にも置きます。</p></div>
-        <div class="box"><b>窓口</b><p>平日 8:30〜17:15。代表 ${TOWN.tel}</p></div>
-      </div>
-    </div><p class="nombre right">1</p></section>`;
+      <p class="contents">Contents</p>
+      <ul class="toc">${toc.map(([label, pg]) => h`<li><i></i><span class="label">${t(label)}</span><span class="dots"></span><span class="pg">${pg}</span></li>`)}</ul>
+      <figure class="hero">
+        <img src="${publicFile(doc.cover.photo)}" alt="" style="${pos}">
+        <figcaption class="overlay"><span>${t(doc.mark)}</span><b>${t(arts[0]?.h || doc.mark)}</b><small>写真　${t(doc.cover.caption)}${doc.cover.note ? "　" + doc.cover.note : ""}</small></figcaption>
+      </figure>
+    </div></section>`;
 
-    const rest = doc.sheets.map((sheet, i) => {
-      const n = i + 2;
-      const isCal = (sheet.articles || []).some((a) => String(a.h).includes("カレンダー"));
-      let body;
-      if (n === 12) {
-        const nums = popOf(sheet);
-        const pop = (sheet.articles || []).filter((a) => a.h === "人口");
-        body = h`${columns(
-          [
-            ...pop,
-            ...(nums ? [{ h: "地区別", body: ["住民基本台帳の地区別です。人口と世帯の合計は、上の数と一致します。", districts(nums[0], nums[1])] }] : []),
-            { h: "町民文芸", body: [ESSAY[doc.month] || ""] },
-            { h: "編集後記", body: [EDITOR[doc.month] || ""] },
-          ],
-          [
-            {
-              h: "課の電話",
-              body: [
-                `代表 ${TOWN.tel} のあと、内線を伝えてください。`,
-                { table: { cls: "data", widths: ["58%", "18%", "24%"], head: ["担当", "階", "内線"], rows: DIRECTORY } },
-              ],
-            },
-          ],
-        )}<div class="below">${art({
-          h: "窓口とバス",
-          body: [
-            "役場は平日 8:30〜17:15です。診療所は平日 9:00〜17:00、土曜 9:00〜12:00。図書館は火〜金 9:30〜18:00、土曜 9:30〜17:00で、日曜・月曜と祝日は休館です。",
-            Tbus(),
-          ],
-        })}</div>${colophon(doc, date)}`;
-      } else if (isCal) {
-        body = h`<div class="cal-wrap"><h2>${sheet.articles[0].h}</h2>${calendar(doc.issued, events, false)}<p class="hol-note">${t(holidayLine(doc.issued))} 色の付いた日は、この号で案内している日です。</p></div>${art({ ...sheet.articles[0], h: "この月の主な日" })}`;
-      } else {
-        const left = sheet.two ? sheet.two[0] : sheet.articles || [];
-        const right = sheet.two ? sheet.two[1] : [...(sheet.side ? [sheet.side] : []), ...(sheet.moreRight || [])];
-        const cols = right.length ? columns(left, right) : h`<div class="flow">${left.map(art)}</div>`;
-        body = h`${cols}${sheet.below ? h`<div class="below">${art(sheet.below)}</div>` : ""}`;
-      }
+    let seq = 1;
+    const middles = groups.map((group, gi) => {
+      const n = gi + 2;
+      const left = group.filter((_, i) => i % 2 === 0);
+      const right = group.filter((_, i) => i % 2 === 1);
+      const col = (list) => list.map((a) => feature(a, seq++));
       return h`<section class="page"><div class="sheet">
-        <p class="running"><span><b>広報かすみのもり</b>　No.${doc.no}　${doc.month}月号</span><span>${date}</span></p>
-        ${body}
+        ${runbar(doc)}
+        <div class="grid2 tight"><div class="col">${col(left)}</div><div class="col">${col(right)}</div></div>
       </div><p class="nombre ${n % 2 ? "right" : "left"}">${n}</p></section>`;
     });
-    return { styles: css("base.css", "koho.css"), pages: [cover, ...rest] };
+
+    const calPage = h`<section class="page"><div class="sheet">
+      ${runbar(doc)}
+      <p class="dept">広報情報係</p>
+      <h2 class="feat-h"><span class="num">●</span>${doc.month}月のくらしのカレンダー</h2>
+      <div class="cal-wrap">${calendar(doc.issued, events, false)}</div>
+      <p class="hol-note">${t(holidayLine(doc.issued))}　色の付いた日は、この号で案内している日です。</p>
+    </div><p class="nombre left">${calNo}</p></section>`;
+
+    const nums = pop ? popOf({ articles: [pop] }) : null;
+    const back = h`<section class="page"><div class="sheet">
+      ${runbar(doc)}
+      <div class="grid2 tight">
+        <div class="col">
+          ${feature(pop || { h: "人口", body: [] }, 1)}
+          ${nums ? feature({ h: "地区別の人口", body: ["住民基本台帳の地区別です。人口と世帯の合計は、上の数と一致します。", districts(nums[0], nums[1])] }, 2) : ""}
+          ${feature({ h: "編集後記", body: [EDITOR[doc.month] || "", ESSAY[doc.month] || ""] }, 3)}
+        </div>
+        <div class="col">
+          ${feature({
+            h: "課の電話",
+            body: [
+              "代表電話のあと、内線を伝えてください。",
+              { table: { cls: "data", widths: ["58%", "18%", "24%"], head: ["担当", "階", "内線"], rows: DIRECTORY } },
+            ],
+          }, 4)}
+        </div>
+      </div>
+      ${colophon(doc, date)}
+    </div><p class="nombre right">${backNo}</p></section>`;
+
+    const pages = [cover, ...middles, calPage, back];
+    doc.pages = pages.length;
+    return { styles: css("base.css", "koho.css"), pages };
   },
 };

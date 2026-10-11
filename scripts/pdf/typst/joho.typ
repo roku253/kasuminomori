@@ -1,7 +1,6 @@
 // 情報提供資料の1ページ。公文書の通知の体裁（明朝・黒枠・印）。2〜3ページは写しの画像。
 #let data = json(sys.inputs.data)
 #let ink = rgb("#1a1a1a")
-#let seal = rgb("#b02020")
 
 #set text(font: "BIZ UDPMincho", fill: ink, size: 10.5pt, lang: "ja")
 #set par(justify: true, leading: 0.85em, first-line-indent: 1em, spacing: 0.75em)
@@ -50,21 +49,13 @@
 #block(width: 100%)[#text(size: 9.5pt)[#data.ask]]
 
 #v(6mm)
-#grid(
-  columns: (1fr, 22mm),
-  column-gutter: 4mm,
-  align: horizon,
-  text(size: 8.5pt)[
-    #data.office \
-    #data.postal　#data.address \
-    電話 #data.tel（代表）
-  ],
-  box(width: 16mm, height: 16mm)[
-    #place(center + horizon, circle(radius: 7.2mm, stroke: 0.7pt + seal))
-    #place(center + horizon, circle(radius: 6.2mm, stroke: 0.3pt + seal))
-    #place(center + horizon, text(font: "BIZ UDPMincho", fill: seal, size: 8pt)[印])
-  ],
-)
+#text(size: 8.5pt)[
+  #data.office \
+  #data.postal　#data.address \
+  電話 #data.tel（代表）
+]
+#v(1.4mm)
+#text(size: 8.5pt)[（公印省略）]
 
 #page(margin: 0pt, header: none, footer: none)[
   #image(data.copy1, width: 100%, height: 100%, fit: "stretch")

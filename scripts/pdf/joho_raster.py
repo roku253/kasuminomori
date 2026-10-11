@@ -1,8 +1,9 @@
 """情報提供資料の2〜3ページ。公文書の写し。文字は画像の中だけ。帯は一様な黒で、種類ごとに同じ長さ。"""
+import random
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 W, H = 1985, 2808  # A4 @ 240dpi
 INK = (32, 32, 32)
@@ -29,6 +30,7 @@ class Sheet:
         self.small = font(3.1)
         self.lead = font(4.2)
         self.title = font(4.6)
+        self.bars = []
 
     def lh(self, f):
         return int(f.size * 1.85)
@@ -56,7 +58,9 @@ class Sheet:
         self.y += mm(2.4)
 
     def bar(self, x, y, width):
-        self.d.rectangle([x, y, x + width, y + mm(3.1)], fill=(0, 0, 0))
+        h = mm(3.1)
+        self.d.rectangle([x, y, x + width, y + h], fill=(0, 0, 0))
+        self.bars.append((int(x), int(y), int(width), h))
 
     def inline(self, parts, f=None, indent=0, align="left"):
         """parts: ('t', str) or ('b', 'line'|'short'). 帯の幅は種類ごとに固定。"""
@@ -83,15 +87,47 @@ class Sheet:
             x += w
         self.y += self.lh(f)
 
-    def seal(self, cx, cy):
-        r = mm(8)
-        self.d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=RED, width=4)
-        self.d.ellipse([cx - r + mm(1.1), cy - r + mm(1.1), cx + r - mm(1.1), cy + r - mm(1.1)], outline=RED, width=2)
-        mark = "印"
-        f = font(3.4)
-        box = self.d.textbbox((0, 0), mark, font=f)
-        tw, th = box[2] - box[0], box[3] - box[1]
-        self.d.text((cx - tw / 2, cy - th / 2 - mm(0.6)), mark, font=f, fill=RED)
+    def name_seal(self, x, y, surname="宮坂"):
+        """教育長の認印。白文の二字を朱肉のムラと傾きで押す。"""
+        S = 480
+        im = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        red = (178, 26, 22, 255)
+        m = 26
+        d.rectangle([m, m, S - m, S - m], fill=red)
+        holes = Image.new("L", (S, S), 0)
+        hd = ImageDraw.Draw(holes)
+        inset = m + 18
+        hd.rectangle([inset, inset, S - inset, S - inset], outline=255, width=9)
+        f = ImageFont.truetype(str(FONT), 168)
+        top, bottom = surname[0], surname[1]
+        for i, ch in enumerate((top, bottom)):
+            box = hd.textbbox((0, 0), ch, font=f)
+            tw, th = box[2] - box[0], box[3] - box[1]
+            cx = (S - tw) / 2 - box[0]
+            cy = S * (0.18 if i == 0 else 0.52) - box[1]
+            hd.text((cx, cy), ch, font=f, fill=255)
+        pix = im.load()
+        hole = holes.load()
+        rnd = random.Random(19)
+        for yy in range(S):
+            for xx in range(S):
+                if hole[xx, yy] > 80:
+                    pix[xx, yy] = (0, 0, 0, 0)
+                    continue
+                r, g, b, a = pix[xx, yy]
+                if a == 0:
+                    continue
+                n = rnd.randrange(100)
+                if n < 5:
+                    pix[xx, yy] = (0, 0, 0, 0)
+                elif n < 14:
+                    pix[xx, yy] = (min(255, r + 48), min(255, g + 36), min(255, b + 28), 150)
+        im = im.filter(ImageFilter.GaussianBlur(0.7))
+        im = im.rotate(2.6, resample=Image.BICUBIC, expand=True)
+        side = mm(13.5)
+        im = im.resize((side, side), Image.Resampling.LANCZOS)
+        self.im.paste(im, (int(x), int(y)), im)
 
 
 def page2():
@@ -107,8 +143,9 @@ def page2():
     s.line("霞ノ杜町長　様")
     s.gap(2)
     name_y = s.y
-    s.line("霞ノ杜町教育委員会教育長", indent=78)
-    s.seal(s.right - mm(12), name_y + mm(2))
+    title = "霞ノ杜町教育委員会教育長"
+    s.line(title, indent=62)
+    s.name_seal(s.left + mm(62) + s.width(title, s.body) - mm(3), name_y - mm(1))
     s.gap(6)
     s.line("烏啼山道付近立入禁止区域における事案について（報告）", s.title, center=True)
     s.gap(1)
@@ -130,7 +167,7 @@ def page2():
     s.inline([("b", "line")], indent=6)
     s.inline([("b", "line")], indent=6)
     s.line("…搬送された。", indent=6)
-    return s.im
+    return s
 
 
 def page3():
@@ -160,15 +197,59 @@ def page3():
     s.gap(8)
     s.rule(1)
     s.line("【7条1号】　　【7条5号】", s.small)
-    return s.im
+    return s
+
+
+def as_scan(im, bars, seed):
+    """紙の地色・にじみ・傾き・端の影・ゴミ。黒い帯は最後に純黒へ戻す。"""
+    im = im.convert("RGB")
+    w, h = im.size
+    paper = (236, 231, 221)
+    channels = []
+    for i, ch in enumerate(im.split()):
+        pc = paper[i]
+        channels.append(ch.point(lambda v, pc=pc: 0 if v < 12 else int(v * pc / 255)))
+    im = Image.merge("RGB", channels)
+    im = im.filter(ImageFilter.GaussianBlur(0.4))
+    shade = Image.new("L", (w, h), 0)
+    sd = ImageDraw.Draw(shade)
+    band = int(w * 0.02)
+    for k in range(band):
+        a = int(24 * (1 - k / band) ** 2)
+        sd.line([(k, 0), (k, h)], fill=a)
+    for k in range(int(h * 0.012)):
+        a = int(12 * (1 - k / (h * 0.012)) ** 2)
+        sd.line([(0, k), (w, k)], fill=a)
+    shade = shade.filter(ImageFilter.GaussianBlur(7))
+    dark = im.convert("L").point(lambda v: 255 if v < 18 else 0)
+    im = Image.composite(im, ImageChops.subtract(im, Image.merge("RGB", (shade, shade, shade))), dark)
+    rnd = random.Random(seed)
+    d = ImageDraw.Draw(im)
+    for _ in range(56):
+        x, y = rnd.randrange(w), rnd.randrange(h)
+        if im.getpixel((x, y))[0] < 150:
+            continue
+        r = 1 if rnd.random() < 0.8 else 2
+        g = rnd.randrange(145, 188)
+        d.ellipse([x - r, y - r, x + r, y + r], fill=(g, max(0, g - 6), max(0, g - 12)))
+    angle = 0.32 if seed % 2 == 0 else -0.26
+    mask = Image.new("L", (w, h), 0)
+    md = ImageDraw.Draw(mask)
+    for x, y, bw, bh in bars:
+        md.rectangle([x, y, x + bw, y + bh], fill=255)
+    im = im.rotate(angle, resample=Image.BICUBIC, expand=False, fillcolor=paper)
+    mask = mask.rotate(angle, resample=Image.NEAREST, expand=False, fillcolor=0)
+    im = Image.composite(Image.new("RGB", (w, h), (0, 0, 0)), im, mask)
+    return im
 
 
 def main(out_dir: Path):
     out_dir.mkdir(parents=True, exist_ok=True)
     a = out_dir / "joho-p2.jpg"
     b = out_dir / "joho-p3.jpg"
-    page2().save(a, quality=92)
-    page3().save(b, quality=92)
+    p2, p3 = page2(), page3()
+    as_scan(p2.im, p2.bars, 2).save(a, quality=84, dpi=(240, 240))
+    as_scan(p3.im, p3.bars, 3).save(b, quality=84, dpi=(240, 240))
     print(a)
     print(b)
 

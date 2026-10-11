@@ -35,7 +35,8 @@ npm run check:pdf
 ## 中身
 
 - `typst/koho.typ` … 広報（表紙の写真、2列のもくじ、2段の本文）
-- `typst/flow.typ` … 議会だより、地域安全通信
+- `typst/anzen.typ` … 地域安全通信（題字・回覧欄・2段・連絡欄）
+- `typst/flow.typ` … 議会だより
 - `typst/joho.typ` … 情報提供資料。2〜3ページは `joho_raster.py` の画像
 - `typst/prepare.mjs` … `docs/*.mjs` を JSON にする
 - `post.py` … 作中の文書情報に直し、許可した字体だけが埋まっていることを確かめる

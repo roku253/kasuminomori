@@ -5,7 +5,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { TOWN, unit } from "../lib/town.mjs";
+import { full } from "../lib/dates.mjs";
+import { TOWN, telNo, unit } from "../lib/town.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, "..", "..", "..");
@@ -188,6 +189,97 @@ function collectStrings(v, out, seen) {
     if (k === "checks" || k === "meta" || k === "file" || k === "template") continue;
     collectStrings(val, out, seen);
   }
+}
+
+function rich(s) {
+  const parts = [];
+  const re = /\*\*(.+?)\*\*/g;
+  let last = 0;
+  let m;
+  const text = String(s);
+  while ((m = re.exec(text))) {
+    if (m.index > last) parts.push({ text: text.slice(last, m.index), strong: false });
+    parts.push({ text: m[1], strong: true });
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push({ text: text.slice(last), strong: false });
+  return parts.length ? parts : [{ text, strong: false }];
+}
+
+function anzenBlock(b) {
+  if (b == null) return null;
+  if (typeof b === "string") return { t: "p", parts: rich(b) };
+  if (typeof b.p === "string") return { t: "p", parts: rich(b.p), lead: b.cls === "lead" };
+  if (b.toi) {
+    const u = unit(b.toi);
+    return { t: "toi", text: `${u.name}　${telNo(b.toi)}` };
+  }
+  if (b.ordered || b.list) return { t: "list", ordered: !!b.ordered, items: b.list || [] };
+  if (b.table) {
+    const cell = (c) => (typeof c === "string" ? { t: c, a: "" } : { t: c?.t || "", a: c?.cls || "" });
+    return {
+      t: "table",
+      caption: b.table.caption || "",
+      head: b.table.head || [],
+      widths: b.table.widths || [],
+      rows: (b.table.rows || []).map((row) => row.map(cell)),
+    };
+  }
+  if (b.box) {
+    const items = [];
+    for (const inner of b.box.body || []) {
+      const block = anzenBlock(inner);
+      if (block?.t === "list") items.push(...block.items);
+      else if (block?.t === "p") items.push(block.parts.map((p) => p.text).join(""));
+    }
+    return { t: "box", title: b.box.title || "", warn: b.box.cls === "warn", items };
+  }
+  if (b.html) return { t: "map" };
+  return null;
+}
+
+function anzenArticle(a) {
+  if (a?.grid) return { grid: a.grid.map(anzenArticle) };
+  return {
+    title: a.title || "",
+    kicker: a.kicker || "",
+    sub: a.sub || "",
+    small: !!a.small,
+    body: (a.body || []).map(anzenBlock).filter(Boolean),
+  };
+}
+
+function anzenColumn(list, small) {
+  return (list || []).map((a) => {
+    const article = anzenArticle(a);
+    if (!small) return article;
+    if (article.grid) return { grid: article.grid.map((g) => ({ ...g, small: true })) };
+    return { ...article, small: true };
+  });
+}
+
+export function prepareAnzen(doc) {
+  const office = unit(doc.office);
+  return {
+    kind: "anzen",
+    no: doc.issue.no,
+    month: doc.issue.month,
+    date: full(doc.issue.date),
+    tagline: doc.tagline,
+    publisher: doc.publisher,
+    cooperation: doc.cooperation,
+    town: TOWN,
+    office: `${office.name}（役場${office.floor}）　電話 ${TOWN.tel}（内線 ${office.ext}）　FAX ${TOWN.fax}`,
+    contact: (doc.contact || []).map((s) => rich(s)),
+    top: {
+      title: doc.p1.top.title || "",
+      body: (doc.p1.top.body || []).map(anzenBlock).filter(Boolean),
+      aside: (doc.p1.top.aside || []).map(anzenBlock).filter(Boolean),
+    },
+    rest: anzenColumn(doc.p1.rest, false),
+    left: anzenColumn(doc.p2.left, true),
+    right: anzenColumn(doc.p2.right, true),
+  };
 }
 
 export function prepareFlow(doc) {

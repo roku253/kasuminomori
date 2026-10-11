@@ -18,7 +18,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { FONT_NAME_PATTERN } from "./lib/html.mjs";
 import { checkTownConstants } from "./lib/town.mjs";
-import { prepareFlow, prepareJoho, prepareKoho, writePayload } from "./typst/prepare.mjs";
+import { prepareAnzen, prepareFlow, prepareJoho, prepareKoho, writePayload } from "./typst/prepare.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, "..", "..");
@@ -113,6 +113,9 @@ async function buildOne(id) {
   if (doc.template === "koho") {
     template = "koho.typ";
     payload = prepareKoho(doc);
+  } else if (doc.template === "anzen") {
+    template = "anzen.typ";
+    payload = prepareAnzen(doc);
   } else if (doc.template === "joho") {
     template = "joho.typ";
     const rasterDir = path.join(CACHE, "raster");

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 300 236" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#e6edf5"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#1f4b7a" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect x="0.5" y="0.5" width="299" height="235" fill="#fff" stroke="#8b98a8"/>
+  <g fill="none" stroke="#c3cbd4" stroke-width="0.9">
+    <path d="M60 40 C110 30 160 8 220 4"/>
+    <path d="M70 70 C120 58 170 30 236 18"/>
+    <path d="M84 104 C130 92 186 52 240 44"/>
+    <path d="M96 140 C150 126 200 92 236 76"/>
+    <path d="M120 180 C170 166 214 132 240 112"/>
+  </g>
+  <path d="M268 4 C256 40 276 70 262 104 C250 136 270 170 258 206 L254 232" fill="none" stroke="#5f7186" stroke-width="6"/>
+  <path d="M268 4 C256 40 276 70 262 104 C250 136 270 170 258 206 L254 232" fill="none" stroke="#fff" stroke-width="2.4"/>
+  <path d="M128 160 L114 122 L130 86 L166 54 L208 28 L244 22 L250 50 L234 84 L204 112 L172 138 L148 160 Z" fill="url(#hatch)" stroke="#1f4b7a" stroke-width="1.2"/>
+  <path d="M114 122 L130 86 L166 54 M148 160 L172 138 L204 112" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-dasharray="1.6 2.6"/>
+  <path d="M22 214 C52 204 82 194 104 180 L122 166" fill="none" stroke="#1a1a1a" stroke-width="3.2"/>
+  <path d="M122 166 L150 140 L176 110 L204 80 L230 52 L244 34" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <line x1="116" y1="152" x2="142" y2="174" stroke="#1a1a1a" stroke-width="4.2"/>
+  <rect x="92" y="172" width="11" height="11" fill="#1a1a1a"/>
+  <rect x="144" y="170" width="11" height="11" fill="#1a1a1a"/>
+  <rect x="98" y="114" width="11" height="11" fill="#1a1a1a"/>
+  <rect x="190" y="128" width="11" height="11" fill="#1a1a1a"/>
+  <rect x="124" y="140" width="11" height="11" fill="#fff" stroke="#1a1a1a" stroke-width="1.4"/>
+  <rect x="236" y="86" width="11" height="11" fill="#fff" stroke="#1a1a1a" stroke-width="1.4"/>
+  <rect x="148" y="51" width="76" height="17" rx="2" fill="#fff" fill-opacity="0.92"/>
+  <line x1="216" y1="158" x2="178" y2="112" stroke="#1a1a1a" stroke-width="0.7"/>
+  <line x1="60" y1="144" x2="118" y2="156" stroke="#1a1a1a" stroke-width="0.7"/>
+  <g transform="translate(26 28)">
+    <circle r="11" fill="#fff" stroke="#1a1a1a"/>
+    <path d="M0 -8 L4 4 L0 1 L-4 4 Z" fill="#1a1a1a"/>
+  </g>
+</svg>

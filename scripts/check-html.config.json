@@ -20,7 +20,7 @@
       "id": "K-12",
       "label": "画面に出さない語（架空表示・旧称・誤った地名や校名・旧い電話番号の形・旧型の見出し・プレースホルダ）",
       "enforce": false,
-      "scopes": ["text", "attr", "title"],
+      "scopes": ["text", "attr", "title", "searchIndex", "sitemap"],
       "words": [
         "フィクション", "架空", "謎解き", "デモ用", "示意", "参考画像", "市政",
         "霞ノ杜町立霞ノ杜小学校", "町立霞ノ杜小学校", "各小学校", "三校区",
@@ -127,16 +127,26 @@
         "files": ["/pdf/gikai-r1-09.pdf", "/pdf/anzen-r1-09.pdf", "/pdf/anzen-r1-11.pdf", "/pdf/joho-teikyo-01.pdf"]
       },
       {
-        "id": "past",
-        "label": "町の歴史・過去の記事（一覧 /blog/ と年別。令和元年は /blog/2019/）",
-        "routes": ["/history/", "/blog/*"],
+        "id": "history",
+        "label": "町の歴史（伝承）",
+        "routes": ["/history/"],
+        "files": []
+      },
+      {
+        "id": "articles",
+        "label": "過去の記事（一覧 /blog/ と年別。令和元年は /blog/2019/）",
+        "routes": ["/blog/*"],
         "files": [],
         "_段階2": "サイト側の規則 src/lib/navigation.ts の STORY_LINK_GROUPS（/blog/ 前方一致・/history/）と同じ範囲。WP3a が過去の記事を別の route に置いたら両方を合わせる"
       }
     ],
     "forbidden": [
-      { "from": "past", "to": "archive" },
-      { "from": "archive", "to": "past" }
+      { "from": "history", "to": "archive" },
+      { "from": "archive", "to": "history" },
+      { "from": "articles", "to": "archive" },
+      { "from": "archive", "to": "articles" },
+      { "from": "history", "to": "articles" },
+      { "from": "articles", "to": "history" }
     ],
     "commonNav": {
       "id": "K-11-common",

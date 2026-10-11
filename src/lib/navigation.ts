@@ -4,7 +4,7 @@ export const MEGA_TOOLS = [
   { href: "/kurashi/tetsuzuki-navi/", label: "手続ナビ" },
   { href: "/kurashi/tetsuzuki-search/", label: "申請・手続早わかり検索" },
   { href: "/kurashi/bus-jikan/", label: "バス時刻表" },
-  { href: "/kurashi/bus-roke/", label: "バスロケ" },
+  { href: "/kurashi/bus-roke/", label: "運行情報" },
   { href: "/kurashi/gomi/", label: "ごみ収集曜日" },
   { href: "/kurashi/gomi-search/", label: "ごみ収集検索" },
   { href: "/kurashi/chizu/", label: "地図から探す" },
@@ -92,7 +92,7 @@ export const MEGA_COLUMNS = [
  * - LOCAL_NAV_EXCLUDE に当たるページは並べない（過去の記事は「お知らせ」のリニューアル告知から辿る＝物語の導線。
  *   サイト内検索・お知らせの詳細は一覧に要らない）。
  * - 物語ページ同士の相互リンクを作らない（確定版 ★・受け入れ条件 K-11）: 今のページが STORY_LINK_GROUPS の
- *   ある群に入るとき、ほかの群のページは並べない（例: 過去の記事のページに「資料室」を出さない）。
+ *   ある群に入るとき、ほかの群のページは並べない（資料室・過去の記事・町の歴史は別の群）。
  * WP3a が物語のページ（過去の記事の一覧・情報提供資料など）を足したら、ここの前方一致も見直すこと。
  */
 export const LOCAL_NAV_EXCLUDE: readonly string[] = ["/blog/", "/search/"];
@@ -111,5 +111,6 @@ export const SITEMAP_NO_CHILDREN: readonly string[] = ["/documents/"];
 
 export const STORY_LINK_GROUPS: readonly (readonly string[])[] = [
   ["/documents/"],
-  ["/blog/", "/history/"],
+  ["/blog/"],
+  ["/history/"],
 ];

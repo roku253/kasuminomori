@@ -34,7 +34,7 @@ test.describe("霞ノ杜町 — スモーク（使用感シミュレーション
   test("バス時刻表: 関連リンクが404にならない", async ({ page }) => {
     await page.goto(sitePath("kurashi/bus-jikan/"));
     const related = page.getByRole("complementary").filter({ hasText: "関連するページ" });
-    await related.getByRole("link", { name: "バスロケ" }).click();
+    await related.getByRole("link", { name: "運行情報" }).click();
     await expect(page).toHaveURL(/\/kasuminomori\/kurashi\/bus-roke\/?$/);
     await page.goto(sitePath("kurashi/bus-jikan/"));
     await related.getByRole("link", { name: "地図" }).click();

@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import data from "@/content/data/gomi.json";
+import { normalizeForMatch } from "@/lib/normalize";
 import { ToolForm, ToolStatus } from "./ToolForm";
 import { replaceQueryParam, useInitialQuery } from "./useToolQuery";
 
@@ -13,12 +14,12 @@ export function GomiCodeSearch() {
 
   const run = useCallback(
     (raw: string) => {
-      const q = raw.normalize("NFKC").trim();
+      const q = normalizeForMatch(raw);
       if (!q) {
         setMessage("");
         return;
       }
-      const hits = items.filter((item) => item.name.normalize("NFKC").includes(q));
+      const hits = items.filter((item) => normalizeForMatch(item.name).includes(q));
       if (!hits.length) {
         setMessage(ui.notFound.replace("{q}", q));
         return;

@@ -3,7 +3,7 @@
   "route": "/shisei/",
   "layout": "city",
   "title": "町政情報｜霞ノ杜町",
-  "description": "",
+  "description": "町長、議会、広報、選挙、庁舎の案内です。",
   "breadcrumbs": [
     {
       "label": "トップ",

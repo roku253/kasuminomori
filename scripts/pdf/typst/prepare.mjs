@@ -312,9 +312,20 @@ function projectPath(abs) {
 }
 
 export function prepareJoho(doc, copy1, copy2) {
-  const cover = asText(doc.cover);
-  const paras = cover.split(/\n+/).map((s) => s.trim()).filter((s) => s.length > 4);
-  return { kind: "joho", paras, copy1, copy2 };
+  const n = doc.notice;
+  return {
+    kind: "joho",
+    date: n.date,
+    paras: n.paras,
+    rows: n.rows,
+    ask: n.ask,
+    office: "霞ノ杜町 総務課 情報公開担当",
+    postal: TOWN.postalCode,
+    address: TOWN.address,
+    tel: TOWN.tel,
+    copy1,
+    copy2,
+  };
 }
 
 export function writePayload(dir, id, payload) {

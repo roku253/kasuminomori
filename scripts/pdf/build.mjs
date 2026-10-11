@@ -119,9 +119,12 @@ async function buildOne(id) {
   } else if (doc.template === "joho") {
     template = "joho.typ";
     const rasterDir = path.join(CACHE, "raster");
-    const drawn = spawnSync(PYTHON, [path.join(HERE, "joho_raster.py"), rasterDir], { encoding: "utf8" });
-    if (drawn.status !== 0) throw new Error(drawn.stderr || drawn.stdout || "写しの画像に失敗");
     const rel = (abs) => "/" + path.relative(ROOT, abs).split(path.sep).join("/");
+    const copyData = writePayload(dataDir, `${id}-copy`, { kind: "joho-copy" });
+    const copyPdf = path.join(CACHE, "raw", `${id}-copy.pdf`);
+    typstCompile("joho-copy.typ", copyData, copyPdf);
+    const drawn = spawnSync(PYTHON, [path.join(HERE, "joho_raster.py"), copyPdf, rasterDir], { encoding: "utf8" });
+    if (drawn.status !== 0) throw new Error(drawn.stderr || drawn.stdout || "写しの画像に失敗");
     payload = prepareJoho(doc, rel(path.join(rasterDir, "joho-p2.jpg")), rel(path.join(rasterDir, "joho-p3.jpg")));
   } else {
     payload = prepareFlow(doc);

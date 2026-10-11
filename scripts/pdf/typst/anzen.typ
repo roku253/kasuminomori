@@ -223,16 +223,17 @@
 #page(paper: "a4", margin: (top: 10mm, bottom: 15mm, x: 12mm))[
   #grid(
     columns: (1fr, 58mm),
-    rows: (34mm,),
     column-gutter: 4mm,
-    block(width: 100%, height: 100%, fill: navy, inset: (x: 5mm, y: 2.8mm), radius: 1.2mm)[
+    block(width: 100%, fill: navy, inset: (x: 5mm, y: 2.4mm), radius: 1.2mm)[
       #set par(spacing: 0pt, leading: 0.65em)
-      #block(spacing: 2.2mm)[
-        #text(fill: white, size: 8.6pt, tracking: 0.06em)[#data.tagline]
+      #box(height: 4.2mm, width: 100%)[
+        #align(bottom + left, text(fill: white, size: 8.6pt, tracking: 0.06em)[#data.tagline])
       ]
-      #block(spacing: 2.8mm)[
-        #text(fill: white, size: 26pt, weight: "bold", tracking: 0.06em)[地域安全通信]
+      #v(1.2mm)
+      #box(height: 10mm, width: 100%)[
+        #align(horizon + left, text(fill: white, size: 26pt, weight: "bold", tracking: 0.04em)[地域安全通信])
       ]
+      #v(1.2mm)
       #text(fill: white, size: 9.2pt, weight: "bold")[
         #text(size: 12.5pt)[第#data.no\号]
         #h(3mm)
@@ -241,7 +242,7 @@
         #data.date\発行
       ]
     ],
-    block(width: 100%, height: 100%, stroke: 0.5mm + black, inset: (x: 2mm, y: 1.6mm), radius: 1mm)[
+    block(width: 100%, stroke: 0.5mm + black, inset: (x: 2mm, y: 1.6mm), radius: 1mm)[
       #grid(
         columns: (1fr, auto),
         align: horizon,

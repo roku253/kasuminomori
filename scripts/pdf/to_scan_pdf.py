@@ -80,10 +80,39 @@ def _scanned_type(rgb: np.ndarray, bars: np.ndarray, rng: np.random.Generator) -
     darkness = np.clip(density * (0.86 + 0.08 * mottling), 0, 0.93)
     paper = np.full(rgb.shape, 252, np.float32)
     out = paper * (1.0 - darkness[..., None])
-    # 朱印はそのまま、縁だけ少しぼかす
-    seal = cv2.GaussianBlur(rgb, (0, 0), 0.6)
-    out[red] = seal[red]
     return np.clip(out, 0, 255).astype(np.uint8)
+
+
+def _press_seal(page: np.ndarray, original: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+    """朱印を、押しムラとインクの欠けがある押印にする。紙の色が透ける。"""
+    red = (original[:, :, 0] > original[:, :, 1] + 28) & (original[:, :, 0] > 110)
+    if not np.any(red):
+        return page
+    ys, xs = np.nonzero(red)
+    pad = 6
+    y0, y1 = max(0, int(ys.min()) - pad), min(page.shape[0], int(ys.max()) + pad + 1)
+    x0, x1 = max(0, int(xs.min()) - pad), min(page.shape[1], int(xs.max()) + pad + 1)
+    ink = red[y0:y1, x0:x1].astype(np.float32)
+    ink = cv2.GaussianBlur(ink, (0, 0), 0.55)
+    ch, cw = ink.shape
+    pressure = rng.random((max(3, ch // 10), max(3, cw // 10))).astype(np.float32)
+    pressure = cv2.resize(pressure, (cw, ch), interpolation=cv2.INTER_CUBIC)
+    pressure = 0.05 + 0.95 * np.clip(pressure, 0, 1)
+    # 片側が紙に乗っていない
+    tilt = np.linspace(0.25, 1.0, cw, dtype=np.float32)
+    if rng.random() < 0.5:
+        tilt = tilt[::-1]
+    pressure *= tilt[None, :]
+    gaps = rng.random((ch, cw)).astype(np.float32)
+    gaps = cv2.GaussianBlur(gaps, (0, 0), 0.9)
+    ink *= pressure
+    ink[gaps < 0.42] = 0
+    vermilion = np.array([168, 32, 26], np.float32)
+    paper = page[y0:y1, x0:x1].astype(np.float32)
+    stamped = paper * (1.0 - ink[..., None]) + vermilion * (paper / 252.0) * ink[..., None]
+    out = page.copy()
+    out[y0:y1, x0:x1] = np.clip(stamped, 0, 255).astype(np.uint8)
+    return out
 
 
 def _patchy_grain(rgb: np.ndarray, rng: np.random.Generator) -> np.ndarray:
@@ -142,7 +171,7 @@ def scan_page(rgb: np.ndarray, seed: int = 1) -> np.ndarray:
     angle = float(rng.uniform(0.1, 0.2) * rng.choice(np.array([-1.0, 1.0])))
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
     bars = _bars(gray)
-    typed = _patchy_grain(_scanned_type(rgb, bars, rng), rng)
+    typed = _press_seal(_patchy_grain(_scanned_type(rgb, bars, rng), rng), rgb, rng)
     turned, mask = _skew(typed, bars, angle)
     tone = _toner(mask, rng)
     turned[mask > 0] = tone[mask > 0, None]

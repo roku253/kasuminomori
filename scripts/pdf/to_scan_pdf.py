@@ -79,11 +79,39 @@ def _scanned_type(rgb: np.ndarray, bars: np.ndarray, rng: np.random.Generator) -
     mottling = cv2.GaussianBlur(rng.normal(0, 1, density.shape).astype(np.float32), (0, 0), 1.4)
     darkness = np.clip(density * (0.86 + 0.08 * mottling), 0, 0.93)
     paper = np.full(rgb.shape, 252, np.float32)
-    paper += rng.normal(0, 1.6, paper.shape)
     out = paper * (1.0 - darkness[..., None])
     # 朱印はそのまま、縁だけ少しぼかす
     seal = cv2.GaussianBlur(rgb, (0, 0), 0.6)
     out[red] = seal[red]
+    return np.clip(out, 0, 255).astype(np.uint8)
+
+
+def _patchy_grain(rgb: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+    """ざらつきの強さを場所で変える。きれいな面と、汚れた塊、横筋が混ざる。"""
+    h, w = rgb.shape[:2]
+    coarse = rng.normal(0, 1, (max(6, h // 90), max(6, w // 90))).astype(np.float32)
+    coarse = cv2.GaussianBlur(cv2.resize(coarse, (w, h), interpolation=cv2.INTER_CUBIC), (0, 0), 8)
+    # 大半はほぼ無地、ところどころだけ粒が濃い
+    amp = np.clip(np.maximum(coarse - 0.35, 0) * 14, 0.15, 16)
+    fine = rng.normal(0, 1, (h, w)).astype(np.float32)
+    dust = np.zeros((h, w), np.float32)
+    yy, xx = np.ogrid[0:h, 0:w]
+    for _ in range(int(rng.integers(5, 9))):
+        cx = int(rng.integers(0, w))
+        cy = int(rng.integers(0, h))
+        rad = float(rng.integers(40, 220))
+        dust += np.exp(-((xx - cx) ** 2 + (yy - cy) ** 2) / (2 * rad * rad)) * float(rng.uniform(14, 32))
+    streaks = np.zeros((h, w), np.float32)
+    for _ in range(int(rng.integers(1, 3))):
+        y0 = int(rng.integers(0, h))
+        thick = int(rng.integers(2, 6))
+        x0 = int(rng.integers(0, w // 2))
+        length = int(rng.integers(w // 5, w // 2))
+        y1, y2 = max(0, y0 - thick), min(h, y0 + thick)
+        x2 = min(w, x0 + length)
+        streaks[y1:y2, x0:x2] += float(rng.uniform(6, 12))
+    grain = fine * amp - dust * 0.55 - streaks
+    out = rgb.astype(np.float32) + grain[..., None]
     return np.clip(out, 0, 255).astype(np.uint8)
 
 
@@ -114,7 +142,7 @@ def scan_page(rgb: np.ndarray, seed: int = 1) -> np.ndarray:
     angle = float(rng.uniform(0.1, 0.2) * rng.choice(np.array([-1.0, 1.0])))
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
     bars = _bars(gray)
-    typed = _scanned_type(rgb, bars, rng)
+    typed = _patchy_grain(_scanned_type(rgb, bars, rng), rng)
     turned, mask = _skew(typed, bars, angle)
     tone = _toner(mask, rng)
     turned[mask > 0] = tone[mask > 0, None]

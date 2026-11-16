@@ -350,9 +350,12 @@
   )
 }
 
-#let feat = data.pages.position(p => p.kind == "articles")
+#if data.id == "koho-r8-10" {
+  include "october-r8-10.typ"
+} else {
+let feat = data.pages.position(p => p.kind == "articles")
 
-#for (pi, pg) in data.pages.enumerate() {
+for (pi, pg) in data.pages.enumerate() {
   if pg.kind == "cover" [
     #page(paper: "a4", margin: 0pt, header: none, footer: none)[
       #place(top + left)[
@@ -440,4 +443,5 @@
   ] else {
     panic("未知のページ: " + pg.kind)
   }
+}
 }

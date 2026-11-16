@@ -235,7 +235,7 @@ export function issue(id) {
     const rawPg = rawRow.pages[pi];
     return { ...pg, weeks: buildCalendarWeeks(rawPg, id) };
   });
-  const pages = padToTwelve(row, mapped);
+  const pages = id === "koho-r8-10" ? mapped : padToTwelve(row, mapped);
   return {
     template: "koho",
     file: `${id}.pdf`,

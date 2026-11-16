@@ -1,2 +1,2 @@
-import { sep } from "./_koho-issues.mjs";
-export default sep;
+import { issue } from "./_koho-load.mjs";
+export default issue("koho-r8-09");

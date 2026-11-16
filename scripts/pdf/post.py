@@ -5,7 +5,7 @@
 spec.mode = "finalize":
   - 文書情報（Info）と XMP を作中の値にし、Creator・Producer などツールの痕跡を消す。DisplayDocTitle・/Lang ja。
     → scripts/hazard/pdf_post.py の finalize_pdf を**共有**して使う（ハザードマップと同じ処理）。
-  - 検査（止める条件）: ページ数、全ページ A4 縦、フォントがすべて埋め込みで OFL の BIZ UDP だけ、
+  - 検査（止める条件）: ページ数、全ページ A4（portraitOnly なら縦だけ）、フォントがすべて埋め込みで scripts/pdf/fonts の OFL フォントだけ、
     mustContain（ページ指定可。空白・改行を除いて照合）、mustNotContain（文書全体）、仮の文字（1 行の中）、
     textlessPages（抽出できる文字 0・文字描画 0・フォント 0・全面画像 1 枚・黒帯の内側が一様な黒）、
     題名・説明・キーワードに事件の語が無いこと（tester K-08）、容量（既定 5MB）。
@@ -91,14 +91,18 @@ def finalize(spec: dict) -> None:
     texts = []
     for i, page in enumerate(doc, start=1):
         w, h = page.rect.width, page.rect.height
-        if abs(w - A4[0]) > 1.5 or abs(h - A4[1]) > 1.5:
+        portrait = abs(w - A4[0]) <= 1.5 and abs(h - A4[1]) <= 1.5
+        landscape = abs(w - A4[1]) <= 1.5 and abs(h - A4[0]) <= 1.5
+        if not (portrait or landscape):
+            problems.append(f"p{i}: A4 でない（{w:.2f}×{h:.2f}pt）")
+        if spec.get("portraitOnly") and not portrait:
             problems.append(f"p{i}: A4 縦でない（{w:.2f}×{h:.2f}pt）")
         for f in page.get_fonts(full=True):
             ext, basefont = f[1], f[3]
             if ext == "n/a":
                 problems.append(f"p{i}: 埋め込まれていないフォント {basefont}")
             if not font_re.match(basefont):
-                problems.append(f"p{i}: 想定外のフォント {basefont}（許可は BIZ UDP と Zen Kaku Gothic New。字形が無く代わりのフォントで描かれた字がある）")
+                problems.append(f"p{i}: 想定外のフォント {basefont}（許可は BIZ UDP・Zen Kaku Gothic New・Zen Maru Gothic・Kiwi Maru・Yomogi。字形が無く代わりのフォントで描かれた字がある）")
         text = page.get_text("text")
         texts.append(text)
         for ph in spec.get("placeholders", []):

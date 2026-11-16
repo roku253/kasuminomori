@@ -1,2 +1,2 @@
-import { aug } from "./_koho-issues.mjs";
-export default aug;
+import { issue } from "./_koho-load.mjs";
+export default issue("koho-r8-08");

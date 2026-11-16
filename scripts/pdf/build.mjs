@@ -134,18 +134,20 @@ async function buildOne(id) {
   typstCompile(template, dataFile, raw);
   const pages = pageCount(raw);
   const c = doc.checks || {};
+  const expectPages = Array.isArray(doc.pages) ? doc.pages.length : doc.pages;
   runPost(
     {
       mode: "finalize",
       src: raw,
       dst: path.join(PUBLIC_PDF, doc.file),
       meta: doc.meta,
-      pages,
+      pages: expectPages ?? pages,
       fontPattern: FONT_NAME_PATTERN,
       mustContain: c.mustContain || [],
       mustNotContain: [...ALWAYS_FORBIDDEN, ...(c.mustNotContain || [])],
       placeholders: PLACEHOLDERS,
       textlessPages: c.textlessPages || [],
+      portraitOnly: !!c.portraitOnly,
       maxBytes: c.maxBytes || 5 * 1024 * 1024,
       shots: shots ? path.join(shots, id) : null,
     },

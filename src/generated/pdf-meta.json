@@ -2,7 +2,7 @@
   "files": {
     "anzen-r1-09.pdf": {
       "bytes": 177426,
-      "sha256": "efe28df00c7c8658424b6eded163bf5bb05fd24b5df4041258508e4ccfb1f6c6",
+      "sha256": "737b0056ed57d403d02a7178430246cb601ae5fc0652b8de296622c2dc4d1220",
       "pages": 2,
       "paper": "A4",
       "pageSizes": [
@@ -13,7 +13,7 @@
     },
     "anzen-r1-11.pdf": {
       "bytes": 130814,
-      "sha256": "121a7266ac7f7247ce14dfc51ac361e3049039b53932f07d70d55e78c179467a",
+      "sha256": "cf44564d042e96edfba285378419405982abffe18664cbed9c7521a6b3a2e09c",
       "pages": 2,
       "paper": "A4",
       "pageSizes": [
@@ -24,7 +24,7 @@
     },
     "gikai-r1-09.pdf": {
       "bytes": 127397,
-      "sha256": "b2784108e0de904f0c2ad583ef34ca99c425aca37eb7163d841d02d2da4f0867",
+      "sha256": "014191c35f829941ed5bac79b135c30115bba5904c0d40e811853c5f9492f172",
       "pages": 8,
       "paper": "A4",
       "pageSizes": [
@@ -51,7 +51,7 @@
     },
     "joho-teikyo-01.pdf": {
       "bytes": 1809735,
-      "sha256": "5c12f4b1d629254b7aaaa58d10ee1307c0e84f6a7448df66d02ee40cab4859a5",
+      "sha256": "5fa76898257c2c4721ccd54596ea3dc308eed198c5ceb568896eee463a6c778a",
       "pages": 3,
       "paper": "A4",
       "pageSizes": [
@@ -62,11 +62,13 @@
       "title": "情報提供資料 烏啼山道付近立入禁止区域における事案について（報告）"
     },
     "koho-r8-05.pdf": {
-      "bytes": 620593,
-      "sha256": "a3b29472201d6ea4a3c19d3d2118bbe766ba5c2fc5d2e481e2e638154c643ef0",
-      "pages": 6,
+      "bytes": 1201981,
+      "sha256": "d3de20164de7576086277f191a3938d3512dad7e3c196e3b38737973aae7ab79",
+      "pages": 8,
       "paper": "A4",
       "pageSizes": [
+        [595.28, 841.89],
+        [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
@@ -77,8 +79,8 @@
       "title": "広報かすみのもり 5月号 No.841"
     },
     "koho-r8-06.pdf": {
-      "bytes": 476361,
-      "sha256": "6a32bc86ee6721e5cc04af51d52f92f80b116d603a3ab6db4017b2d5ffd523f1",
+      "bytes": 913763,
+      "sha256": "485e1a2f3e205b3a227e7afdc865b9232bb32d8eead7224c6538ca406612fb27",
       "pages": 6,
       "paper": "A4",
       "pageSizes": [
@@ -92,11 +94,13 @@
       "title": "広報かすみのもり 6月号 No.842"
     },
     "koho-r8-07.pdf": {
-      "bytes": 657406,
-      "sha256": "e29ae00b4f305b839e94487e98e886707fb3d6b9b52c24fc51f3fd539b0536fc",
-      "pages": 6,
+      "bytes": 1211415,
+      "sha256": "f35c8848ff05c189e25ce6c7d2d69026715467682f0bbaae469a8cb74adaa456",
+      "pages": 8,
       "paper": "A4",
       "pageSizes": [
+        [595.28, 841.89],
+        [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
@@ -107,11 +111,13 @@
       "title": "広報かすみのもり 7月号 No.843"
     },
     "koho-r8-08.pdf": {
-      "bytes": 648873,
-      "sha256": "223c016cefb46a122ab87d90603bcd5505db52c3b4f66897fe3f0beca619e8aa",
-      "pages": 6,
+      "bytes": 1076298,
+      "sha256": "040b257e2f6cc8a42c46c19d709749a8e38bed98e5424d805bf63a5664df516f",
+      "pages": 8,
       "paper": "A4",
       "pageSizes": [
+        [595.28, 841.89],
+        [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
@@ -122,11 +128,12 @@
       "title": "広報かすみのもり 8月号 No.844"
     },
     "koho-r8-09.pdf": {
-      "bytes": 532037,
-      "sha256": "3ba6c8c39b9eec6c11564d05625e7a31b71944b70ffbaab58ef150ff79826af5",
-      "pages": 6,
+      "bytes": 996048,
+      "sha256": "c577afbf7efb89aec79c4839a81c80f09d6319f774fda11ad46a3c3d5f3ae40c",
+      "pages": 7,
       "paper": "A4",
       "pageSizes": [
+        [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
@@ -137,11 +144,13 @@
       "title": "広報かすみのもり 9月号 No.845"
     },
     "koho-r8-10.pdf": {
-      "bytes": 567189,
-      "sha256": "106d186c8b3cc61f32f6a6e956ad816204777e8c617b412595139a19daf154ec",
-      "pages": 6,
+      "bytes": 1311848,
+      "sha256": "363f27ab88cff83f0c77ff2f8159116e87b1b6c547e19d04bbd7536db64909f4",
+      "pages": 8,
       "paper": "A4",
       "pageSizes": [
+        [595.28, 841.89],
+        [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],
         [595.28, 841.89],

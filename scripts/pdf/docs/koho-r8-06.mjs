@@ -1,2 +1,2 @@
-import { jun } from "./_koho-issues.mjs";
-export default jun;
+import { issue } from "./_koho-load.mjs";
+export default issue("koho-r8-06");

@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { full } from "../lib/dates.mjs";
+import { full, year as warekiYear } from "../lib/dates.mjs";
 import { TOWN, telNo, unit } from "../lib/town.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -54,64 +54,8 @@ function asText(v) {
   return "";
 }
 
-function parasOf(body) {
-  const paras = [];
-  let toi = "";
-  for (const b of body || []) {
-    if (typeof b === "string" && b.trim()) paras.push(b.trim());
-    else if (b && typeof b === "object") {
-      if (b.toi) {
-        try {
-          const u = unit(b.toi);
-          toi = `${u.name}　${TOWN.tel}（内線 ${u.ext}）`;
-        } catch {
-          toi = String(b.toi);
-        }
-      } else if (typeof b.p === "string") paras.push(b.p.trim());
-      else if (b.list) paras.push((b.list || []).join("\n"));
-      else if (b.table?.rows) {
-        for (const row of b.table.rows) paras.push(row.map((c) => (typeof c === "string" ? c : c?.t || "")).join("　"));
-      }
-    }
-  }
-  return { paras, toi };
-}
-
-function deptOf(toiName, fallback) {
-  if (!toiName) return fallback;
-  return toiName.split(/\s+/)[0] || fallback;
-}
-
-function flattenKoho(doc) {
-  const arts = [];
-  let calRows = [];
-  let population = "";
-  for (const sheet of doc.sheets || []) {
-    const all = [
-      ...(sheet.articles || []),
-      ...((sheet.two || []).flat()),
-      ...(sheet.side ? [sheet.side] : []),
-      ...(sheet.moreRight || []),
-      ...(sheet.moreLeft || []),
-      ...(sheet.below ? [sheet.below] : []),
-    ];
-    for (const a of all) {
-      if (!a?.h) continue;
-      if (String(a.h).includes("カレンダー")) {
-        const table = (a.body || []).find((b) => b?.table);
-        calRows = (table?.table?.rows || []).map((row) => row.map((c) => String(c)));
-      } else if (a.h === "人口") {
-        population = (a.body || []).find((b) => typeof b === "string") || "";
-      } else {
-        const { paras, toi } = parasOf(a.body);
-        arts.push({ h: a.h, dept: deptOf(toi, "広報情報係"), paras, toi });
-      }
-    }
-  }
-  const per = 4;
-  const groups = [];
-  for (let i = 0; i < arts.length; i += per) groups.push(arts.slice(i, i + per));
-  return { arts, groups, calRows, population };
+function pubPath(rel) {
+  return "/public/" + String(rel || "").replace(/\\/g, "/").replace(/^\/?public\//, "");
 }
 
 function holidayLine(iso) {
@@ -141,9 +85,7 @@ function holidayLine(iso) {
 }
 
 export function prepareKoho(doc) {
-  const { groups, calRows, population } = flattenKoho(doc);
   const [y, m, d] = doc.issued.split("-").map(Number);
-  const photo = "/public/" + String(doc.cover.photo || "").replace(/\\/g, "/").replace(/^\/?public\//, "");
   return {
     kind: "koho",
     id: doc.id,
@@ -152,18 +94,17 @@ export function prepareKoho(doc) {
     year: y,
     monthNum: m,
     day: d,
+    wareki: warekiYear(doc.issued),
     mark: doc.mark,
-    feature: groups[0]?.[0]?.h || doc.mark,
-    photo,
-    caption: doc.cover.caption || "",
-    note: doc.cover.note || "",
+    feature: doc.feature,
+    photo: pubPath(doc.photo),
+    caption: doc.caption || "",
+    toc: doc.toc || [],
     town: TOWN,
-    groups,
-    calRows,
-    population,
-    holiday: holidayLine(doc.issued),
     directory: DIRECTORY,
-    pages: 1 + groups.length + 2,
+    holiday: holidayLine(doc.issued),
+    pages: (doc.pages || []).map((pg) => (pg.photo ? { ...pg, photo: pubPath(pg.photo) } : pg)),
+    images: (doc.images || []).map((img) => ({ ...img, file: pubPath(img.file) })),
   };
 }
 

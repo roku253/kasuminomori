@@ -1,2 +1,2 @@
-import { may } from "./_koho-issues.mjs";
-export default may;
+import { issue } from "./_koho-load.mjs";
+export default issue("koho-r8-05");
